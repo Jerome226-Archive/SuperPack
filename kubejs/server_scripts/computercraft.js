@@ -1,5 +1,6 @@
 onEvent('recipes', event => {
     //computers
+    event.remove({output: 'computercraft:computer_normal'})
     event.shaped('computercraft:computer_normal', [
         'SSS',
         'SIS',
@@ -9,6 +10,7 @@ onEvent('recipes', event => {
         M: 'computercraft:monitor_normal',
         I: 'create:integrated_circuit'
     })
+    event.remove({output: 'computercraft:computer_advanced'})
     event.shaped('computercraft:computer_advanced', [
         'HHH',
         'HBH',
@@ -19,6 +21,7 @@ onEvent('recipes', event => {
         M: 'computercraft:monitor_advanced'
     })
     //monitors
+    event.remove({output: 'computercraft:monitor_normal'})
     event.shaped('computercraft:monitor_normal', [
         'PGP',
         'GLG',
@@ -28,6 +31,7 @@ onEvent('recipes', event => {
         G: 'thermal:obsidian_glass',
         L: 'minecraft:redstone_lamp'
     })
+    event.remove({output: 'computercraft:monitor_advanced'})
     event.shaped('computercraft:monitor_advanced', [
         'PGP',
         'GLG',
