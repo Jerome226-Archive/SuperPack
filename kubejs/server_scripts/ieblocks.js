@@ -1,5 +1,6 @@
 onEvent('recipes', event => {
-    //computers
+    //multiblock bits
+    event.remove({id: 'immersiveengineering:crafting/light_engineering'})
     event.shaped('immersiveengineering:light_engineering', [
         'SBS',
         'CWC',
@@ -10,5 +11,15 @@ onEvent('recipes', event => {
         C: 'immersiveengineering:component_iron',
         B: '#forge:ingots/brass'
     })
-    // there'll be more here, just had to stop a lil early
+    event.remove({id: 'immersiveengineering:crafting/rs_engineering'})
+    event.shaped('immersiveengineering:rs_engineering', [
+        'ASA',
+        'CRC',
+        'ASA'
+    ], {
+        A: '#forge:sheetmetals/aluminum',
+        S: 'thermal:redstone_servo',
+        C: 'create:integrated_circuit',
+        R: 'immersiveengineering:wirecoil_redstone'
+    })
 })
