@@ -10,9 +10,13 @@ onEvent('jei.hide.items', event => {
         'createaddition:gold_spool',
         'createaddition:iron_spool',
         'createaddition:connector',
+        'createaddition:copper_wire',
 
         //Multiservo Press
         'thermal:machine_press',
+
+        //Alloy Kiln
+        'immersiveengineering:alloy_smelter',
         
         //Iron Dust
         'bloodmagic:ironsand',
@@ -40,6 +44,7 @@ onEvent('jei.hide.items', event => {
         'mekanism:ingot_copper',
         'create:copper_ingot',
         'immersiveengineering:ingot_copper',
+        'tconstruct:copper_ingot',
 
         //Copper Dust
         'immersiveengineering:dust_copper',
@@ -50,6 +55,7 @@ onEvent('jei.hide.items', event => {
         'mekanism:nugget_copper',
         'create:copper_nugget',
         'immersiveengineering:nugget_copper',
+        'tconstruct:copper_nugget',
 
         //Copper Plate
         'immersiveengineering:plate_copper',
