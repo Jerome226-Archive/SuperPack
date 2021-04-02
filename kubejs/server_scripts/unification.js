@@ -16,8 +16,20 @@ events.listen('recipes', function (event) {
         event.remove({id: 'immersiveengineering:crafting/iron_ingot_from_dust'})
         event.remove({id: 'thermal:smelting/iron_ingot_from_dust_blasting'})
         event.remove({id: 'thermal:smelting/iron_ingot_from_dust_smelting'})
+        event.remove({id: 'immersiveengineering:crafting/stick_iron'})
         event.remove({id: 'bloodmagic:smelting/ingot_iron'})
         event.remove({id: 'mekanism:processing/iron/dust/from_ore'})
+        event.remove({id: 'createaddition:rolling/iron_ingot'})
+        event.custom({
+            "type":"createaddition:rolling",
+            "input": {
+                  "tag": "forge:ingots/iron"
+            },
+            "result": {
+                "item":  "immersiveengineering:stick_iron",
+                "count": 2
+            }
+        })
 
         //Create Crusher - 1 Iron ore to 1 Crushed Iron Ore, 30 % chance to have 1 Iron dust.
         event.remove({id: 'create:crushing/iron_ore'})
@@ -46,6 +58,7 @@ events.listen('recipes', function (event) {
 
         //Recipes removal
         event.remove({id: 'mekanism:processing/gold/dust/from_ore'})
+        event.remove({id: 'create:pressing/gold_ingot'})
 
         //Create Crusher - 1 Gold ore to 1 Crushed Gold Ore, 30 % chance to have 1 gold dust.
         event.remove({id: 'create:crushing/gold_ore'})
@@ -77,8 +90,11 @@ events.listen('recipes', function (event) {
         event.remove({id: 'mekanism:processing/copper/dust/from_ore'})
         event.remove({id: 'thermal:machine/press/press_copper_ingot_to_plate'})
         event.remove({id: 'iceandfire:copper_ingot_to_nuggets'})
+        event.remove({id: 'immersiveengineering:recycling/wire_copper'})
+        event.remove({id: 'immersiveengineering:crafting/wire_copper'})
         event.remove({id: 'create:crushing/copper_block'})
         event.remove({id: 'createaddition:rolling/copper_plate'})
+        event.remove({id: 'thermal:machine/pulverizer/pulverizer_copper_ore'})
         event.custom({
             "type":"createaddition:rolling",
             "input": {
@@ -88,6 +104,75 @@ events.listen('recipes', function (event) {
                 "item":  "immersiveengineering:wire_copper",
                 "count": 1
             }
+        })
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/copper/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_copper",
+              "amount": 1296
+            },
+            "result": "thermal:copper_block",
+            "cooling_time": 150
+        })
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/copper/ingot_gold_cast'})
+        event.custom({
+            "type": "tconstruct:casting_table",
+            "cast": {
+              "item": "tconstruct:ingot_cast"
+            },
+            "fluid": {
+              "name": "tconstruct:molten_copper",
+              "amount": 144
+            },
+            "result": "thermal:copper_ingot",
+            "cooling_time": 50
+        })
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/copper/ingot_sand_cast'})
+        event.custom({
+            "type": "tconstruct:casting_table",
+            "cast": {
+              "tag": "tconstruct:casts/single_use/ingot"
+            },
+            "cast_consumed": true,
+            "fluid": {
+              "name": "tconstruct:molten_copper",
+              "amount": 144
+            },
+            "result": "thermal:copper_ingot",
+            "cooling_time": 50
+        })
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/copper/nugget_gold_cast'})
+        event.custom({
+            "type": "tconstruct:casting_table",
+            "cast": {
+              "item": "tconstruct:nugget_cast"
+            },
+            "fluid": {
+              "name": "tconstruct:molten_copper",
+              "amount": 16
+            },
+            "result": "thermal:copper_nugget",
+            "cooling_time": 17
+        })
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/copper/nugget_sand_cast'})
+        event.custom({
+            "type": "tconstruct:casting_table",
+            "cast": {
+              "tag": "tconstruct:casts/single_use/nugget"
+            },
+            "cast_consumed": true,
+            "fluid": {
+              "name": "tconstruct:molten_copper",
+              "amount": 16
+            },
+            "result": "thermal:copper_nugget",
+            "cooling_time": 17
         })
 
         //Furnace
@@ -117,11 +202,10 @@ events.listen('recipes', function (event) {
         event.recipes.create.pressing('thermal:copper_plate', '#forge:ingots/copper')
 
         //Copper Block
-        event.smelting('mekanism:block_copper', 'thermal:copper_block')
-        event.smelting('iceandfire:copper_block', 'mekanism:block_copper')
-        event.smelting('create:copper_block', 'iceandfire:copper_block')
-        event.smelting('immersiveengineering:storage_copper', 'create:copper_block')
-        event.smelting('thermal:copper_block', 'immersiveengineering:storage_copper')
+        event.stonecutting('mekanism:block_copper', 'thermal:copper_block')
+        event.stonecutting('iceandfire:copper_block', 'thermal:copper_block')
+        event.stonecutting('create:copper_block', 'thermal:copper_block')
+        event.stonecutting('immersiveengineering:storage_copper', 'thermal:copper_block')
 
         //Replace Output
         event.replaceOutput({}, 'iceandfire:copper_nugget', 'thermal:copper_nugget')
@@ -133,6 +217,7 @@ events.listen('recipes', function (event) {
         //Zinc Recipes
         //-----------------------------------------------------
 
+        //Recipes removal
         event.remove({id: 'create:crushing/zinc_ore'})
         event.remove({id: 'create:crushing/zinc_block'})
         event.remove({id: 'thermal:machine/plugins/create/pulverizer_create_zinc_ore'})
@@ -152,11 +237,15 @@ events.listen('recipes', function (event) {
         //Aluminum Recipes
         //-----------------------------------------------------
 
+        //Recipes removal
         event.remove({id: 'immersiveengineering:crafting/plate_aluminum_hammering'})
+        event.remove({id: 'immersiveengineering:recycling/wire_aluminum'})
+        event.remove({id: 'immersiveengineering:crafting/wire_aluminum'})
+        event.remove({id: 'immersiveengineering:crafting/stick_aluminum'})
 
         //Create Crusher - 1 Aluminum ore to 1 Crushed Aluminum Ore, 30 % chance to have 1 aluminum dust.
         event.remove({id: 'create:crushing/aluminum_ore'})
-        event.recipes.create.crushing([Item.of('create:crushed_aluminum_ore'), Item.of('minecraft:barrier').withChance(0.30), Item.of('minecraft:cobblestone').withChance(0.35)], '#forge:ores/aluminum', 350)
+        event.recipes.create.crushing([Item.of('create:crushed_aluminum_ore'), Item.of('immersiveengineering:dust_aluminum').withChance(0.30), Item.of('minecraft:cobblestone').withChance(0.35)], '#forge:ores/aluminum', 350)
 
         //IE Crusher - 1 Crushed Aluminum Ore into 2 dusts, 15% chance to have a extra iron dust.
         event.remove({id: 'immersiveengineering:crusher/ore_aluminum'})
@@ -185,12 +274,16 @@ events.listen('recipes', function (event) {
         //Brass Recipes
         //-----------------------------------------------------
 
+        //Recipes removal
         event.remove({id: 'create:crushing/brass_block'})
+        event.remove({id: 'immersiveengineering:arcfurnace/alloy_brass'})
+        event.remove({id: 'immersiveengineering:alloysmelter/brass'})
 
         //-----------------------------------------------------
         //Osmium Recipes
         //-----------------------------------------------------
 
+        //Recipes removal
         event.remove({id: 'mekanism:processing/osmium/dust/from_ore'})
 
         //Create Crusher - 1 Osmium ore to 1 Crushed Osmium Ore, 30 % chance to have 1 osmium dust.
@@ -209,6 +302,17 @@ events.listen('recipes', function (event) {
 
         //Recipes removal
         event.remove({id: 'mekanism:processing/tin/dust/from_ore'})
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/tin/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_tin",
+              "amount": 1296
+            },
+            "result": "mekanism:block_steel",
+            "cooling_time": 117
+        })
 
         //Create Crusher - 1 Tin ore to 1 Crushed Tin Ore, 30 % chance to have 1 tin dust.
         event.remove({id: 'create:crushing/tin_ore'})
@@ -229,8 +333,7 @@ events.listen('recipes', function (event) {
         event.recipes.immersiveengineering.crusher(Item.of('thermal:tin_dust', 2), '#forge:ores/tin')
 
         //Tin Block
-        event.smelting('mekanism:block_tin', 'thermal:tin_block')
-        event.smelting('thermal:tin_block', 'mekanism:block_tin')
+        event.stonecutting('mekanism:block_tin', 'thermal:tin_block')
 
         //Replace Output
         event.replaceOutput({type: 'theurgy:purification'}, 'mekanism:ingot_tin', 'thermal:tin_ingot')
@@ -244,6 +347,17 @@ events.listen('recipes', function (event) {
 
         //Recipes removal
         event.remove({id: 'mekanism:processing/lead/dust/from_ore'})
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/lead/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_lead",
+              "amount": 1296
+            },
+            "result": "thermal:lead_block",
+            "cooling_time": 130
+        })
 
         //Create Crusher - 1 Lead ore to 1 Crushed Lead Ore, 30 % chance to have 1 lead dust.
         event.remove({id: 'create:crushing/lead_ore'})
@@ -264,9 +378,8 @@ events.listen('recipes', function (event) {
         event.recipes.create.pressing('thermal:lead_plate', '#forge:ingots/lead')
         
         //Lead Block
-        event.smelting('mekanism:block_lead', 'thermal:lead_block')
-        event.smelting('immersiveengineering:storage_lead', 'mekanism:block_lead')
-        event.smelting('thermal:lead_block', 'immersiveengineering:storage_lead')
+        event.stonecutting('mekanism:block_lead', 'thermal:lead_block')
+        event.stonecutting('immersiveengineering:storage_lead', 'thermal:lead_block')
 
         //Replace Output
         event.replaceOutput({type: 'theurgy:purification'}, 'mekanism:ingot_lead', 'thermal:lead_ingot')
@@ -281,6 +394,17 @@ events.listen('recipes', function (event) {
         //Recipes removal
         event.remove({id: 'iceandfire:silver_ingot_to_nuggets'})
         event.remove({id: 'create:splashing/iceandfire/crushed_silver_ore'})
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/silver/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_silver",
+              "amount": 1296
+            },
+            "result": "thermal:silver_block",
+            "cooling_time": 179
+        })
 
         //Create Crusher - 1 Silver ore to 1 Crushed Silver Ore, 30 % chance to have 1 silver dust.
         event.remove({id: 'create:crushing/silver_ore'})
@@ -304,10 +428,9 @@ events.listen('recipes', function (event) {
         event.recipes.create.pressing('thermal:silver_plate', '#forge:ingots/silver')
 
         //Silver Block
-        event.smelting('iceandfire:silver_block', 'thermal:silver_block')
-        event.smelting('immersiveengineering:storage_silver', 'iceandfire:silver_block')
-        event.smelting('thermal:silver_block', 'immersiveengineering:storage_silver')
-    
+        event.stonecutting('iceandfire:silver_block', 'thermal:silver_block')
+        event.stonecutting('immersiveengineering:storage_silver', 'thermal:silver_block')
+
         //Replace Output
         event.replaceOutput({type: 'theurgy:purification'}, 'iceandfire:silver_ingot', 'thermal:silver_ingot')
         event.replaceOutput({type: 'theurgy:replication'}, 'iceandfire:silver_ingot', 'thermal:silver_ingot')
@@ -319,10 +442,22 @@ events.listen('recipes', function (event) {
         //Nickel Recipes
         //-----------------------------------------------------
 
+        //Recipes removal
+        event.remove({id: 'tconstruct:smeltery/casting/metal/nickel/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_nickel",
+              "amount": 1296
+            },
+            "result": "thermal:nickel_block",
+            "cooling_time": 194
+        })
+
         //Create Crusher - 1 Nickel ore to 1 Crushed Nickel Ore, 30 % chance to have 1 nickel dust.
         event.remove({id: 'create:crushing/nickel_ore'})
         event.recipes.create.crushing([Item.of('create:crushed_nickel_ore'), Item.of('thermal:nickel_dust').withChance(0.30), Item.of('minecraft:cobblestone').withChance(0.35)], '#forge:ores/nickel', 350)
-        
+    
         //IE Crusher - 1 Crushed Nickel Ore into 2 dusts, 15% chance to have a extra iron dust.
         event.remove({id: 'immersiveengineering:crusher/ore_nickel'})
         event.recipes.immersiveengineering.crusher(Item.of('thermal:nickel_dust', 2), 'create:crushed_nickel_ore', Item.of('thermal:iron_dust').withChance(0.15))
@@ -344,8 +479,7 @@ events.listen('recipes', function (event) {
         event.recipes.create.pressing('thermal:nickel_plate', '#forge:ingots/nickel')
 
         //Nickel Block
-        event.smelting('immersiveengineering:storage_nickel', 'thermal:nickel_block')
-        event.smelting('thermal:nickel_block', 'immersiveengineering:storage_nickel')
+        event.stonecutting('immersiveengineering:storage_nickel', 'thermal:nickel_block')
 
         //Replace Output
         event.replaceOutput({type: 'create:milling'}, 'create:crushed_nickel_ore', 'thermal:nickel_dust')
@@ -357,6 +491,18 @@ events.listen('recipes', function (event) {
         //Recipes removal
         event.remove({id: 'mekanism:processing/uranium/dust/from_ore'})
         event.remove({id: 'immersiveengineering:crafting/plate_uranium_hammering'})
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/uranium/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_uranium",
+              "amount": 1296
+            },
+            "result": "mekanism:block_uranium",
+            "cooling_time": 183
+        })
+
 
         //Create Crusher - 1 Uranium ore to 1 Crushed Uranium Ore, 30 % chance to have 1 lead dust.
         event.remove({id: 'create:crushing/uranium_ore'})
@@ -379,8 +525,7 @@ events.listen('recipes', function (event) {
         event.recipes.create.pressing('immersiveengineering:plate_uranium', '#forge:ingots/uranium')
 
         //Uranium Block
-        event.smelting('immersiveengineering:storage_uranium', 'mekanism:block_uranium')
-        event.smelting('mekanism:block_uranium', 'immersiveengineering:storage_uranium')
+        event.stonecutting('immersiveengineering:storage_uranium', 'mekanism:block_uranium')
 
         //Replace Output
         event.replaceOutput({type: 'create:milling'}, 'create:crushed_uranium_ore', 'mekanism:dust_uranium')
@@ -391,16 +536,29 @@ events.listen('recipes', function (event) {
 
         //Recipes removal
         event.remove({id: 'immersiveengineering:crafting/plate_steel_hammering'})
+        event.remove({id: 'immersiveengineering:recycling/wire_steel'})
+        event.remove({id: 'immersiveengineering:crafting/wire_steel'})
+        event.remove({id: 'immersiveengineering:crafting/stick_steel'})
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/steel/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_steel",
+              "amount": 1296
+            },
+            "result": "mekanism:block_steel",
+            "cooling_time": 217
+        })
 
         //Plates Recipes
         event.recipes.create.pressing('immersiveengineering:plate_steel', '#forge:ingots/steel')
 
-        //Thermal Pulverizer - 1 Electrum Ingot into 1 dusts (No bonuses)
+        //Thermal Pulverizer - 1 Steel Ingot into 1 dusts (No bonuses)
         event.recipes.thermal.pulverizer('mekanism:dust_steel', '#forge:ingots/steel')
 
-        //Uranium Block
-        event.smelting('immersiveengineering:storage_steel', 'mekanism:block_steel')
-        event.smelting('mekanism:block_steel', 'immersiveengineering:storage_steel')
+        //Steel Block
+        event.stonecutting('immersiveengineering:storage_steel', 'mekanism:block_steel')
 
         //-----------------------------------------------------
         //Electrum Recipes
@@ -409,6 +567,21 @@ events.listen('recipes', function (event) {
         //Recipes removal
         event.remove({id: 'thermal:electrum_dust_2'})
         event.remove({id: 'thermal:fire_charge/electrum_ingot_2'})
+        event.remove({id: 'immersiveengineering:recycling/wire_electrum'})
+        event.remove({id: 'immersiveengineering:crafting/wire_electrum'})
+        event.remove({id: 'immersiveengineering:arcfurnace/alloy_electrum'})
+        event.remove({id: 'immersiveengineering:alloysmelter/electrum'})
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/electrum/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_electrum",
+              "amount": 1296
+            },
+            "result": "thermal:constantan_block",
+            "cooling_time": 177
+        })
 
         //Plates Recipes
         event.recipes.create.pressing('thermal:electrum_plate', '#forge:ingots/electrum')
@@ -417,8 +590,7 @@ events.listen('recipes', function (event) {
         event.recipes.mekanism.crushing('thermal:electrum_dust', '#forge:ingots/electrum')
 
         //Electrum Block
-        event.smelting('immersiveengineering:storage_electrum', 'thermal:electrum_block')
-        event.smelting('thermal:electrum_block', 'immersiveengineering:storage_electrum')
+        event.stonecutting('immersiveengineering:storage_electrum', 'thermal:electrum_block')
 
         //-----------------------------------------------------
         //Constantan Recipes
@@ -427,6 +599,19 @@ events.listen('recipes', function (event) {
         //Recipes removal
         event.remove({id: 'thermal:constantan_dust_2'})
         event.remove({id: 'thermal:fire_charge/constantan_ingot_2'})
+        event.remove({id: 'immersiveengineering:arcfurnace/alloy_constantan'})
+        event.remove({id: 'immersiveengineering:alloysmelter/constantan'})
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/constantan/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_constantan",
+              "amount": 1296
+            },
+            "result": "thermal:constantan_block",
+            "cooling_time": 192
+        })
 
         //Plates Recipes
         event.recipes.create.pressing('thermal:constantan_plate', '#forge:ingots/constantan')
@@ -435,8 +620,7 @@ events.listen('recipes', function (event) {
         event.recipes.mekanism.crushing('thermal:constantan_dust', '#forge:ingots/constantan')
 
         //Constantan Block
-        event.smelting('immersiveengineering:storage_constantan', 'thermal:constantan_block')
-        event.smelting('thermal:constantan_block', 'immersiveengineering:storage_constantan')
+        event.stonecutting('immersiveengineering:storage_constantan', 'thermal:constantan_block')
         
         //-----------------------------------------------------
         //Bronze Recipes
@@ -445,13 +629,53 @@ events.listen('recipes', function (event) {
         //Recipes removal
         event.remove({id: 'thermal:bronze_dust_4'})
         event.remove({id: 'thermal:fire_charge/bronze_ingot_4'})
+        event.remove({id: 'immersiveengineering:arcfurnace/alloy_bronze'})
+        event.remove({id: 'immersiveengineering:alloysmelter/bronze'})
+
+        event.remove({id: 'tconstruct:smeltery/casting/metal/bronze/block'})
+        event.custom({
+            "type": "tconstruct:casting_basin",
+            "fluid": {
+              "name": "tconstruct:molten_bronze",
+              "amount": 1296
+            },
+            "result": "thermal:bronze_block",
+            "cooling_time": 171
+          })
 
         //Mekanism Crusher - 1 Bronze Ingot into 1 dust
         event.recipes.mekanism.crushing('thermal:bronze_dust', '#forge:ingots/bronze')
 
         //Bronze Block
-        event.smelting('mekanism:block_bronze', 'thermal:bronze_block')
-        event.smelting('thermal:bronze_block', 'mekanism:block_bronze')
+        event.stonecutting('mekanism:block_bronze', 'thermal:bronze_block')
+
+        //-----------------------------------------------------
+        //Invar Recipes
+        //-----------------------------------------------------
+
+        //Recipes removal
+        event.remove({id: 'thermal:invar_dust_3'})
+        event.remove({id: 'thermal:fire_charge/invar_ingot_3'})
+        event.remove({id: 'immersiveengineering:arcfurnace/alloy_invar'})
+        event.remove({id: 'immersiveengineering:alloysmelter/invar'})
+
+        //Plates Recipes
+        event.recipes.create.pressing('thermal:invar_plate', '#forge:ingots/invar')
+
+        //Mekanism Crusher - 1 Electrum Ingot into 1 dust
+        event.recipes.mekanism.crushing('thermal:invar_dust', '#forge:ingots/invar')
+
+        //Electrum Block
+        event.stonecutting('immersiveengineering:storage_electrum', 'thermal:electrum_block')
+
+        //-----------------------------------------------------
+        //Tinker's Alloys
+        //-----------------------------------------------------
+
+        event.remove({id: 'immersiveengineering:arcfurnace/alloy_rose_gold'})
+        event.remove({id: 'immersiveengineering:alloysmelter/rose_gold'})
+        event.remove({id: 'immersiveengineering:arcfurnace/alloy_manyullyn'})
+        event.remove({id: 'immersiveengineering:alloysmelter/manyullyn'})
         
 
         var removal = [
@@ -471,6 +695,9 @@ events.listen('recipes', function (event) {
             'immersiveengineering:plate_iron',
             'create:iron_sheet',
 
+            //Iron Rod
+            'createaddition:iron_rod',
+
             //Gold Dust
             'immersiveengineering:dust_gold',
 
@@ -482,12 +709,14 @@ events.listen('recipes', function (event) {
             'mekanism:block_copper',
             'create:copper_block',
             'immersiveengineering:storage_copper',
+            'tconstruct:copper_block',
             
             //Copper Ingot
             'iceandfire:copper_ingot',
             'mekanism:ingot_copper',
             'create:copper_ingot',
             'immersiveengineering:ingot_copper',
+            'tconstruct:copper_ingot',
             
             //Copper Dust
             'immersiveengineering:dust_copper',
@@ -495,6 +724,7 @@ events.listen('recipes', function (event) {
             //Copper Nugget
             'immersiveengineering:nugget_copper',
             'mekanism:nugget_copper',
+            'tconstruct:copper_nugget',
 
             //Copper Plate
             'create:copper_sheet',
@@ -637,6 +867,10 @@ events.listen('recipes', function (event) {
 
 events.listen('item.tags', function (event) {
 
+        //Rusty Iron
+        event.get('forge:nuggets/iron').remove('dustrial_decor:rusty_iron_nugget')
+        event.get('forge:ingots/iron').remove('dustrial_decor:rusty_iron_ingot')
+
         //Copper Wire
         event.get('forge:wires').remove('createaddition:copper_wire')
         event.get('forge:wires/copper').remove('createaddition:copper_wire')
@@ -674,6 +908,7 @@ events.listen('item.tags', function (event) {
         event.get('forge:ingots').remove('create:copper_ingot')
         event.get('forge:ingots').remove('immersiveengineering:ingot_copper')
         event.get('forge:ingots').remove('mekanism:ingot_copper')
+        event.get('forge:ingots').remove('tconstruct:copper_ingot')
 
         //Copper Dust
         event.get('forge:dusts/copper').removeAll()
@@ -688,6 +923,7 @@ events.listen('item.tags', function (event) {
         event.get('forge:nuggets').remove('mekanism:nugget_copper')
         event.get('forge:nuggets').remove('create:copper_nugget')
         event.get('forge:nuggets').remove('immersiveengineering:nugget_copper')
+        event.get('forge:nuggets').remove('tconstruct:copper_nugget')
 
         //Copper Plate
         event.get('forge:plates/copper').removeAll()
