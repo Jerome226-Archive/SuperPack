@@ -8,9 +8,7 @@ onEvent('recipes', event => {
     //unifyOre Ingot
     //-----------------------------------------------------
 
-    if (ingotItem == null) {
-      return;
-    }
+    if (ingotItem !== null) {
 
     //Crafting
     event.remove({ output: `#forge:ingots/${nameUnify}`, type: 'minecraft:crafting_shapeless'});
@@ -21,18 +19,44 @@ onEvent('recipes', event => {
         I: nuggetItem
     })
 
-    //Smelting
+    //Smelting Remove
     event.remove({ output: `#forge:ingots/${nameUnify}`, type: 'minecraft:smelting'});
     event.remove({ output: `#forge:ingots/${nameUnify}`, type: 'minecraft:blasting'});
+
+    //Alloy Kiln Remove
+    event.remove({id: `immersiveengineering:alloysmelter/${nameUnify}`})
+
+    //Arc Furnace Remove
+    event.remove({id: `immersiveengineering:arcfurnace/alloy_${nameUnify}`})
+
+    //Thermal Induction Smelter
+    event.remove({id: `thermal:machine/smelter/smelter_alloy_${nameUnify}`})
+
+
+    }
+
+    if (oreItem !== null && ingotItem !== null) {
 
     event.smelting(ingotItem, oreItem).xp(0.5)
     event.recipes.minecraft.blasting(ingotItem, oreItem).xp(0.5)
 
+    }
+
+    if (crushedItem !== null && ingotItem !== null) {
+
     event.smelting(ingotItem, crushedItem).xp(0.1)
     event.recipes.minecraft.blasting(ingotItem, crushedItem).xp(0.1)
 
+    }
+
+    if (dustItem !== null && ingotItem !== null) {
+
     event.smelting(ingotItem, dustItem).xp(0.35)
     event.recipes.minecraft.blasting(ingotItem, dustItem).xp(0.35)
+
+    }
+
+    if (moltenFluid !== null && ingotItem !== null) {
 
     //Tinker's Casting
     event.remove({id: `tconstruct:smeltery/casting/metal/${nameUnify}/ingot_gold_cast`})
@@ -64,21 +88,33 @@ onEvent('recipes', event => {
         "cooling_time": castingIngotTime
     })
 
+    }
+
     //-----------------------------------------------------
     //unifyOre Nugget
     //-----------------------------------------------------
 
-    if (nuggetItem == null) {
-      return;
-    }
-
+    if (nuggetItem !== null) {
+    
     //Crafting
     event.remove({ output: `#forge:nuggets/${nameUnify}`, type: 'minecraft:crafting_shapeless'});
     event.shapeless(item.of(nuggetItem, 9), [ingotItem])
 
+    }
+
+    if (nuggetItem !== null && crushedItem !== null) {
+
     //Create Washing
     event.remove({id: `create:splashing/crushed_${nameUnify}_ore`})
+    event.remove({id: `create:splashing/thermal/crushed_${nameUnify}_ore`})
+    event.remove({id: `create:splashing/mekanism/crushed_${nameUnify}_ore`})
+    event.remove({id: `create:splashing/immersiveengineering/crushed_${nameUnify}_ore`})
+
     event.recipes.create.splashing([item.of(nuggetItem, 10), Item.of(nuggetItem, 5).withChance(0.5)], crushedItem)
+
+    }
+
+    if (moltenFluid !== null && nuggetItem !== null) {
 
     //Tinker's Casting
     event.remove({id: `tconstruct:smeltery/casting/metal/${nameUnify}/nugget_gold_cast`})
@@ -110,6 +146,8 @@ onEvent('recipes', event => {
         "cooling_time": castingNuggetTime
     })
 
+    }
+
     //Manual Recipe
     event.replaceOutput({}, 'iceandfire:copper_nugget', 'thermal:copper_nugget')
     event.replaceOutput({}, 'iceandfire:silver_nugget', 'thermal:silver_nugget')
@@ -118,15 +156,17 @@ onEvent('recipes', event => {
     //unifyOre Block
     //-----------------------------------------------------
 
-    if (blockItem == null) {
-      return;
-    }
+    if (blockItem !== null) {
 
     //Crafting
     event.remove({ output: `#forge:storage_blocks/${nameUnify}`, type: 'minecraft:crafting_shaped'});
     event.shaped(blockItem, ['III', 'III', 'III'], {
         I: ingotItem
     })
+
+    }
+
+    if (moltenFluid !== null && blockItem !== null) {
 
     //Tinker's Casting
     event.remove({id: `tconstruct:smeltery/casting/metal/${nameUnify}/block`})
@@ -140,72 +180,92 @@ onEvent('recipes', event => {
         "cooling_time": castingBlockTime
     })
 
+    }
+
     //-----------------------------------------------------
     //unifyOre Dust & Crushed Ore
     //-----------------------------------------------------
+    
+    if (crushedItem !== null){
 
-    if (dustItem == null) {
-      return;
+    //Create Milling Remove
+    event.remove({ output: crushedItem, type: 'create:milling'});
+
+    //Create Crushing Remove
+    event.remove({ output: crushedItem, type: 'create:crushing'});
+
     }
 
-    if (crushedItem == null) {
-      return;
-    }
+    if (dustItem !== null) {
 
     //Crafting
     event.remove({id: `immersiveengineering:crafting/hammercrushing_${nameUnify}`})
+    event.remove({ output: `#forge:dusts/${nameUnify}`, type: 'minecraft:crafting_shapeless'});
 
-    //Create Crusher
-    event.remove({ output: `#forge:dusts/${nameUnify}`, type: 'create:crushing'});
-    event.remove({ output: crushedItem, type: 'create:crushing'});
-    event.recipes.create.crushing([Item.of(crushedItem), Item.of(dustItem).withChance(0.30), Item.of('minecraft:cobblestone').withChance(0.35)], oreItem, 350)
-
-    //IE Crusher - Crushed Ore into 2 Dust + Bonuse
-    event.remove({ output: `#forge:dusts/${nameUnify}`, type: 'immersiveengineering:crusher'});
-    event.recipes.immersiveengineering.crusher(Item.of(dustItem, 2), crushedItem, Item.of(crusherBonus).withChance(0.15))
-
-    //IE Crusher - Ore into 2 Dust
-    event.recipes.immersiveengineering.crusher(Item.of(dustItem, 2), oreItem)
-
-    //IE Crusher - Ingot into Dust
-    event.recipes.immersiveengineering.crusher(dustItem, ingotItem)
-
-    //Thermal Pulverizer - Ore into 2 Dust
+    //Thermal Pulverizer - Ingot into Dust
     event.remove({ output: `#forge:dusts/${nameUnify}`, type: 'thermal:pulverizer'});
-    event.recipes.thermal.pulverizer(Item.of(dustItem, 2), oreItem)
-
-    //Thermal Pulverizer - Ore into Dust
     event.recipes.thermal.pulverizer(dustItem, ingotItem)
 
     //Mekanism Crusher - 1 Ingot into Dust
     event.remove({ output: `#forge:dusts/${nameUnify}`, type: 'mekanism:crushing'});
     event.recipes.mekanism.crushing(dustItem, ingotItem)
 
+    //IE Crusher - Ingot into Dust
+    event.remove({ output: `#forge:dusts/${nameUnify}`, type: 'immersiveengineering:crusher'});
+    event.recipes.immersiveengineering.crusher(dustItem, ingotItem)
+
+    //Create Crusher
+    event.remove({ output: `#forge:dusts/${nameUnify}`, type: 'create:crushing'});
+
     //Create Milling - 1 Ingot into Dust
-    event.remove({ output: crushedItem, type: 'create:milling'});
     event.remove({ output: `#forge:dusts/${nameUnify}`, type: 'create:milling'});
     event.recipes.create.milling(dustItem, ingotItem)
 
-    //Mekanism Enrichment Chamber - 1 Ore into 2 Dust
+    //Mekanism Enrichment Chamber
     event.remove({ output: `#forge:dusts/${nameUnify}`, type: 'mekanism:enriching'});
-    event.recipes.mekanism.enriching(Item.of(dustItem, 2), oreItem)
+
+    }
+
+    if (dirtyDustItem !== null) {
 
     //Mekanism Enrichment Chamber - 1 Dirty Dust into Dust
     event.recipes.mekanism.enriching(dustItem, dirtyDustItem)
 
+    }
+
+    if (oreItem !== null) {
+
+    //Thermal Pulverizer
+    event.recipes.thermal.pulverizer(Item.of(dustItem, 2), oreItem)
+
+    //Mekanism Enrichment Chamber
+    event.recipes.mekanism.enriching(Item.of(dustItem, 2), oreItem)
+
+    //IE Crusher
+    event.recipes.immersiveengineering.crusher(Item.of(dustItem, 2), oreItem)
+
+    }
+
+    if (oreItem !== null && crushedItem !== null) {
+
+    //Create Crusher
+    event.recipes.create.crushing([Item.of(crushedItem), Item.of(dustItem).withChance(0.30), Item.of('minecraft:cobblestone').withChance(0.35)], oreItem, 350)
+
+    //IE Crusher
+    event.recipes.immersiveengineering.crusher(Item.of(dustItem, 2), crushedItem, Item.of(crusherBonus).withChance(0.15))
+
+    }
+
     //Manual Recipe
-    event.remove({id: 'thermal:compat/create/pulverizer_zinc_ore'})
+    event.remove({id: 'thermal:compat/create/pulverizer_create__zinc_ore'})
 
     //-----------------------------------------------------
     //unifyOre Plate
     //-----------------------------------------------------
 
-    if (plateItem == null) {
-      return;
-    }
+    if (plateItem !== null) {
 
-    //Crafting
-    event.remove({ output: `#forge:plates/${nameUnify}`, type: 'minecraft:crafting_shapeless'});
+    event.remove({ output:  `#forge:plates/${nameUnify}`});
     
     //IE Metal Press
     event.remove({ output: `#forge:plates/${nameUnify}`, type: 'immersiveengineering:metal_press'});
@@ -215,31 +275,29 @@ onEvent('recipes', event => {
     event.remove({ output: `#forge:plates/${nameUnify}`, type: 'create:pressing'});
     event.recipes.create.pressing(plateItem, ingotItem)
 
+    }
+
     //-----------------------------------------------------
     //unifyOre Gear
     //-----------------------------------------------------
 
-    if (gearItem == null) {
-      return;
-    }
+    if (gearItem !== null) {
 
-    //Crafting
-    event.remove({ output: `#forge:gears/${nameUnify}`, type: 'minecraft:crafting_shaped'});
+    event.remove({ output: `#forge:gears/${nameUnify}`});
 
     //IE Metal Press
     event.remove({ output: `#forge:gears/${nameUnify}`, type: 'immersiveengineering:metal_press'});
     event.recipes.immersiveengineering.metal_press(gearItem, Item.of(ingotItem, 4), 'immersiveengineering:mold_gear')
 
+    }
+
     //-----------------------------------------------------
     //unifyOre Rod
     //-----------------------------------------------------
 
-    if (rodItem == null) {
-      return;
-    }
-
-    //Crafting
-    event.remove({ output: `#forge:rods/${nameUnify}`, type: 'minecraft:crafting_shaped'});
+    if (rodItem !== null) {
+    
+    event.remove({ output: `#forge:rods/${nameUnify}`});
 
     //IE Metal Press
     event.remove({ output: `#forge:rods/${nameUnify}`, type: 'immersiveengineering:metal_press'});
@@ -258,16 +316,15 @@ onEvent('recipes', event => {
         }
     })
 
+    }
+
     //-----------------------------------------------------
     //unifyOre Wire
     //-----------------------------------------------------
 
-    if (wireItem == null) {
-      return;
-    }
+    if (wireItem !== null) {
 
-    //Crafting
-    event.remove({ output: `#forge:wires/${nameUnify}`, type: 'minecraft:crafting_shapeless'});
+    event.remove({ output: `#forge:wires/${nameUnify}`});
 
     //IE Metal Press
     event.remove({ output: `#forge:wires/${nameUnify}`, type: 'immersiveengineering:metal_press'});
@@ -288,6 +345,8 @@ onEvent('recipes', event => {
 
     }
 
+    }
+
     unifyOre('iron', 'minecraft:iron_ore', 'minecraft:iron_ingot', 'thermal:iron_dust', 'mekanism:dirty_dust_iron', 'minecraft:iron_block', 'minecraft:iron_nugget', 'thermal:iron_gear', 'thermal:iron_plate', 'create:crushed_iron_ore', 'immersiveengineering:stick_iron', 'createaddition:iron_wire', 'tconstruct:molten_iron', 180, 60, 20, 'thermal:nickel_dust');
     unifyOre('gold', 'minecraft:gold_ore', 'minecraft:gold_ingot', 'thermal:gold_dust', 'mekanism:dirty_dust_gold', 'minecraft:gold_block', 'minecraft:gold_nugget', 'thermal:gold_gear', 'thermal:gold_plate', 'create:crushed_gold_ore', 'createaddition:gold_rod', 'createaddition:gold_wire', 'tconstruct:molten_gold', 171, 57, 19, 'ftbquests:missing_item');    
     unifyOre('copper', 'thermal:copper_ore', 'thermal:copper_ingot', 'thermal:copper_dust', 'mekanism:dirty_dust_copper', 'thermal:copper_block', 'thermal:copper_nugget', 'thermal:copper_gear', 'thermal:copper_plate', 'create:crushed_copper_ore', 'createaddition:copper_rod', 'immersiveengineering:wire_copper', 'tconstruct:molten_copper', 150, 50, 17, 'thermal:gold_dust');
@@ -299,5 +358,13 @@ onEvent('recipes', event => {
     unifyOre('aluminum', 'immersiveengineering:ore_aluminum', 'immersiveengineering:ingot_aluminum', 'immersiveengineering:dust_aluminum', null, 'immersiveengineering:storage_aluminum', 'immersiveengineering:nugget_aluminum', null, 'immersiveengineering:plate_aluminum', 'create:crushed_aluminum_ore', 'immersiveengineering:stick_aluminum', 'immersiveengineering:wire_aluminum', 'tconstruct:molten_aluminum', 141, 47, 16, 'thermal:iron_dust');
     unifyOre('osmium', 'mekanism:osmium_ore', 'mekanism:ingot_osmium', 'mekanism:dust_osmium', 'mekanism:dirty_dust_osmium', 'mekanism:block_osmium', 'mekanism:nugget_osmium', null, null, 'create:crushed_osmium_ore', null, null, 'tconstruct:molten_osmium', 233, 78, 26, 'ftbquests:missing_item');
     unifyOre('zinc', 'create:zinc_ore', 'create:zinc_ingot', 'ftbquests:missing_item', null, 'create:zinc_block', 'create:zinc_nugget', null, 'createaddition:zinc_sheet', 'create:crushed_zinc_ore', null, null, 'tconstruct:molten_zinc', 141, 47, 16, 'ftbquests:missing_item');
+    unifyOre('electrum', null, 'thermal:electrum_ingot', 'thermal:electrum_dust', null, 'thermal:electrum_block', 'thermal:electrum_nugget', 'thermal:electrum_gear', 'thermal:electrum_plate', null, null, 'immersiveengineering:wire_electrum', 'tconstruct:molten_electrum', 177, 59, 20, null);
+    unifyOre('constantan', null, 'thermal:constantan_ingot', 'thermal:constantan_dust', null, 'thermal:constantan_block', 'thermal:constantan_nugget', 'thermal:constantan_gear', 'thermal:constantan_plate', null, null, null, 'tconstruct:molten_constantan', 192, 64, 21, null);
+    unifyOre('invar', null, 'thermal:invar_ingot', 'thermal:invar_dust', null, 'thermal:invar_block', 'thermal:invar_nugget', 'thermal:invar_gear', 'thermal:invar_plate', null, null, null, 'tconstruct:molten_invar', 190, 63, 21, null);
+    unifyOre('bronze', null, 'thermal:bronze_ingot', 'thermal:bronze_dust', null, 'thermal:bronze_block', 'thermal:bronze_nugget', 'thermal:bronze_gear', 'thermal:bronze_plate', null, null, null, 'tconstruct:molten_bronze', 171, 57, 19, null);
+    unifyOre('steel', null, 'mekanism:ingot_steel', 'mekanism:dust_steel', null, 'mekanism:block_steel', 'mekanism:nugget_steel', null, 'immersiveengineering:plate_steel', null, 'immersiveengineering:stick_steel', 'immersiveengineering:wire_steel', 'tconstruct:molten_steel', 217, 72, 24, null);
+    unifyOre('enderium', null, 'thermal:enderium_ingot', 'thermal:enderium_dust', null, 'thermal:enderium_block', 'thermal:enderium_nugget', 'thermal:enderium_gear', 'thermal:enderium_plate', null, null, null, null, 0, 0, 0, null);
+    unifyOre('signalum', null, 'thermal:signalum_ingot', 'thermal:signalum_dust', null, 'thermal:signalum_block', 'thermal:signalum_nugget', 'thermal:signalum_gear', 'thermal:signalum_plate', null, null, null, null, 0, 0, 0, null);
+    unifyOre('lumium', null, 'thermal:lumium_ingot', 'thermal:lumium_dust', null, 'thermal:lumium_block', 'thermal:lumium_nugget', 'thermal:lumium_gear', 'thermal:lumium_plate', null, null, null, null, 0, 0, 0, null);
 
 });
