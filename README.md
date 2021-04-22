@@ -1,3 +1,3 @@
 # superpack
 
-Superpack is a 1.16 progression pack with a focus on Create.
+SuperPack is a 1.16 progression pack with a focus on Create.
