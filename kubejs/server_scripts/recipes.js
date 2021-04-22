@@ -39,6 +39,59 @@ events.listen('recipes', function (event) {
       "time": 300
     })
 
+    //Dimensional Plasma
+    event.custom({
+      "type": "astralsorcery:lightwell",
+      "input": {
+        "item": "superpackutils:dimensional_stone"
+      },
+      "output": "betterportals:portal_fluid_still",
+      "productionMultiplier": 2.0,
+      "shatterMultiplier": 30.0,
+      "color": -11310593
+    })
+
+    //Dimensional Rock
+    event.custom({
+      "type": "botania:petal_apothecary",
+      "output": {
+        "item": "superpackutils:dimensional_stone"
+      },
+      "ingredients": [
+        {
+          "item": "minecraft:obsidian"
+        },
+        {
+          "item": "superpackutils:dyingrock"
+        },
+        {
+          "item": "botania:mana_pearl"
+        },
+        {
+          "tag": "forge:ingots/manasteel"
+        }
+      ]
+    })
+
+    //Electrical Platinum Ingot
+    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_platinum_ingot', 4)], 'superpackutils:platinum_ingot', [Item.of('thermal:silver_dust', 2), 'thermal:electrum_dust'], 'thermal:slag')
+
+    //Dyingrock
+    event.remove({id: 'botania:pure_daisy/livingrock'})
+    event.custom({
+      "type": "botania:pure_daisy",
+      "input": {
+        "type": "block",
+        "block": "astralsorcery:black_marble_raw"
+      },
+      "output": {
+        "name": "superpackutils:dyingrock"
+      }
+    })
+
+    //Compressed Steel Ingot
+    event.custom({"type":"immersiveengineering:squeezer","result":{"item":"superpackutils:compressed_steel_ingot"},"input":{"count":1,"base_ingredient":{"tag":"forge:ingots/steel"}},"energy":19200})
+    
     //-----------------------------------------------------
     //Create
     //-----------------------------------------------------
@@ -193,7 +246,20 @@ events.listen('recipes', function (event) {
 
     //Create Electron Tube
     event.remove({output: 'create:electron_tube'})
-    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"immersiveengineering:wire_electrum"}},{"count":1,"base_ingredient":{"item":"create:polished_rose_quartz"}},{"count":1,"base_ingredient":{"item":"minecraft:redstone"}},{"count":1,"base_ingredient":{"item":"createaddition:capacitor"}}],"category":"components","result":{"item":"create:electron_tube","count":1}}),
+    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"immersiveengineering:wire_electrum"}},{"count":1,"base_ingredient":{"item":"create:polished_rose_quartz"}},{"count":1,"base_ingredient":{"item":"minecraft:redstone"}},{"count":1,"base_ingredient":{"item":"mekanism:ingot_steel"}}],"category":"components","result":{"item":"create:electron_tube","count":1}}),
+    
+    //-----------------------------------------------------
+    //Create Additions
+    //-----------------------------------------------------
+    
+    //Capacitor
+    event.remove({output: 'createaddition:capacitor'})
+    event.shaped('createaddition:capacitor', [' S ', 'PCP', 'PMP'], {
+        S: '#forge:plates/zinc',
+        P: '#forge:plates/iron',
+        C: 'superpackutils:compressed_steel_ingot',
+        M: 'immersiveengineering:component_steel'
+    }),
 
     //-----------------------------------------------------
     //Immersive Engineering
@@ -304,16 +370,26 @@ events.listen('recipes', function (event) {
         C: '#forge:plates/iron'
     }),
 
+    //IE Steel Block
+    event.remove({output: 'immersiveengineering:storage_steel'})
+    event.shaped(Item.of('immersiveengineering:storage_steel', 3), ['CSC', 'SBS', 'CSC'], {
+        C: 'immersiveengineering:component_steel',
+        S: 'immersiveengineering:sheetmetal_steel',
+        B: 'mekanism:block_steel'
+    }),
+
     //-----------------------------------------------------
     //Early Mekanism
     //-----------------------------------------------------
 
     //Mekanism Energy Tablet
     event.remove({output: 'mekanism:energy_tablet'})
-    event.shaped('mekanism:energy_tablet', [' G ', 'WPW', ' G '], {
-        G: 'mekanism:ingot_osmium',
-        W: 'immersiveengineering:wirecoil_redstone',
-        P: 'superpackutils:platinum_ingot'
+    event.shaped('mekanism:energy_tablet', [' P ', 'CEC', 'ZOZ'], {
+        O: 'mekanism:ingot_osmium',
+        Z: 'createaddition:zinc_sheet',
+        E: 'superpackutils:electrical_platinum_ingot',
+        C: 'superpackutils:compressed_steel_ingot',
+        P: '#forge:plates/iron'
     }),
 
     //Teleportation Core
@@ -328,7 +404,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'mekanism:steel_casing'})
     event.shaped('mekanism:steel_casing', ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/steel',
-        C: '#immersiveengineering:scaffoldings/steel',
+        C: 'superpackutils:electrical_platinum_ingot',
         B: 'tconstruct:slimesteel_ingot',
         I: 'superpackutils:bio_plastic'
     }),
@@ -339,7 +415,7 @@ events.listen('recipes', function (event) {
         S: '#forge:sheetmetals/steel',
         C: 'create:furnace_engine',
         B: 'create:brass_casing',
-        I: 'mekanism:energy_tablet'
+        I: 'createaddition:capacitor'
     }),
 
     //Enrichment Chamber
@@ -605,12 +681,56 @@ events.listen('recipes', function (event) {
           "item": "minecraft:cobblestone_slab"
         },
         "B": {
-          "item": "astralsorcery:rock_crystal"
-        }
+          "type": "astralsorcery:crystal",
+          "hasToBeAttuned": false,
+          "hasToBeCelestial": false,
+          "canBeAttuned": true,
+          "canBeCelestialCrystal": true
+        },
       },
       "output": [
         {
           "item": "botania:apothecary_default",
+          "count": 1
+        }
+      ],
+      "effects": [
+        "astralsorcery:built_in_effect_discovery_central_beam"
+      ]
+    })
+
+    //Runic Altar
+    event.remove({output: 'botania:runic_altar'})
+    event.custom({
+      "type": "astralsorcery:altar",
+      "altar_type": 0,
+      "duration": 40,
+      "starlight": 100,
+      "pattern": [
+        "_____",
+        "_____",
+        "_BAB_",
+        "_BCB_",
+        "_____"
+      ],
+      "key": {
+        "A": {
+          "item": "botania:mana_diamond"
+        },
+        "C": {
+          "type": "astralsorcery:crystal",
+          "hasToBeAttuned": false,
+          "hasToBeCelestial": false,
+          "canBeAttuned": true,
+          "canBeCelestialCrystal": true
+        },
+        "B": {
+          "item": "botania:livingrock"
+        }
+      },
+      "output": [
+        {
+          "item": "botania:runic_altar",
           "count": 1
         }
       ],
@@ -627,6 +747,22 @@ events.listen('recipes', function (event) {
         L: '#botania:livingwood'
     }),
 
+    //Mana Lens
+    event.remove({output: 'botania:lens_normal'})
+    event.shaped('botania:lens_normal', [' F ', 'FIF', ' F '], {
+        F: 'botania:manasteel_ingot',
+        I: 'astralsorcery:glass_lens'
+    }),
+
+    //Mana Spreader
+    event.remove({output: 'botania:mana_spreader'})
+    event.shaped('botania:mana_spreader', ['LGL', 'LCP', 'LGL'], {
+        P: '#botania:petals',
+        C: 'astralsorcery:rock_crystal',
+        G: 'botania:glimmering_livingwood',
+        L: '#botania:livingwood'
+    }),
+
     //Livingwood
     event.remove({id: 'botania:pure_daisy/livingwood'})
     event.custom({
@@ -638,7 +774,7 @@ events.listen('recipes', function (event) {
       "output": {
         "name": "botania:livingwood"
       }
-    })
+    }),
 
     //Livingrock
     event.remove({id: 'botania:pure_daisy/livingrock'})
@@ -814,7 +950,61 @@ events.listen('recipes', function (event) {
       },
       "starlight": 60
     })
-    
+
+    //Starlight Crafting
+    event.remove({id: 'astralsorcery:altar/altar_attunement'})
+    event.custom({
+      "type": "astralsorcery:altar",
+      "altar_type": 0,
+      "duration": 100,
+      "starlight": 700,
+      "pattern": [
+        "_____",
+        "_LAL_",
+        "_RBR",
+        "_LDL_",
+        "_____"
+      ],
+      "key": {
+        "A": {
+          "item": "astralsorcery:aquamarine"
+        },
+        "B": {
+          "type": "astralsorcery:crystal",
+          "hasToBeAttuned": false,
+          "hasToBeCelestial": false,
+          "canBeAttuned": true,
+          "canBeCelestialCrystal": true
+        },
+        "R": {
+          "item": "botania:livingrock"
+        },
+        "L": {
+          "item": "botania:livingwood"
+        },
+        "D": {
+          "type": "astralsorcery:fluid",
+          "fluid": [
+            {
+              "fluid": "astralsorcery:liquid_starlight",
+              "amount": 1000
+            }
+          ]
+        }
+      },
+      "recipe_class": "astralsorcery:attunement_upgrade",
+      "output": [
+        {
+          "item": "astralsorcery:altar_attunement",
+          "count": 1
+        }
+      ],
+      "effects": [
+        "astralsorcery:built_in_effect_discovery_central_beam",
+        "astralsorcery:upgrade_altar"
+      ]
+    })
+
     //-----------------------------------------------------
     //PneumaticCraft
     //-----------------------------------------------------

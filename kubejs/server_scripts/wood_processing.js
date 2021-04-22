@@ -1,10 +1,6 @@
 onEvent('recipes', event => {
     function wood(isModded, logType, modName, woodName, logItem, logStrippedItem, plankItem, stairItem, slabItem, fenceItem, gateItem, doorItem, trapdoorItem, pPlateItem, bookshelfItem, craftingTableItem, boatItem, vertPlankItem) {
 
-    //Manual
-    event.remove({ output: 'ars_nouveau:archwood_planks', type: 'minecraft:crafting_shapeless'});
-    event.shapeless(item.of('ars_nouveau:archwood_planks', 2), ['#forge:logs/archwood'])
-
     //Stick
     event.remove({ output: 'mekanism:sawdust', type: 'mekanism:sawing'});
 
@@ -54,11 +50,11 @@ onEvent('recipes', event => {
     if (logStrippedItem !== null && plankItem !== null && logItem !== null) {
 
         //Create Sawmill
-        event.recipes.create.cutting(logStrippedItem, `#${modName}:${woodName}_${logType}s`)
+        event.recipes.create.cutting(logStrippedItem, logItem)
         event.recipes.create.cutting(Item.of(plankItem, 4), logStrippedItem)
 
         //IE Sawmill
-        event.recipes.immersiveengineering.sawmill(Item.of(plankItem, 5), `#${modName}:${woodName}_${logType}s`, [{stripping: true, output: 'thermal:sawdust'}, {stripping: false, output: 'thermal:sawdust'}], logStrippedItem)
+        event.recipes.immersiveengineering.sawmill(Item.of(plankItem, 5), logItem, [{stripping: true, output: 'thermal:sawdust'}, {stripping: false, output: 'thermal:sawdust'}], logStrippedItem)
         
     }
 

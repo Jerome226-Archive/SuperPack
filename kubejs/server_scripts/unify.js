@@ -2,7 +2,7 @@
 
 onEvent('recipes', event => {
 
-  function unifyOre(isGem, nameUnify, oreItem, ingotItem, dustItem, dirtyDustItem, blockItem, nuggetItem, coinItem, gearItem, plateItem, crushedItem, rodItem, wireItem, moltenFluid, castingBlockTime, castingIngotTime, castingNuggetTime, crusherBonus, oreDoublingOutput, oreDoublingBonus) {
+  function unifyOre(isGem, nameUnify, oreItem, ingotItem, dustItem, dirtyDustItem, blockItem, nuggetItem, coinItem, gearItem, plateItem, crushedItem, rodItem, wireItem, moltenFluid, castingBlockTime, castingIngotTime, castingNuggetTime, crusherBonusChance, crusherBonus, oreDoublingOutput, oreDoublingBonus) {
   
   //-----------------------------------------------------
   //unifyOre Ingot
@@ -28,6 +28,9 @@ onEvent('recipes', event => {
     event.remove({id: `thermal:machine/smelter/smelter_alloy_${nameUnify}`})
     event.remove({id: `thermal:compat/create/smelter_create_alloy_${nameUnify}`})
     event.remove({id: `thermal:compat/tconstruct/smelter_alloy_tconstruct_${nameUnify}_ingot`})
+
+    //Blast Chiller
+    event.remove({id: `thermal:compat/tconstruct/chiller_tconstruct_${nameUnify}_ingot`});
   
   }
 
@@ -120,6 +123,27 @@ onEvent('recipes', event => {
       "cooling_time": castingIngotTime
   })
 
+  //Thermal Chiller
+  event.custom({
+    "type": "thermal:chiller",
+    "input": [
+      {
+        "fluid": moltenFluid,
+        "amount": 144
+      },
+      {
+        "item": "thermal:chiller_ingot_cast"
+      }
+    ],
+    "result": [
+      {
+        "item": ingotItem,
+        "count": 1
+      }
+    ],
+    "energy": 5000
+  })
+
   }
 
   //Manual Recipe
@@ -193,6 +217,8 @@ onEvent('recipes', event => {
   //Manual Recipe
   event.replaceOutput({}, 'iceandfire:copper_nugget', 'thermal:copper_nugget')
   event.replaceOutput({}, 'iceandfire:silver_nugget', 'thermal:silver_nugget')
+  event.replaceOutput({}, 'immersiveengineering:nugget_steel', 'mekanism:nugget_steel')
+
 
   //-----------------------------------------------------
   //unifyOre Block
@@ -323,10 +349,10 @@ onEvent('recipes', event => {
   if (oreItem !== null && crushedItem !== null && oreItem !== null && isGem == false) {
 
   //Create Crusher
-  event.recipes.create.crushing([Item.of(crushedItem), Item.of(dustItem).withChance(0.30), Item.of('minecraft:cobblestone').withChance(0.35)], oreItem, 350)
+  event.recipes.create.crushing([Item.of(crushedItem), Item.of(dustItem).withChance(0.15), Item.of('minecraft:cobblestone').withChance(0.35)], oreItem, 350)
 
   //IE Crusher
-  event.recipes.immersiveengineering.crusher(Item.of(dustItem, 2), crushedItem, Item.of(crusherBonus).withChance(0.15))
+  event.recipes.immersiveengineering.crusher(Item.of(dustItem, 2), crushedItem, Item.of(crusherBonus).withChance(crusherBonusChance))
 
   }
 
@@ -348,6 +374,40 @@ onEvent('recipes', event => {
   //Create Press
   event.remove({ output: `#forge:plates/${nameUnify}`, type: 'create:pressing'});
   event.recipes.create.pressing(plateItem, ingotItem)
+
+  }
+
+  if (plateItem !== null && moltenFluid !== null && isGem == false) {
+
+  //Tinker's Casting
+  event.remove({id: `tconstruct:smeltery/casting/metal/${nameUnify}/plate_gold_cast`})
+  event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "item": "tconstruct:plate_cast"
+      },
+      "fluid": {
+        "name": moltenFluid,
+        "amount": 144
+      },
+      "result": plateItem,
+      "cooling_time": castingIngotTime
+  })
+
+  event.remove({id: `tconstruct:smeltery/casting/metal/${nameUnify}/plate_sand_cast`})
+  event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "tag": "tconstruct:casts/single_use/plate"
+      },
+      "cast_consumed": true,
+      "fluid": {
+        "name": moltenFluid,
+        "amount": 144
+      },
+      "result": plateItem,
+      "cooling_time": castingIngotTime
+  })
 
   }
 
@@ -392,6 +452,31 @@ onEvent('recipes', event => {
 
   }
 
+  if (rodItem !== null && moltenFluid !== null) {
+
+  //Thermal Chiller
+  event.custom({
+    "type": "thermal:chiller",
+    "input": [
+      {
+        "fluid": moltenFluid,
+        "amount": 72
+      },
+      {
+        "item": "thermal:chiller_rod_cast"
+      }
+    ],
+    "result": [
+      {
+        "item": rodItem,
+        "count": 1
+      }
+    ],
+    "energy": 5000
+  })
+
+  }
+
   //-----------------------------------------------------
   //unifyOre Wire
   //-----------------------------------------------------
@@ -421,43 +506,43 @@ onEvent('recipes', event => {
 
   }
 
-  unifyOre(false, 'iron', 'minecraft:iron_ore', 'minecraft:iron_ingot', 'thermal:iron_dust', 'mekanism:dirty_dust_iron', 'minecraft:iron_block', 'minecraft:iron_nugget', 'thermal:iron_coin', 'thermal:iron_gear', 'thermal:iron_plate', 'create:crushed_iron_ore', 'immersiveengineering:stick_iron', 'createaddition:iron_wire', 'tconstruct:molten_iron', 180, 60, 20, 'thermal:nickel_dust', 2, null);
-  unifyOre(false, 'gold', 'minecraft:gold_ore', 'minecraft:gold_ingot', 'thermal:gold_dust', 'mekanism:dirty_dust_gold', 'minecraft:gold_block', 'minecraft:gold_nugget', 'thermal:gold_coin', 'thermal:gold_gear', 'thermal:gold_plate', 'create:crushed_gold_ore', 'createaddition:gold_rod', 'createaddition:gold_wire', 'tconstruct:molten_gold', 171, 57, 19, 'superpackutils:platinum_dust', 2, null);    
-  unifyOre(false, 'copper', 'thermal:copper_ore', 'thermal:copper_ingot', 'thermal:copper_dust', 'mekanism:dirty_dust_copper', 'thermal:copper_block', 'thermal:copper_nugget', 'thermal:copper_coin', 'thermal:copper_gear', 'thermal:copper_plate', 'create:crushed_copper_ore', 'createaddition:copper_rod', 'immersiveengineering:wire_copper', 'tconstruct:molten_copper', 150, 50, 17, 'thermal:gold_dust', 2, null);
-  unifyOre(false, 'tin', 'thermal:tin_ore', 'thermal:tin_ingot', 'thermal:tin_dust', 'mekanism:dirty_dust_tin', 'thermal:tin_block', 'thermal:tin_nugget', 'thermal:tin_coin', 'thermal:tin_gear', 'thermal:tin_plate', 'create:crushed_tin_ore', null, null, 'tconstruct:molten_tin', 117, 39, 13, 'thermal:iron_dust', 2, null);
-  unifyOre(false, 'lead', 'thermal:lead_ore', 'thermal:lead_ingot', 'thermal:lead_dust', 'mekanism:dirty_dust_lead', 'thermal:lead_block', 'thermal:lead_nugget', 'thermal:lead_coin', 'thermal:lead_gear', 'thermal:lead_plate', 'create:crushed_lead_ore', null, null, 'tconstruct:molten_lead', 130, 43, 14, 'thermal:silver_dust', 2, null);
-  unifyOre(false, 'silver', 'thermal:silver_ore', 'thermal:silver_ingot', 'thermal:silver_dust', null, 'thermal:silver_block', 'thermal:silver_nugget', 'thermal:silver_coin', 'thermal:silver_gear', 'thermal:silver_plate', 'create:crushed_silver_ore', null, null, 'tconstruct:molten_silver', 179, 60, 20, 'thermal:lead_dust', 2, null);
-  unifyOre(false, 'nickel', 'thermal:nickel_ore', 'thermal:nickel_ingot', 'thermal:nickel_dust', null, 'thermal:nickel_block', 'thermal:nickel_nugget', 'thermal:nickel_coin', 'thermal:nickel_gear', 'thermal:nickel_plate', 'create:crushed_nickel_ore', null, null, 'tconstruct:molten_nickel', 194, 65, 22, 'thermal:iron_dust', 2, null);
-  unifyOre(false, 'uranium', 'mekanism:uranium_ore', 'mekanism:ingot_uranium', 'mekanism:dust_uranium', 'mekanism:dirty_dust_uranium', 'mekanism:block_uranium', 'mekanism:nugget_uranium', null, 'superpackutils:uranium_gear', 'immersiveengineering:plate_uranium', 'create:crushed_uranium_ore', null, null, 'tconstruct:molten_uranium', 183, 61, 20, 'thermal:iron_dust', 2, null);
-  unifyOre(false, 'aluminum', 'immersiveengineering:ore_aluminum', 'immersiveengineering:ingot_aluminum', 'immersiveengineering:dust_aluminum', null, 'immersiveengineering:storage_aluminum', 'immersiveengineering:nugget_aluminum', null, 'superpackutils:aluminium_gear', 'immersiveengineering:plate_aluminum', 'create:crushed_aluminum_ore', 'immersiveengineering:stick_aluminum', 'immersiveengineering:wire_aluminum', 'tconstruct:molten_aluminum', 141, 47, 16, 'thermal:iron_dust', 2, null);
-  unifyOre(false, 'osmium', 'mekanism:osmium_ore', 'mekanism:ingot_osmium', 'mekanism:dust_osmium', 'mekanism:dirty_dust_osmium', 'mekanism:block_osmium', 'mekanism:nugget_osmium', null, 'superpackutils:osmium_gear', null, 'create:crushed_osmium_ore', null, null, 'tconstruct:molten_osmium', 233, 78, 26, 'superpackutils:depleted_mythril_dust', 2, null);
-  unifyOre(false, 'zinc', 'create:zinc_ore', 'create:zinc_ingot', 'superpackutils:zinc_dust', null, 'create:zinc_block', 'create:zinc_nugget', null, null, 'createaddition:zinc_sheet', 'create:crushed_zinc_ore', null, null, 'tconstruct:molten_zinc', 141, 47, 16, 'ftbquests:missing_item', 2, null);
-  unifyOre(false, 'electrum', null, 'thermal:electrum_ingot', 'thermal:electrum_dust', null, 'thermal:electrum_block', 'thermal:electrum_nugget', 'thermal:electrum_coin', 'thermal:electrum_gear', 'thermal:electrum_plate', null, null, 'immersiveengineering:wire_electrum', 'tconstruct:molten_electrum', 177, 59, 20, null, 2, null);
-  unifyOre(false, 'constantan', null, 'thermal:constantan_ingot', 'thermal:constantan_dust', null, 'thermal:constantan_block', 'thermal:constantan_nugget', 'thermal:constantan_coin', 'thermal:constantan_gear', 'thermal:constantan_plate', null, null, null, 'tconstruct:molten_constantan', 192, 64, 21, null, 2, null);
-  unifyOre(false, 'invar', null, 'thermal:invar_ingot', 'thermal:invar_dust', null, 'thermal:invar_block', 'thermal:invar_nugget', 'thermal:invar_coin', 'thermal:invar_gear', 'thermal:invar_plate', null, null, null, 'tconstruct:molten_invar', 190, 63, 21, null, 2, null);
-  unifyOre(false, 'bronze', null, 'thermal:bronze_ingot', 'thermal:bronze_dust', null, 'thermal:bronze_block', 'thermal:bronze_nugget', 'thermal:bronze_coin', 'thermal:bronze_gear', 'thermal:bronze_plate', null, null, null, 'tconstruct:molten_bronze', 171, 57, 19, null, 2, null);
-  unifyOre(false, 'steel', null, 'mekanism:ingot_steel', 'mekanism:dust_steel', null, 'mekanism:block_steel', 'mekanism:nugget_steel', null, 'superpackutils:steel_gear', 'immersiveengineering:plate_steel', null, 'immersiveengineering:stick_steel', 'immersiveengineering:wire_steel', 'tconstruct:molten_steel', 217, 72, 24, null, 2, null);
-  unifyOre(false, 'platinum', null, 'superpackutils:platinum_ingot', 'superpackutils:platinum_dust', null, 'superpackutils:platinum_block', 'superpackutils:platinum_nugget', null, null, null, null, null, null, 'tconstruct:molten_platinum', 196, 65, 22, null, 2, null);
-  unifyOre(false, 'enderium', null, 'thermal:enderium_ingot', 'thermal:enderium_dust', null, 'thermal:enderium_block', 'thermal:enderium_nugget', 'thermal:enderium_coin', 'thermal:enderium_gear', 'thermal:enderium_plate', null, null, null, null, 0, 0, 0, null, 2, null);
-  unifyOre(false, 'signalum', null, 'thermal:signalum_ingot', 'thermal:signalum_dust', null, 'thermal:signalum_block', 'thermal:signalum_nugget', 'thermal:signalum_coin', 'thermal:signalum_gear', 'thermal:signalum_plate', null, null, null, null, 0, 0, 0, null, 2, null);
-  unifyOre(false, 'lumium', null, 'thermal:lumium_ingot', 'thermal:lumium_dust', null, 'thermal:lumium_block', 'thermal:lumium_nugget', 'thermal:lumium_coin', 'thermal:lumium_gear', 'thermal:lumium_plate', null, null, null, null, 0, 0, 0, null, 2, null);
-  unifyOre(false, 'cobalt', 'tconstruct:cobalt_ore', 'tconstruct:cobalt_ingot', null, null, 'tconstruct:cobalt_block', 'tconstruct:cobalt_nugget', null, null, null, null, null, null, 'tconstruct:molten_cobalt', 194, 65, 22, null, 2, null);  
-  unifyOre(false, 'rose_gold', null, 'tconstruct:rose_gold_ingot', null, null, 'tconstruct:rose_gold_block', 'tconstruct:rose_gold_nugget', null, null, null, null, null, null, 'tconstruct:molten_rose_gold', 155, 52, 17, null, 2, null);
-  unifyOre(false, 'pig_iron', null, 'tconstruct:pig_iron_ingot', null, null, 'tconstruct:pig_iron_block', 'tconstruct:pig_iron_nugget', null, null, null, null, null, null, 'tconstruct:molten_pig_iron', 181, 60, 20, null, 2, null);
-  unifyOre(false, 'silicon_bronze', null, 'tconstruct:tinkers_bronze_ingot', null, null, 'tconstruct:tinkers_bronze_block', 'tconstruct:tinkers_bronze_nugget', null, null, null, null, null, null, 'tconstruct:molten_tinkers_bronze', 171, 57, 19, null, 2, null);
-  unifyOre(false, 'slimesteel', null, 'tconstruct:slimesteel_ingot', null, null, 'tconstruct:slimesteel_block', 'tconstruct:slimesteel_nugget', null, null, null, null, null, null, 'tconstruct:molten_slimesteel', 190, 63, 21, null, 2, null);
-  unifyOre(false, 'queens_slime', null, 'tconstruct:queens_slime_ingot', null, null, 'tconstruct:queens_slime_block', 'tconstruct:queens_slime_nugget', null, null, null, null, null, null, 'tconstruct:molten_queens_slime', 212, 71, 24, null, 2, null);
-  unifyOre(false, 'manyullyn', null, 'tconstruct:manyullyn_ingot', null, null, 'tconstruct:manyullyn_block', 'tconstruct:manyullyn_nugget', null, null, null, null, null, null, 'tconstruct:molten_manyullyn', 216, 72, 24, null, 2, null);
-  unifyOre(false, 'hepatizon', null, 'tconstruct:hepatizon_ingot', null, null, 'tconstruct:hepatizon_block', 'tconstruct:hepatizon_nugget', null, null, null, null, null, null, 'tconstruct:molten_hepatizon', 233, 78, 26, null, 2, null);
-  unifyOre(false, 'brass', null, 'create:brass_ingot', null, null, 'create:brass_block', 'create:brass_nugget', null, null, 'create:brass_sheet', 'create:crushed_brass', 'createaddition:brass_rod', null, 'tconstruct:molten_brass', 233, 78, 26, null, 2, null);
-  unifyOre(false, 'netherite', null, 'minecraft:netherite_ingot', 'mekanism:dust_netherite', null, 'minecraft:netherite_block', 'tconstruct:netherite_nugget', null, null, null, null, null, null, 'tconstruct:molten_netherite', 221, 74, 25, null, 2, null);
+  unifyOre(false, 'iron', 'minecraft:iron_ore', 'minecraft:iron_ingot', 'thermal:iron_dust', 'mekanism:dirty_dust_iron', 'minecraft:iron_block', 'minecraft:iron_nugget', 'thermal:iron_coin', 'thermal:iron_gear', 'thermal:iron_plate', 'create:crushed_iron_ore', 'immersiveengineering:stick_iron', 'createaddition:iron_wire', 'tconstruct:molten_iron', 180, 60, 20, 0.15, 'thermal:nickel_dust', 2, null);
+  unifyOre(false, 'gold', 'minecraft:gold_ore', 'minecraft:gold_ingot', 'thermal:gold_dust', 'mekanism:dirty_dust_gold', 'minecraft:gold_block', 'minecraft:gold_nugget', 'thermal:gold_coin', 'thermal:gold_gear', 'thermal:gold_plate', 'create:crushed_gold_ore', 'createaddition:gold_rod', 'createaddition:gold_wire', 'tconstruct:molten_gold', 171, 57, 19, 0.30, 'superpackutils:platinum_dust', 2, null);    
+  unifyOre(false, 'copper', 'thermal:copper_ore', 'thermal:copper_ingot', 'thermal:copper_dust', 'mekanism:dirty_dust_copper', 'thermal:copper_block', 'thermal:copper_nugget', 'thermal:copper_coin', 'thermal:copper_gear', 'thermal:copper_plate', 'create:crushed_copper_ore', 'createaddition:copper_rod', 'immersiveengineering:wire_copper', 'tconstruct:molten_copper', 150, 50, 17, 0.15, 'thermal:gold_dust', 2, null);
+  unifyOre(false, 'tin', 'thermal:tin_ore', 'thermal:tin_ingot', 'thermal:tin_dust', 'mekanism:dirty_dust_tin', 'thermal:tin_block', 'thermal:tin_nugget', 'thermal:tin_coin', 'thermal:tin_gear', 'thermal:tin_plate', 'create:crushed_tin_ore', null, null, 'tconstruct:molten_tin', 117, 39, 13, 0.15, 'thermal:iron_dust', 2, null);
+  unifyOre(false, 'lead', 'thermal:lead_ore', 'thermal:lead_ingot', 'thermal:lead_dust', 'mekanism:dirty_dust_lead', 'thermal:lead_block', 'thermal:lead_nugget', 'thermal:lead_coin', 'thermal:lead_gear', 'thermal:lead_plate', 'create:crushed_lead_ore', null, null, 'tconstruct:molten_lead', 130, 43, 14, 0.15, 'thermal:silver_dust', 2, null);
+  unifyOre(false, 'silver', 'thermal:silver_ore', 'thermal:silver_ingot', 'thermal:silver_dust', null, 'thermal:silver_block', 'thermal:silver_nugget', 'thermal:silver_coin', 'thermal:silver_gear', 'thermal:silver_plate', 'create:crushed_silver_ore', null, null, 'tconstruct:molten_silver', 179, 60, 20, 0.15, 'thermal:lead_dust', 2, null);
+  unifyOre(false, 'nickel', 'thermal:nickel_ore', 'thermal:nickel_ingot', 'thermal:nickel_dust', null, 'thermal:nickel_block', 'thermal:nickel_nugget', 'thermal:nickel_coin', 'thermal:nickel_gear', 'thermal:nickel_plate', 'create:crushed_nickel_ore', null, null, 'tconstruct:molten_nickel', 194, 65, 22, 0.15, 'thermal:iron_dust', 2, null);
+  unifyOre(false, 'uranium', 'mekanism:uranium_ore', 'mekanism:ingot_uranium', 'mekanism:dust_uranium', 'mekanism:dirty_dust_uranium', 'mekanism:block_uranium', 'mekanism:nugget_uranium', null, 'superpackutils:uranium_gear', 'immersiveengineering:plate_uranium', 'create:crushed_uranium_ore', null, null, 'tconstruct:molten_uranium', 183, 61, 20, 0.15, 'thermal:iron_dust', 2, null);
+  unifyOre(false, 'aluminum', 'immersiveengineering:ore_aluminum', 'immersiveengineering:ingot_aluminum', 'immersiveengineering:dust_aluminum', null, 'immersiveengineering:storage_aluminum', 'immersiveengineering:nugget_aluminum', null, 'superpackutils:aluminium_gear', 'immersiveengineering:plate_aluminum', 'create:crushed_aluminum_ore', 'immersiveengineering:stick_aluminum', 'immersiveengineering:wire_aluminum', 'tconstruct:molten_aluminum', 141, 47, 16, 0.15, 'thermal:iron_dust', 2, null);
+  unifyOre(false, 'osmium', 'mekanism:osmium_ore', 'mekanism:ingot_osmium', 'mekanism:dust_osmium', 'mekanism:dirty_dust_osmium', 'mekanism:block_osmium', 'mekanism:nugget_osmium', null, 'superpackutils:osmium_gear', null, 'create:crushed_osmium_ore', null, null, 'tconstruct:molten_osmium', 233, 78, 26, 15, 'superpackutils:depleted_mythril_dust', 2, null);
+  unifyOre(false, 'zinc', 'create:zinc_ore', 'create:zinc_ingot', 'superpackutils:zinc_dust', null, 'create:zinc_block', 'create:zinc_nugget', null, null, 'createaddition:zinc_sheet', 'create:crushed_zinc_ore', null, null, 'tconstruct:molten_zinc', 141, 47, 16, 0.15, 'ftbquests:missing_item', 2, null);
+  unifyOre(false, 'electrum', null, 'thermal:electrum_ingot', 'thermal:electrum_dust', null, 'thermal:electrum_block', 'thermal:electrum_nugget', 'thermal:electrum_coin', 'thermal:electrum_gear', 'thermal:electrum_plate', null, null, 'immersiveengineering:wire_electrum', 'tconstruct:molten_electrum', 177, 59, 20, 0.15, null, 2, null);
+  unifyOre(false, 'constantan', null, 'thermal:constantan_ingot', 'thermal:constantan_dust', null, 'thermal:constantan_block', 'thermal:constantan_nugget', 'thermal:constantan_coin', 'thermal:constantan_gear', 'thermal:constantan_plate', null, null, null, 'tconstruct:molten_constantan', 192, 64, 21, 0.15, null, 2, null);
+  unifyOre(false, 'invar', null, 'thermal:invar_ingot', 'thermal:invar_dust', null, 'thermal:invar_block', 'thermal:invar_nugget', 'thermal:invar_coin', 'thermal:invar_gear', 'thermal:invar_plate', null, null, null, 'tconstruct:molten_invar', 190, 63, 21, 0.15, null, 2, null);
+  unifyOre(false, 'bronze', null, 'thermal:bronze_ingot', 'thermal:bronze_dust', null, 'thermal:bronze_block', 'thermal:bronze_nugget', 'thermal:bronze_coin', 'thermal:bronze_gear', 'thermal:bronze_plate', null, null, null, 'tconstruct:molten_bronze', 171, 57, 19, 0.15, null, 2, null);
+  unifyOre(false, 'steel', null, 'mekanism:ingot_steel', 'mekanism:dust_steel', null, 'mekanism:block_steel', 'mekanism:nugget_steel', null, 'superpackutils:steel_gear', 'immersiveengineering:plate_steel', null, 'immersiveengineering:stick_steel', 'immersiveengineering:wire_steel', 'tconstruct:molten_steel', 217, 72, 24, 0.15, null, 2, null);
+  unifyOre(false, 'platinum', null, 'superpackutils:platinum_ingot', 'superpackutils:platinum_dust', null, 'superpackutils:platinum_block', 'superpackutils:platinum_nugget', null, null, null, null, null, null, 'tconstruct:molten_platinum', 196, 65, 22, 0, null, 2, null);
+  unifyOre(false, 'enderium', null, 'thermal:enderium_ingot', 'thermal:enderium_dust', null, 'thermal:enderium_block', 'thermal:enderium_nugget', 'thermal:enderium_coin', 'thermal:enderium_gear', 'thermal:enderium_plate', null, null, null, null, 0, 0, 0, 0, null, 2, null);
+  unifyOre(false, 'signalum', null, 'thermal:signalum_ingot', 'thermal:signalum_dust', null, 'thermal:signalum_block', 'thermal:signalum_nugget', 'thermal:signalum_coin', 'thermal:signalum_gear', 'thermal:signalum_plate', null, null, null, null, 0, 0, 0, 0, null, 2, null);
+  unifyOre(false, 'lumium', null, 'thermal:lumium_ingot', 'thermal:lumium_dust', null, 'thermal:lumium_block', 'thermal:lumium_nugget', 'thermal:lumium_coin', 'thermal:lumium_gear', 'thermal:lumium_plate', null, null, null, null, 0, 0, 0, 0, null, 2, null);
+  unifyOre(false, 'cobalt', 'tconstruct:cobalt_ore', 'tconstruct:cobalt_ingot', null, null, 'tconstruct:cobalt_block', 'tconstruct:cobalt_nugget', null, null, null, null, null, null, 'tconstruct:molten_cobalt', 194, 65, 22, 0, null, 2, null);  
+  unifyOre(false, 'rose_gold', null, 'tconstruct:rose_gold_ingot', null, null, 'tconstruct:rose_gold_block', 'tconstruct:rose_gold_nugget', null, null, null, null, null, null, 'tconstruct:molten_rose_gold', 155, 52, 17, 0, null, 2, null);
+  unifyOre(false, 'pig_iron', null, 'tconstruct:pig_iron_ingot', null, null, 'tconstruct:pig_iron_block', 'tconstruct:pig_iron_nugget', null, null, null, null, null, null, 'tconstruct:molten_pig_iron', 181, 60, 20, 0, null, 2, null);
+  unifyOre(false, 'silicon_bronze', null, 'tconstruct:tinkers_bronze_ingot', null, null, 'tconstruct:tinkers_bronze_block', 'tconstruct:tinkers_bronze_nugget', null, null, null, null, null, null, 'tconstruct:molten_tinkers_bronze', 171, 57, 19, 0, null, 2, null);
+  unifyOre(false, 'slimesteel', null, 'tconstruct:slimesteel_ingot', null, null, 'tconstruct:slimesteel_block', 'tconstruct:slimesteel_nugget', null, null, null, null, null, null, 'tconstruct:molten_slimesteel', 190, 63, 21, 0, null, 2, null);
+  unifyOre(false, 'queens_slime', null, 'tconstruct:queens_slime_ingot', null, null, 'tconstruct:queens_slime_block', 'tconstruct:queens_slime_nugget', null, null, null, null, null, null, 'tconstruct:molten_queens_slime', 212, 71, 24, 0, null, 2, null);
+  unifyOre(false, 'manyullyn', null, 'tconstruct:manyullyn_ingot', null, null, 'tconstruct:manyullyn_block', 'tconstruct:manyullyn_nugget', null, null, null, null, null, null, 'tconstruct:molten_manyullyn', 216, 72, 24, 0, null, 2, null);
+  unifyOre(false, 'hepatizon', null, 'tconstruct:hepatizon_ingot', null, null, 'tconstruct:hepatizon_block', 'tconstruct:hepatizon_nugget', null, null, null, null, null, null, 'tconstruct:molten_hepatizon', 233, 78, 26, 0, null, 2, null);
+  unifyOre(false, 'brass', null, 'create:brass_ingot', null, null, 'create:brass_block', 'create:brass_nugget', null, null, 'create:brass_sheet', 'create:crushed_brass', 'createaddition:brass_rod', null, 'tconstruct:molten_brass', 233, 78, 26, 0, null, 2, null);
+  unifyOre(false, 'netherite', null, 'minecraft:netherite_ingot', 'mekanism:dust_netherite', null, 'minecraft:netherite_block', 'tconstruct:netherite_nugget', null, null, null, null, null, null, 'tconstruct:molten_netherite', 221, 74, 25, 0, null, 2, null);
   
-  unifyOre(true, 'diamond', 'minecraft:diamond_ore', 'minecraft:diamond', 'thermal:diamond_dust', null, 'minecraft:diamond_block', null, null, 'thermal:diamond_gear', null, null, null, null, null, 0, 0, 0, null, 2, 1);
-  unifyOre(true, 'coal', 'minecraft:coal_ore', 'minecraft:coal', 'mekanism:dust_coal', null, 'minecraft:coal_block', null, null, null, null, null, null, null, null, 0, 0, 0, null, 2, 1);
-  unifyOre(true, 'coal_coke', null, 'thermal:coal_coke', 'immersiveengineering:dust_coke', null, 'thermal:coal_coke_block', null, null, null, null, null, null, null, null, 0, 0, 0, null, 2, 1);
-  unifyOre(true, 'charcoal', '#minecraft:logs_that_burn', 'minecraft:charcoal', 'mekanism:dust_charcoal', null, 'thermal:charcoal_block', null, null, null, null, null, null, null, null, 0, 0, 0, null, 2, 1);
-  unifyOre(true, 'emerald', 'minecraft:emerald_ore', 'minecraft:emerald', 'thermal:emerald_dust', null, 'minecraft:emerald_block', null, null, 'thermal:emerald_gear', null, null, null, null, null, 0, 0, 0, null, 2, 1);
-  unifyOre(true, 'lapis', 'minecraft:lapis_ore', 'minecraft:lapis_lazuli', 'thermal:lapis_dust', null, 'minecraft:lapis_block', null, null, 'thermal:lapis_gear', null, null, null, null, null, 0, 0, 0, null, 12, 8);
+  unifyOre(true, 'diamond', 'minecraft:diamond_ore', 'minecraft:diamond', 'thermal:diamond_dust', null, 'minecraft:diamond_block', null, null, 'thermal:diamond_gear', null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'coal', 'minecraft:coal_ore', 'minecraft:coal', 'mekanism:dust_coal', null, 'minecraft:coal_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'coal_coke', null, 'thermal:coal_coke', 'immersiveengineering:dust_coke', null, 'thermal:coal_coke_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'charcoal', '#minecraft:logs_that_burn', 'minecraft:charcoal', 'mekanism:dust_charcoal', null, 'thermal:charcoal_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'emerald', 'minecraft:emerald_ore', 'minecraft:emerald', 'thermal:emerald_dust', null, 'minecraft:emerald_block', null, null, 'thermal:emerald_gear', null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'lapis', 'minecraft:lapis_ore', 'minecraft:lapis_lazuli', 'thermal:lapis_dust', null, 'minecraft:lapis_block', null, null, 'thermal:lapis_gear', null, null, null, null, null, 0, 0, 0, 0, null, 12, 8);
   //unifyOre(true, 'certus_quartz', 'appliedenergistics2:quartz_ore', 'appliedenergistics2:certus_quartz_crystal', 'appliedenergistics2:certus_quartz_dust', null, 'appliedenergistics2:quartz_block', null, null, null, null, null, null, null, null, 0, 0, 0, null, 2, 1);
   //unifyOre(true, 'certus_quartz', 'appliedenergistics2:charged_quartz_ore', 'appliedenergistics2:charged_certus_quartz_crystal', 'appliedenergistics2:certus_quartz_dust', null, 'appliedenergistics2:quartz_block', null, null, null, null, null, null, null, null, 0, 0, 0, null, 2, 1);
 
