@@ -1,0 +1,10 @@
+{
+	id: "607D7E4325DF385A",
+	group: "349C1E75CB7A5A84",
+	order_index: 1,
+	filename: "tier_2_creepy_magic",
+	title: "Tier 2: Creepy Magic",
+	icon: "bloodmagic:weakbloodshard",
+	default_quest_shape: "",
+	quests: []
+}

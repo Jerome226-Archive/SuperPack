@@ -1,0 +1,423 @@
+{
+	id: "0479128E3D52E86A",
+	group: "1452F36931011CD8",
+	order_index: 0,
+	filename: "tier_1_rotational_power",
+	title: "Tier 1: Rotational Power",
+	icon: "create:large_cogwheel",
+	default_quest_shape: "",
+	quests: [
+		{
+			title: "Tier 1",
+			x: -0.5d,
+			y: 5.0d,
+			shape: "hexagon",
+			subtitle: "Welcome to the Tier 1 Tech quests!",
+			id: "0F62021D31E792EF",
+			tasks: [{
+				id: "638B31FEA7654E0A",
+				type: "item",
+				item: "immersiveengineering:treated_wood_horizontal"
+			}]
+		},
+		{
+			x: -0.5d,
+			y: -0.5d,
+			dependencies: ["3445CBB90C54C1F3"],
+			id: "43F2AF3B3909201A",
+			tasks: [{
+				id: "1674D1DE2EA354FE",
+				type: "item",
+				item: "create:andesite_casing"
+			}]
+		},
+		{
+			x: -1.5d,
+			y: 0.5d,
+			dependencies: ["3445CBB90C54C1F3"],
+			id: "179B4546D470BD1A",
+			tasks: [
+				{
+					id: "51D20F9CA31A13B6",
+					type: "item",
+					item: "create:cogwheel"
+				},
+				{
+					id: "686F20DC9B81FADB",
+					type: "item",
+					item: "create:large_cogwheel"
+				}
+			]
+		},
+		{
+			x: -0.5d,
+			y: 1.5d,
+			dependencies: ["0F62021D31E792EF"],
+			id: "3445CBB90C54C1F3",
+			tasks: [{
+				id: "1B754B5B29383152",
+				type: "item",
+				item: "create:andesite_alloy"
+			}]
+		},
+		{
+			x: 0.5d,
+			y: 0.5d,
+			dependencies: ["3445CBB90C54C1F3"],
+			id: "3CB675ED5395B441",
+			tasks: [{
+				id: "195EE3F0B0000D8C",
+				type: "item",
+				item: "create:shaft"
+			}]
+		},
+		{
+			x: -0.5d,
+			y: -3.5d,
+			dependencies: ["43F2AF3B3909201A"],
+			id: "2C214049E79CC74A",
+			tasks: [{
+				id: "66FD583F85698D5C",
+				type: "item",
+				item: "create:mechanical_press"
+			}]
+		},
+		{
+			x: 1.2857142857143202d,
+			y: -4.903061224489786d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "268888A821C73966",
+			tasks: [{
+				id: "3B8202F85CFF117D",
+				type: "item",
+				item: "create:mechanical_drill"
+			}]
+		},
+		{
+			x: 0.5d,
+			y: -5.5d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "6DCD03E99A9E3C1C",
+			tasks: [{
+				id: "604F9B97BA13E6FE",
+				type: "item",
+				item: "create:mechanical_saw"
+			}]
+		},
+		{
+			x: -1.5d,
+			y: -5.5d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "6557E740456313B7",
+			tasks: [{
+				id: "20C662FF7269C75A",
+				type: "item",
+				item: "create:mechanical_harvester"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: -4.0d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "2E74DA560DDDC91D",
+			tasks: [{
+				id: "361CC87157EAA5A6",
+				type: "item",
+				item: "create:mechanical_plough"
+			}]
+		},
+		{
+			x: 1.5d,
+			y: -4.0d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "6DFC18B8146D709D",
+			tasks: [{
+				id: "687A712C4A11ECC5",
+				type: "item",
+				item: "create:mechanical_mixer"
+			}]
+		},
+		{
+			x: 1.5d,
+			y: -3.0d,
+			dependencies: [
+				"7F3943424622371B",
+				"2C214049E79CC74A"
+			],
+			id: "047D68D5CD887601",
+			tasks: [{
+				id: "4D0571C8A8458969",
+				type: "item",
+				item: "create:blaze_burner"
+			}]
+		},
+		{
+			x: 1.0d,
+			y: -2.0d,
+			shape: "hexagon",
+			id: "7F3943424622371B",
+			tasks: [{
+				id: "0F62E01C69CCD8ED",
+				type: "dimension",
+				icon: "minecraft:crimson_nylium",
+				dimension: "minecraft:nether"
+			}]
+		},
+		{
+			x: 4.5d,
+			y: -3.5d,
+			dependencies: [
+				"047D68D5CD887601",
+				"6DFC18B8146D709D"
+			],
+			id: "4A4A59B1E12A5285",
+			tasks: [{
+				id: "6A0A6431EC9FC0E4",
+				type: "item",
+				item: "create:brass_ingot"
+			}]
+		},
+		{
+			x: 4.5d,
+			y: -2.5d,
+			dependencies: [
+				"6DFC18B8146D709D",
+				"047D68D5CD887601"
+			],
+			id: "7C77EC8E620D4A5B",
+			tasks: [{
+				id: "27341AB50FC1DB3B",
+				type: "item",
+				item: "thermal:bronze_ingot"
+			}]
+		},
+		{
+			x: 4.5d,
+			y: -4.5d,
+			dependencies: [
+				"6DFC18B8146D709D",
+				"047D68D5CD887601"
+			],
+			id: "7A2A4C870E3DBCFA",
+			tasks: [{
+				id: "3A11B817ECEB8A22",
+				type: "item",
+				item: "thermal:invar_ingot"
+			}]
+		},
+		{
+			x: 4.5d,
+			y: -1.5d,
+			dependencies: [
+				"6DFC18B8146D709D",
+				"047D68D5CD887601"
+			],
+			id: "173342CECB968473",
+			tasks: [{
+				id: "419AE67369A8122F",
+				type: "item",
+				item: "thermal:constantan_ingot"
+			}]
+		},
+		{
+			x: 4.5d,
+			y: -5.5d,
+			dependencies: [
+				"6DFC18B8146D709D",
+				"047D68D5CD887601"
+			],
+			id: "66574E991D929702",
+			tasks: [{
+				id: "75CEB4C911477C3E",
+				type: "item",
+				item: "thermal:electrum_ingot"
+			}]
+		},
+		{
+			x: 1.0d,
+			y: -0.5d,
+			dependencies: ["43F2AF3B3909201A"],
+			id: "78B8BE4B94828F5E",
+			tasks: [{
+				id: "66622172F7A15BC1",
+				type: "item",
+				item: "create:depot"
+			}]
+		},
+		{
+			x: -2.1428571428571317d,
+			y: -4.846938775510203d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "308D9E4382718441",
+			tasks: [{
+				id: "225BCACAD0577DE1",
+				type: "item",
+				item: "create:encased_fan"
+			}]
+		},
+		{
+			x: 6.0d,
+			y: -3.5d,
+			dependencies: ["4A4A59B1E12A5285"],
+			id: "72A2ED01F231B66F",
+			tasks: [{
+				id: "01D047B27DEBA045",
+				type: "item",
+				item: "create:brass_casing"
+			}]
+		},
+		{
+			x: -2.0d,
+			y: -2.0d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "1DF222E4F2E47869",
+			tasks: [{
+				id: "45256DFEE093CFD4",
+				type: "item",
+				item: "create:chute"
+			}]
+		},
+		{
+			x: -0.5102040816326436d,
+			y: -5.846938775510203d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "091EA885EFE53713",
+			tasks: [{
+				id: "5A02A49E699C39B6",
+				type: "item",
+				item: "create:copper_casing"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: -3.0d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "19169420B6DE377D",
+			tasks: [{
+				id: "687133E6285C495D",
+				type: "item",
+				item: "createaddition:rolling_mill"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: 1.0d,
+			id: "150DE3B401D8C17B",
+			tasks: [{
+				id: "5269B500DCC2622F",
+				type: "item",
+				item: "create:belt_connector"
+			}]
+		},
+		{
+			x: -2.0d,
+			y: -0.5d,
+			dependencies: ["43F2AF3B3909201A"],
+			id: "1982B28891419A97",
+			tasks: [{
+				id: "61E4777381511288",
+				type: "item",
+				item: "create:basin"
+			}]
+		},
+		{
+			x: -0.5d,
+			y: -8.5d,
+			dependencies: ["091EA885EFE53713"],
+			id: "58EF5F2C1824125E",
+			tasks: [{
+				id: "4F28D36AB3F4B715",
+				type: "item",
+				item: "create:item_drain"
+			}]
+		},
+		{
+			x: 1.0d,
+			y: -8.0d,
+			dependencies: ["091EA885EFE53713"],
+			id: "70999D85ED97D8A2",
+			tasks: [{
+				id: "4325A0B723047F2E",
+				type: "item",
+				item: "create:hose_pulley"
+			}]
+		},
+		{
+			x: -2.0d,
+			y: -8.0d,
+			dependencies: ["091EA885EFE53713"],
+			id: "0754AAE459AE7AFA",
+			tasks: [{
+				id: "61688EEEB6FD9B64",
+				type: "item",
+				item: "create:fluid_pipe"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: -6.5d,
+			dependencies: ["091EA885EFE53713"],
+			id: "66A1A70B49988B48",
+			tasks: [{
+				id: "6B4C2DF937F70FFB",
+				type: "item",
+				item: "create:smart_fluid_pipe"
+			}]
+		},
+		{
+			x: 1.5d,
+			y: -6.5d,
+			dependencies: ["091EA885EFE53713"],
+			id: "7534D7C46C54A851",
+			tasks: [{
+				id: "68788895BA2D1767",
+				type: "item",
+				item: "create:mechanical_pump"
+			}]
+		},
+		{
+			x: 2.0d,
+			y: -7.5d,
+			dependencies: ["091EA885EFE53713"],
+			id: "55346778B5866C02",
+			tasks: [{
+				id: "5884238BAEF2AEC5",
+				type: "item",
+				item: "create:portable_fluid_interface"
+			}]
+		},
+		{
+			x: -3.0d,
+			y: -7.5d,
+			dependencies: ["091EA885EFE53713"],
+			id: "54B7EC9FD13883AC",
+			tasks: [{
+				id: "1032F9030DE092AB",
+				type: "item",
+				item: "create:spout"
+			}]
+		},
+		{
+			x: -1.5d,
+			y: -9.0d,
+			dependencies: ["091EA885EFE53713"],
+			id: "19A3A6642FCBC985",
+			tasks: [{
+				id: "3810D1FA3D390165",
+				type: "item",
+				item: "create:fluid_tank"
+			}]
+		},
+		{
+			x: 0.5d,
+			y: -9.0d,
+			dependencies: ["091EA885EFE53713"],
+			id: "2A5D538A452FD56C",
+			tasks: [{
+				id: "0CDF02D7BB7D103B",
+				type: "item",
+				item: "create:fluid_valve"
+			}]
+		}
+	]
+}

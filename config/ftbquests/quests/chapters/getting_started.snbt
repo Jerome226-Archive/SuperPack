@@ -1,0 +1,261 @@
+{
+	id: "59433FC4D8039A92",
+	group: "",
+	order_index: 0,
+	filename: "getting_started",
+	title: "Getting Started",
+	icon: "biomesoplenty:bop_icon",
+	default_quest_shape: "",
+	quests: [
+		{
+			title: "Welcome!",
+			icon: "biomesoplenty:bop_icon",
+			x: 1.0d,
+			y: 2.0d,
+			shape: "hexagon",
+			subtitle: "Thanks for downloading Superpack! Follow the quests and have fun!",
+			size: 1.5d,
+			id: "28F37F0179AB9A0C",
+			tasks: [{
+				id: "74104A8136A4A871",
+				type: "dimension",
+				icon: "biomesoplenty:bop_icon",
+				dimension: "minecraft:overworld"
+			}]
+		},
+		{
+			title: "Chopping wood!",
+			x: 1.0d,
+			y: 3.5d,
+			subtitle: "Cut some trees to get started!",
+			dependencies: ["28F37F0179AB9A0C"],
+			id: "492E0DBCFF16AE61",
+			tasks: [{
+				id: "03AA9D68F8D5BC75",
+				type: "item",
+				item: "minecraft:oak_log"
+			}]
+		},
+		{
+			title: "Smelting!",
+			x: 1.0d,
+			y: 7.0d,
+			subtitle: "The Furnace allows you to smelt your ores and other things!",
+			dependencies: ["2BD88FEF8627EBDE"],
+			id: "1910BABD0FF02C8E",
+			tasks: [{
+				id: "0828AF188D59A896",
+				type: "item",
+				item: "minecraft:furnace"
+			}]
+		},
+		{
+			title: "Early Storage!",
+			x: 2.5d,
+			y: 5.0d,
+			subtitle: "Store your things in a chest!",
+			dependencies: ["2BD88FEF8627EBDE"],
+			id: "135CE149A8C95267",
+			tasks: [{
+				id: "6AFDA4EDB0B9D576",
+				type: "item",
+				item: "quark:oak_chest"
+			}]
+		},
+		{
+			title: "Upgraded Chest.",
+			x: 4.0d,
+			y: 5.0d,
+			subtitle: "You can upgrade your chests with Iron, Gold and Diamond!",
+			dependencies: ["135CE149A8C95267"],
+			id: "6A863D29B434258E",
+			tasks: [{
+				id: "12074A5D3D77E537",
+				type: "item",
+				item: "ironchest:iron_chest"
+			}]
+		},
+		{
+			title: "Coke Oven!",
+			icon: "immersiveengineering:coke_oven",
+			x: 1.0d,
+			y: 8.5d,
+			subtitle: "Make a Coke Oven. It will be required to start the Tech in the pack!",
+			description: [
+				"A Coke Oven is made with 27 Coke Brick.",
+				""
+			],
+			dependencies: [
+				"1910BABD0FF02C8E",
+				"4F3776448618CD2E",
+				"2E90D888048A9AF6"
+			],
+			id: "4B35364D1E32F527",
+			tasks: [{
+				id: "1AC951DD5B63600E",
+				type: "item",
+				item: "immersiveengineering:cokebrick",
+				count: 27L
+			}]
+		},
+		{
+			title: "Fancy wood!",
+			x: 1.0d,
+			y: 10.0d,
+			shape: "hexagon",
+			subtitle: "Make some Treated Wood to unlock Technology tier 1.",
+			dependencies: ["4B35364D1E32F527"],
+			size: 1.5d,
+			id: "5E22B7E09B86A844",
+			tasks: [{
+				id: "077BE3FCB67F6018",
+				type: "item",
+				item: "immersiveengineering:treated_wood_horizontal"
+			}]
+		},
+		{
+			title: "Magic Wand!",
+			x: -1.0d,
+			y: 5.0d,
+			subtitle: "Make a Resonating Wand and try to find some Rock Crystal!",
+			dependencies: ["2BD88FEF8627EBDE"],
+			id: "46386455CC4203D0",
+			tasks: [{
+				id: "38F3433C7CB78BFC",
+				type: "item",
+				item: "astralsorcery:wand"
+			}]
+		},
+		{
+			title: "Mysterious Crystal.",
+			x: -2.0d,
+			y: 6.0d,
+			subtitle: "Find a Rock Crystal vein.",
+			dependencies: [
+				"46386455CC4203D0",
+				"2E90D888048A9AF6"
+			],
+			id: "0A33A7FE828BF3B7",
+			tasks: [{
+				id: "1F5E70CE5CF798FE",
+				type: "item",
+				item: {
+					id: "astralsorcery:rock_crystal",
+					Count: 1b,
+					tag: {
+						astralsorcery: {}
+					}
+				}
+			}]
+		},
+		{
+			title: "Magic Crafting Table.",
+			x: -2.0d,
+			y: 4.0d,
+			subtitle: "Find a structure with a Crystal in it and infuse a Crafting Table!",
+			dependencies: ["46386455CC4203D0"],
+			id: "084ED0B92E8EDC7D",
+			tasks: [{
+				id: "4C4927A1E0AF65BD",
+				type: "item",
+				item: "astralsorcery:altar_discovery"
+			}]
+		},
+		{
+			title: "Tier 1: Magic",
+			x: -3.0d,
+			y: 5.0d,
+			shape: "hexagon",
+			subtitle: "Make a Petal Apocathery to unlock the first chapter of the magic category!",
+			dependencies: [
+				"084ED0B92E8EDC7D",
+				"0A33A7FE828BF3B7"
+			],
+			size: 1.5d,
+			id: "13D8769FBB3A41AB",
+			tasks: [{
+				id: "3D5A9F5B843F5099",
+				type: "item",
+				item: "botania:apothecary_default"
+			}]
+		},
+		{
+			x: 2.0484693877551123d,
+			y: 7.770408163265309d,
+			dependencies: ["1910BABD0FF02C8E"],
+			id: "4F3776448618CD2E",
+			tasks: [{
+				id: "30B4D891EE361C5D",
+				type: "item",
+				item: {
+					id: "immersiveengineering:hammer",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		},
+		{
+			x: -1.0d,
+			y: 7.0d,
+			dependencies: ["2BD88FEF8627EBDE"],
+			id: "2E90D888048A9AF6",
+			tasks: [
+				{
+					id: "6EAB6D6D2B075DB2",
+					type: "item",
+					item: "tconstruct:melter"
+				},
+				{
+					id: "62F1BB49C6A6112A",
+					type: "item",
+					item: "tconstruct:seared_heater"
+				},
+				{
+					id: "44E5483DA11488B1",
+					type: "item",
+					item: "tconstruct:faucet"
+				},
+				{
+					id: "43658037A56424A8",
+					type: "item",
+					item: "tconstruct:casting_table"
+				},
+				{
+					id: "42CB18306093F605",
+					type: "item",
+					item: {
+						id: "tconstruct:tinker_station",
+						Count: 1b,
+						tag: {
+							texture: "minecraft:oak_planks"
+						}
+					}
+				},
+				{
+					id: "3029E422A3D75A67",
+					type: "item",
+					item: {
+						id: "tconstruct:part_builder",
+						Count: 1b,
+						tag: {
+							texture: "minecraft:oak_planks"
+						}
+					}
+				}
+			]
+		},
+		{
+			x: 1.0d,
+			y: 5.0d,
+			dependencies: ["492E0DBCFF16AE61"],
+			id: "2BD88FEF8627EBDE",
+			tasks: [{
+				id: "0D4582F9C19CF360",
+				type: "item",
+				item: "tconstruct:crafting_station"
+			}]
+		}
+	]
+}

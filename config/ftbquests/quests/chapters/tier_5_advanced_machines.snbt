@@ -1,0 +1,10 @@
+{
+	id: "7C7F32893F0A7BAE",
+	group: "1452F36931011CD8",
+	order_index: 4,
+	filename: "tier_5_advanced_machines",
+	title: "Tier 5: Advanced Machines",
+	icon: "thermal:machine_pulverizer",
+	default_quest_shape: "",
+	quests: []
+}

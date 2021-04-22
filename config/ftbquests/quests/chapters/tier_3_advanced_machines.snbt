@@ -1,0 +1,10 @@
+{
+	id: "5E081A394199289D",
+	group: "1452F36931011CD8",
+	order_index: 2,
+	filename: "tier_3_advanced_machines",
+	title: "Tier 3: Little Machines",
+	icon: "mekanism:enrichment_chamber",
+	default_quest_shape: "",
+	quests: []
+}

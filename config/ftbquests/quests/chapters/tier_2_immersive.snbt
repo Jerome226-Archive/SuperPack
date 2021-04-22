@@ -1,0 +1,10 @@
+{
+	id: "6EE4FE470B3E4637",
+	group: "1452F36931011CD8",
+	order_index: 1,
+	filename: "tier_2_immersive",
+	title: "Tier 2: Early Power",
+	icon: "immersiveengineering:crusher",
+	default_quest_shape: "",
+	quests: []
+}

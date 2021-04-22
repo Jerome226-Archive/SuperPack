@@ -1,0 +1,12 @@
+{
+	chapter_groups: [
+		{
+			id: "1452F36931011CD8",
+			title: "Tech"
+		},
+		{
+			id: "349C1E75CB7A5A84",
+			title: "Magic"
+		}
+	]
+}

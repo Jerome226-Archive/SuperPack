@@ -1,0 +1,10 @@
+{
+	id: "62C3A8B93CD9B65E",
+	group: "",
+	order_index: 1,
+	filename: "materials",
+	title: "Materials",
+	icon: "thermal:enderium_ingot",
+	default_quest_shape: "",
+	quests: []
+}
