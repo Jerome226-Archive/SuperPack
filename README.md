@@ -1,4 +1,3 @@
 # superpack
 
-imagine not playing superpack 
-imagine playing a pack that isnt a thing yet
+Superpack is a 1.16 progression pack with a focus on Create.
