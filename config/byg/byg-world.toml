@@ -70,7 +70,7 @@
 		[Overworld.Stones.Scoria_Stone]
 			#
 			#Generate Scoria Stone?
-			GenerateScoriaStone = true
+			GenerateScoriaStone = false
 			#
 			#Y level to start generating at.
 			#Default: 63
@@ -90,7 +90,7 @@
 		[Overworld.Stones.Soap_Stone]
 			#
 			#Generate Soap Stone?
-			GenerateSoapStone = true
+			GenerateSoapStone = false
 			#
 			#Y level to start generating at.
 			#Default: 63
