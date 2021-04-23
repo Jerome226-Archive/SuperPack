@@ -339,7 +339,7 @@
 	"Dragon Scales" = true
 	Emotes = true
 	"Enhanced Ladders" = true
-	"Glass Shard" = true
+	"Glass Shard" = false
 	"Hoe Harvesting" = true
 	"Improved Sleeping" = true
 	"Infinity Bucket" = true
@@ -467,7 +467,7 @@
 [world]
 	"Big Dungeon" = true
 	"Big Stone Clusters" = true
-	Biotite = true
+	Biotite = false
 	"Blossom Trees" = true
 	"Cave Roots" = true
 	"Chorus Vegetation" = true
@@ -1452,8 +1452,8 @@
 	Forgotten = true
 	Foxhound = true
 	Frogs = true
-	Stonelings = true
-	Toretoise = true
+	Stonelings = false
+	Toretoise = false
 	Wraith = true
 
 	[mobs.crabs]
