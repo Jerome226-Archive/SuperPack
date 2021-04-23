@@ -1,5 +1,5 @@
 onEvent('recipes', event => {
-    function sieve(name, ore, orepiece, ) {
+    function sieve(name, ore) {
     
     
     }
