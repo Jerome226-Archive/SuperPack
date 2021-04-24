@@ -475,7 +475,7 @@
 	"Fairy Rings" = true
 	"Mega Caves" = true
 	"Monster Box" = true
-	"Nether Obsidian Spikes" = true
+	"Nether Obsidian Spikes" = false
 	"New Stone Types" = true
 	"Realistic World Gen" = true
 	Speleothems = true
