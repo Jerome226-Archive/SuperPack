@@ -102,7 +102,7 @@ events.listen('recipes', function (event) {
     }),
 
     //Mana Spreader
-    event.remove({output: 'botania:mana_spreader'})
+    event.remove({id: 'botania:mana_spreader'})
     event.shaped('botania:mana_spreader', ['LGL', 'LCP', 'LGL'], {
         P: '#botania:petals',
         C: 'astralsorcery:rock_crystal',
@@ -135,6 +135,10 @@ events.listen('recipes', function (event) {
         "name": "botania:livingrock"
       }
     })
+
+    //Golden Seeds
+    event.remove({output: 'botania:golden_seeds'})
+    event.recipes.create.filling('botania:golden_seeds', ['botania:grass_seeds', fluid.of('tconstruct:molten_gold', 64)]),
 
     //Rune of Air
     event.remove({id: 'botania:runic_altar/air'})

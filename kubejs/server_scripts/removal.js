@@ -1,4 +1,4 @@
-//priority 99999
+//priority 10
 events.listen('recipes', function (event) {
 
 var outputRemoval = [
@@ -31,6 +31,12 @@ var outputRemoval = [
     'pneumaticcraft:logistics_core',
     'pneumaticcraft:logistics_drone',
     'pneumaticcraft:logistics_module',
+
+    'thermal:machine_press',
+
+    'immersiveengineering:windmill',
+    'immersiveengineering:watermill',
+    'immersiveengineering:dynamo',
 ];
 
 var typeRemoval = [

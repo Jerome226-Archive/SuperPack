@@ -27,7 +27,7 @@ events.listen('recipes', function (event) {
     event.shaped(Item.of('immersiveengineering:light_engineering', 4), ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/aluminum',
         C: 'immersiveengineering:component_iron',
-        B: '#forge:storage_blocks/nickel',
+        B: 'create:andesite_casing',
         I: '#forge:ingots/electrum'
     }),
 
@@ -36,8 +36,16 @@ events.listen('recipes', function (event) {
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 2), ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/steel',
         C: 'immersiveengineering:component_steel',
-        B: '#forge:storage_blocks/brass',
+        B: 'create:brass_casing',
         I: '#forge:ingots/platinum'
+    }),
+
+    //IE Heavy Engineering Block Cheap
+    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 1), ['SCS', 'IBI', 'SCS'], {
+        S: '#forge:sheetmetals/steel',
+        C: 'immersiveengineering:component_steel',
+        B: 'create:brass_casing',
+        I: 'superpackutils:electrical_platinum_ingot'
     }),
 
     //IE Redstone Engineering Block
@@ -45,7 +53,7 @@ events.listen('recipes', function (event) {
     event.shaped(Item.of('immersiveengineering:rs_engineering', 2), ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/constantan',
         C: 'immersiveengineering:circuit_board',
-        B: '#forge:storage_blocks/tin',
+        B: 'create:copper_casing',
         I: '#forge:ingots/constantan'
     }),
 
@@ -76,6 +84,13 @@ events.listen('recipes', function (event) {
     //Treated Wood
     event.recipes.create.filling('immersiveengineering:treated_wood_horizontal', ['#minecraft:planks', fluid.of('immersiveengineering:creosote', 100)]),
 
+    //Waterwheel Segment
+    event.remove({output: 'immersiveengineering:waterwheel_segment'})
+    event.shaped(Item.of('immersiveengineering:waterwheel_segment', 2), ['TAT', 'ATA', ' A '], {
+        A: '#forge:rods/treated_wood',
+        T: '#forge:treated_wood'
+    }),
+
     //LV Wire
     event.remove({output: 'immersiveengineering:wirecoil_copper'})
     event.shaped(Item.of('immersiveengineering:wirecoil_copper', 4), [' I ', 'ICI', ' I '], {
@@ -104,15 +119,6 @@ events.listen('recipes', function (event) {
         C: 'createaddition:spool',
         J: '#forge:wires/aluminum',
         I: 'minecraft:redstone'
-    }),
-
-    //IE Redstone Engineering Block
-    event.remove({output: 'immersiveengineering:rs_engineering'})
-    event.shaped(Item.of('immersiveengineering:rs_engineering', 2), ['SCS', 'IBI', 'SCS'], {
-        S: '#forge:sheetmetals/constantan',
-        C: 'immersiveengineering:circuit_board',
-        B: '#forge:storage_blocks/tin',
-        I: '#forge:ingots/constantan'
     }),
 
     //Fluid Pipe

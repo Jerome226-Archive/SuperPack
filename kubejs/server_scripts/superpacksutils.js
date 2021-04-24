@@ -63,7 +63,31 @@ events.listen('recipes', function (event) {
   
     //Electrical Platinum Ingot
     event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_platinum_ingot', 4)], 'superpackutils:platinum_ingot', [Item.of('thermal:silver_dust', 2), 'thermal:electrum_dust'], 'thermal:slag')
-  
+ 
+    //Nugget Cast
+    event.shaped('superpackutils:chiller_nugget_cast', [' C ', 'CIC', ' C '], {
+        C: '#forge:plates/bronze',
+        I: '#forge:nuggets'
+    }),
+
+    //Gear Cast
+    event.shaped('superpackutils:chiller_gear_cast', [' C ', 'CIC', ' C '], {
+        C: '#forge:plates/bronze',
+        I: '#forge:gears'
+    }),
+
+    //Plates Cast
+    event.shaped('superpackutils:chiller_plate_cast', [' C ', 'CIC', ' C '], {
+        C: '#forge:plates/bronze',
+        I: '#forge:plates'
+    }),
+
+    //Coin Cast
+    event.shaped('superpackutils:chiller_coin_cast', [' C ', 'CIC', ' C '], {
+        C: '#forge:plates/bronze',
+        I: '#forge:coins'
+    }),
+    
     //Dyingrock
     event.remove({id: 'botania:pure_daisy/livingrock'})
     event.custom({

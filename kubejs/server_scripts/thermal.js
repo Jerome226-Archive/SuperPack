@@ -75,6 +75,28 @@ events.listen('recipes', function (event) {
         O: 'botania:mana_pearl'
     }),
 
+    //Energetic Infuser
+    event.remove({output: 'thermal:charge_bench'})
+    event.shaped('thermal:charge_bench', ['ECE', 'PBP', 'LRL'], {
+        E: '#forge:sheetmetals/electrum',
+        C: 'immersiveengineering:charging_station',
+        P: '#forge:plates/copper',
+        B: 'create:brass_casing',
+        L: '#forge:sheetmetals/lead',
+        R: 'thermal:rf_coil'
+    }),
+
+    //Decoctive Diffuser
+    event.remove({output: 'thermal:device_potion_diffuser'})
+    event.shaped('thermal:device_potion_diffuser', ['ECE', 'PBP', 'LRL'], {
+        E: '#forge:sheetmetals/lead',
+        C: 'minecraft:glass_bottle',
+        P: '#forge:plates/silver',
+        B: 'create:andesite_casing',
+        L: '#forge:sheetmetals/aluminum',
+        R: 'minecraft:dropper'
+    }),
+
     //Redstone Flux Coil
     event.remove({id: 'thermal:rf_coil'})
     event.recipes.mekanism.metallurgic_infusing('thermal:rf_coil', 'immersiveengineering:coil_mv', 'mekanism:redstone', 160),
@@ -88,6 +110,20 @@ events.listen('recipes', function (event) {
     event.remove({id: 'thermal:rubber_3'})
     event.remove({id: 'thermal:rubber_from_dandelion'})
     event.recipes.create.compacting(Item.of('thermal:rubber', 3), [fluid.of('thermal:latex', 1000)]),
+
+    //Ingot Cast
+    event.remove({output: 'thermal:chiller_ingot_cast'})
+    event.shaped('thermal:chiller_ingot_cast', [' C ', 'CIC', ' C '], {
+        C: '#forge:plates/bronze',
+        I: '#forge:ingots'
+    }),
+
+    //Rod Cast
+    event.remove({output: 'thermal:chiller_rod_cast'})
+    event.shaped('thermal:chiller_rod_cast', [' C ', 'CIC', ' C '], {
+        C: '#forge:plates/bronze',
+        I: '#forge:rods'
+    }),
 
     //Coal Coke
     event.remove({id: 'thermal:machine/pyrolyzer/pyrolyzer_logs'})

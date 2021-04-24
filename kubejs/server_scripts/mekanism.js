@@ -28,8 +28,8 @@ events.listen('recipes', function (event) {
     event.remove({output: 'mekanism:steel_casing'})
     event.shaped('mekanism:steel_casing', ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/steel',
-        C: 'superpackutils:compressed_steel_ingot',
-        B: 'superpackutils:electrical_platinum_ingot',
+        C: '#immersiveengineering:scaffoldings/steel',
+        B: 'immersiveengineering:heavy_engineering',
         I: 'superpackutils:bio_plastic'
     }),
 
@@ -38,7 +38,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanism:metallurgic_infuser', ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/steel',
         C: 'create:furnace_engine',
-        B: 'create:brass_casing',
+        B: 'immersiveengineering:heavy_engineering',
         I: 'createaddition:capacitor'
     }),
 

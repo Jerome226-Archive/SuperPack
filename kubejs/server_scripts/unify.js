@@ -212,6 +212,27 @@ onEvent('recipes', event => {
       "cooling_time": castingNuggetTime
   })
 
+    //Thermal Chiller
+    event.custom({
+      "type": "thermal:chiller",
+      "input": [
+        {
+          "fluid": moltenFluid,
+          "amount": 16
+        },
+        {
+          "item": "superpackutils:chiller_nugget_cast"
+        }
+      ],
+      "result": [
+        {
+          "item": nuggetItem,
+          "count": 1
+        }
+      ],
+      "energy": 5000
+    })
+
   }
 
   //Manual Recipe
@@ -247,6 +268,24 @@ onEvent('recipes', event => {
       },
       "result": blockItem,
       "cooling_time": castingBlockTime
+  })
+
+  //Thermal Chiller
+  event.custom({
+    "type": "thermal:chiller",
+    "input": [
+      {
+        "fluid": moltenFluid,
+        "amount": 1296
+      }
+    ],
+    "result": [
+      {
+        "item": blockItem,
+        "count": 1
+      }
+    ],
+    "energy": 5000
   })
 
   }
@@ -409,6 +448,27 @@ onEvent('recipes', event => {
       "cooling_time": castingIngotTime
   })
 
+    //Thermal Chiller
+    event.custom({
+      "type": "thermal:chiller",
+      "input": [
+        {
+          "fluid": moltenFluid,
+          "amount": 144
+        },
+        {
+          "item": "superpackutils:chiller_plate_cast"
+        }
+      ],
+      "result": [
+        {
+          "item": plateItem,
+          "count": 1
+        }
+      ],
+      "energy": 5000
+    })
+
   }
 
   //-----------------------------------------------------
@@ -424,6 +484,32 @@ onEvent('recipes', event => {
   event.recipes.immersiveengineering.metal_press(gearItem, Item.of(ingotItem, 4), 'immersiveengineering:mold_gear')
 
   }
+
+  if (gearItem !== null && moltenFluid !== null) {
+
+    //Thermal Chiller
+    event.custom({
+      "type": "thermal:chiller",
+      "input": [
+        {
+          "fluid": moltenFluid,
+          "amount": 576
+        },
+        {
+          "item": "superpackutils:chiller_gear_cast"
+        }
+      ],
+      "result": [
+        {
+          "item": gearItem,
+          "count": 1
+        }
+      ],
+      "energy": 5000
+    })
+  
+    }
+  
 
   //-----------------------------------------------------
   //unifyOre Rod
@@ -502,6 +588,34 @@ onEvent('recipes', event => {
       }
   })
 
+  //-----------------------------------------------------
+  //unifyOre Coin
+  //-----------------------------------------------------
+
+  if (coinItem !== null && moltenFluid !== null) {
+
+    //Thermal Chiller
+    event.custom({
+      "type": "thermal:chiller",
+      "input": [
+        {
+          "fluid": moltenFluid,
+          "amount": 48
+        },
+        {
+          "item": "superpackutils:chiller_coin_cast"
+        }
+      ],
+      "result": [
+        {
+          "item": coinItem,
+          "count": 1
+        }
+      ],
+      "energy": 5000
+    })
+  
+    }
   }
 
   }
@@ -523,6 +637,7 @@ onEvent('recipes', event => {
   unifyOre(false, 'bronze', null, 'thermal:bronze_ingot', 'thermal:bronze_dust', null, 'thermal:bronze_block', 'thermal:bronze_nugget', 'thermal:bronze_coin', 'thermal:bronze_gear', 'thermal:bronze_plate', null, null, null, 'tconstruct:molten_bronze', 171, 57, 19, 0.15, null, 2, null);
   unifyOre(false, 'steel', null, 'mekanism:ingot_steel', 'mekanism:dust_steel', null, 'mekanism:block_steel', 'mekanism:nugget_steel', null, 'superpackutils:steel_gear', 'immersiveengineering:plate_steel', null, 'immersiveengineering:stick_steel', 'immersiveengineering:wire_steel', 'tconstruct:molten_steel', 217, 72, 24, 0.15, null, 2, null);
   unifyOre(false, 'platinum', null, 'superpackutils:platinum_ingot', 'superpackutils:platinum_dust', null, 'superpackutils:platinum_block', 'superpackutils:platinum_nugget', null, null, null, null, null, null, 'tconstruct:molten_platinum', 196, 65, 22, 0, null, 2, null);
+  unifyOre(false, 'mythril', null, 'superpackutils:mythril_ingot', 'superpackutils:mythril_dust', null, 'superpackutils:mythril_block', 'superpackutils:mythril_nugget', null, null, null, null, null, null, null, 0, 0, 0, 0, null, 0, null);
   unifyOre(false, 'enderium', null, 'thermal:enderium_ingot', 'thermal:enderium_dust', null, 'thermal:enderium_block', 'thermal:enderium_nugget', 'thermal:enderium_coin', 'thermal:enderium_gear', 'thermal:enderium_plate', null, null, null, null, 0, 0, 0, 0, null, 2, null);
   unifyOre(false, 'signalum', null, 'thermal:signalum_ingot', 'thermal:signalum_dust', null, 'thermal:signalum_block', 'thermal:signalum_nugget', 'thermal:signalum_coin', 'thermal:signalum_gear', 'thermal:signalum_plate', null, null, null, null, 0, 0, 0, 0, null, 2, null);
   unifyOre(false, 'lumium', null, 'thermal:lumium_ingot', 'thermal:lumium_dust', null, 'thermal:lumium_block', 'thermal:lumium_nugget', 'thermal:lumium_coin', 'thermal:lumium_gear', 'thermal:lumium_plate', null, null, null, null, 0, 0, 0, 0, null, 2, null);

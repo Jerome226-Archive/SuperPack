@@ -46,16 +46,32 @@ events.listen('recipes', function (event) {
     event.remove({output: 'create:cogwheel'})
     event.shaped(Item.of('create:cogwheel', 6), ['STS', 'TAT', 'STS'], {
         A: 'create:andesite_alloy',
-        T: '#forge:treated_wood',
-        S: 'immersiveengineering:stick_treated'
+        T: '#minecraft:planks',
+        S: '#forge:rods/wooden'
     }),
 
     //Create Large Cogwheel
     event.remove({output: 'create:large_cogwheel'})
     event.shaped(Item.of('create:large_cogwheel', 3), ['WTW', 'TCT', 'WTW'], {
         C: 'create:andesite_alloy',
-        T: '#forge:treated_wood',
+        T: '#minecraft:planks',
         W: '#minecraft:logs'
+    }),
+
+    //Waterwheel
+    event.remove({output: 'create:water_wheel'})
+    event.shaped('create:water_wheel', [' T ', 'TAT', ' T '], {
+        A: 'create:large_cogwheel',
+        T: 'immersiveengineering:waterwheel_segment'
+    }),
+
+    //Windmill
+    event.remove({output: 'create:windmill_bearing'})
+    event.shaped('create:windmill_bearing', [' T ', 'BAB', ' P '], {
+        A: 'create:andesite_casing',
+        P: '#forge:plates/iron',
+        T: 'create:turntable',
+        B: 'immersiveengineering:windmill_blade'
     }),
 
     //Create Mechanical Drill
