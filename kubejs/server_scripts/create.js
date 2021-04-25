@@ -165,8 +165,8 @@ events.listen('recipes', function (event) {
     ], {
         L: '#forge:plates/lapis_lazuli',
         B: '#forge:plates/brass',
-        C: 'immersiveengineering:circuit_board',
-        Z: '#pneumaticcraft:plastic_sheets', //Need to replace with custom Bio Plastic
+        C: 'youmatter:compute_module',
+        Z: '#forge:ingots/zinc',
         E: 'create:electron_tube'
     }),
 

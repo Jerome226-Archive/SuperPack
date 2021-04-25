@@ -48,4 +48,7 @@ events.listen('recipes', function (event) {
     event.remove({id: 'tconstruct:smeltery/casting/clock'})
     event.recipes.create.filling('minecraft:clock', ['minecraft:redstone', fluid.of('tconstruct:molten_gold', 576)])
 
+    //Remove Soup
+    event.remove({id: 'minecraft:beetroot_soup'})
+
 });

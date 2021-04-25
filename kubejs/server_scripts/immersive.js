@@ -34,18 +34,10 @@ events.listen('recipes', function (event) {
     //IE Heavy Engineering Block
     event.remove({output: 'immersiveengineering:heavy_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 2), ['SCS', 'IBI', 'SCS'], {
-        S: '#forge:sheetmetals/steel',
+        S: 'superpackutils:compressed_steel_ingot',
         C: 'immersiveengineering:component_steel',
         B: 'create:brass_casing',
-        I: '#forge:ingots/platinum'
-    }),
-
-    //IE Heavy Engineering Block Cheap
-    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 1), ['SCS', 'IBI', 'SCS'], {
-        S: '#forge:sheetmetals/steel',
-        C: 'immersiveengineering:component_steel',
-        B: 'create:brass_casing',
-        I: 'superpackutils:electrical_platinum_ingot'
+        I: 'mekanism:ingot_osmium'
     }),
 
     //IE Redstone Engineering Block

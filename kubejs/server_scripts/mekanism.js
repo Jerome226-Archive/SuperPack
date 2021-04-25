@@ -26,12 +26,21 @@ events.listen('recipes', function (event) {
 
     //Mekanism Steel Casing
     event.remove({output: 'mekanism:steel_casing'})
-    event.shaped('mekanism:steel_casing', ['SCS', 'IBI', 'SCS'], {
-        S: '#forge:sheetmetals/steel',
-        C: '#immersiveengineering:scaffoldings/steel',
-        B: 'immersiveengineering:heavy_engineering',
-        I: 'superpackutils:bio_plastic'
-    }),
+    event.recipes.create.mechanical_crafting(Item.of('mekanism:steel_casing', 2), [
+        'CPSPC',
+        'PEGEP',
+        'SBHBS',
+        'PEGEP',
+        'CPSPC'
+      ], {
+        C: 'immersiveengineering:component_iron',
+        P: '#forge:plates/steel',
+        S: '#immersiveengineering:scaffoldings/steel',
+        E: 'superpackutils:electrical_platinum_ingot',
+        G: 'immersiveengineering:electron_tube',
+        H: 'immersiveengineering:heavy_engineering',
+        B: 'superpackutils:bio_plastic'
+    })
 
     //Metallurgic Infuser
     event.remove({output: 'mekanism:metallurgic_infuser'})

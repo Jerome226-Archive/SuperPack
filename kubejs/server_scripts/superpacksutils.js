@@ -50,6 +50,27 @@ events.listen('recipes', function (event) {
             "item": "minecraft:obsidian"
           },
           {
+            "item": "minecraft:obsidian"
+          },
+          {
+            "item": "minecraft:obsidian"
+          },
+          {
+            "item": "minecraft:obsidian"
+          },
+          {
+            "item": "minecraft:obsidian"
+          },
+          {
+            "item": "minecraft:obsidian"
+          },
+          {
+            "item": "minecraft:obsidian"
+          },
+          {
+            "item": "minecraft:obsidian"
+          },
+          {
             "item": "superpackutils:dyingrock"
           },
           {
@@ -62,8 +83,14 @@ events.listen('recipes', function (event) {
     }),
   
     //Electrical Platinum Ingot
-    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_platinum_ingot', 4)], 'superpackutils:platinum_ingot', [Item.of('thermal:silver_dust', 2), 'thermal:electrum_dust'], 'thermal:slag')
+    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_platinum_ingot', 4)], 'superpackutils:platinum_ingot', ['thermal:electrum_dust', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
  
+    //Rune
+    event.recipes.create.pressing('superpackutils:rune', 'botania:livingrock')
+
+    //Basic Alloy
+    event.recipes.create.compacting('superpackutils:basic_alloy', ['create:andesite_alloy', fluid.of('mekanismgenerators:bioethanol', 1000)])
+
     //Nugget Cast
     event.shaped('superpackutils:chiller_nugget_cast', [' C ', 'CIC', ' C '], {
         C: '#forge:plates/bronze',
@@ -87,7 +114,10 @@ events.listen('recipes', function (event) {
         C: '#forge:plates/bronze',
         I: '#forge:coins'
     }),
-    
+
+    //Industrial Sand
+    event.recipes.immersiveengineering.crusher('superpackutils:industrial_sand', 'create:limesand')
+
     //Dyingrock
     event.remove({id: 'botania:pure_daisy/livingrock'})
     event.custom({
@@ -102,7 +132,7 @@ events.listen('recipes', function (event) {
     }),
 
     //Bio Plastic
-    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"thermal:sawdust_block"},{"item":"thermal:rubber"}],"result":{"fluid":"superpackutils:molten_bio_plastic_fluid","amount":1000},"fluid":{"tag":"forge:biodiesel","amount":1000},"energy":3200}),
+    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"thermal:sawdust"},{"item":"thermal:rubber"}],"result":{"fluid":"superpackutils:molten_bio_plastic_fluid","amount":1000},"fluid":{"tag":"forge:biodiesel","amount":1000},"energy":3200}),
     event.recipes.create.compacting('superpackutils:bio_plastic', [fluid.of('superpackutils:molten_bio_plastic_fluid', 1000)]),
   
     //Compressed Steel Ingot

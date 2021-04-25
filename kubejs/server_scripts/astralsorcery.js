@@ -28,9 +28,9 @@ events.listen('recipes', function (event) {
         "starlight": 60
     }),
   
-      //Starlight Crafting
-      event.remove({id: 'astralsorcery:altar/altar_attunement'})
-      event.custom({
+    //Starlight Crafting
+    event.remove({id: 'astralsorcery:altar/altar_attunement'})
+    event.custom({
         "type": "astralsorcery:altar",
         "altar_type": 0,
         "duration": 100,
@@ -54,7 +54,7 @@ events.listen('recipes', function (event) {
             "canBeCelestialCrystal": true
           },
           "R": {
-            "item": "botania:livingrock"
+            "item": "botania:manasteel_ingot"
           },
           "L": {
             "item": "botania:livingwood"
@@ -79,6 +79,64 @@ events.listen('recipes', function (event) {
         "effects": [
           "astralsorcery:built_in_effect_discovery_central_beam",
           "astralsorcery:upgrade_altar"
+        ]
+    })
+
+    //Celestial Altar
+    event.remove({id: 'astralsorcery:altar/altar_constellation'})
+    event.custom({
+        "type": "astralsorcery:altar",
+        "altar_type": 1,
+        "duration": 200,
+        "starlight": 1400,
+        "pattern": [
+          "A___A",
+          "_BDB_",
+          "_CFC_",
+          "_ELE_",
+          "N___N"
+        ],
+        "key": {
+          "A": {
+            "item": "botania:terrasteel_ingot"
+          },
+          "B": {
+            "item": "astralsorcery:starmetal_ingot"
+          },
+          "C": {
+            "item": "botania:pixie_dust"
+          },
+          "D": {
+            "item": "astralsorcery:marble_chiseled"
+          },
+          "E": {
+            "item": "botania:elementium_ingot"
+          },
+          "L": {
+            "item": "botania:livingrock"
+          },
+          "N": {
+            "item": "botania:dragonstone"
+          },
+          "F": {
+            "type": "astralsorcery:crystal",
+            "hasToBeAttuned": false,
+            "hasToBeCelestial": false,
+            "canBeAttuned": true,
+            "canBeCelestialCrystal": true
+          }
+        },
+        "recipe_class": "astralsorcery:constellation_upgrade",
+        "output": [
+          {
+            "item": "astralsorcery:altar_constellation",
+            "count": 1
+          }
+        ],
+        "effects": [
+          "astralsorcery:built_in_effect_discovery_central_beam",
+          "astralsorcery:upgrade_altar",
+          "astralsorcery:built_in_effect_attunement_sparkle"
         ]
     })
 

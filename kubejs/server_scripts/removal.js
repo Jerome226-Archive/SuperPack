@@ -37,6 +37,8 @@ var outputRemoval = [
     'immersiveengineering:windmill',
     'immersiveengineering:watermill',
     'immersiveengineering:dynamo',
+
+    'buzzier_bees:honey_apple',
 ];
 
 var typeRemoval = [

@@ -60,7 +60,7 @@ events.listen('recipes', function (event) {
         A: '#forge:sheetmetals/aluminum',
         L: '#forge:sheetmetals/lead',
         P: '#forge:plates/invar',
-        B: '#forge:tools/pickaxes',
+        B: 'minecraft:iron_pickaxe',
         O: 'thermal:drill_head'
     }),
 
@@ -83,7 +83,7 @@ events.listen('recipes', function (event) {
         P: '#forge:plates/copper',
         B: 'create:brass_casing',
         L: '#forge:sheetmetals/lead',
-        R: 'thermal:rf_coil'
+        R: 'createaddition:capacitor'
     }),
 
     //Decoctive Diffuser
@@ -95,6 +95,16 @@ events.listen('recipes', function (event) {
         B: 'create:andesite_casing',
         L: '#forge:sheetmetals/aluminum',
         R: 'minecraft:dropper'
+    }),
+
+    //Tinker's Workbench
+    event.remove({output: 'thermal:tinker_bench'})
+    event.shaped('thermal:tinker_bench', ['LML', 'TAT', 'TCT'], {
+        A: 'create:andesite_casing',
+        L: '#forge:sheetmetals/lead',
+        C: 'createaddition:capacitor',
+        M: 'engineersdecor:metal_crafting_table',
+        T: '#forge:treated_wood'
     }),
 
     //Redstone Flux Coil

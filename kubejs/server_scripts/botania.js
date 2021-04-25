@@ -86,6 +86,50 @@ events.listen('recipes', function (event) {
       ]
     })
 
+    //Elven Gateway
+    event.remove({id: 'botania:alfheim_portal'})
+    event.custom({
+        "type": "astralsorcery:altar",
+        "altar_type": 1,
+        "duration": 200,
+        "starlight": 1400,
+        "pattern": [
+          "E___E",
+          "_LTL_",
+          "_TDT_",
+          "_LTL_",
+          "G___G"
+        ],
+        "key": {
+          "E": {
+            "item": "botania:rune_earth"
+          },
+          "G": {
+            "item": "botania:rune_greed"
+          },
+          "T": {
+            "item": "botania:terrasteel_ingot"
+          },
+          "L": {
+            "item": "botania:glimmering_livingwood"
+          },
+          "D": {
+            "item": "botania:mana_diamond"
+          }
+        },
+        "output": [
+          {
+            "item": "botania:alfheim_portal",
+            "count": 1
+          }
+        ],
+        "effects": [
+          "astralsorcery:built_in_effect_discovery_central_beam",
+          "astralsorcery:gateway_edge",
+          "astralsorcery:built_in_effect_attunement_sparkle"
+        ]
+    })
+
     //Glimmering Livingwood
     event.remove({output: 'botania:glimmering_livingwood'})
     event.shaped('botania:glimmering_livingwood', ['FIF', 'ILI', 'FIF'], {
@@ -169,7 +213,7 @@ events.listen('recipes', function (event) {
             "item": "minecraft:feather"
           },
           {
-            "item": "tconstruct:sky_slime_crystal"
+            "item": "superpackutils:rune"
           }
         ]
     }),
@@ -194,9 +238,6 @@ events.listen('recipes', function (event) {
             "item": "create:cinder_flour"
           },
           {
-            "item": "tconstruct:ichor_slime_crystal"
-          },
-          {
             "item": "minecraft:nether_brick"
           },
           {
@@ -204,6 +245,9 @@ events.listen('recipes', function (event) {
           },
           {
             "item": "minecraft:quartz"
+          },
+          {
+            "item": "superpackutils:rune"
           }
         ]
     }),
@@ -228,9 +272,6 @@ events.listen('recipes', function (event) {
             "item": "minecraft:sugar_cane"
           },
           {
-            "item": "tconstruct:ender_slime_crystal"
-          },
-          {
             "item": "minecraft:fishing_rod"
           },
           {
@@ -238,6 +279,9 @@ events.listen('recipes', function (event) {
           },
           {
             "item": "minecraft:kelp"
+          },
+          {
+            "item": "superpackutils:rune"
           }
         ]
     }),
@@ -262,9 +306,6 @@ events.listen('recipes', function (event) {
             "item": "create:wheat_flour"
           },
           {
-            "item": "tconstruct:earth_slime_crystal"
-          },
-          {
             "tag": "minecraft:saplings"
           },
           {
@@ -272,8 +313,15 @@ events.listen('recipes', function (event) {
           },
           {
             "item": "create:tree_fertilizer"
+          },
+          {
+            "item": "superpackutils:rune"
           }
         ]
     })
+
+    //Blaze Quartz
+    event.remove({id: 'botania:quartz_blaze'})
+    event.recipes.create.filling('botania:quartz_blaze', ['minecraft:quartz', fluid.of('tconstruct:molten_blaze', 10)])
 
 });
