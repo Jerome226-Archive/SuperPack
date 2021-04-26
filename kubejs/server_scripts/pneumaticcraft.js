@@ -64,6 +64,10 @@ events.listen('recipes', function (event) {
 
     event.remove({id: 'pneumaticcraft:heat_frame_cooling/plastic'})
 
+    //Yeast Culture
+    event.remove({id: 'pneumaticcraft:thermo_plant/yeast_culture'})
+    event.custom({"type":"immersiveengineering:fermenter","fluid":{"fluid":"pneumaticcraft:yeast_culture","amount":50},"input":{"item":"superpackutils:weird_fungu"},"energy":5000})
+
     //Compressed Ingot Early
     event.remove({id: 'pneumaticcraft:explosion_crafting/compressed_iron_ingot'})
     event.remove({id: 'pneumaticcraft:explosion_crafting/compressed_iron_block'})

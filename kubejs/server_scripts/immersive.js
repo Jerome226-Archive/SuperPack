@@ -37,7 +37,7 @@ events.listen('recipes', function (event) {
         S: 'superpackutils:compressed_steel_ingot',
         C: 'immersiveengineering:component_steel',
         B: 'create:brass_casing',
-        I: 'mekanism:ingot_osmium'
+        I: 'immersiveengineering:slag'
     }),
 
     //IE Redstone Engineering Block
@@ -75,6 +75,9 @@ events.listen('recipes', function (event) {
 
     //Treated Wood
     event.recipes.create.filling('immersiveengineering:treated_wood_horizontal', ['#minecraft:planks', fluid.of('immersiveengineering:creosote', 100)]),
+
+    //Bio Slag
+    event.custom({"type":"immersiveengineering:bottling_machine","result":{"item":"immersiveengineering:slag"},"input":{"item":"thermal:slag"},"fluid":{"tag":"pneumaticcraft:yeast_culture","amount":150}})
 
     //Waterwheel Segment
     event.remove({output: 'immersiveengineering:waterwheel_segment'})

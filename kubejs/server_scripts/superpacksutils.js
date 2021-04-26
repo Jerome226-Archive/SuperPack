@@ -68,10 +68,7 @@ events.listen('recipes', function (event) {
             "item": "minecraft:obsidian"
           },
           {
-            "item": "minecraft:obsidian"
-          },
-          {
-            "item": "superpackutils:dyingrock"
+            "item": "botania:livingrock"
           },
           {
             "item": "botania:mana_pearl"
@@ -89,7 +86,11 @@ events.listen('recipes', function (event) {
     event.recipes.create.pressing('superpackutils:rune', 'botania:livingrock')
 
     //Basic Alloy
-    event.recipes.create.compacting('superpackutils:basic_alloy', ['create:andesite_alloy', fluid.of('mekanismgenerators:bioethanol', 1000)])
+    event.shaped('superpackutils:basic_alloy', [' C ', 'EIE', ' C '], {
+        C: '#mekanism:enriched/carbon',
+        E: 'thermal:rich_slag',
+        I: 'create:andesite_alloy'
+    }),
 
     //Nugget Cast
     event.shaped('superpackutils:chiller_nugget_cast', [' C ', 'CIC', ' C '], {
@@ -119,17 +120,10 @@ events.listen('recipes', function (event) {
     event.recipes.immersiveengineering.crusher('superpackutils:industrial_sand', 'create:limesand')
 
     //Dyingrock
-    event.remove({id: 'botania:pure_daisy/livingrock'})
-    event.custom({
-        "type": "botania:pure_daisy",
-        "input": {
-          "type": "block",
-          "block": "astralsorcery:black_marble_raw"
-        },
-        "output": {
-          "name": "superpackutils:dyingrock"
-        }
-    }),
+    event.recipes.mekanism.metallurgic_infusing('superpackutils:dyingrock', 'botania:livingrock', 'mekanism:carbon', 80),
+
+    //Weird Fungu
+    event.recipes.create.filling('superpackutils:weird_fungu', ['minecraft:crimson_fungus', fluid.of('mekanismgenerators:bioethanol', 1000)]),
 
     //Bio Plastic
     event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"thermal:sawdust"},{"item":"thermal:rubber"}],"result":{"fluid":"superpackutils:molten_bio_plastic_fluid","amount":1000},"fluid":{"tag":"forge:biodiesel","amount":1000},"energy":3200}),

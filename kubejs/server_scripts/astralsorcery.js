@@ -140,4 +140,37 @@ events.listen('recipes', function (event) {
         ]
     })
 
+    //Glass Lens
+    event.remove({id: 'astralsorcery:altar/glass_lens'})
+    event.custom({
+        "type": "astralsorcery:altar",
+        "altar_type": 0,
+        "duration": 100,
+        "starlight": 200,
+        "pattern": [
+          "_____",
+          "__A__",
+          "_ABA_",
+          "__A__",
+          "_____"
+        ],
+        "key": {
+          "A": {
+            "item": "astralsorcery:aquamarine"
+          },
+          "B": {
+            "item": "botania:mana_glass_pane"
+          }
+        },
+        "output": [
+          {
+            "item": "astralsorcery:glass_lens",
+            "count": 1
+          }
+        ],
+        "effects": [
+          "astralsorcery:built_in_effect_discovery_central_beam"
+        ]
+    })
+
 });

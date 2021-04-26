@@ -234,6 +234,22 @@ events.listen('recipes', function (event) {
         I: '#forge:circuits/basic'
     }),
 
+    //Bio Generator
+    event.remove({output: 'mekanismgenerators:bio_generator'})
+    event.shaped('mekanismgenerators:bio_generator', ['SCS', 'IBI', 'SDS'], {
+        S: '#forge:plates/invar',
+        C: 'create:millstone',
+        D: 'createaddition:capacitor',
+        B: 'immersiveengineering:light_engineering',
+        I: 'mekanism:bio_fuel'
+    }),
+
+    //Bio Fuel IE Crusher
+    event.recipes.immersiveengineering.crusher(Item.of('mekanism:bio_fuel', 3), '#forge:crops')
+
+    //Bio Fuel Mek Crusher
+    event.recipes.mekanism.crushing(Item.of('mekanism:bio_fuel', 5), '#forge:crops')
+
     //Heat Generator
     event.remove({output: 'mekanismgenerators:heat_generator'})
     event.shaped('mekanismgenerators:heat_generator', ['IFI', 'POP', 'CSC'], {
@@ -260,6 +276,6 @@ events.listen('recipes', function (event) {
     //Advanced Circuit
     event.remove({output: 'mekanism:advanced_control_circuit'})
     event.remove({type: 'mekanism:combining'})
-    event.recipes.mekanism.combining('mekanism:advanced_control_circuit', '#forge:circuits/basic', Item.of('mekanism:alloy_infused', 4))
+    event.recipes.mekanism.combining('mekanism:advanced_control_circuit', '#forge:circuits/basic', Item.of('mekanism:alloy_infused', 2))
 
 });

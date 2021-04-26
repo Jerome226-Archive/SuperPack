@@ -130,6 +130,62 @@ events.listen('recipes', function (event) {
         ]
     })
 
+    //Terrestrial Agglomeration Plate
+    event.remove({id: 'botania:terra_plate'})
+    event.custom({
+        "type": "astralsorcery:altar",
+        "altar_type": 1,
+        "duration": 200,
+        "starlight": 600,
+        "pattern": [
+          "A___W",
+          "_SSS_",
+          "_DMD_",
+          "_LCL_",
+          "E___F"
+        ],
+        "key": {
+          "E": {
+            "item": "botania:rune_earth"
+          },
+          "W": {
+            "item": "botania:rune_water"
+          },
+          "A": {
+            "item": "botania:rune_air"
+          },
+          "F": {
+            "item": "botania:rune_fire"
+          },
+          "M": {
+            "item": "botania:rune_mana"
+          },
+          "S": {
+            "item": "astralsorcery:starmetal_ingot"
+          },
+          "D": {
+            "item": "astralsorcery:stardust"
+          },
+          "C": {
+            "item": "tconstruct:cobalt_block"
+          },
+          "L": {
+            "item": "botania:livingrock"
+          }
+        },
+        "output": [
+          {
+            "item": "botania:terra_plate",
+            "count": 1
+          }
+        ],
+        "effects": [
+          "astralsorcery:built_in_effect_discovery_central_beam",
+          "astralsorcery:gateway_edge",
+          "astralsorcery:built_in_effect_attunement_sparkle"
+        ]
+    })
+
     //Glimmering Livingwood
     event.remove({output: 'botania:glimmering_livingwood'})
     event.shaped('botania:glimmering_livingwood', ['FIF', 'ILI', 'FIF'], {
@@ -137,6 +193,9 @@ events.listen('recipes', function (event) {
         I: 'astralsorcery:illumination_powder',
         L: '#botania:livingwood'
     }),
+
+    //Bowl of Water
+    event.recipes.create.filling('botania:water_bowl', ['minecraft:bowl', fluid.of('minecraft:water', 1000)]),
 
     //Mana Lens
     event.remove({output: 'botania:lens_normal'})
@@ -322,6 +381,10 @@ events.listen('recipes', function (event) {
 
     //Blaze Quartz
     event.remove({id: 'botania:quartz_blaze'})
-    event.recipes.create.filling('botania:quartz_blaze', ['minecraft:quartz', fluid.of('tconstruct:molten_blaze', 10)])
+    event.recipes.create.filling('botania:quartz_blaze', ['botania:quartz_mana', fluid.of('tconstruct:molten_blaze', 10)])
+
+    //Ender Eye
+    event.remove({id: 'minecraft:ender_eye'})
+    event.recipes.mekanism.combining('minecraft:ender_eye', 'minecraft:ender_pearl', 'botania:quartz_blaze')
 
 });
