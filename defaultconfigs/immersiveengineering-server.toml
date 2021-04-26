@@ -121,7 +121,7 @@
 		[machines.capacitors.mv]
 			#Maximum energy stored (Flux)
 			#Range: > 1
-			storage = 1000000
+			storage = 400000
 			#Maximum energy input (Flux/tick)
 			#Range: > 1
 			input = 1024
@@ -133,7 +133,7 @@
 		[machines.capacitors.hv]
 			#Maximum energy stored (Flux)
 			#Range: > 1
-			storage = 4000000
+			storage = 800000
 			#Maximum energy input (Flux/tick)
 			#Range: > 1
 			input = 4096
