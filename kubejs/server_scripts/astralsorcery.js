@@ -39,7 +39,7 @@ events.listen('recipes', function (event) {
           "_____",
           "_LAL_",
           "_RBR",
-          "_LDL_",
+          "_ZDZ_",
           "_____"
         ],
         "key": {
@@ -57,7 +57,10 @@ events.listen('recipes', function (event) {
             "item": "botania:manasteel_ingot"
           },
           "L": {
-            "item": "botania:livingwood"
+            "item": "botania:mana_quartz"
+          },
+          "Z": {
+            "item": "botania:lavender_quartz"
           },
           "D": {
             "type": "astralsorcery:fluid",
@@ -101,19 +104,19 @@ events.listen('recipes', function (event) {
             "item": "botania:terrasteel_ingot"
           },
           "B": {
-            "item": "astralsorcery:starmetal_ingot"
+            "item": "botania:red_quartz"
           },
           "C": {
             "item": "botania:pixie_dust"
           },
           "D": {
-            "item": "astralsorcery:marble_chiseled"
+            "item": "astralsorcery:starmetal_ingot"
           },
           "E": {
-            "item": "botania:elementium_ingot"
+            "item": "botania:blaze_quartz"
           },
           "L": {
-            "item": "botania:livingrock"
+            "item": "botania:elementium_ingot"
           },
           "N": {
             "item": "botania:dragonstone"

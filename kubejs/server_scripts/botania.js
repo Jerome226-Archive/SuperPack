@@ -243,6 +243,37 @@ events.listen('recipes', function (event) {
     event.remove({output: 'botania:golden_seeds'})
     event.recipes.create.filling('botania:golden_seeds', ['botania:grass_seeds', fluid.of('tconstruct:molten_gold', 64)]),
 
+    //Lavender Quartz
+    event.remove({id: 'botania:quartz_lavender'})
+    event.recipes.create.mixing(Item.of('botania:quartz_lavender', 4), ['botania:quartz_mana', 'botania:quartz_mana', 'botania:quartz_mana', 'botania:quartz_mana', 'botania:metamorphic_fungal_stone', 'minecraft:allium']).heated()
+
+    //Red Quartz
+    event.remove({id: 'botania:quartz_red'})
+    event.recipes.create.mixing(Item.of('botania:quartz_red', 4), ['botania:quartz_lavender', 'botania:quartz_lavender', 'botania:quartz_lavender', 'botania:quartz_lavender', 'botania:metamorphic_mesa_stone', 'minecraft:redstone']).superheated()
+
+    //Blaze Quartz
+    event.remove({id: 'botania:quartz_blaze'})
+    event.recipes.create.mixing(Item.of('botania:quartz_blaze', 4), ['botania:quartz_red', 'botania:quartz_red', 'botania:quartz_red', 'botania:quartz_red', 'botania:metamorphic_desert_stone', 'minecraft:blaze_powder']).superheated()
+
+    //Elven Quartz
+    event.remove({id: 'botania:elven_trade/elf_quartz'})
+    event.custom({
+        "type": "botania:elven_trade",
+        "ingredients": [
+            {
+                "item": "botania:metamorphic_plains_stone"
+            },
+          {
+            "item": "botania:quartz_blaze"
+          }
+        ],
+        "output": [
+          {
+            "item": "botania:quartz_elven"
+          }
+        ]
+    })
+
     //Rune of Air
     event.remove({id: 'botania:runic_altar/air'})
     event.custom({
@@ -277,9 +308,9 @@ events.listen('recipes', function (event) {
         ]
     }),
 
-      //Rune of Fire
-      event.remove({id: 'botania:runic_altar/fire'})
-      event.custom({
+    //Rune of Fire
+    event.remove({id: 'botania:runic_altar/fire'})
+    event.custom({
         "type": "botania:runic_altar",
         "output": {
           "item": "botania:rune_fire",
@@ -311,9 +342,9 @@ events.listen('recipes', function (event) {
         ]
     }),
 
-      //Rune of Water
-      event.remove({id: 'botania:runic_altar/water'})
-      event.custom({
+    //Rune of Water
+    event.remove({id: 'botania:runic_altar/water'})
+    event.custom({
         "type": "botania:runic_altar",
         "output": {
           "item": "botania:rune_water",
@@ -345,9 +376,9 @@ events.listen('recipes', function (event) {
         ]
     }),
 
-      //Rune of Earth
-      event.remove({id: 'botania:runic_altar/earth'})
-      event.custom({
+    //Rune of Earth
+    event.remove({id: 'botania:runic_altar/earth'})
+    event.custom({
         "type": "botania:runic_altar",
         "output": {
           "item": "botania:rune_earth",
@@ -378,10 +409,6 @@ events.listen('recipes', function (event) {
           }
         ]
     })
-
-    //Blaze Quartz
-    event.remove({id: 'botania:quartz_blaze'})
-    event.recipes.create.filling('botania:quartz_blaze', ['botania:quartz_mana', fluid.of('tconstruct:molten_blaze', 10)])
 
     //Ender Eye
     event.remove({id: 'minecraft:ender_eye'})

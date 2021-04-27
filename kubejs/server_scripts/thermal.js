@@ -31,6 +31,16 @@ events.listen('recipes', function (event) {
         S: 'create:hose_pulley'
     }),
 
+    //Phyto-Soil Infuser
+    event.remove({output: 'thermal:device_soil_infuser'})
+    event.shaped('thermal:device_soil_infuser', ['TDT', 'BCB', 'TST'], {
+        T: 'immersiveengineering:treated_wood_horizontal',
+        C: 'create:andesite_casing',
+        B: 'thermal:phytogro',
+        D: 'createaddition:capacitor', 
+        S: 'botania:agricarnation'
+    }),
+
     //Thermal Hive Hopper
     event.remove({output: 'thermal:device_hive_extractor'})
     event.shaped('thermal:device_hive_extractor', ['TNT', 'RCD', 'TST'], {
@@ -72,7 +82,7 @@ events.listen('recipes', function (event) {
         L: '#forge:sheetmetals/lead',
         P: '#forge:plates/lead',
         B: 'minecraft:hopper',
-        O: 'botania:mana_pearl'
+        O: 'botania:hopperhock'
     }),
 
     //Energetic Infuser

@@ -31,6 +31,14 @@ events.listen('recipes', function (event) {
         I: '#forge:ingots/electrum'
     }),
 
+    //Generator
+    event.remove({output: 'immersiveengineering:generator'})
+    event.shaped(Item.of('immersiveengineering:generator', 4), ['BCB', 'CSC', 'BCB'], {
+        S: 'immersiveengineering:dynamo',
+        C: 'thermal:electrum_plate',
+        B: 'superpackutils:compressed_steel_ingot'
+    }),
+
     //IE Heavy Engineering Block
     event.remove({output: 'immersiveengineering:heavy_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 2), ['SCS', 'IBI', 'SCS'], {
@@ -84,6 +92,39 @@ events.listen('recipes', function (event) {
     event.shaped(Item.of('immersiveengineering:waterwheel_segment', 2), ['TAT', 'ATA', ' A '], {
         A: '#forge:rods/treated_wood',
         T: '#forge:treated_wood'
+    }),
+
+    //LV Capacitor
+    event.remove({output: 'immersiveengineering:capacitor_lv'})
+    event.shaped('immersiveengineering:capacitor_lv', ['GCG', 'JBJ', 'ATA'], {
+        A: '#forge:treated_wood',
+        T: 'minecraft:redstone',
+        B: '#forge:storage_blocks/lead',
+        J: '#forge:ingots/copper',
+        C: 'createaddition:capacitor',
+        G: '#forge:ingots/iron'
+    }),
+
+    //MV Capacitor
+    event.remove({output: 'immersiveengineering:capacitor_mv'})
+    event.shaped('immersiveengineering:capacitor_mv', ['GCG', 'JBJ', 'ATA'], {
+        A: '#forge:treated_wood',
+        T: '#forge:storage_blocks/redstone',
+        B: 'immersiveengineering:capacitor_lv',
+        J: '#forge:ingots/electrum',
+        C: 'createaddition:capacitor',
+        G: 'superpackutils:compressed_steel_ingot'
+    }),
+
+    //HV Capacitor
+    event.remove({output: 'immersiveengineering:capacitor_hv'})
+    event.shaped('immersiveengineering:capacitor_hv', ['GCG', 'JBJ', 'ATA'], {
+        A: '#forge:treated_wood',
+        T: 'mekanism:enriched_redstone',
+        B: 'immersiveengineering:capacitor_mv',
+        J: '#forge:ingots/constantan',
+        C: 'createaddition:capacitor',
+        G: 'immersiveengineering:component_steel'
     }),
 
     //LV Wire

@@ -16,6 +16,15 @@ events.listen('recipes', function (event) {
         H: 'immersiveengineering:hammer'
     }),
 
+    //Bucket
+    event.remove({output: 'minecraft:bucket'})
+    event.shaped('minecraft:bucket', ['P P', ' P '], {
+        C: '#forge:plates/iron'
+    }),
+
+    //Glowstone Pre-Nether
+    event.recipes.create.filling('minecraft:glowstone_dust', ['minecraft:gunpowder', fluid.of('astralsorcery:liquid_starlight', 250)]),
+
     //Soul Lantern
     event.remove({id: 'tconstruct:smeltery/casting/soul_lantern'})
     event.recipes.create.filling('minecraft:soul_lantern', ['minecraft:soul_torch', fluid.of('tconstruct:molten_iron', 128)]),

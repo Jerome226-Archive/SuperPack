@@ -19,6 +19,10 @@ var outputRemoval = [
     'mekanism:restrictive_transporter',
     'mekanism:diversion_transporter',
 
+    'rftoolsstorage:crafting_manager',
+
+    'storagedrawers:compacting_drawers_3',
+
     'createaddition:copper_spool',
     'createaddition:gold_spool',
     'createaddition:connector',
@@ -36,7 +40,6 @@ var outputRemoval = [
 
     'immersiveengineering:windmill',
     'immersiveengineering:watermill',
-    'immersiveengineering:dynamo',
 
     'buzzier_bees:honey_apple',
 ];

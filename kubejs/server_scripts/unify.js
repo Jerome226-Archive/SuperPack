@@ -56,7 +56,7 @@ onEvent('recipes', event => {
 
   }
 
-  if (ingotItem !== null && blockItem !== null) {
+  if (ingotItem !== null && blockItem !== null && nameUnify !== 'quartz' && nameUnify !== 'ender_pearl') {
 
   event.shapeless(item.of(ingotItem, 9), [blockItem])
 
@@ -246,7 +246,7 @@ onEvent('recipes', event => {
   //unifyOre Block
   //-----------------------------------------------------
 
-  if (blockItem !== null) {
+  if (blockItem !== null && nameUnify !== 'quartz' && nameUnify !== 'ender_pearl') {
 
   //Crafting
   event.remove({ output: `#forge:storage_blocks/${nameUnify}`, type: 'minecraft:crafting_shaped'});
@@ -660,6 +660,13 @@ onEvent('recipes', event => {
   unifyOre(true, 'charcoal', '#minecraft:logs_that_burn', 'minecraft:charcoal', 'mekanism:dust_charcoal', null, 'thermal:charcoal_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
   unifyOre(true, 'emerald', 'minecraft:emerald_ore', 'minecraft:emerald', 'thermal:emerald_dust', null, 'minecraft:emerald_block', null, null, 'thermal:emerald_gear', null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
   unifyOre(true, 'lapis', 'minecraft:lapis_ore', 'minecraft:lapis_lazuli', 'thermal:lapis_dust', null, 'minecraft:lapis_block', null, null, 'thermal:lapis_gear', null, null, null, null, null, 0, 0, 0, 0, null, 12, 8);
+  unifyOre(true, 'quartz', 'minecraft:nether_quartz_ore', 'minecraft:quartz', 'thermal:quartz_dust', null, 'minecraft:quartz_block', null, null, 'thermal:quartz_gear', null, null, null, null, null, 0, 0, 0, 0, null, 2, 2);
+  unifyOre(true, 'apatite', 'thermal:apatite_ore', 'thermal:apatite', 'thermal:apatite_dust', null, 'thermal:apatite_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'cinnabar', 'thermal:cinnabar_ore', 'thermal:cinnabar', 'thermal:cinnabar_dust', null, 'thermal:cinnabar_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'niter', 'thermal:niter_ore', 'thermal:niter', 'thermal:niter_dust', null, 'thermal:niter_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'sulfur', 'thermal:sulfur_ore', 'thermal:sulfur', 'thermal:sulfur_dust', null, 'thermal:sulfur_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'ender_pearl', null, 'minecraft:ender_pearl', 'thermal:ender_pearl_dust', null, 'architects_palette:ender_pearl_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 0, 0);
+
   //unifyOre(true, 'certus_quartz', 'appliedenergistics2:quartz_ore', 'appliedenergistics2:certus_quartz_crystal', 'appliedenergistics2:certus_quartz_dust', null, 'appliedenergistics2:quartz_block', null, null, null, null, null, null, null, null, 0, 0, 0, null, 2, 1);
   //unifyOre(true, 'certus_quartz', 'appliedenergistics2:charged_quartz_ore', 'appliedenergistics2:charged_certus_quartz_crystal', 'appliedenergistics2:certus_quartz_dust', null, 'appliedenergistics2:quartz_block', null, null, null, null, null, null, null, null, 0, 0, 0, null, 2, 1);
 

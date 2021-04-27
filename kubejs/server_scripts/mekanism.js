@@ -9,7 +9,7 @@ events.listen('recipes', function (event) {
     //Mekanism Energy Tablet
     event.remove({output: 'mekanism:energy_tablet'})
     event.shaped('mekanism:energy_tablet', [' P ', 'CEC', 'ZOZ'], {
-        O: 'mekanism:ingot_osmium',
+        O: 'createaddition:capacitor',
         Z: 'createaddition:zinc_sheet',
         E: 'superpackutils:electrical_platinum_ingot',
         C: 'superpackutils:compressed_steel_ingot',
@@ -33,7 +33,7 @@ events.listen('recipes', function (event) {
         'PEGEP',
         'CPSPC'
       ], {
-        C: 'immersiveengineering:component_iron',
+        C: 'youmatter:machine_casing',
         P: '#forge:plates/steel',
         S: '#immersiveengineering:scaffoldings/steel',
         E: 'superpackutils:electrical_platinum_ingot',
@@ -56,7 +56,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanismgenerators:solar_panel', ['GGG', 'OCO'], {
         G: '#forge:glass_panes/colorless',
         C: 'superpackutils:compressed_steel_ingot',
-        O: 'mekanism:ingot_osmium'
+        O: '#forge:ingots/silver'
     }),
 
     //Solar Generator
@@ -64,7 +64,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanismgenerators:solar_generator', ['SSS', 'OCO', ' A '], {
         S: 'mekanismgenerators:solar_panel',
         A: 'create:andesite_alloy',
-        O: 'mekanism:ingot_osmium',
+        O: '#forge:ingots/hop_graphite',
         C: 'createaddition:capacitor'
     }),
 
@@ -149,7 +149,7 @@ events.listen('recipes', function (event) {
     //Seismic Vibrator
     event.remove({output: 'mekanism:seismic_vibrator'})
     event.shaped('mekanism:seismic_vibrator', ['SCS', 'IBI', 'SKS'], {
-        S: '#forge:ingots/osmium',
+        S: '#forge:plates/invar',
         C: 'immersiveengineering:sample_drill',
         K: 'thermal:drill_head',
         B: 'mekanism:steel_casing',
@@ -162,13 +162,131 @@ events.listen('recipes', function (event) {
         P: 'minecraft:polished_blackstone_pressure_plate',
         C: 'immersiveengineering:charging_station',
         S: '#forge:ingots/steel',
+        E: '#forge:ingots/silver'
+    }),
+
+    //Chemical Tank
+    event.remove({output: 'mekanism:basic_chemical_tank'})
+    event.shaped('mekanism:basic_chemical_tank', ['CSC', 'EPE', 'CSC'], {
+        P: 'create:fluid_tank',
+        C: 'mekanism:enriched_carbon',
+        S: 'superpackutils:basic_alloy',
+        E: '#forge:ingots/invar'
+    }),
+
+    //Advanced Chemical Tank
+    event.remove({output: 'mekanism:advanced_chemical_tank'})
+    event.shaped('mekanism:advanced_chemical_tank', ['CSC', 'EPE', 'CSC'], {
+        P: 'mekanism:basic_chemical_tank',
+        C: 'mekanism:enriched_redstone',
+        S: 'mekanism:alloy_infused',
+        E: '#forge:ingots/invar'
+    }),
+
+    //Elite Chemical Tank
+    event.remove({output: 'mekanism:elite_chemical_tank'})
+    event.shaped('mekanism:elite_chemical_tank', ['CSC', 'EPE', 'CSC'], {
+        P: 'mekanism:advanced_chemical_tank',
+        C: 'mekanism:enriched_diamond',
+        S: 'mekanism:alloy_reinforced',
+        E: '#forge:ingots/invar'
+    }),
+
+    //Ultimate Chemical Tank
+    event.remove({output: 'mekanism:ultimate_chemical_tank'})
+    event.shaped('mekanism:ultimate_chemical_tank', ['CSC', 'EPE', 'CSC'], {
+        P: 'mekanism:advanced_chemical_tank',
+        C: 'mekanism:enriched_refined_obsidian',
+        S: 'mekanism:alloy_atomic',
+        E: '#forge:ingots/invar'
+    }),
+
+    //Fluid Tank
+    event.remove({output: 'mekanism:basic_fluid_tank'})
+    event.shaped('mekanism:basic_fluid_tank', ['CSC', 'EPE', 'CSC'], {
+        P: 'create:fluid_tank',
+        C: 'mekanism:enriched_carbon',
+        S: 'superpackutils:basic_alloy',
+        E: 'pneumaticcraft:ingot_iron_compressed'
+    }),
+
+    //Advanced Fluid Tank
+    event.remove({output: 'mekanism:advanced_fluid_tank'})
+    event.shaped('mekanism:advanced_fluid_tank', ['CSC', 'EPE', 'CSC'], {
+        P: 'mekanism:basic_fluid_tank',
+        C: 'mekanism:enriched_redstone',
+        S: 'mekanism:alloy_infused',
+        E: 'pneumaticcraft:ingot_iron_compressed'
+    }),
+
+    //Elite Fluid Tank
+    event.remove({output: 'mekanism:elite_fluid_tank'})
+    event.shaped('mekanism:elite_fluid_tank', ['CSC', 'EPE', 'CSC'], {
+        P: 'mekanism:advanced_fluid_tank',
+        C: 'mekanism:enriched_diamond',
+        S: 'mekanism:alloy_reinforced',
+        E: 'pneumaticcraft:ingot_iron_compressed'
+    }),
+
+    //Ultimate Fluid Tank
+    event.remove({output: 'mekanism:ultimate_fluid_tank'})
+    event.shaped('mekanism:ultimate_fluid_tank', ['CSC', 'EPE', 'CSC'], {
+        P: 'mekanism:elite_fluid_tank',
+        C: 'mekanism:enriched_refined_obsidian',
+        S: 'mekanism:alloy_atomic',
+        E: 'pneumaticcraft:ingot_iron_compressed'
+    }),
+    
+    //Basic Energy Cube
+    event.remove({output: 'mekanism:basic_energy_cube'})
+    event.shaped('mekanism:basic_energy_cube', ['CSC', 'EPE', 'CSC'], {
+        P: 'immersiveengineering:capacitor_hv',
+        C: 'mekanism:enriched_carbon',
+        S: 'superpackutils:basic_alloy',
         E: 'mekanism:energy_tablet'
+    }),
+
+    //Advanced Energy Cube
+    event.remove({output: 'mekanism:advanced_energy_cube'})
+    event.shaped('mekanism:advanced_energy_cube', ['CSC', 'EPE', 'CSC'], {
+        P: 'mekanism:basic_energy_cube',
+        C: 'mekanism:enriched_redstone',
+        S: 'mekanism:alloy_infused',
+        E: 'mekanism:energy_tablet'
+    }),
+
+    //Elite Energy Cube
+    event.remove({output: 'mekanism:elite_energy_cube'})
+    event.shaped('mekanism:elite_energy_cube', ['CSC', 'EPE', 'CSC'], {
+        P: 'mekanism:advanced_energy_cube',
+        C: 'mekanism:enriched_diamond',
+        S: 'mekanism:alloy_reinforced',
+        E: 'mekanism:energy_tablet'
+    }),
+
+    //Ultimate Energy Cube
+    event.remove({output: 'mekanism:ultimate_energy_cube'})
+    event.shaped('mekanism:ultimate_energy_cube', ['CSC', 'EPE', 'CSC'], {
+        P: 'mekanism:elite_energy_cube',
+        C: 'mekanism:enriched_refined_obsidian',
+        S: 'mekanism:alloy_atomic',
+        E: 'mekanism:energy_tablet'
+    }),
+
+    //Personal Chest
+    event.remove({output: 'mekanism:personal_chest'})
+    event.shaped('mekanism:personal_chest', ['CSC', 'EPE', 'CAC'], {
+        P: 'ironchest:iron_chest',
+        C: 'mekanism:enriched_carbon',
+        S: 'mekanism:basic_control_circuit',
+        A: 'superpackutils:compressed_steel_ingot',
+        E: 'minecraft:glass'
     }),
 
     //Electric Pump
     event.remove({output: 'mekanism:electric_pump'})
     event.shaped('mekanism:electric_pump', ['SCS', 'IBI', 'SJS'], {
-        S: '#forge:ingots/osmium',
+        S: '#forge:plates/lead',
         C: 'immersiveengineering:fluid_pump',
         J: 'create:mechanical_pump',
         B: 'mekanism:steel_casing',
@@ -256,7 +374,7 @@ events.listen('recipes', function (event) {
         I: '#forge:ingots/iron',
         F: 'minecraft:furnace',
         P: '#forge:plates/iron',
-        O: '#forge:ingots/osmium',
+        O: 'create:andesite_casing',
         C: '#forge:ingots/copper',
         S: 'superpackutils:compressed_steel_ingot'
     }),
