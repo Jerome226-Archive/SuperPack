@@ -118,7 +118,7 @@
 	#Generation Settings for salt.
 	[world_generation.salt]
 		#Determines if salt should be added to world generation.
-		shouldGenerate = true
+		shouldGenerate = false
 		#Chance that salt generates in a chunk.
 		#Range: 1 ~ 128
 		perChunk = 2
