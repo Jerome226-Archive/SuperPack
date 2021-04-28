@@ -10,9 +10,10 @@
 		{
 			title: "Tier 1",
 			x: -0.5d,
-			y: 5.0d,
+			y: 3.0d,
 			shape: "hexagon",
 			subtitle: "Welcome to the Tier 1 Tech quests!",
+			size: 1.5d,
 			id: "0F62021D31E792EF",
 			tasks: [{
 				id: "638B31FEA7654E0A",
@@ -24,6 +25,7 @@
 			x: -0.5d,
 			y: -0.5d,
 			dependencies: ["3445CBB90C54C1F3"],
+			size: 1.2d,
 			id: "43F2AF3B3909201A",
 			tasks: [{
 				id: "1674D1DE2EA354FE",
@@ -75,6 +77,7 @@
 			x: -0.5d,
 			y: -3.5d,
 			dependencies: ["43F2AF3B3909201A"],
+			size: 1.2d,
 			id: "2C214049E79CC74A",
 			tasks: [{
 				id: "66FD583F85698D5C",
@@ -164,7 +167,7 @@
 			}]
 		},
 		{
-			x: 4.5d,
+			x: 3.5d,
 			y: -3.5d,
 			dependencies: [
 				"047D68D5CD887601",
@@ -178,7 +181,7 @@
 			}]
 		},
 		{
-			x: 4.5d,
+			x: 4.0d,
 			y: -2.5d,
 			dependencies: [
 				"6DFC18B8146D709D",
@@ -192,7 +195,7 @@
 			}]
 		},
 		{
-			x: 4.5d,
+			x: 4.0d,
 			y: -4.5d,
 			dependencies: [
 				"6DFC18B8146D709D",
@@ -259,6 +262,7 @@
 			x: 6.0d,
 			y: -3.5d,
 			dependencies: ["4A4A59B1E12A5285"],
+			size: 1.2d,
 			id: "72A2ED01F231B66F",
 			tasks: [{
 				id: "01D047B27DEBA045",
@@ -302,6 +306,7 @@
 		{
 			x: -2.5d,
 			y: 1.0d,
+			dependencies: ["3445CBB90C54C1F3"],
 			id: "150DE3B401D8C17B",
 			tasks: [{
 				id: "5269B500DCC2622F",
@@ -418,6 +423,207 @@
 				type: "item",
 				item: "create:fluid_valve"
 			}]
+		},
+		{
+			x: 7.0d,
+			y: -1.5d,
+			dependencies: [
+				"585E447E78E33062",
+				"72A2ED01F231B66F"
+			],
+			id: "554E2A73132B48A4",
+			tasks: [{
+				id: "54B07FB31EE89DA9",
+				type: "item",
+				item: "create:mechanical_crafter"
+			}]
+		},
+		{
+			x: 4.0d,
+			y: 0.5d,
+			dependencies: ["5985D6F3B37AD32E"],
+			id: "2AABA45B4983E627",
+			tasks: [{
+				id: "69677A23878877F3",
+				type: "item",
+				item: "mekanism:ingot_steel"
+			}]
+		},
+		{
+			title: "Blast Furnace",
+			icon: "immersiveengineering:blast_furnace",
+			x: 2.5d,
+			y: -0.5d,
+			dependencies: ["7F3943424622371B"],
+			id: "5985D6F3B37AD32E",
+			tasks: [{
+				id: "126C2527FE2DE5F1",
+				type: "item",
+				item: "immersiveengineering:blastbrick",
+				count: 27L
+			}]
+		},
+		{
+			x: 6.0d,
+			y: 0.0d,
+			dependencies: ["2AABA45B4983E627"],
+			id: "585E447E78E33062",
+			tasks: [{
+				id: "11DA568A0B3DC896",
+				type: "item",
+				item: "create:electron_tube"
+			}]
+		},
+		{
+			x: 9.0d,
+			y: -0.75d,
+			shape: "hexagon",
+			dependencies: ["554E2A73132B48A4"],
+			size: 1.5d,
+			id: "51FD8B6C0B7AEC23",
+			tasks: [{
+				id: "1754C106DE2FD811",
+				type: "item",
+				item: "createaddition:alternator"
+			}]
+		},
+		{
+			x: 8.5d,
+			y: 0.5d,
+			dependencies: ["554E2A73132B48A4"],
+			id: "13DA57BCC81465BA",
+			tasks: [{
+				id: "143E39A24D73D50D",
+				type: "item",
+				item: "createaddition:electric_motor"
+			}]
+		},
+		{
+			x: 8.0d,
+			y: -2.5d,
+			dependencies: ["72A2ED01F231B66F"],
+			id: "394D7FD4BD563B67",
+			tasks: [{
+				id: "03AC0CDD30379AA3",
+				type: "item",
+				item: "create:sequenced_gearshift"
+			}]
+		},
+		{
+			x: 8.264965986394522d,
+			y: -3.7095238095237946d,
+			dependencies: ["72A2ED01F231B66F"],
+			id: "6DCA231A5435A747",
+			tasks: [{
+				id: "1AB8A24A674474BF",
+				type: "item",
+				item: "create:brass_tunnel"
+			}]
+		},
+		{
+			x: 1.5d,
+			y: 1.0d,
+			dependencies: ["3445CBB90C54C1F3"],
+			id: "0F42AFBF4423D93B",
+			tasks: [{
+				id: "5BBFCD4A91547A27",
+				type: "item",
+				item: "create:andesite_funnel"
+			}]
+		},
+		{
+			x: 1.0d,
+			y: 2.0d,
+			dependencies: ["3445CBB90C54C1F3"],
+			id: "1CEE6F3CADC00327",
+			tasks: [{
+				id: "27C38103802EC1D5",
+				type: "item",
+				item: "create:andesite_tunnel"
+			}]
+		},
+		{
+			x: -2.0d,
+			y: 2.0d,
+			dependencies: ["3445CBB90C54C1F3"],
+			id: "7A4470A5BAD87B50",
+			tasks: [{
+				id: "30C811758E4DBB49",
+				type: "item",
+				item: "create:gearbox"
+			}]
+		},
+		{
+			x: 8.0d,
+			y: -5.0d,
+			dependencies: ["72A2ED01F231B66F"],
+			id: "7395E038C5245220",
+			tasks: [{
+				id: "24416AC253B32093",
+				type: "item",
+				item: "create:brass_funnel"
+			}]
+		},
+		{
+			x: 7.122108843537376d,
+			y: -5.648299319727876d,
+			dependencies: ["72A2ED01F231B66F"],
+			id: "29B7E9A3D73DE497",
+			tasks: [{
+				id: "72BBCF3AA10184A8",
+				type: "item",
+				item: "create:mechanical_arm"
+			}]
+		},
+		{
+			x: 6.0d,
+			y: -6.0d,
+			dependencies: ["72A2ED01F231B66F"],
+			id: "3070E5A8C7997F86",
+			tasks: [{
+				id: "75C0E04B522DF475",
+				type: "item",
+				item: "create:rotation_speed_controller"
+			}]
+		},
+		{
+			x: 5.887414965986359d,
+			y: -1.1789115646258281d,
+			dependencies: ["72A2ED01F231B66F"],
+			id: "365BEB299549991C",
+			tasks: [
+				{
+					id: "7589D19632821537",
+					type: "item",
+					item: "create:flywheel"
+				},
+				{
+					id: "5DD111E2AF46C7F7",
+					type: "item",
+					item: "create:furnace_engine"
+				}
+			]
+		},
+		{
+			title: "Improved Blast Furnace",
+			icon: "immersiveengineering:advanced_blast_furnace",
+			x: 3.0d,
+			y: 2.0d,
+			dependencies: ["2AABA45B4983E627"],
+			id: "56637C803A8F372D",
+			tasks: [
+				{
+					id: "1B50DF85D5CB6A0F",
+					type: "item",
+					item: "immersiveengineering:blastbrick_reinforced",
+					count: 27L
+				},
+				{
+					id: "3ABE97EF511A3740",
+					type: "item",
+					item: "minecraft:hopper"
+				}
+			]
 		}
 	]
 }

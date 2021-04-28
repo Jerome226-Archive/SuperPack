@@ -11,6 +11,15 @@ events.listen('recipes', function (event) {
         E: '#forge:storage_blocks/electrum'
     }),
 
+    //Machine Frame
+    event.remove({output: 'rftoolsbase:machine_frame'})
+    event.recipes.create.mechanical_crafting('rftoolsbase:machine_frame', ['SCS', 'IBI', 'SCS'], {
+        S: 'immersiveengineering:sheetmetal_steel',
+        C: 'pneumaticcraft:compressed_iron_gear',
+        B: 'mekanism:steel_casing',
+        I: '#forge:ingots/osmium'
+    }),
+
     //Storage Scanner
     event.remove({output: 'rftoolsstorage:storage_scanner'})
     event.recipes.create.mechanical_crafting('rftoolsstorage:storage_scanner', ['HLTLH', 'GPSEG', 'HRTRH'], {

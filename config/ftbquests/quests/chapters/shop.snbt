@@ -1,0 +1,9 @@
+{
+	id: "1824C22DED433089",
+	group: "",
+	order_index: 2,
+	filename: "shop",
+	title: "shop",
+	default_quest_shape: "",
+	quests: []
+}

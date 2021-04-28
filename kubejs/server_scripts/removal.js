@@ -18,6 +18,7 @@ var outputRemoval = [
     'mekanism:ultimate_logistical_transporter',
     'mekanism:restrictive_transporter',
     'mekanism:diversion_transporter',
+    'mekanism:logistical_sorter',
 
     'rftoolsstorage:crafting_manager',
 

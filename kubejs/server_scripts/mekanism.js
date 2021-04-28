@@ -6,6 +6,39 @@ events.listen('recipes', function (event) {
     //Early Mekanism
     //-----------------------------------------------------
 
+    //Osmium Processing
+    event.remove({id: 'mekanism:processing/osmium/clump/from_ore'})
+    event.remove({id: 'tconstruct:smeltery/melting/metal/osmium/ore'})
+    event.remove({id: 'immersiveengineering:arcfurnace/ore_osmium'})
+
+    //Uranium Processing
+    event.remove({id: 'tconstruct:smeltery/melting/metal/uranium/ore'})
+    event.remove({id: 'immersiveengineering:arcfurnace/ore_uranium'})
+
+    event.custom({
+        "type": "thermal:smelter",
+        "ingredient": {
+          "tag": "forge:ores/uranium"
+        },
+        "result": [
+          {
+            "item": "mekanism:ingot_uranium",
+            "chance": 1.0
+          },
+          {
+            "item": "thermal:rich_slag",
+            "chance": 0.2
+          }
+        ],
+        "experience": 0.2,
+        "conditions": [
+          {
+            "type": "forge:mod_loaded",
+            "modid": "mekanism"
+          }
+        ]
+    })
+
     //Mekanism Energy Tablet
     event.remove({output: 'mekanism:energy_tablet'})
     event.shaped('mekanism:energy_tablet', [' P ', 'CEC', 'ZOZ'], {
@@ -64,7 +97,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanismgenerators:solar_generator', ['SSS', 'OCO', ' A '], {
         S: 'mekanismgenerators:solar_panel',
         A: 'create:andesite_alloy',
-        O: '#forge:ingots/hop_graphite',
+        O: 'superpackutils:compressed_steel_ingot',
         C: 'createaddition:capacitor'
     }),
 
@@ -91,6 +124,16 @@ events.listen('recipes', function (event) {
     event.shaped('mekanism:chemical_oxidizer', ['SCS', 'IBI', 'SJS'], {
         S: '#forge:plates/invar',
         C: 'tconstruct:melter',
+        J: 'mekanism:basic_chemical_tank',
+        B: 'mekanism:steel_casing',
+        I: '#forge:circuits/basic'
+    }),
+
+    //Chemical Infuser
+    event.remove({output: 'mekanism:chemical_infuser'})
+    event.shaped('mekanism:chemical_infuser', ['SCS', 'IBI', 'SJS'], {
+        S: '#forge:plates/invar',
+        C: 'mekanism:metallurgic_infuser',
         J: 'mekanism:basic_chemical_tank',
         B: 'mekanism:steel_casing',
         I: '#forge:circuits/basic'
@@ -146,6 +189,17 @@ events.listen('recipes', function (event) {
         G: 'pneumaticcraft:compressed_iron_gear'
     }),
 
+    //Chemical Injection Chamber
+    event.remove({output: 'mekanism:chemical_injection_chamber'})
+    event.shaped('mekanism:chemical_injection_chamber', ['GCG', 'IBI', 'SKS'], {
+        S: '#forge:plates/bronze',
+        C: 'create:spout',
+        K: 'immersiveengineering:heavy_engineering',
+        B: 'mekanism:purification_chamber',
+        I: '#forge:circuits/advanced',
+        G: '#forge:gears/bronze'
+    }),
+
     //Seismic Vibrator
     event.remove({output: 'mekanism:seismic_vibrator'})
     event.shaped('mekanism:seismic_vibrator', ['SCS', 'IBI', 'SKS'], {
@@ -195,7 +249,7 @@ events.listen('recipes', function (event) {
     //Ultimate Chemical Tank
     event.remove({output: 'mekanism:ultimate_chemical_tank'})
     event.shaped('mekanism:ultimate_chemical_tank', ['CSC', 'EPE', 'CSC'], {
-        P: 'mekanism:advanced_chemical_tank',
+        P: 'mekanism:elite_chemical_tank',
         C: 'mekanism:enriched_refined_obsidian',
         S: 'mekanism:alloy_atomic',
         E: '#forge:ingots/invar'
@@ -298,7 +352,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanism:osmium_compressor', ['GCG', 'IBI', 'SJS'], {
         S: '#forge:plates/bronze',
         C: 'create:mechanical_press',
-        J: 'mekanism:clump_osmium',
+        J: 'create:depot',
         B: 'mekanism:steel_casing',
         I: '#forge:circuits/advanced',
         G: '#forge:gears/bronze'

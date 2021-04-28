@@ -19,7 +19,7 @@ events.listen('recipes', function (event) {
     //Bucket
     event.remove({output: 'minecraft:bucket'})
     event.shaped('minecraft:bucket', ['P P', ' P '], {
-        C: '#forge:plates/iron'
+        C: '#forge:plates/iron',
     }),
 
     //Glowstone Pre-Nether
