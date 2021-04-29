@@ -350,9 +350,6 @@ onEvent('recipes', event => {
 
   if (dirtyDustItem !== null && dustItem !== null && isGem == false) {
 
-  //Mekanism Enrichment Chamber - 1 Dirty Dust into Dust
-  event.recipes.mekanism.enriching(dustItem, dirtyDustItem)
-
   //Create Encased Fan
   event.recipes.create.splashing(dustItem, dirtyDustItem)
 

@@ -73,11 +73,8 @@ events.listen('recipes', function (event) {
     event.remove({output: 'youmatter:black_hole'})
     event.recipes.mekanism.combining('youmatter:black_hole', 'botania:ender_air_bottle', Item.of('mythicbotany:alfsteel_ingot', 1))
 
-    //Golden Frog Leg
+    //Golden Frog
     event.recipes.create.filling('quark:golden_frog_leg', ['quark:frog_leg', fluid.of('tconstruct:molten_gold', 128)]),
-
-    //Golden Habanera
-    event.recipes.create.filling('simplefarming:golden_habanero', ['simplefarming:habanero', fluid.of('tconstruct:molten_gold', 128)]),
 
     //Honey Bread
     event.remove({output: 'buzzier_bees:honey_bread'})

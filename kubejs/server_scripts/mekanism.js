@@ -57,6 +57,13 @@ events.listen('recipes', function (event) {
         B: 'youmatter:black_hole'
     }),
 
+    //Thermal Evaporation Block
+    event.remove({output: 'mekanism:thermal_evaporation_block'})
+    event.shaped(Item.of('mekanism:thermal_evaporation_block', 4), [' A ', 'AIA', ' A '], {
+        I: '#forge:storage_blocks/steel',
+        A: '#forge:ingots/bronze'
+    }),
+
     //Mekanism Steel Casing
     event.remove({output: 'mekanism:steel_casing'})
     event.recipes.create.mechanical_crafting(Item.of('mekanism:steel_casing', 2), [
