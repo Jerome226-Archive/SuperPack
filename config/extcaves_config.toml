@@ -153,27 +153,27 @@
 		#
 		#Sweetshroom Spawn Rate (default=10)
 		#Range: 1 ~ 50
-		spawnrate_mushroom_sweetshroom = 10
+		spawnrate_mushroom_sweetshroom = 6
 		#
 		#Goldishroom Spawn Rate (default=10)
 		#Range: 1 ~ 50
-		spawnrate_mushroom_goldishroom = 10
+		spawnrate_mushroom_goldishroom = 6
 		#
 		#Shinyshroom Spawn Rate (default=10)
 		#Range: 1 ~ 50
-		spawnrate_mushroom_shinyshroom = 10
+		spawnrate_mushroom_shinyshroom = 6
 		#
 		#Lumishroom Spawn Rate (default=10)
 		#Range: 1 ~ 50
-		spawnrate_mushroom_lumishroom = 10
+		spawnrate_mushroom_lumishroom = 6
 		#
 		#Fluoshroom Spawn Rate (default=10)
 		#Range: 1 ~ 50
-		spawnrate_mushroom_fluoshroom = 10
+		spawnrate_mushroom_fluoshroom = 8
 		#
 		#Rockshroom Spawn Rate (default=10)
 		#Range: 1 ~ 50
-		spawnrate_mushroom_rockshroom = 10
+		spawnrate_mushroom_rockshroom = 6
 
 	[Spawn_Rates.Mosses]
 		#
