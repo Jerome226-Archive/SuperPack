@@ -42,6 +42,13 @@ var outputRemoval = [
     'pneumaticcraft:logistics_drone',
     'pneumaticcraft:logistics_module',
 
+    'pneumaticcraft:programmable_controller',
+    'pneumaticcraft:programmer',
+    'pneumaticcraft:programming_puzzle',
+    'pneumaticcraft:network_api',
+    'pneumaticcraft:network_data_storage',
+    'pneumaticcraft:drone',
+
     //Thermal Series
     'thermal:machine_press',
 
