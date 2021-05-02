@@ -16,15 +16,6 @@ events.listen('recipes', function (event) {
         H: 'immersiveengineering:hammer'
     }),
 
-    //Piston
-    event.remove({output: 'minecraft:piston'})
-    event.shaped('minecraft:piston', ['AAA', 'TCT', 'TBT'], {
-        A: '#forge:treated_wood',
-        B: '#forge:dusts/redstone',
-        C: '#forge:plates/iron',
-        T: '#forge:cobblestone'
-    }),
-
     //Igneous Sand Generation
     event.custom({
         "type": "thermal:rock_gen",
