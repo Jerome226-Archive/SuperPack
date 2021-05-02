@@ -39,7 +39,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'thermal:device_soil_infuser'})
     event.shaped('thermal:device_soil_infuser', ['TDT', 'BCB', 'TST'], {
         T: 'immersiveengineering:treated_wood_horizontal',
-        C: 'create:andesite_casing',
+        C: 'immersiveengineering:light_engineering',
         B: 'thermal:phytogro',
         D: 'createaddition:capacitor', 
         S: 'botania:agricarnation'
@@ -70,18 +70,18 @@ events.listen('recipes', function (event) {
     //Thermal Igneous Extruder
     event.remove({output: 'thermal:device_rock_gen'})
     event.shaped('thermal:device_rock_gen', ['LBL', 'PCP', 'AOA'], {
-        C: 'create:andesite_casing',
+        C: 'immersiveengineering:light_engineering',
         A: '#forge:sheetmetals/aluminum',
         L: '#forge:sheetmetals/lead',
         P: '#forge:plates/invar',
-        B: 'minecraft:iron_pickaxe',
+        B: 'superpackutils:pickaxe',
         O: 'thermal:drill_head'
     }),
 
     //Thermal Vacuumulator
     event.remove({output: 'thermal:device_collector'})
     event.shaped('thermal:device_collector', ['LBL', 'PCP', 'AOA'], {
-        C: 'create:andesite_casing',
+        C: 'immersiveengineering:light_engineering',
         A: '#forge:sheetmetals/aluminum',
         L: '#forge:sheetmetals/lead',
         P: '#forge:plates/lead',
@@ -106,7 +106,7 @@ events.listen('recipes', function (event) {
         E: '#forge:sheetmetals/lead',
         C: 'minecraft:glass_bottle',
         P: '#forge:plates/silver',
-        B: 'create:andesite_casing',
+        B: 'immersiveengineering:light_engineering',
         L: '#forge:sheetmetals/aluminum',
         R: 'minecraft:dropper'
     }),

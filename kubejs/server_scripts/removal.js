@@ -2,6 +2,7 @@
 events.listen('recipes', function (event) {
 
 var outputRemoval = [
+    //Mekanism
     'mekanism:basic_universal_cable',
     'mekanism:advanced_universal_cable',
     'mekanism:elite_universal_cable',
@@ -20,15 +21,19 @@ var outputRemoval = [
     'mekanism:diversion_transporter',
     'mekanism:logistical_sorter',
 
+    //RFTools
     'rftoolsstorage:crafting_manager',
 
+    //Storage Drawers
     'storagedrawers:compacting_drawers_3',
 
+    //Create Additions
     'createaddition:copper_spool',
     'createaddition:gold_spool',
     'createaddition:connector',
     'createaddition:accumulator',
 
+    //Pneumaticcraft
     'pneumaticcraft:logistics_frame_storage',
     'pneumaticcraft:logistics_frame_default_storage',
     'pneumaticcraft:logistics_frame_passive_provider',
@@ -37,12 +42,16 @@ var outputRemoval = [
     'pneumaticcraft:logistics_drone',
     'pneumaticcraft:logistics_module',
 
+    //Thermal Series
     'thermal:machine_press',
 
+    //Immersive Engineering
     'immersiveengineering:windmill',
     'immersiveengineering:watermill',
 
+    //Buzzier Bees
     'buzzier_bees:honey_apple',
+
 ];
 
 var typeRemoval = [

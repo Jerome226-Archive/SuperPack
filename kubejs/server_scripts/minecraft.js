@@ -16,11 +16,23 @@ events.listen('recipes', function (event) {
         H: 'immersiveengineering:hammer'
     }),
 
-    //Bucket
-    event.remove({output: 'minecraft:bucket'})
-    event.shaped('minecraft:bucket', ['P P', ' P '], {
-        P: '#forge:plates/iron',
+    //Piston
+    event.remove({output: 'minecraft:piston'})
+    event.shaped('minecraft:piston', ['AAA', 'TCT', 'TBT'], {
+        A: '#forge:treated_wood',
+        B: '#forge:dusts/redstone',
+        C: '#forge:plates/iron',
+        T: '#forge:cobblestone'
     }),
+
+    //Igneous Sand Generation
+    event.custom({
+        "type": "thermal:rock_gen",
+        "adjacent": "astralsorcery:liquid_starlight",
+        "result": {
+          "item": "minecraft:sand"
+        }
+    })
 
     //Glowstone Pre-Nether
     event.recipes.create.filling('minecraft:glowstone_dust', ['minecraft:gunpowder', fluid.of('astralsorcery:liquid_starlight', 250)]),

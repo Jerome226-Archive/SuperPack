@@ -116,11 +116,40 @@ events.listen('recipes', function (event) {
         I: '#forge:coins'
     }),
 
+    //Igneous Deepslate Generation
+    event.custom({
+      "type": "thermal:rock_gen",
+      "adjacent": "minecraft:water",
+      "below": "minecraft:bedrock",
+      "result": {
+        "item": "superpackutils:deepslate"
+      }
+    })
+
+    //Ethyl Chloride
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:hydrogen_chloride"},"rightInput":{"amount":1,"gas":"mekanism:ethene"},"output":{"gas":"superpackutils:ethyl_chloride","amount":1}})
+
+    //Tetraethyl Lead Dust
+    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"thermal:lead_dust"}},"fluidInput":{"amount":50,"tag":"forge:sodium"},"gasInput":{"amount":100,"gas":"superpackutils:ethyl_chloride"},"energyRequired":200,"duration":400,"itemOutput":{"item":"superpackutils:tetraethyl_lead_dust","count":1},"gasOutput":{"gas":"mekanism:oxygen","amount":10}})
+
     //Industrial Sand
     event.recipes.immersiveengineering.crusher('superpackutils:industrial_sand', 'create:limesand')
 
+    //Bedrock Dust & Limestone Dust
+    event.recipes.create.crushing([Item.of('superpackutils:limestone_dust').withChance(0.35), 'superpackutils:bedrock_dust', Item.of('superpackutils:bedrock_dust').withChance(0.45)], 'superpackutils:deepslate', 350)
+
+    //Reinforced Capacitor 
+    event.shaped('superpackutils:reinforced_capacitor', [' CI', 'CAC', 'IC '], {
+      C: '#forge:plates/lead',
+      A: 'createaddition:capacitor',
+      I: 'superpackutils:bedrock_dust'
+    }),
+
     //Dyingrock
     event.recipes.mekanism.metallurgic_infusing('superpackutils:dyingrock', 'botania:livingrock', 'mekanism:carbon', 80),
+
+    //Superheated Bronze Ingot
+    event.recipes.create.compacting('superpackutils:superheated_bronze_ingot', ['#forge:ingots/bronze', fluid.of('tconstruct:magma_cream', 50)]).superheated(),
 
     //Weird Fungu
     event.recipes.create.filling('superpackutils:weird_fungu', ['minecraft:crimson_fungus', fluid.of('mekanismgenerators:bioethanol', 1000)]),

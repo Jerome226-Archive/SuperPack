@@ -12,8 +12,18 @@ events.listen('recipes', function (event) {
         S: '#forge:plates/zinc',
         P: '#forge:plates/iron',
         C: 'superpackutils:compressed_steel_ingot',
-        M: 'immersiveengineering:component_steel'
+        M: '#forge:plates/copper'
     })
+
+    //Induction Heater
+    event.remove({output: 'createaddition:heater'})
+    event.shaped('createaddition:heater', [' C ', 'IBI', 'SPS'], {
+        S: '#forge:ingots/brass',
+        C: 'createaddition:capacitor',
+        B: 'mekanismgenerators:heat_generator',
+        P: '#forge:plates/iron',
+        I: 'immersiveengineering:wirecoil_copper'
+    }),
 
     //Alternator
     event.remove({id: 'createaddition:mechanical_crafting/alternator'})

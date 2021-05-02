@@ -6,6 +6,16 @@ events.listen('recipes', function (event) {
     //Immersive Engineering
     //-----------------------------------------------------
 
+    //Coke Oven Balance
+    event.remove({id: 'immersiveengineering:cokeoven/charcoal'})
+    event.recipes.immersiveengineering.coke_oven('minecraft:charcoal', '#minecraft:logs').creosote(250).time(450)
+
+    event.remove({id: 'immersiveengineering:cokeoven/coke'})
+    event.recipes.immersiveengineering.coke_oven('thermal:coal_coke', 'minecraft:coal').creosote(500).time(900)
+
+    event.remove({id: 'immersiveengineering:cokeoven/coke_block'})
+    event.recipes.immersiveengineering.coke_oven('thermal:coal_coke_block', 'minecraft:coal_block').creosote(5000).time(8100)
+
     //IE Coke Brick
     event.remove({output: 'immersiveengineering:cokebrick'})
     event.shaped(Item.of('immersiveengineering:cokebrick', 3), ['ATA', 'TWT', 'ATA'], {
@@ -43,7 +53,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'immersiveengineering:heavy_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 2), ['SCS', 'IBI', 'SCS'], {
         S: 'superpackutils:compressed_steel_ingot',
-        C: 'immersiveengineering:component_steel',
+        C: 'superpackutils:reinforced_capacitor',
         B: 'create:brass_casing',
         I: 'immersiveengineering:slag'
     }),

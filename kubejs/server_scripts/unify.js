@@ -355,7 +355,7 @@ onEvent('recipes', event => {
 
   }
 
-  if (oreItem !== null && dustItem !== null && isGem == false) {
+  if (oreItem !== null && dustItem !== null && isGem == false && nameUnify !== 'starmetal') {
 
   //Thermal Pulverizer
   event.recipes.thermal.pulverizer(Item.of(dustItem, oreDoublingOutput), oreItem)
@@ -650,9 +650,11 @@ onEvent('recipes', event => {
   unifyOre(false, 'manyullyn', null, 'tconstruct:manyullyn_ingot', null, null, 'tconstruct:manyullyn_block', 'tconstruct:manyullyn_nugget', null, null, null, null, null, null, 'tconstruct:molten_manyullyn', 216, 72, 24, 0, null, 2, null);
   unifyOre(false, 'hepatizon', null, 'tconstruct:hepatizon_ingot', null, null, 'tconstruct:hepatizon_block', 'tconstruct:hepatizon_nugget', null, null, null, null, null, null, 'tconstruct:molten_hepatizon', 233, 78, 26, 0, null, 2, null);
   unifyOre(false, 'compressed_iron', null, 'pneumaticcraft:ingot_iron_compressed', null, null, 'pneumaticcraft:compressed_iron_block', null, null, 'pneumaticcraft:compressed_iron_gear', null, null, null, null, null, 0, 0, 0, 0, null, 0, null);
+  unifyOre(false, 'starmetal', 'astralsorcery:starmetal_ore', 'astralsorcery:starmetal_ingot', 'astralsorcery:stardust', null, 'astralsorcery:starmetal', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 0, null);
+  unifyOre(false, 'tetraethyl', null, 'superpackutils:tetraethyl_lead_ingot', 'superpackutils:tetraethyl_lead_dust', null, null, null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 0, null);
   unifyOre(false, 'brass', null, 'create:brass_ingot', null, null, 'create:brass_block', 'create:brass_nugget', null, null, 'create:brass_sheet', 'create:crushed_brass', 'createaddition:brass_rod', null, 'tconstruct:molten_brass', 233, 78, 26, 0, null, 2, null);
   unifyOre(false, 'netherite', null, 'minecraft:netherite_ingot', 'mekanism:dust_netherite', null, 'minecraft:netherite_block', 'tconstruct:netherite_nugget', null, null, null, null, null, null, 'tconstruct:molten_netherite', 221, 74, 25, 0, null, 2, null);
-  
+
   unifyOre(true, 'diamond', 'minecraft:diamond_ore', 'minecraft:diamond', 'thermal:diamond_dust', null, 'minecraft:diamond_block', null, null, 'thermal:diamond_gear', null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
   unifyOre(true, 'coal', 'minecraft:coal_ore', 'minecraft:coal', 'mekanism:dust_coal', null, 'minecraft:coal_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
   unifyOre(true, 'coal_coke', null, 'thermal:coal_coke', 'immersiveengineering:dust_coke', null, 'thermal:coal_coke_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);

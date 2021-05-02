@@ -15,6 +15,7 @@ events.listen('recipes', function (event) {
     event.remove({id: 'tconstruct:smeltery/melting/metal/uranium/ore'})
     event.remove({id: 'immersiveengineering:arcfurnace/ore_uranium'})
 
+    //Uranium Smelting Induction Smelter
     event.custom({
         "type": "thermal:smelter",
         "ingredient": {
@@ -57,13 +58,6 @@ events.listen('recipes', function (event) {
         B: 'youmatter:black_hole'
     }),
 
-    //Thermal Evaporation Block
-    event.remove({output: 'mekanism:thermal_evaporation_block'})
-    event.shaped(Item.of('mekanism:thermal_evaporation_block', 4), [' A ', 'AIA', ' A '], {
-        I: '#forge:storage_blocks/steel',
-        A: '#forge:ingots/bronze'
-    }),
-
     //Mekanism Steel Casing
     event.remove({output: 'mekanism:steel_casing'})
     event.recipes.create.mechanical_crafting(Item.of('mekanism:steel_casing', 2), [
@@ -82,13 +76,38 @@ events.listen('recipes', function (event) {
         B: 'superpackutils:bio_plastic'
     })
 
+    //Thermal Evaporation Tower
+    event.remove({output: 'mekanism:thermal_evaporation_controller'})
+    event.recipes.create.mechanical_crafting('mekanism:thermal_evaporation_controller', [
+        'CPPPC',
+        'PSESP',
+        'PGHGP',
+        'PSESP',
+        'CPPPC'
+      ], {
+        C: '#forge:plates/bronze',
+        P: 'mekanism:thermal_evaporation_block',
+        S: 'superpackutils:superheated_bronze_ingot',
+        E: 'create:integrated_circuit',
+        G: '#forge:circuits/advanced',
+        H: 'mekanism:steel_casing'
+    })
+
+    //Thermal Evaporation Casing
+    event.remove({output: 'mekanism:thermal_evaporation_block'})
+    event.shaped(Item.of('mekanism:thermal_evaporation_block', 4), ['BCB', 'CIC', 'BCB'], {
+        C: 'superpackutils:tin_brass_ingot',
+        B: '#forge:sheetmetals/copper',
+        I: 'superpackutils:bio_plastic'
+    }),
+
     //Metallurgic Infuser
     event.remove({output: 'mekanism:metallurgic_infuser'})
     event.shaped('mekanism:metallurgic_infuser', ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/steel',
         C: 'create:furnace_engine',
         B: 'immersiveengineering:heavy_engineering',
-        I: 'createaddition:capacitor'
+        I: 'superpackutils:reinforced_capacitor'
     }),
 
     //Solar Panel
@@ -438,6 +457,31 @@ events.listen('recipes', function (event) {
         O: 'create:andesite_casing',
         C: '#forge:ingots/copper',
         S: 'superpackutils:compressed_steel_ingot'
+    }),
+
+    //Superheating Element
+    event.remove({output: 'mekanism:superheating_element'})
+    event.shaped('mekanism:superheating_element', ['CSC', 'SBS', 'CSC'], {
+        S: 'superpackutils:superheated_bronze_ingot',
+        C: '#mekanism:enriched/redstone',
+        B: 'rftoolsbase:machine_frame'
+    }),
+
+    //Pressure Dispenser
+    event.remove({output: 'mekanism:pressure_disperser'})
+    event.shaped('mekanism:pressure_disperser', ['SBS', 'ACA', 'SBS'], {
+        S: '#forge:ingots/compressed_iron',
+        C: 'mekanism:alloy_infused',
+        A: 'superpackutils:compressed_steel_ingot',
+        B: 'quark:grate'
+    }),
+
+    //Boiler Casing
+    event.remove({output: 'mekanism:boiler_casing'})
+    event.shaped(Item.of('mekanism:boiler_casing', 4), ['BCB', 'CIC', 'BCB'], {
+        C: '#forge:ingots/compressed_iron',
+        B: '#forge:sheetmetals/steel',
+        I: 'mekanism:hdpe_sheet'
     }),
 
     //Sheets

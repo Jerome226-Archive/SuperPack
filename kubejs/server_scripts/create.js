@@ -14,6 +14,15 @@ events.listen('recipes', function (event) {
         T: '#forge:treated_wood'
     }),
 
+    //Mechanical Piston
+    event.remove({output: 'create:mechanical_piston'})
+    event.shaped('create:mechanical_piston', [' P ', 'ICI', ' A '], {
+        C: 'create:andesite_casing',
+        A: 'create:piston_extension_pole',
+        P: 'minecraft:piston',
+        I: 'create:cogwheel'
+    }),
+
     //Create Andesite Alloy
     event.remove({output: 'create:andesite_alloy'})
     event.shaped('create:andesite_alloy', ['NA', 'AN'], {

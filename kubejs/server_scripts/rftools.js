@@ -14,7 +14,7 @@ events.listen('recipes', function (event) {
     //Machine Frame
     event.remove({output: 'rftoolsbase:machine_frame'})
     event.recipes.create.mechanical_crafting('rftoolsbase:machine_frame', ['SCS', 'IBI', 'SCS'], {
-        S: 'immersiveengineering:sheetmetal_steel',
+        S: 'superpackutils:tetraethyl_lead_ingot',
         C: 'pneumaticcraft:compressed_iron_gear',
         B: 'mekanism:steel_casing',
         I: '#forge:ingots/osmium'

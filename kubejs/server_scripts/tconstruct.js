@@ -16,6 +16,6 @@ events.listen('recipes', function (event) {
 
     //Blazewood
     event.remove({id: 'tconstruct:smeltery/casting/blazewood'})
-    event.recipes.create.filling('tconstruct:blazewood', ['#minecraft:planks', fluid.of('minecraft:molten_blaze', 100)])
-    
+    event.recipes.create.filling('tconstruct:blazewood', ['#minecraft:planks', fluid.of('tconstruct:molten_blaze', 100)])
+
 });
