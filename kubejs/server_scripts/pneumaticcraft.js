@@ -59,6 +59,8 @@ events.listen('recipes', function (event) {
       "temperature": {
         "min_temp": 373
       },
+      "pressure": 2.0,
+      "speed": 0.25,
       "exothermic": false
     })
 

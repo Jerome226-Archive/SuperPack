@@ -55,9 +55,9 @@ events.listen('recipes', function (event) {
       "starlight": 100,
       "pattern": [
         "_____",
-        "_____",
-        "_BAB_",
+        "__A__",
         "_BCB_",
+        "_BBB_",
         "_____"
       ],
       "key": {

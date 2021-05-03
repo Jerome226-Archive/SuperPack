@@ -25,10 +25,16 @@ events.listen('recipes', function (event) {
         }
     })
 
+    //Crimson Fungus
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:crimson_fungus","count":1}],"input":{"item":"minecraft:crimson_fungus"},"soil":{"item":"minecraft:crimson_nylium"},"time":480,"render":{"type":"generic","block":"minecraft:crimson_fungus"}})
+
+    //Warped Fungus
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:warped_fungus","count":1}],"input":{"item":"minecraft:warped_fungus"},"soil":{"item":"minecraft:warped_nylium"},"time":480,"render":{"type":"generic","block":"minecraft:warped_fungus"}})
+    
     //Glowstone Pre-Nether
     event.recipes.create.filling('minecraft:glowstone_dust', ['minecraft:gunpowder', fluid.of('astralsorcery:liquid_starlight', 250)]),
 
-    //Soul Lantern
+    //Soul Lantern 
     event.remove({id: 'tconstruct:smeltery/casting/soul_lantern'})
     event.recipes.create.filling('minecraft:soul_lantern', ['minecraft:soul_torch', fluid.of('tconstruct:molten_iron', 128)]),
 

@@ -143,6 +143,16 @@ events.listen('recipes', function (event) {
         ]
     })
 
+    //Igneous Marble Generation
+    event.custom({
+      "type": "thermal:rock_gen",
+      "adjacent": "minecraft:water",
+      "below": "create:limestone",
+      "result": {
+        "item": "astralsorcery:marble_raw"
+      }
+    })
+
     //Glass Lens
     event.remove({id: 'astralsorcery:altar/glass_lens'})
     event.custom({

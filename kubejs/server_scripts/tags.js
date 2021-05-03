@@ -20,3 +20,9 @@ events.listen('item.tags', function (event) {
     event.get('forge:storage_blocks/steel').remove('immersiveengineering:storage_steel')
 
 });
+
+events.listen('fluid.tags', function (event) {
+
+    event.get('superpackutils:silicon_dioxide').add('superpackutils:liquid_silicon_dioxide_fluid')
+
+});

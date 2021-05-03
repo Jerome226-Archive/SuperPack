@@ -126,6 +126,34 @@ events.listen('recipes', function (event) {
       }
     })
 
+    //Rotary (de)Condensentrating for Liquid Silicon Dioxide
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"superpackutils:silicon_dioxide"},"gasOutput":{"gas":"superpackutils:silicon_dioxide","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_dioxide"},"fluidOutput":{"fluid":"superpackutils:liquid_silicon_dioxide_fluid","amount":1}}) 
+
+    //Silicon Dioxide Oxiding
+    event.custom({"type":"mekanism:oxidizing","input":{"ingredient":{"tag":"forge:dusts/quartz"}},"output":{"gas":"superpackutils:silicon_dioxide","amount":100}})
+
+    //Silicon Thermoprocessing
+    event.custom({
+      "type": "pneumaticcraft:thermo_plant",
+      "item_input": {
+        "item": "minecraft:sand"
+      },
+      "fluid_input": {
+        "type": "pneumaticcraft:fluid",
+        "tag": "superpackutils:silicon_dioxide",
+        "amount": 100
+      },
+      "item_output": {
+        "item": "superpackutils:silicon"
+      },
+      "temperature": {
+        "min_temp": 528
+      },
+      "pressure": 4.5,
+      "speed": 0.5,
+      "exothermic": false
+    })
+
     //Ethyl Chloride
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:hydrogen_chloride"},"rightInput":{"amount":1,"gas":"mekanism:ethene"},"output":{"gas":"superpackutils:ethyl_chloride","amount":1}})
 
