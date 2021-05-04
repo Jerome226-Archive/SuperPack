@@ -21,7 +21,7 @@
       "maxY": 15,
       "playerTeleportedMinY": 100,
       "playerTeleportedMaxY": 120,
-      "spawnChance": 0.05,
+      "spawnChance": 0,
       "spawnDimension": "minecraft:overworld",
       "targetDimension": "minecraft:the_nether",
       "spawnPlatformBlock": "minecraft:netherrack"
