@@ -40,6 +40,46 @@ events.listen('recipes', function (event) {
         ]
     })
 
+    //Refined Obsidian
+    event.remove({id: 'mekanism:processing/refined_obsidian/ingot/from_dust'})
+    event.custom({
+        "type": "pneumaticcraft:pressure_chamber",
+        "inputs": [
+          {
+            "item": "create:shadow_steel"
+          },
+          {
+            "item": "mekanism:dust_refined_obsidian"
+          },
+        ],
+        "pressure": -0.75,
+        "results": [
+          {
+            "item": "mekanism:ingot_refined_obsidian"
+          }
+        ]
+    })
+
+    //Refined Glowstone
+    event.remove({id: 'mekanism:processing/refined_glowstone/ingot/from_dust'})
+    event.custom({
+        "type": "pneumaticcraft:pressure_chamber",
+        "inputs": [
+          {
+            "item": "create:refined_radiance"
+          },
+          {
+            "item": "minecraft:glowstone_dust"
+          },
+        ],
+        "pressure": -0.75,
+        "results": [
+          {
+            "item": "mekanism:ingot_refined_glowstone"
+          }
+        ]
+    })
+
     //Mekanism Energy Tablet
     event.remove({output: 'mekanism:energy_tablet'})
     event.shaped('mekanism:energy_tablet', [' P ', 'CEC', 'ZOZ'], {
