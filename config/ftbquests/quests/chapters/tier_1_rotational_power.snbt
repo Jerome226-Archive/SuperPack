@@ -158,82 +158,14 @@
 			x: 1.0d,
 			y: -2.0d,
 			shape: "hexagon",
+			dependencies: ["695D23C209DB8953"],
 			id: "7F3943424622371B",
 			tasks: [{
 				id: "0F62E01C69CCD8ED",
 				type: "dimension",
+				title: "Visit Dimension: Nether",
 				icon: "minecraft:crimson_nylium",
-				dimension: "minecraft:nether"
-			}]
-		},
-		{
-			x: 3.5d,
-			y: -3.5d,
-			dependencies: [
-				"047D68D5CD887601",
-				"6DFC18B8146D709D"
-			],
-			id: "4A4A59B1E12A5285",
-			tasks: [{
-				id: "6A0A6431EC9FC0E4",
-				type: "item",
-				item: "create:brass_ingot"
-			}]
-		},
-		{
-			x: 4.0d,
-			y: -2.5d,
-			dependencies: [
-				"6DFC18B8146D709D",
-				"047D68D5CD887601"
-			],
-			id: "7C77EC8E620D4A5B",
-			tasks: [{
-				id: "27341AB50FC1DB3B",
-				type: "item",
-				item: "thermal:bronze_ingot"
-			}]
-		},
-		{
-			x: 4.0d,
-			y: -4.5d,
-			dependencies: [
-				"6DFC18B8146D709D",
-				"047D68D5CD887601"
-			],
-			id: "7A2A4C870E3DBCFA",
-			tasks: [{
-				id: "3A11B817ECEB8A22",
-				type: "item",
-				item: "thermal:invar_ingot"
-			}]
-		},
-		{
-			x: 4.5d,
-			y: -1.5d,
-			dependencies: [
-				"6DFC18B8146D709D",
-				"047D68D5CD887601"
-			],
-			id: "173342CECB968473",
-			tasks: [{
-				id: "419AE67369A8122F",
-				type: "item",
-				item: "thermal:constantan_ingot"
-			}]
-		},
-		{
-			x: 4.5d,
-			y: -5.5d,
-			dependencies: [
-				"6DFC18B8146D709D",
-				"047D68D5CD887601"
-			],
-			id: "66574E991D929702",
-			tasks: [{
-				id: "75CEB4C911477C3E",
-				type: "item",
-				item: "thermal:electrum_ingot"
+				dimension: "minecraft:the_nether"
 			}]
 		},
 		{
@@ -259,9 +191,9 @@
 			}]
 		},
 		{
-			x: 6.0d,
+			x: 4.5d,
 			y: -3.5d,
-			dependencies: ["4A4A59B1E12A5285"],
+			dependencies: ["75BBB0EC91B63BFB"],
 			size: 1.2d,
 			id: "72A2ED01F231B66F",
 			tasks: [{
@@ -425,8 +357,8 @@
 			}]
 		},
 		{
-			x: 7.0d,
-			y: -1.5d,
+			x: 5.5d,
+			y: -2.5d,
 			dependencies: [
 				"585E447E78E33062",
 				"72A2ED01F231B66F"
@@ -436,17 +368,6 @@
 				id: "54B07FB31EE89DA9",
 				type: "item",
 				item: "create:mechanical_crafter"
-			}]
-		},
-		{
-			x: 4.0d,
-			y: 0.5d,
-			dependencies: ["5985D6F3B37AD32E"],
-			id: "2AABA45B4983E627",
-			tasks: [{
-				id: "69677A23878877F3",
-				type: "item",
-				item: "mekanism:ingot_steel"
 			}]
 		},
 		{
@@ -464,9 +385,9 @@
 			}]
 		},
 		{
-			x: 6.0d,
-			y: 0.0d,
-			dependencies: ["2AABA45B4983E627"],
+			x: 5.0d,
+			y: -1.0d,
+			dependencies: ["58050F41AD56343F"],
 			id: "585E447E78E33062",
 			tasks: [{
 				id: "11DA568A0B3DC896",
@@ -475,8 +396,8 @@
 			}]
 		},
 		{
-			x: 9.0d,
-			y: -0.75d,
+			x: 7.5d,
+			y: -2.25d,
 			shape: "hexagon",
 			dependencies: ["554E2A73132B48A4"],
 			size: 1.5d,
@@ -488,9 +409,10 @@
 			}]
 		},
 		{
-			x: 8.5d,
-			y: 0.5d,
+			x: 6.75d,
+			y: -0.75d,
 			dependencies: ["554E2A73132B48A4"],
+			size: 1.5d,
 			id: "13DA57BCC81465BA",
 			tasks: [{
 				id: "143E39A24D73D50D",
@@ -499,8 +421,8 @@
 			}]
 		},
 		{
-			x: 8.0d,
-			y: -2.5d,
+			x: 6.0d,
+			y: -3.5d,
 			dependencies: ["72A2ED01F231B66F"],
 			id: "394D7FD4BD563B67",
 			tasks: [{
@@ -510,8 +432,8 @@
 			}]
 		},
 		{
-			x: 8.264965986394522d,
-			y: -3.7095238095237946d,
+			x: 5.5d,
+			y: -4.5d,
 			dependencies: ["72A2ED01F231B66F"],
 			id: "6DCA231A5435A747",
 			tasks: [{
@@ -554,8 +476,8 @@
 			}]
 		},
 		{
-			x: 8.0d,
-			y: -5.0d,
+			x: 4.5d,
+			y: -2.0d,
 			dependencies: ["72A2ED01F231B66F"],
 			id: "7395E038C5245220",
 			tasks: [{
@@ -565,8 +487,8 @@
 			}]
 		},
 		{
-			x: 7.122108843537376d,
-			y: -5.648299319727876d,
+			x: 3.5d,
+			y: -4.5d,
 			dependencies: ["72A2ED01F231B66F"],
 			id: "29B7E9A3D73DE497",
 			tasks: [{
@@ -576,8 +498,8 @@
 			}]
 		},
 		{
-			x: 6.0d,
-			y: -6.0d,
+			x: 4.5d,
+			y: -5.0d,
 			dependencies: ["72A2ED01F231B66F"],
 			id: "3070E5A8C7997F86",
 			tasks: [{
@@ -587,8 +509,8 @@
 			}]
 		},
 		{
-			x: 5.887414965986359d,
-			y: -1.1789115646258281d,
+			x: 3.5d,
+			y: -2.5d,
 			dependencies: ["72A2ED01F231B66F"],
 			id: "365BEB299549991C",
 			tasks: [
@@ -607,9 +529,9 @@
 		{
 			title: "Improved Blast Furnace",
 			icon: "immersiveengineering:advanced_blast_furnace",
-			x: 3.0d,
-			y: 2.0d,
-			dependencies: ["2AABA45B4983E627"],
+			x: 3.5d,
+			y: 1.0d,
+			dependencies: ["5985D6F3B37AD32E"],
 			id: "56637C803A8F372D",
 			tasks: [
 				{
@@ -624,6 +546,375 @@
 					item: "minecraft:hopper"
 				}
 			]
+		},
+		{
+			x: -3.5d,
+			y: -1.0d,
+			dependencies: [
+				"1BC816952304F066",
+				"52412904E957777A",
+				"53E6E3524B5582D2",
+				"29D97508558C67C6"
+			],
+			id: "695D23C209DB8953",
+			tasks: [{
+				id: "2E73F65FEE197571",
+				type: "item",
+				item: "superpackutils:dimensional_stone"
+			}]
+		},
+		{
+			x: -4.5d,
+			y: 1.0d,
+			dependencies: [
+				"27555EED26DD0507",
+				"462F614445439672"
+			],
+			id: "1BC816952304F066",
+			tasks: [{
+				id: "01E1ECF3DDCAE979",
+				type: "item",
+				item: "botania:apothecary_default"
+			}]
+		},
+		{
+			x: -6.5d,
+			y: -2.5d,
+			dependencies: [
+				"53E6E3524B5582D2",
+				"1A311155C68A45F9"
+			],
+			id: "0A11E6E25119BE31",
+			tasks: [{
+				id: "75FFA359087492B9",
+				type: "item",
+				item: "botania:mana_pool"
+			}]
+		},
+		{
+			x: -6.5d,
+			y: 1.0d,
+			dependencies: ["1BC816952304F066"],
+			id: "4FDCC531A7A3490C",
+			tasks: [{
+				id: "3CFF4E6C6A71FB4A",
+				type: "item",
+				item: "botania:pure_daisy"
+			}]
+		},
+		{
+			x: -6.5d,
+			y: -1.0d,
+			dependencies: ["4FDCC531A7A3490C"],
+			id: "53E6E3524B5582D2",
+			tasks: [{
+				id: "6EE20D91DD09F2C6",
+				type: "item",
+				item: "botania:livingrock"
+			}]
+		},
+		{
+			x: -8.0d,
+			y: -2.5d,
+			dependencies: ["12A7ABA1B1133E3A"],
+			id: "1A311155C68A45F9",
+			tasks: [{
+				id: "149A22FBE93D9B3E",
+				type: "item",
+				item: "botania:mana_spreader"
+			}]
+		},
+		{
+			x: -8.0d,
+			y: -0.5d,
+			dependencies: [
+				"4FDCC531A7A3490C",
+				"2DE385D41076CC84"
+			],
+			id: "12A7ABA1B1133E3A",
+			tasks: [{
+				id: "5FE1EC2C4346D170",
+				type: "item",
+				item: "botania:livingwood"
+			}]
+		},
+		{
+			x: -7.5d,
+			y: 2.5d,
+			dependencies: ["27555EED26DD0507"],
+			id: "1C0A2B260DDC2C6C",
+			tasks: [{
+				id: "396B5EB7FB986439",
+				type: "item",
+				item: "astralsorcery:well"
+			}]
+		},
+		{
+			x: -5.5d,
+			y: 3.0d,
+			dependencies: ["6010E044C068178A"],
+			id: "27555EED26DD0507",
+			tasks: [{
+				id: "20FBF2B1B79A30B8",
+				type: "item",
+				item: "astralsorcery:altar_discovery"
+			}]
+		},
+		{
+			x: -8.0d,
+			y: 1.0d,
+			dependencies: ["1C0A2B260DDC2C6C"],
+			id: "2DE385D41076CC84",
+			tasks: [{
+				id: "7A85F8F708DF6D14",
+				type: "item",
+				item: "astralsorcery:infused_wood"
+			}]
+		},
+		{
+			x: -5.0d,
+			y: -2.0d,
+			dependencies: ["0A11E6E25119BE31"],
+			id: "52412904E957777A",
+			tasks: [{
+				id: "192DB29ED4AB540F",
+				type: "item",
+				item: "botania:mana_pearl"
+			}]
+		},
+		{
+			x: -4.0d,
+			y: 2.5d,
+			dependencies: ["6010E044C068178A"],
+			id: "462F614445439672",
+			tasks: [{
+				id: "3BFA0231CA243EC3",
+				type: "item",
+				item: {
+					id: "astralsorcery:rock_crystal",
+					Count: 1b,
+					tag: {
+						astralsorcery: {}
+					}
+				}
+			}]
+		},
+		{
+			x: -4.5d,
+			y: 4.5d,
+			shape: "hexagon",
+			size: 1.5d,
+			id: "6010E044C068178A",
+			tasks: [{
+				id: "0B6B21AED9CA1490",
+				type: "item",
+				item: "astralsorcery:wand"
+			}]
+		},
+		{
+			x: -2.0d,
+			y: 5.0d,
+			dependencies: ["0F62021D31E792EF"],
+			id: "1F95FB139DB0E310",
+			tasks: [{
+				id: "330E836F67478AA7",
+				type: "item",
+				item: "create:cart_assembler"
+			}]
+		},
+		{
+			x: -0.5d,
+			y: 5.5d,
+			dependencies: ["0F62021D31E792EF"],
+			id: "61AFA81850603B29",
+			tasks: [
+				{
+					id: "006CE8D9D99A02DF",
+					type: "item",
+					item: "create:gantry_shaft"
+				},
+				{
+					id: "372BDF22419EFB8F",
+					type: "item",
+					item: "create:gantry_carriage"
+				}
+			]
+		},
+		{
+			x: 1.0d,
+			y: 5.0d,
+			dependencies: ["0F62021D31E792EF"],
+			id: "7E81E5CF9EE915D3",
+			tasks: [{
+				id: "0C03A8420C64A870",
+				type: "item",
+				item: "create:mechanical_piston"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: 4.0d,
+			dependencies: ["0F62021D31E792EF"],
+			id: "18C1C42B962AD8FF",
+			tasks: [{
+				id: "06B3D474A3B5D3A3",
+				type: "item",
+				item: "create:mechanical_bearing"
+			}]
+		},
+		{
+			x: 1.5d,
+			y: 4.0d,
+			dependencies: ["0F62021D31E792EF"],
+			id: "20025714DB1E1653",
+			tasks: [{
+				id: "32081B8ED09D642E",
+				type: "item",
+				item: "create:rope_pulley"
+			}]
+		},
+		{
+			x: -4.660714285714285d,
+			y: -2.933673469387749d,
+			dependencies: ["0A11E6E25119BE31"],
+			id: "29D97508558C67C6",
+			tasks: [{
+				id: "2155FB336A809415",
+				type: "item",
+				item: "botania:manasteel_ingot"
+			}]
+		},
+		{
+			x: 3.0d,
+			y: -3.5d,
+			dependencies: ["047D68D5CD887601"],
+			id: "75BBB0EC91B63BFB",
+			tasks: [{
+				id: "26124603DDA3F7B5",
+				type: "item",
+				item: "create:brass_ingot"
+			}]
+		},
+		{
+			x: 4.0d,
+			y: -0.5d,
+			dependencies: ["5985D6F3B37AD32E"],
+			id: "58050F41AD56343F",
+			tasks: [{
+				id: "368CF4E06E64FC35",
+				type: "item",
+				item: "mekanism:ingot_steel"
+			}]
+		},
+		{
+			x: -6.5d,
+			y: -4.0d,
+			dependencies: ["0A11E6E25119BE31"],
+			id: "4C87285497B7DEB5",
+			tasks: [{
+				id: "4281F11B177944B7",
+				type: "item",
+				item: "botania:mana_diamond"
+			}]
+		},
+		{
+			x: -6.5d,
+			y: -5.0d,
+			dependencies: ["4C87285497B7DEB5"],
+			id: "6FF26BCE98D5E652",
+			tasks: [{
+				id: "13BEFD6D855D1BE5",
+				type: "item",
+				item: "botania:runic_altar"
+			}]
+		},
+		{
+			x: -7.5d,
+			y: -5.5d,
+			dependencies: ["6FF26BCE98D5E652"],
+			id: "0A77DB767D2C8557",
+			tasks: [{
+				id: "7CFC4B59D351CED2",
+				type: "item",
+				item: "botania:rune_water"
+			}]
+		},
+		{
+			x: -7.5d,
+			y: -4.5d,
+			dependencies: ["6FF26BCE98D5E652"],
+			id: "764E76B7F677CD1E",
+			tasks: [{
+				id: "75AC621292DF8200",
+				type: "item",
+				item: "botania:rune_fire"
+			}]
+		},
+		{
+			x: -5.5d,
+			y: -4.5d,
+			dependencies: ["6FF26BCE98D5E652"],
+			id: "2290A244CDE42293",
+			tasks: [{
+				id: "050FAB7509EDBC49",
+				type: "item",
+				item: "botania:rune_earth"
+			}]
+		},
+		{
+			x: -5.5d,
+			y: -5.5d,
+			dependencies: ["6FF26BCE98D5E652"],
+			id: "574B0B75AD95FF6E",
+			tasks: [{
+				id: "011989FC861F5C51",
+				type: "item",
+				item: "botania:rune_air"
+			}]
+		},
+		{
+			x: -1.1386054421768819d,
+			y: -1.5323129251700678d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "1EB5322290C6EC15",
+			tasks: [{
+				id: "0CA867496DB50BE8",
+				type: "item",
+				item: "thermal:device_tree_extractor"
+			}]
+		},
+		{
+			x: 0.14710884353738862d,
+			y: -1.5119047619047663d,
+			dependencies: ["2C214049E79CC74A"],
+			id: "577DBD9AAB7861BD",
+			tasks: [{
+				id: "031C37FB597CBF32",
+				type: "item",
+				item: "thermal:device_hive_extractor"
+			}]
+		},
+		{
+			x: -3.0d,
+			y: -8.5d,
+			dependencies: ["091EA885EFE53713"],
+			id: "7705796F9B9C9992",
+			tasks: [{
+				id: "781D57EB8B5F2C49",
+				type: "item",
+				item: "thermal:device_water_gen"
+			}]
+		},
+		{
+			x: 2.0d,
+			y: -8.5d,
+			dependencies: ["091EA885EFE53713"],
+			id: "6A5FDFB571E697FB",
+			tasks: [{
+				id: "4503BAE6B99F2A4A",
+				type: "item",
+				item: "create:smart_fluid_pipe"
+			}]
 		}
 	]
 }

@@ -106,23 +106,35 @@
 			x: 2.0d,
 			y: -3.5d,
 			dependencies: ["785746D573270542"],
-			id: "427B1E2F7976FA6A"
+			id: "427B1E2F7976FA6A",
+			tasks: [{
+				id: "37DC2D21012E7D2B",
+				type: "checkmark"
+			}]
 		},
 		{
 			title: "Fermenter",
 			icon: "immersiveengineering:fermenter",
 			x: -2.0d,
-			y: -2.5d,
+			y: -3.5d,
 			dependencies: ["785746D573270542"],
-			id: "30C769CC3458E91F"
+			id: "30C769CC3458E91F",
+			tasks: [{
+				id: "7BFB4E5280482AEE",
+				type: "checkmark"
+			}]
 		},
 		{
 			title: "Squeezer",
 			icon: "immersiveengineering:squeezer",
-			x: 1.0d,
-			y: -4.5d,
+			x: -2.0d,
+			y: -2.5d,
 			dependencies: ["785746D573270542"],
-			id: "138BA072A7F027D5"
+			id: "138BA072A7F027D5",
+			tasks: [{
+				id: "5B11DAE7D27A24D3",
+				type: "checkmark"
+			}]
 		},
 		{
 			title: "Bottling Machine",
@@ -130,15 +142,23 @@
 			x: -1.0d,
 			y: -4.5d,
 			dependencies: ["785746D573270542"],
-			id: "3BB16D69154ED42D"
+			id: "3BB16D69154ED42D",
+			tasks: [{
+				id: "0D713DEC3FE6E6F8",
+				type: "checkmark"
+			}]
 		},
 		{
 			title: "Crusher",
 			icon: "immersiveengineering:crusher",
-			x: -2.0d,
-			y: -3.5d,
+			x: 1.0d,
+			y: -4.5d,
 			dependencies: ["785746D573270542"],
-			id: "15149677F5FD2D19"
+			id: "15149677F5FD2D19",
+			tasks: [{
+				id: "1575BF1E37DED80D",
+				type: "checkmark"
+			}]
 		},
 		{
 			title: "Tank",
@@ -146,7 +166,11 @@
 			x: 1.0d,
 			y: -1.5d,
 			dependencies: ["785746D573270542"],
-			id: "134263805A7AD5BC"
+			id: "134263805A7AD5BC",
+			tasks: [{
+				id: "0B90E76377EF4C34",
+				type: "checkmark"
+			}]
 		},
 		{
 			title: "Silo",
@@ -156,9 +180,8 @@
 			dependencies: ["785746D573270542"],
 			id: "7F4BB1BFF1C99A9B",
 			tasks: [{
-				id: "5174AC0ED7147CD9",
-				type: "item",
-				item: "immersiveengineering:silo"
+				id: "760C177AE3E8E044",
+				type: "checkmark"
 			}]
 		},
 		{
@@ -173,9 +196,12 @@
 			}]
 		},
 		{
-			x: -1.515306122448969d,
-			y: -5.742346938775512d,
-			dependencies: ["3BB16D69154ED42D"],
+			x: -1.4714285714285609d,
+			y: -5.804591836734687d,
+			dependencies: [
+				"3BB16D69154ED42D",
+				"3B82582696BE7EF4"
+			],
 			id: "7A8D1C6C720E832F",
 			tasks: [{
 				id: "44E107D5FE36278C",
@@ -184,23 +210,12 @@
 			}]
 		},
 		{
-			x: 1.484693877551038d,
-			y: -5.742346938775512d,
-			dependencies: ["138BA072A7F027D5"],
-			id: "682FAF38518B08B3",
-			tasks: [{
-				id: "0A25DF6F9FCD7841",
-				type: "item",
-				item: "superpackutils:compressed_steel_ingot"
-			}]
-		},
-		{
 			x: 0.0d,
 			y: -8.5d,
 			dependencies: [
 				"785746D573270542",
 				"7A8D1C6C720E832F",
-				"682FAF38518B08B3"
+				"7B36E066D9872D98"
 			],
 			id: "5B9F70B7795FDD93",
 			tasks: [{
@@ -315,6 +330,196 @@
 			y: -7.0d,
 			dependencies: ["5B9F70B7795FDD93"],
 			id: "40BB382AEDA513EE"
+		},
+		{
+			x: -4.5d,
+			y: -4.0d,
+			dependencies: ["5D9DBC02EE671E73"],
+			id: "4219F328B6DC70F3",
+			tasks: [{
+				id: "7C070C327C63D698",
+				type: "item",
+				item: "mekanismgenerators:bio_generator"
+			}]
+		},
+		{
+			x: -3.591836734693878d,
+			y: -5.941326530612237d,
+			dependencies: ["38443F76A10D9178"],
+			id: "151C0218CDEC6707",
+			tasks: [{
+				id: "319EECFA1ACD99FE",
+				type: "item",
+				item: "superpackutils:weird_fungu"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: -6.0d,
+			dependencies: [
+				"151C0218CDEC6707",
+				"30C769CC3458E91F"
+			],
+			id: "3B82582696BE7EF4",
+			tasks: [{
+				id: "380EA6EAFFD3514B",
+				type: "item",
+				item: "pneumaticcraft:yeast_culture_bucket"
+			}]
+		},
+		{
+			x: -4.367346938775512d,
+			y: -5.186224489795919d,
+			dependencies: ["4219F328B6DC70F3"],
+			id: "38443F76A10D9178",
+			tasks: [{
+				id: "1AD3759B3EFF77BF",
+				type: "item",
+				item: "mekanismgenerators:bioethanol_bucket"
+			}]
+		},
+		{
+			x: 3.5d,
+			y: -3.0d,
+			dependencies: ["785746D573270542"],
+			id: "188B00E0DC571289",
+			tasks: [{
+				id: "1D583B72B01E1680",
+				type: "item",
+				item: "thermal:device_rock_gen"
+			}]
+		},
+		{
+			x: 2.5d,
+			y: -4.5d,
+			dependencies: ["785746D573270542"],
+			id: "5F259DE9E995009D",
+			tasks: [{
+				id: "46223E30D2295A7D",
+				type: "item",
+				item: "thermal:device_potion_diffuser"
+			}]
+		},
+		{
+			x: 2.5d,
+			y: -1.5d,
+			dependencies: ["785746D573270542"],
+			id: "2A991AF040056C5D",
+			tasks: [{
+				id: "416915EF5E7E9558",
+				type: "item",
+				item: "thermal:device_collector"
+			}]
+		},
+		{
+			x: -6.0d,
+			y: -2.5d,
+			dependencies: ["5D9DBC02EE671E73"],
+			id: "3E94AB5E6A3E3CF5",
+			tasks: [{
+				id: "0CE38B8EDDF96539",
+				type: "item",
+				item: "thermal:device_soil_infuser"
+			}]
+		},
+		{
+			x: -5.5d,
+			y: -3.5d,
+			dependencies: ["5D9DBC02EE671E73"],
+			id: "25EF5FD4B41F8244",
+			tasks: [{
+				id: "56A2D4120ECDCF24",
+				type: "item",
+				item: "thermal:charge_bench"
+			}]
+		},
+		{
+			x: -3.5d,
+			y: -3.5d,
+			dependencies: ["5D9DBC02EE671E73"],
+			id: "3615A776A5B3284E",
+			tasks: [{
+				id: "09C9C75B3A124F07",
+				type: "item",
+				item: "createaddition:heater"
+			}]
+		},
+		{
+			x: -4.5d,
+			y: -2.5d,
+			dependencies: ["138BA072A7F027D5"],
+			id: "5D9DBC02EE671E73",
+			tasks: [{
+				id: "5FB523CBB912AD0C",
+				type: "item",
+				item: "superpackutils:compressed_steel_ingot"
+			}]
+		},
+		{
+			x: -5.5d,
+			y: -1.5d,
+			dependencies: ["5D9DBC02EE671E73"],
+			id: "2CC02FCC1B4E9926",
+			tasks: [{
+				id: "13184833FC6F40A5",
+				type: "item",
+				item: "mekanismgenerators:heat_generator"
+			}]
+		},
+		{
+			x: -4.5d,
+			y: -1.0d,
+			dependencies: ["5D9DBC02EE671E73"],
+			id: "10B936C392394B86",
+			tasks: [{
+				id: "4EF0FBC2C9946174",
+				type: "item",
+				item: "immersiveengineering:thermoelectric_generator"
+			}]
+		},
+		{
+			x: -3.5d,
+			y: -1.5d,
+			dependencies: ["5D9DBC02EE671E73"],
+			id: "6C4CECC4D915ACB5",
+			tasks: [{
+				id: "3B884DCFF24A692B",
+				type: "item",
+				item: "mekanismgenerators:solar_generator"
+			}]
+		},
+		{
+			x: 4.0d,
+			y: -4.5d,
+			dependencies: ["188B00E0DC571289"],
+			id: "5CA02C57B1DA2646",
+			tasks: [{
+				id: "45C911F13EFB34D4",
+				type: "item",
+				item: "superpackutils:deepslate"
+			}]
+		},
+		{
+			x: 3.0d,
+			y: -6.0d,
+			dependencies: ["5CA02C57B1DA2646"],
+			id: "7CCEAB71BC03AE0C",
+			tasks: [{
+				id: "664123BD1B8A91C6",
+				type: "item",
+				item: "superpackutils:bedrock_dust"
+			}]
+		},
+		{
+			x: 1.263265306122456d,
+			y: -5.845408163265297d,
+			dependencies: ["7CCEAB71BC03AE0C"],
+			id: "7B36E066D9872D98",
+			tasks: [{
+				id: "5DAF780F604CF192",
+				type: "item",
+				item: "superpackutils:reinforced_capacitor"
+			}]
 		}
 	]
 }

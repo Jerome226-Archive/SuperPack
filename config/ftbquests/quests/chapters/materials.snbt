@@ -6,5 +6,173 @@
 	title: "Materials",
 	icon: "thermal:enderium_ingot",
 	default_quest_shape: "",
-	quests: []
+	quests: [
+		{
+			x: -4.0d,
+			y: -1.5d,
+			dependencies: ["3E773AFD582AFBBC"],
+			id: "42B806AE7F7F32F4",
+			tasks: [{
+				id: "5D747DEB313608AA",
+				type: "item",
+				item: "create:brass_ingot"
+			}]
+		},
+		{
+			x: -3.0d,
+			y: -1.0d,
+			dependencies: ["3E773AFD582AFBBC"],
+			id: "3B5B4710F3E7B519",
+			tasks: [{
+				id: "3D8C3E74D0547965",
+				type: "item",
+				item: "thermal:invar_ingot"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: 0.0d,
+			dependencies: ["3E773AFD582AFBBC"],
+			id: "2ABDA67E1A1FBCDB",
+			tasks: [{
+				id: "2DDBA22B83D077F6",
+				type: "item",
+				item: "thermal:constantan_ingot"
+			}]
+		},
+		{
+			x: -3.0d,
+			y: 1.0d,
+			dependencies: ["3E773AFD582AFBBC"],
+			id: "58E1AAF166558DFC",
+			tasks: [{
+				id: "7E413B8BA2ACD1CF",
+				type: "item",
+				item: "thermal:electrum_ingot"
+			}]
+		},
+		{
+			x: -5.0d,
+			y: 1.0d,
+			dependencies: ["3E773AFD582AFBBC"],
+			id: "74A32CE7AEF97CA4",
+			tasks: [{
+				id: "68AC17D71F9AF233",
+				type: "item",
+				item: "thermal:bronze_ingot"
+			}]
+		},
+		{
+			x: 0.0d,
+			y: -1.5d,
+			dependencies: ["793C2C4C74FCF9D1"],
+			id: "41FE401A7166FB6C",
+			tasks: [{
+				id: "3D029D9533F47E29",
+				type: "item",
+				item: "minecraft:netherite_ingot"
+			}]
+		},
+		{
+			title: "Heated",
+			x: -4.0d,
+			y: 0.0d,
+			subtitle: "These ingots need to be alloyed in a heated mixer.",
+			id: "3E773AFD582AFBBC",
+			tasks: [{
+				id: "45747FB57FF11C3B",
+				type: "item",
+				item: "create:blaze_burner"
+			}]
+		},
+		{
+			title: "Superheated",
+			x: 0.0d,
+			y: 0.0d,
+			subtitle: "These ingots need to be alloyed in a superheated mixer.",
+			id: "793C2C4C74FCF9D1",
+			tasks: [{
+				id: "1BA8766E24AB1134",
+				type: "item",
+				item: "create:blaze_cake"
+			}]
+		},
+		{
+			x: -1.0d,
+			y: -1.0d,
+			dependencies: ["793C2C4C74FCF9D1"],
+			id: "5375160C87A822C4",
+			tasks: [{
+				id: "2008EC1DBF0AE913",
+				type: "item",
+				item: "tconstruct:queens_slime_ingot"
+			}]
+		},
+		{
+			x: -1.5d,
+			y: 0.0d,
+			dependencies: ["793C2C4C74FCF9D1"],
+			id: "45ED7F6E61368EE7",
+			tasks: [{
+				id: "544648BD3A9F3926",
+				type: "item",
+				item: "tconstruct:hepatizon_ingot"
+			}]
+		},
+		{
+			x: -1.0d,
+			y: 1.0d,
+			dependencies: ["793C2C4C74FCF9D1"],
+			id: "1A5ED4223A5CA9B1",
+			tasks: [{
+				id: "666177B080E7DB78",
+				type: "item",
+				item: "superpackutils:superheated_bronze_ingot"
+			}]
+		},
+		{
+			x: 0.0d,
+			y: 1.5d,
+			dependencies: ["793C2C4C74FCF9D1"],
+			id: "0BA8D409CB21203D",
+			tasks: [{
+				id: "4C092399CF5CC5DB",
+				type: "item",
+				item: "tconstruct:manyullyn_ingot"
+			}]
+		},
+		{
+			x: -4.0d,
+			y: 1.5d,
+			dependencies: ["3E773AFD582AFBBC"],
+			id: "4AAA7FCF1DAD19B7",
+			tasks: [{
+				id: "4161DCEA3699C731",
+				type: "item",
+				item: "tconstruct:rose_gold_ingot"
+			}]
+		},
+		{
+			x: -5.0d,
+			y: -1.0d,
+			dependencies: ["3E773AFD582AFBBC"],
+			id: "2938C841EBA73947",
+			tasks: [{
+				id: "38953D66ED90D4E9",
+				type: "item",
+				item: "tconstruct:pig_iron_ingot"
+			}]
+		},
+		{
+			x: -5.5d,
+			y: 0.0d,
+			dependencies: ["3E773AFD582AFBBC"],
+			id: "7404ABF192DF1BF3",
+			tasks: [{
+				id: "3E532CBC773C54B5",
+				type: "item",
+				item: "tconstruct:slimesteel_ingot"
+			}]
+		}
+	]
 }

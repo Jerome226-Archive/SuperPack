@@ -24,113 +24,6 @@
 			}],
 			rewards: [
 				{
-					id: "54735CFB5CF5A3DA",
-					type: "item",
-					item: {
-						id: "akashictome:tome",
-						Count: 1b,
-						tag: {
-							"akashictome:is_morphing": 1b,
-							"akashictome:data": {
-								botania: {
-									id: "botania:lexicon",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Lexica Botania"
-										},
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Lexica Botania"}]}'
-										}
-									}
-								},
-								astralsorcery: {
-									id: "astralsorcery:tome",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Astral Tome"
-										},
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Astral Tome"}]}'
-										}
-									}
-								},
-								pneumaticcraft: {
-									id: "patchouli:guide_book",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "PNC:R Manual"
-										},
-										"patchouli:book": "pneumaticcraft:book",
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"PNC:R Manual"}]}'
-										}
-									}
-								},
-								immersiveengineering: {
-									id: "immersiveengineering:manual",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Engineer's Manual"
-										},
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Engineer\'s Manual"}]}'
-										}
-									}
-								},
-								bloodmagic: {
-									id: "patchouli:guide_book",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Sanguine Scientiem"
-										},
-										"patchouli:book": "bloodmagic:guide",
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Sanguine Scientiem"}]}'
-										}
-									}
-								},
-								thermal: {
-									id: "patchouli:guide_book",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Thermalpedia"
-										},
-										"patchouli:book": "thermal:guidebook",
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Thermalpedia"}]}'
-										}
-									}
-								},
-								rftoolsbase: {
-									id: "rftoolsbase:manual",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Technology Guide"
-										},
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Technology Guide"}]}'
-										}
-									}
-								}
-							}
-						}
-					}
-				},
-				{
 					id: "2767CE58460E72A7",
 					type: "item",
 					item: {
@@ -273,6 +166,126 @@
 							}
 						}
 					}
+				},
+				{
+					id: "468FB222207004EE",
+					type: "item",
+					item: {
+						id: "akashictome:tome",
+						Count: 1b,
+						tag: {
+							"akashictome:is_morphing": 1b,
+							"akashictome:data": {
+								botania: {
+									id: "botania:lexicon",
+									Count: 1b,
+									tag: {
+										"akashictome:displayName": {
+											text: "Lexica Botania"
+										},
+										"akashictome:is_morphing": 1b,
+										display: {
+											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Lexica Botania"}]}'
+										}
+									}
+								},
+								astralsorcery: {
+									id: "astralsorcery:tome",
+									Count: 1b,
+									tag: {
+										"akashictome:displayName": {
+											text: "Astral Tome"
+										},
+										"akashictome:is_morphing": 1b,
+										display: {
+											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Astral Tome"}]}'
+										}
+									}
+								},
+								pneumaticcraft: {
+									id: "patchouli:guide_book",
+									Count: 1b,
+									tag: {
+										"akashictome:displayName": {
+											text: "PNC:R Manual"
+										},
+										"patchouli:book": "pneumaticcraft:book",
+										"akashictome:is_morphing": 1b,
+										display: {
+											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"PNC:R Manual"}]}'
+										}
+									}
+								},
+								immersiveengineering: {
+									id: "immersiveengineering:manual",
+									Count: 1b,
+									tag: {
+										"akashictome:displayName": {
+											text: "Engineer's Manual"
+										},
+										"akashictome:is_morphing": 1b,
+										display: {
+											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Engineer\'s Manual"}]}'
+										}
+									}
+								},
+								bloodmagic: {
+									id: "patchouli:guide_book",
+									Count: 1b,
+									tag: {
+										"akashictome:displayName": {
+											text: "Sanguine Scientiem"
+										},
+										"patchouli:book": "bloodmagic:guide",
+										"akashictome:is_morphing": 1b,
+										display: {
+											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Sanguine Scientiem"}]}'
+										}
+									}
+								},
+								thermal: {
+									id: "patchouli:guide_book",
+									Count: 1b,
+									tag: {
+										"akashictome:displayName": {
+											text: "Thermalpedia"
+										},
+										"patchouli:book": "thermal:guidebook",
+										"akashictome:is_morphing": 1b,
+										display: {
+											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Thermalpedia"}]}'
+										}
+									}
+								},
+								rftoolsbase: {
+									id: "rftoolsbase:manual",
+									Count: 1b,
+									tag: {
+										"akashictome:displayName": {
+											text: "Technology Guide"
+										},
+										"akashictome:is_morphing": 1b,
+										display: {
+											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Technology Guide"}]}'
+										}
+									}
+								},
+								engineersdecor: {
+									id: "patchouli:guide_book",
+									Count: 1b,
+									tag: {
+										"patchouli:book": "engineersdecor:engineersdecor_manual"
+									}
+								}
+							}
+						}
+					}
+				},
+				{
+					id: "2D3EBE7CD48BB6FE",
+					type: "loot",
+					icon: "ironchest:iron_chest",
+					table_id: 8943544606768321675L
 				}
 			]
 		},
@@ -286,7 +299,20 @@
 			tasks: [{
 				id: "03AA9D68F8D5BC75",
 				type: "item",
-				item: "minecraft:oak_log"
+				title: "Any logs",
+				item: {
+					id: "itemfilters:tag",
+					Count: 1b,
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
+			}],
+			rewards: [{
+				id: "5C7822117FE7F660",
+				type: "loot",
+				icon: "ironchest:iron_chest",
+				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -300,6 +326,12 @@
 				id: "0828AF188D59A896",
 				type: "item",
 				item: "minecraft:furnace"
+			}],
+			rewards: [{
+				id: "193AED506BC44C74",
+				type: "loot",
+				icon: "ironchest:iron_chest",
+				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -310,22 +342,22 @@
 			dependencies: ["2BD88FEF8627EBDE"],
 			id: "135CE149A8C95267",
 			tasks: [{
-				id: "6AFDA4EDB0B9D576",
+				id: "021C0E0087B1022B",
 				type: "item",
-				item: "quark:oak_chest"
-			}]
-		},
-		{
-			title: "Upgraded Chest.",
-			x: 4.0d,
-			y: 5.0d,
-			subtitle: "You can upgrade your chests with Iron, Gold and Diamond!",
-			dependencies: ["135CE149A8C95267"],
-			id: "6A863D29B434258E",
-			tasks: [{
-				id: "12074A5D3D77E537",
-				type: "item",
-				item: "ironchest:iron_chest"
+				title: "Any #forge:chests/wooden",
+				item: {
+					id: "itemfilters:tag",
+					Count: 1b,
+					tag: {
+						value: "forge:chests/wooden"
+					}
+				}
+			}],
+			rewards: [{
+				id: "1FAF930756351019",
+				type: "loot",
+				icon: "ironchest:iron_chest",
+				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -340,8 +372,7 @@
 			],
 			dependencies: [
 				"1910BABD0FF02C8E",
-				"4F3776448618CD2E",
-				"2E90D888048A9AF6"
+				"4F3776448618CD2E"
 			],
 			id: "4B35364D1E32F527",
 			tasks: [{
@@ -349,6 +380,12 @@
 				type: "item",
 				item: "immersiveengineering:cokebrick",
 				count: 27L
+			}],
+			rewards: [{
+				id: "36D1D2071E4FE80D",
+				type: "loot",
+				icon: "ironchest:iron_chest",
+				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -370,63 +407,15 @@
 			title: "Magic Wand!",
 			x: -1.0d,
 			y: 5.0d,
+			shape: "hexagon",
 			subtitle: "Make a Resonating Wand and try to find some Rock Crystal!",
 			dependencies: ["2BD88FEF8627EBDE"],
+			size: 1.5d,
 			id: "46386455CC4203D0",
 			tasks: [{
 				id: "38F3433C7CB78BFC",
 				type: "item",
 				item: "astralsorcery:wand"
-			}]
-		},
-		{
-			title: "Mysterious Crystal.",
-			x: -2.0d,
-			y: 6.0d,
-			subtitle: "Find a Rock Crystal vein.",
-			dependencies: ["46386455CC4203D0"],
-			id: "0A33A7FE828BF3B7",
-			tasks: [{
-				id: "1F5E70CE5CF798FE",
-				type: "item",
-				item: {
-					id: "astralsorcery:rock_crystal",
-					Count: 1b,
-					tag: {
-						astralsorcery: {}
-					}
-				}
-			}]
-		},
-		{
-			title: "Magic Crafting Table.",
-			x: -2.0d,
-			y: 4.0d,
-			subtitle: "Find a structure with a Crystal in it and infuse a Crafting Table!",
-			dependencies: ["46386455CC4203D0"],
-			id: "084ED0B92E8EDC7D",
-			tasks: [{
-				id: "4C4927A1E0AF65BD",
-				type: "item",
-				item: "astralsorcery:altar_discovery"
-			}]
-		},
-		{
-			title: "Tier 1: Magic",
-			x: -3.0d,
-			y: 5.0d,
-			shape: "hexagon",
-			subtitle: "Make a Petal Apocathery to unlock the first chapter of the magic category!",
-			dependencies: [
-				"084ED0B92E8EDC7D",
-				"0A33A7FE828BF3B7"
-			],
-			size: 1.5d,
-			id: "13D8769FBB3A41AB",
-			tasks: [{
-				id: "3D5A9F5B843F5099",
-				type: "item",
-				item: "botania:apothecary_default"
 			}]
 		},
 		{
@@ -444,39 +433,46 @@
 						Damage: 0
 					}
 				}
+			}],
+			rewards: [{
+				id: "3993C3623F713C95",
+				type: "loot",
+				icon: "ironchest:iron_chest",
+				table_id: 8943544606768321675L
 			}]
 		},
 		{
-			x: 0.0d,
-			y: 7.0d,
+			x: 1.0d,
+			y: 5.0d,
+			subtitle: "A crafting station is a upgraded version of the Vanilla Crafting Table.",
+			description: [""],
+			dependencies: ["492E0DBCFF16AE61"],
+			id: "2BD88FEF8627EBDE",
+			tasks: [{
+				id: "0D4582F9C19CF360",
+				type: "item",
+				item: "tconstruct:crafting_station"
+			}],
+			rewards: [{
+				id: "417BDB0424B55EEA",
+				type: "loot",
+				icon: "ironchest:iron_chest",
+				table_id: 8943544606768321675L
+			}]
+		},
+		{
+			title: "Tools!!!",
+			x: -0.5d,
+			y: 6.5d,
+			subtitle: "These two blocks allows you to make basic stone/wooden tools.",
 			dependencies: ["2BD88FEF8627EBDE"],
-			id: "2E90D888048A9AF6",
+			id: "51F4C0110F3F86A5",
 			tasks: [
 				{
-					id: "6EAB6D6D2B075DB2",
-					type: "item",
-					item: "tconstruct:melter"
-				},
-				{
-					id: "62F1BB49C6A6112A",
-					type: "item",
-					item: "tconstruct:seared_heater"
-				},
-				{
-					id: "44E5483DA11488B1",
-					type: "item",
-					item: "tconstruct:faucet"
-				},
-				{
-					id: "43658037A56424A8",
-					type: "item",
-					item: "tconstruct:casting_table"
-				},
-				{
-					id: "42CB18306093F605",
+					id: "08346AC39C777BE8",
 					type: "item",
 					item: {
-						id: "tconstruct:tinker_station",
+						id: "tconstruct:part_builder",
 						Count: 1b,
 						tag: {
 							texture: "minecraft:oak_planks"
@@ -484,10 +480,10 @@
 					}
 				},
 				{
-					id: "3029E422A3D75A67",
+					id: "334F292F93CF7D2E",
 					type: "item",
 					item: {
-						id: "tconstruct:part_builder",
+						id: "tconstruct:tinker_station",
 						Count: 1b,
 						tag: {
 							texture: "minecraft:oak_planks"
@@ -497,14 +493,68 @@
 			]
 		},
 		{
-			x: 1.0d,
+			title: "Cheap Smeltery",
+			x: -0.5d,
+			y: 8.0d,
+			subtitle: "These blocks allows you to make metals tools.",
+			dependencies: ["51F4C0110F3F86A5"],
+			id: "4702984FC2443492",
+			tasks: [
+				{
+					id: "784B9341FF645BFA",
+					type: "item",
+					item: "tconstruct:melter"
+				},
+				{
+					id: "665ACB0D249A1BE0",
+					type: "item",
+					item: "tconstruct:casting_table"
+				},
+				{
+					id: "6B832F7F32649837",
+					type: "item",
+					item: "tconstruct:casting_basin"
+				},
+				{
+					id: "190DCB58C619E07B",
+					type: "item",
+					item: "tconstruct:faucet"
+				},
+				{
+					id: "387E83E87AAF3C67",
+					type: "item",
+					item: "tconstruct:seared_heater"
+				},
+				{
+					id: "7BA2122D25F4DED9",
+					type: "item",
+					item: "tconstruct:seared_tank"
+				}
+			]
+		},
+		{
+			title: "Drawers",
+			x: 4.0d,
 			y: 5.0d,
-			dependencies: ["492E0DBCFF16AE61"],
-			id: "2BD88FEF8627EBDE",
+			dependencies: ["135CE149A8C95267"],
+			id: "2A559968B5696308",
 			tasks: [{
-				id: "0D4582F9C19CF360",
+				id: "6C82E6A37D16CF60",
 				type: "item",
-				item: "tconstruct:crafting_station"
+				title: "Any Drawers",
+				item: {
+					id: "itemfilters:tag",
+					Count: 1b,
+					tag: {
+						value: "storagedrawers:drawers"
+					}
+				}
+			}],
+			rewards: [{
+				id: "0239A21771C6DB0A",
+				type: "loot",
+				icon: "ironchest:iron_chest",
+				table_id: 8943544606768321675L
 			}]
 		}
 	]
