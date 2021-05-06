@@ -46,7 +46,7 @@ events.listen('recipes', function (event) {
 
     //Compute Module
     event.remove({output: 'youmatter:compute_module'})
-    event.recipes.create.mechanical_crafting(Item.of('youmatter:compute_module', 2), [' LE', 'RTR', 'PGP'], {
+    event.recipes.create.mechanical_crafting(Item.of('youmatter:compute_module', 1), [' LE', 'RTR', 'PGP'], {
         T: 'youmatter:transistor',
         G: '#forge:rods/gold',
         E: 'immersiveengineering:electron_tube',

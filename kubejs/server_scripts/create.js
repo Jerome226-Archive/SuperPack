@@ -179,6 +179,10 @@ events.listen('recipes', function (event) {
         E: 'create:electron_tube'
     }),
 
+    //Chromatic Compound
+    event.remove({id: 'create:mixing/chromatic_compound'})
+    event.recipes.create.mixing('create:chromatic_compound', ['create:chromatic_compound', 'astralsorcery:stardust', 'botania:elementium_ingot']).superheated()
+
     //Blaze Cake
     event.remove({id: 'create:filling/blaze_cake'})
     event.recipes.create.filling('create:blaze_cake', ['create:blaze_cake_base', fluid.of('tconstruct:molten_blaze', 250)]),

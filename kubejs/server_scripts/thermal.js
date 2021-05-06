@@ -97,7 +97,7 @@ events.listen('recipes', function (event) {
         P: '#forge:plates/copper',
         B: 'create:brass_casing',
         L: '#forge:sheetmetals/lead',
-        R: 'createaddition:capacitor'
+        R: 'superpackutils:reinforced_capacitor'
     }),
 
     //Decoctive Diffuser
@@ -116,7 +116,7 @@ events.listen('recipes', function (event) {
     event.shaped('thermal:tinker_bench', ['LML', 'TAT', 'TCT'], {
         A: 'create:andesite_casing',
         L: '#forge:sheetmetals/lead',
-        C: 'createaddition:capacitor',
+        C: 'superpackutils:sturdy_capacitor',
         M: 'engineersdecor:metal_crafting_table',
         T: '#forge:treated_wood'
     }),

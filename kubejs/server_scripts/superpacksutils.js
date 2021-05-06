@@ -167,10 +167,29 @@ events.listen('recipes', function (event) {
     event.recipes.create.crushing([Item.of('superpackutils:limestone_dust').withChance(0.35), 'superpackutils:bedrock_dust', Item.of('superpackutils:bedrock_dust').withChance(0.45)], 'superpackutils:deepslate', 350)
 
     //Reinforced Capacitor 
-    event.shaped('superpackutils:reinforced_capacitor', [' CI', 'CAC', 'IC '], {
-      C: '#forge:plates/lead',
+    event.shaped('superpackutils:reinforced_capacitor', ['III', 'BAB', 'CCC'], {
+      C: '#forge:nuggets/electrum',
       A: 'createaddition:capacitor',
-      I: 'superpackutils:bedrock_dust'
+      B: 'superpackutils:bedrock_dust',
+      I: '#forge:plates/iron'
+    }),
+
+    //Sturdy Capacitor
+    event.shaped('superpackutils:sturdy_capacitor', ['ISI', 'BAB', 'CCC'], {
+      C: '#forge:nuggets/electrum',
+      A: 'superpackutils:reinforced_capacitor',
+      B: 'superpackutils:energetic_alloy_ingot',
+      S: 'immersiveengineering:component_steel',
+      I: '#forge:plates/steel'
+    }),
+
+    //Double-Layered Capacitor
+    event.shaped('superpackutils:doublelayered_capacitor', ['ISI', 'BAB', 'CCC'], {
+      C: '#forge:nuggets/electrum',
+      A: 'superpackutils:sturdy_capacitor',
+      B: 'superpackutils:vibrant_alloy_ingot',
+      S: 'superpackutils:reinforced_capacitor',
+      I: '#forge:gears/compressed_iron'
     }),
 
     //Dyingrock

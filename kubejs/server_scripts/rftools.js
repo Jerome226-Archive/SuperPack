@@ -15,7 +15,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'rftoolsbase:machine_frame'})
     event.recipes.create.mechanical_crafting('rftoolsbase:machine_frame', ['SCS', 'IBI', 'SCS'], {
         S: 'superpackutils:tetraethyl_lead_ingot',
-        C: 'pneumaticcraft:compressed_iron_gear',
+        C: 'superpackutils:doublelayered_capacitor',
         B: 'mekanism:steel_casing',
         I: '#forge:ingots/osmium'
     }),
@@ -36,7 +36,7 @@ events.listen('recipes', function (event) {
     ///Modular Storage
     event.remove({output: 'rftoolsstorage:modular_storage'})
     event.shaped('rftoolsstorage:modular_storage', ['CSC', 'HBH', 'ESE'], {
-        C: 'createaddition:capacitor',
+        C: 'superpackutils:doublelayered_capacitor',
         S: 'mekanism:personal_chest',
         H: '#forge:glass/colorless',
         B: 'rftoolsbase:machine_base',

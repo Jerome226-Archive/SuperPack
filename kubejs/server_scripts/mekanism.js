@@ -111,7 +111,7 @@ events.listen('recipes', function (event) {
         P: '#forge:plates/steel',
         S: '#immersiveengineering:scaffoldings/steel',
         E: 'superpackutils:electrical_platinum_ingot',
-        G: 'immersiveengineering:electron_tube',
+        G: 'superpackutils:sturdy_capacitor',
         H: 'immersiveengineering:heavy_engineering',
         B: 'superpackutils:bio_plastic'
     })
@@ -150,6 +150,16 @@ events.listen('recipes', function (event) {
         I: 'superpackutils:reinforced_capacitor'
     }),
 
+    //Formulaic Assemblicator
+    event.remove({output: 'mekanism:formulaic_assemblicator'})
+    event.shaped('mekanism:formulaic_assemblicator', ['CBC', 'ASA', 'CIC'], {
+        C: 'thermal:invar_plate',
+        A: '#forge:circuits/basic',
+        B: 'create:mechanical_crafter',
+        S: 'mekanism:steel_casing',
+        I: '#forge:chests/wooden'
+    }),
+
     //Solar Panel
     event.remove({output: 'mekanismgenerators:solar_panel'})
     event.shaped('mekanismgenerators:solar_panel', ['GGG', 'OCO'], {
@@ -164,7 +174,7 @@ events.listen('recipes', function (event) {
         S: 'mekanismgenerators:solar_panel',
         A: 'create:andesite_alloy',
         O: 'superpackutils:compressed_steel_ingot',
-        C: 'createaddition:capacitor'
+        C: 'superpackutils:reinforced_capacitor'
     }),
 
     //Enrichment Chamber
