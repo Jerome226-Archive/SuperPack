@@ -112,7 +112,6 @@ mimic-1.16.5-v1.12.jar
 miningtweaks-2.0a-1.16.5.jar
 mining_helmet-1.16.5-2.0.1.jar
 MmmMmmMmmMmm-1.16.5-1.2.0.jar
-modlist.txt
 modnametooltip_1.16.2-1.15.0.jar
 Morph-o-Tool-1.4-27.jar
 Morpheus-1.16.5-4.2.70.jar
