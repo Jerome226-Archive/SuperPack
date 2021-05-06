@@ -149,7 +149,6 @@ sophisticatedbackpacks-1.16.4-2.4.0.259.jar
 speedyhoppers-1.16.4-1.jar
 speedyladders-1.16.5-2.jar
 StorageDrawers-1.16.3-8.2.2.jar
-subwild-1.2.1.jar
 superpackutils-1.16.4-b1.8.jar
 supplementaries-1.16.5-0.12.1.jar
 TConstruct-1.16.5-3.0.3.126.jar
