@@ -242,7 +242,6 @@ onEvent('recipes', event => {
   event.replaceOutput({}, 'iceandfire:silver_nugget', 'thermal:silver_nugget')
   event.replaceOutput({}, 'immersiveengineering:nugget_steel', 'mekanism:nugget_steel')
 
-
   //-----------------------------------------------------
   //unifyOre Block
   //-----------------------------------------------------

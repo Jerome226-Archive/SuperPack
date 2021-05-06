@@ -74,7 +74,7 @@ events.listen('recipes', function (event) {
         A: '#forge:sheetmetals/aluminum',
         L: '#forge:sheetmetals/lead',
         P: '#forge:plates/invar',
-        B: 'superpackutils:pickaxe',
+        B: 'botania:manasteel_pick',
         O: 'thermal:drill_head'
     }),
 

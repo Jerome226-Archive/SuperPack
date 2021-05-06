@@ -20,7 +20,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'immersiveengineering:cokebrick'})
     event.shaped(Item.of('immersiveengineering:cokebrick', 3), ['ATA', 'TWT', 'ATA'], {
         A: 'tconstruct:seared_brick',
-        W: '#forge:storage_blocks/clay',
+        W: 'minecraft:clay_ball',
         T: '#forge:ingots/brick'
     }),
 

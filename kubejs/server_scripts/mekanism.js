@@ -15,6 +15,9 @@ events.listen('recipes', function (event) {
     event.remove({id: 'tconstruct:smeltery/melting/metal/uranium/ore'})
     event.remove({id: 'immersiveengineering:arcfurnace/ore_uranium'})
 
+    //Sulfur Replace Output
+    event.replaceOutput({}, 'mekanism:dust_sulfur', 'thermal:sulfur_dust')
+
     //Uranium Smelting Induction Smelter
     event.custom({
         "type": "thermal:smelter",

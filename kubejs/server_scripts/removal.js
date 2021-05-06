@@ -49,16 +49,12 @@ var outputRemoval = [
     'pneumaticcraft:network_data_storage',
     'pneumaticcraft:drone',
 
-    //Thermal Series
-    'thermal:machine_press',
-
     //Immersive Engineering
     'immersiveengineering:windmill',
     'immersiveengineering:watermill',
 
     //Buzzier Bees
     'buzzier_bees:honey_apple',
-
 ];
 
 var typeRemoval = [
