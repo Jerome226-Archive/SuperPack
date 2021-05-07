@@ -95,9 +95,9 @@ events.listen('recipes', function (event) {
         "starlight": 1400,
         "pattern": [
           "E___E",
-          "_LTL_",
+          "_LAL_",
           "_TDT_",
-          "_LTL_",
+          "_LAL_",
           "G___G"
         ],
         "key": {
@@ -113,8 +113,11 @@ events.listen('recipes', function (event) {
           "L": {
             "item": "botania:glimmering_livingwood"
           },
+          "A": {
+            "item": "superpackutils:starlight_infused_mana_diamond"
+          },
           "D": {
-            "item": "botania:mana_diamond"
+            "item": "superpackutils:starlight_infused_mana_pearl"
           }
         },
         "output": [

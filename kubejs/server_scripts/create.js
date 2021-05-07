@@ -179,9 +179,16 @@ events.listen('recipes', function (event) {
         E: 'create:electron_tube'
     }),
 
+    //White Sail
+    event.remove({output: 'create:white_sail'})
+    event.shaped(Item.of('create:white_sail', 8), ['PPP', 'PCP', 'PPP'], {
+        P: 'create:sail_frame',
+        C: 'immersiveengineering:windmill_sail'
+    }),
+
     //Chromatic Compound
     event.remove({id: 'create:mixing/chromatic_compound'})
-    event.recipes.create.mixing('create:chromatic_compound', ['create:chromatic_compound', 'astralsorcery:stardust', 'botania:elementium_ingot']).superheated()
+    event.recipes.create.mixing('create:chromatic_compound', ['create:polished_rose_quartz', 'astralsorcery:stardust', 'botania:elementium_ingot']).superheated()
 
     //Blaze Cake
     event.remove({id: 'create:filling/blaze_cake'})

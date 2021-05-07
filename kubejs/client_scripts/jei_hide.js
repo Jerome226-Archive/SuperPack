@@ -23,12 +23,16 @@ onEvent('jei.hide.items', event => {
         'mekanism:logistical_sorter',
 
         //Pneumaticcraft
+        'pneumaticcraft:logistics_configurator',
+        Item.of('pneumaticcraft:logistics_configurator', {"pneumaticcraft:air":30000}),
         'pneumaticcraft:logistics_frame_storage',
         'pneumaticcraft:logistics_frame_default_storage',
         'pneumaticcraft:logistics_frame_passive_provider',
         'pneumaticcraft:logistics_frame_active_provider',
+        'pneumaticcraft:logistics_frame_requester',
         'pneumaticcraft:logistics_core',
         'pneumaticcraft:logistics_drone',
+        Item.of('pneumaticcraft:logistics_drone', {"pneumaticcraft:air":120000}),
         'pneumaticcraft:logistics_module',
 
         'pneumaticcraft:programmable_controller',
@@ -37,6 +41,14 @@ onEvent('jei.hide.items', event => {
         'pneumaticcraft:network_api',
         'pneumaticcraft:network_data_storage',
         'pneumaticcraft:drone',
+        Item.of('pneumaticcraft:drone', {"pneumaticcraft:air":120000}),
+
+        'pneumaticcraft:lubricant_bucket',
+        'pneumaticcraft:gasoline_bucket',
+        'pneumaticcraft:oil_bucket',
+        'pneumaticcraft:biodiesel_bucket',
+        'pneumaticcraft:vegetable_oil_bucket',
+        'pneumaticcraft:ethanol_bucket',
 
         //RFTools
         'rftoolsstorage:crafting_manager',
@@ -212,6 +224,21 @@ onEvent('jei.hide.items', event => {
 
         //Bronze Nugget
         'mekanism:nugget_bronze'
+    ]);
+
+})
+
+onEvent('jei.hide.fluids', event => {
+
+    event.hide([
+
+        //Pneumaticcraft Liquids
+        'pneumaticcraft:lubricant',
+        'pneumaticcraft:oil',
+        'pneumaticcraft:biodiesel',
+        'pneumaticcraft:vegetable_oil',
+        'pneumaticcraft:ethanol',
+
     ]);
 
 })

@@ -34,10 +34,12 @@ var outputRemoval = [
     'createaddition:accumulator',
 
     //Pneumaticcraft
+    'pneumaticcraft:logistics_configurator',
     'pneumaticcraft:logistics_frame_storage',
     'pneumaticcraft:logistics_frame_default_storage',
     'pneumaticcraft:logistics_frame_passive_provider',
     'pneumaticcraft:logistics_frame_active_provider',
+    'pneumaticcraft:logistics_frame_requester',
     'pneumaticcraft:logistics_core',
     'pneumaticcraft:logistics_drone',
     'pneumaticcraft:logistics_module',

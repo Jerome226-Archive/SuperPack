@@ -192,6 +192,49 @@ events.listen('recipes', function (event) {
       I: '#forge:gears/compressed_iron'
     }),
 
+    //Starlight Shard
+    event.recipes.create.filling('superpackutils:starlight_shard', ['astralsorcery:illumination_powder', fluid.of('astralsorcery:liquid_starlight', 1000)]),
+
+    //Starlight-Infused Mana Pearl
+    event.custom({
+      "type": "botania:terra_plate",
+      "mana": 1000000,
+      "ingredients": [
+        {
+          "item": "botania:mana_pearl"
+        },
+        {
+          "item": "superpackutils:starlight_shard"
+        },
+        {
+          "item": "botania:quartz_mana"
+        }
+      ],
+      "result": {
+        "item": "superpackutils:starlight_infused_mana_pearl"
+      }
+    })
+
+    //Starlight-Infused Mana Diamond
+    event.custom({
+      "type": "botania:terra_plate",
+      "mana": 1000000,
+      "ingredients": [
+        {
+          "item": "botania:mana_diamond"
+        },
+        {
+          "item": "superpackutils:starlight_shard"
+        },
+        {
+          "item": "botania:quartz_mana"
+        }
+      ],
+      "result": {
+        "item": "superpackutils:starlight_infused_mana_diamond"
+      }
+    })
+
     //Dyingrock
     event.recipes.mekanism.metallurgic_infusing('superpackutils:dyingrock', 'botania:livingrock', 'mekanism:carbon', 80),
 
