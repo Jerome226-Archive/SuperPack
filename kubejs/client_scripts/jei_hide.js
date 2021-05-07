@@ -234,6 +234,7 @@ onEvent('jei.hide.fluids', event => {
 
         //Pneumaticcraft Liquids
         'pneumaticcraft:lubricant',
+        'pneumaticcraft:gasoline',
         'pneumaticcraft:oil',
         'pneumaticcraft:biodiesel',
         'pneumaticcraft:vegetable_oil',
