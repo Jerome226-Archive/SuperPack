@@ -135,9 +135,8 @@ Quark-r2.4-311.jar
 QuarkOPlenty-1.16.5-1.2.1.jar
 randompatches-2.4.4-forge.jar
 ReAuth-1.16-Forge-3.9.3.jar
+refinedstorage-1.9.12.jar
 repurposed_structures-1.16.5-2.6.6-forge.jar
-rftoolsbase-1.16-2.0.10.jar
-rftoolsstorage-1.16-2.0.11.jar
 rhino-1.7.13-build.23.jar
 rsgauges-1.16.4-1.2.9.jar
 SereneSeasons-1.16.5-4.0.1.91-universal.jar
