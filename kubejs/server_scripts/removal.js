@@ -21,6 +21,12 @@ var outputRemoval = [
     'mekanism:diversion_transporter',
     'mekanism:logistical_sorter',
 
+    //Engineer's Decor
+    'engineersdecor:small_tree_cutter',
+    'engineersdecor:small_block_breaker',
+    'engineersdecor:small_solar_panel',
+    'engineersdecor:factory_placer',
+
     //RFTools
     'rftoolsstorage:crafting_manager',
 

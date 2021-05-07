@@ -19,7 +19,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'createaddition:heater'})
     event.shaped('createaddition:heater', [' C ', 'IBI', 'SPS'], {
         S: '#forge:ingots/brass',
-        C: 'createaddition:capacitor',
+        C: 'superpackutils:reinforced_capacitor',
         B: 'mekanismgenerators:heat_generator',
         P: '#forge:plates/iron',
         I: 'immersiveengineering:wirecoil_copper'

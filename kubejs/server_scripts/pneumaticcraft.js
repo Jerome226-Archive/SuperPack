@@ -39,6 +39,15 @@ events.listen('recipes', function (event) {
       ]
     })
 
+    //Charging Station
+    event.remove({output: 'pneumaticcraft:charging_station'})
+    event.shaped('pneumaticcraft:charging_station', [' SE', 'CCC', 'PPP'], {
+        P: 'pneumaticcraft:reinforced_stone_slab',
+        C: 'mekanism:enriched_redstone',
+        S: 'mekanism:chargepad',
+        E: 'pneumaticcraft:pressure_tube'
+    }),
+
     //Plastic
     event.remove({id: 'pneumaticcraft:thermo_plant/plastic_from_biodiesel'})
     event.remove({id: 'pneumaticcraft:thermo_plant/plastic_from_lpg'})

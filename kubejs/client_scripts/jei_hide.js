@@ -50,8 +50,11 @@ onEvent('jei.hide.items', event => {
         'pneumaticcraft:vegetable_oil_bucket',
         'pneumaticcraft:ethanol_bucket',
 
-        //RFTools
-        'rftoolsstorage:crafting_manager',
+        //Engineer's Decor
+        'engineersdecor:small_tree_cutter',
+        'engineersdecor:small_block_breaker',
+        'engineersdecor:small_solar_panel',
+        'engineersdecor:factory_placer',
 
         //Storage Drawers
         'storagedrawers:compacting_drawers_3',

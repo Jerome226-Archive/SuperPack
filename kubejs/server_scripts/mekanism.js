@@ -93,14 +93,6 @@ events.listen('recipes', function (event) {
         P: '#forge:plates/iron'
     }),
 
-    //Teleportation Core
-    event.remove({output: 'mekanism:teleportation_core'})
-    event.shaped('mekanism:teleportation_core', ['BAB', 'AIA', 'BAB'], {
-        I: 'rftoolsbase:infused_enderpearl',
-        A: '#mekanism:alloys/atomic',
-        B: 'youmatter:black_hole'
-    }),
-
     //Mekanism Steel Casing
     event.remove({output: 'mekanism:steel_casing'})
     event.recipes.create.mechanical_crafting(Item.of('mekanism:steel_casing', 2), [
@@ -293,7 +285,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'mekanism:chargepad'})
     event.shaped('mekanism:chargepad', ['PCP', 'SES'], {
         P: 'minecraft:polished_blackstone_pressure_plate',
-        C: 'immersiveengineering:charging_station',
+        C: 'thermal:charge_bench',
         S: '#forge:ingots/steel',
         E: '#forge:ingots/silver'
     }),
@@ -490,7 +482,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanismgenerators:bio_generator', ['SCS', 'IBI', 'SDS'], {
         S: '#forge:plates/invar',
         C: 'create:millstone',
-        D: 'createaddition:capacitor',
+        D: 'superpackutils:reinforced_capacitor',
         B: 'immersiveengineering:light_engineering',
         I: 'mekanism:bio_fuel'
     }),
