@@ -36,7 +36,7 @@
 	capacity = 32000
 	#The base energy used by the Controller
 	#Range: > 0
-	baseUsage = 0
+	baseUsage = 250
 	#The maximum energy that the Controller can receive
 	#Range: > 0
 	maxTransfer = 2147483647
@@ -44,7 +44,7 @@
 [cable]
 	#The energy used by the Cable
 	#Range: > 0
-	usage = 0
+	usage = 1
 
 [grid]
 	#The energy used by Grids
@@ -148,12 +148,12 @@
 [interface]
 	#The energy used by the Interface
 	#Range: > 0
-	usage = 2
+	usage = 1000
 
 [fluidInterface]
 	#The energy used by the Fluid Interface
 	#Range: > 0
-	usage = 2
+	usage = 1000
 
 [wirelessTransmitter]
 	#The energy used by the Wireless Transmitter
@@ -272,4 +272,3 @@
 	#The autocrafting calculation timeout in milliseconds, crafting tasks taking longer than this to calculate are cancelled to avoid server strain
 	#Range: > 5000
 	calculationTimeoutMs = 5000
-
