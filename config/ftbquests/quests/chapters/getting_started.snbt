@@ -21,273 +21,7 @@
 				type: "dimension",
 				icon: "biomesoplenty:bop_icon",
 				dimension: "minecraft:overworld"
-			}],
-			rewards: [
-				{
-					id: "2767CE58460E72A7",
-					type: "item",
-					item: {
-						id: "morphtool:tool",
-						Count: 1b,
-						tag: {
-							"morphtool:is_morphing": 1b,
-							"morphtool:data": {
-								blockcarpentry: {
-									id: "blockcarpentry:texture_wrench",
-									Count: 1b,
-									tag: {
-										"morphtool:is_morphing": 1b,
-										"morphtool:displayName": {
-											text: "Texture Wrench"
-										},
-										display: {
-											Name: '{"translate":"morphtool.sudo_name","with":[{"color":"green","text":"Texture Wrench"}]}'
-										}
-									}
-								},
-								mekanism: {
-									id: "mekanism:configurator",
-									Count: 1b,
-									tag: {
-										"morphtool:is_morphing": 1b,
-										"morphtool:displayName": {
-											text: "Configurator"
-										},
-										display: {
-											Name: '{"translate":"morphtool.sudo_name","with":[{"color":"green","text":"Configurator"}]}'
-										}
-									}
-								},
-								pneumaticcraft: {
-									id: "pneumaticcraft:pneumatic_wrench",
-									Count: 1b,
-									tag: {
-										"morphtool:is_morphing": 1b,
-										"morphtool:displayName": {
-											text: "Pneumatic Wrench"
-										},
-										display: {
-											Name: '{"translate":"morphtool.sudo_name","with":[{"color":"green","text":"Pneumatic Wrench"}]}'
-										}
-									}
-								},
-								immersiveengineering: {
-									id: "immersiveengineering:hammer",
-									Count: 1b,
-									tag: {
-										"morphtool:is_morphing": 1b,
-										"morphtool:displayName": {
-											text: "Engineer's Hammer"
-										},
-										AS_Amulet_Holder: [I;
-											-1639266743,
-											-774028287,
-											-2135711050,
-											2047275680
-										],
-										Damage: 0,
-										display: {
-											Name: '{"translate":"morphtool.sudo_name","with":[{"color":"green","text":"Engineer\'s Hammer"}]}'
-										}
-									}
-								},
-								thermal: {
-									id: "thermal:wrench",
-									Count: 1b,
-									tag: {
-										"morphtool:is_morphing": 1b,
-										"morphtool:displayName": {
-											text: "Crescent Hammer"
-										},
-										display: {
-											Name: '{"translate":"morphtool.sudo_name","with":[{"color":"green","text":"Crescent Hammer"}]}'
-										}
-									}
-								},
-								chiselsandbits: {
-									id: "chiselsandbits:wrench_wood",
-									Count: 1b,
-									tag: {
-										"morphtool:is_morphing": 1b,
-										"morphtool:displayName": {
-											text: "Wooden Wrench"
-										},
-										AS_Amulet_Holder: [I;
-											-1639266743,
-											-774028287,
-											-2135711050,
-											2047275680
-										],
-										Damage: 0,
-										display: {
-											Name: '{"translate":"morphtool.sudo_name","with":[{"color":"green","text":"Wooden Wrench"}]}'
-										}
-									}
-								},
-								create: {
-									id: "create:wrench",
-									Count: 1b,
-									tag: {
-										"morphtool:is_morphing": 1b,
-										"morphtool:displayName": {
-											text: "Wrench"
-										},
-										display: {
-											Name: '{"translate":"morphtool.sudo_name","with":[{"color":"green","text":"Wrench"}]}'
-										}
-									}
-								},
-								rftoolsbase: {
-									id: "rftoolsbase:smartwrench",
-									Count: 1b,
-									tag: {
-										"morphtool:is_morphing": 1b,
-										"morphtool:displayName": {
-											text: "Smart Wrench"
-										},
-										display: {
-											Name: '{"translate":"morphtool.sudo_name","with":[{"color":"green","text":"Smart Wrench"}]}'
-										}
-									}
-								},
-								platforms: {
-									id: "platforms:wrench",
-									Count: 1b,
-									tag: {
-										"morphtool:is_morphing": 1b,
-										"morphtool:displayName": {
-											text: "Monkey Wrench"
-										},
-										display: {
-											Name: '{"translate":"morphtool.sudo_name","with":[{"color":"green","text":"Monkey Wrench"}]}'
-										}
-									}
-								}
-							}
-						}
-					}
-				},
-				{
-					id: "468FB222207004EE",
-					type: "item",
-					item: {
-						id: "akashictome:tome",
-						Count: 1b,
-						tag: {
-							"akashictome:is_morphing": 1b,
-							"akashictome:data": {
-								botania: {
-									id: "botania:lexicon",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Lexica Botania"
-										},
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Lexica Botania"}]}'
-										}
-									}
-								},
-								astralsorcery: {
-									id: "astralsorcery:tome",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Astral Tome"
-										},
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Astral Tome"}]}'
-										}
-									}
-								},
-								pneumaticcraft: {
-									id: "patchouli:guide_book",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "PNC:R Manual"
-										},
-										"patchouli:book": "pneumaticcraft:book",
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"PNC:R Manual"}]}'
-										}
-									}
-								},
-								immersiveengineering: {
-									id: "immersiveengineering:manual",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Engineer's Manual"
-										},
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Engineer\'s Manual"}]}'
-										}
-									}
-								},
-								bloodmagic: {
-									id: "patchouli:guide_book",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Sanguine Scientiem"
-										},
-										"patchouli:book": "bloodmagic:guide",
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Sanguine Scientiem"}]}'
-										}
-									}
-								},
-								thermal: {
-									id: "patchouli:guide_book",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Thermalpedia"
-										},
-										"patchouli:book": "thermal:guidebook",
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Thermalpedia"}]}'
-										}
-									}
-								},
-								rftoolsbase: {
-									id: "rftoolsbase:manual",
-									Count: 1b,
-									tag: {
-										"akashictome:displayName": {
-											text: "Technology Guide"
-										},
-										"akashictome:is_morphing": 1b,
-										display: {
-											Name: '{"translate":"akashictome.sudo_name","with":[{"color":"green","text":"Technology Guide"}]}'
-										}
-									}
-								},
-								engineersdecor: {
-									id: "patchouli:guide_book",
-									Count: 1b,
-									tag: {
-										"patchouli:book": "engineersdecor:engineersdecor_manual"
-									}
-								}
-							}
-						}
-					}
-				},
-				{
-					id: "2D3EBE7CD48BB6FE",
-					type: "loot",
-					icon: "ironchest:iron_chest",
-					table_id: 8943544606768321675L
-				}
-			]
+			}]
 		},
 		{
 			title: "Chopping wood!",
@@ -307,12 +41,6 @@
 						value: "minecraft:logs"
 					}
 				}
-			}],
-			rewards: [{
-				id: "5C7822117FE7F660",
-				type: "loot",
-				icon: "ironchest:iron_chest",
-				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -326,12 +54,6 @@
 				id: "0828AF188D59A896",
 				type: "item",
 				item: "minecraft:furnace"
-			}],
-			rewards: [{
-				id: "193AED506BC44C74",
-				type: "loot",
-				icon: "ironchest:iron_chest",
-				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -352,12 +74,6 @@
 						value: "forge:chests/wooden"
 					}
 				}
-			}],
-			rewards: [{
-				id: "1FAF930756351019",
-				type: "loot",
-				icon: "ironchest:iron_chest",
-				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -380,12 +96,6 @@
 				type: "item",
 				item: "immersiveengineering:cokebrick",
 				count: 27L
-			}],
-			rewards: [{
-				id: "36D1D2071E4FE80D",
-				type: "loot",
-				icon: "ironchest:iron_chest",
-				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -433,12 +143,6 @@
 						Damage: 0
 					}
 				}
-			}],
-			rewards: [{
-				id: "3993C3623F713C95",
-				type: "loot",
-				icon: "ironchest:iron_chest",
-				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -452,12 +156,6 @@
 				id: "0D4582F9C19CF360",
 				type: "item",
 				item: "tconstruct:crafting_station"
-			}],
-			rewards: [{
-				id: "417BDB0424B55EEA",
-				type: "loot",
-				icon: "ironchest:iron_chest",
-				table_id: 8943544606768321675L
 			}]
 		},
 		{
@@ -549,12 +247,6 @@
 						value: "storagedrawers:drawers"
 					}
 				}
-			}],
-			rewards: [{
-				id: "0239A21771C6DB0A",
-				type: "loot",
-				icon: "ironchest:iron_chest",
-				table_id: 8943544606768321675L
 			}]
 		}
 	]
