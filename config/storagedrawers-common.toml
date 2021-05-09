@@ -5,7 +5,7 @@
 	#Half-depth drawers hold half those amounts.
 	baseStackStorage = 4
 	#Range: 1 ~ 50
-	controllerRange = 50
+	controllerRange = 4
 	enableUI = true
 	enableSidedInput = true
 	enableSidedOutput = true
@@ -27,4 +27,3 @@
 
 [Integration]
 	wailaStackRemainder = true
-
