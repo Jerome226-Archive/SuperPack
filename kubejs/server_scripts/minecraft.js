@@ -25,12 +25,43 @@ events.listen('recipes', function (event) {
         }
     })
 
+    //Ender Eye
+    event.remove({output: 'minecraft:ender_eye'})
+    event.recipes.create.mixing('minecraft:ender_eye', ['minecraft:ender_pearl', 'minecraft:blaze_powder']).heated()
+
     //Crimson Fungus
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:crimson_fungus","count":1}],"input":{"item":"minecraft:crimson_fungus"},"soil":{"item":"minecraft:crimson_nylium"},"time":480,"render":{"type":"generic","block":"minecraft:crimson_fungus"}})
 
     //Warped Fungus
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:warped_fungus","count":1}],"input":{"item":"minecraft:warped_fungus"},"soil":{"item":"minecraft:warped_nylium"},"time":480,"render":{"type":"generic","block":"minecraft:warped_fungus"}})
     
+    //Melon
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:melon","count":1}],"input":{"item":"minecraft:melon_seeds"},"soil":{"item":"minecraft:dirt"},"time":800,"render":{"type":"stem","block":"minecraft:melon"}})
+
+    //Chorus Fruit
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:chorus_fruit"}],"input":{"item":"minecraft:chorus_flower"},"soil":{"item":"minecraft:end_stone"},"time":480,"render":{"type":"chorus","block":"minecraft:chorus_flower"}})
+
+    //Pumpkin
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:pumpkin"}],"input":{"item":"minecraft:pumpkin_seeds"},"soil":{"item":"minecraft:dirt"},"time":800,"render":{"type":"stem","block":"minecraft:pumpkin"}})
+
+    //Cactus
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:cactus"}],"input":{"item":"minecraft:cactus"},"soil":{"tag":"forge:sand"},"time":560,"render":{"type":"stacking","block":"minecraft:cactus"}})
+
+    //Red Mushroom
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:red_mushroom"}],"input":{"item":"minecraft:red_mushroom"},"soil":[{"item":"minecraft:mycelium"},{"item":"minecraft:podzol"}],"time":480,"render":{"type":"generic","block":"minecraft:red_mushroom"}})
+
+    //Brown Mushroom
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:brown_mushroom"}],"input":{"item":"minecraft:brown_mushroom"},"soil":[{"item":"minecraft:mycelium"},{"item":"minecraft:podzol"}],"time":480,"render":{"type":"generic","block":"minecraft:brown_mushroom"}})
+
+    //Red Mushroom Colony
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"farmersdelight:red_mushroom_colony"}],"input":{"item":"farmersdelight:red_mushroom_colony"},"soil":[{"item":"minecraft:mycelium"},{"item":"minecraft:podzol"}],"time":480,"render":{"type":"generic","block":"minecraft:red_mushroom"}})
+
+    //Brown Mushroom Colony
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"farmersdelight:brown_mushroom_colony"}],"input":{"item":"farmersdelight:brown_mushroom_colony"},"soil":[{"item":"minecraft:mycelium"},{"item":"minecraft:podzol"}],"time":480,"render":{"type":"generic","block":"minecraft:brown_mushroom"}})
+
+    //Livingroot
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"botania:living_root"}],"input":{"item":"minecraft:dead_bush"},"soil":[{"item":"farmersdelight:organic_compost"}],"time":1200,"render":{"type":"generic","block":"minecraft:dead_bush"}})
+
     //Glowstone Pre-Nether
     event.recipes.create.filling('minecraft:glowstone_dust', ['minecraft:gunpowder', fluid.of('astralsorcery:liquid_starlight', 250)]),
 

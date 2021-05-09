@@ -34,7 +34,7 @@ events.listen('recipes', function (event) {
 
     //IE Light Engineering Block
     event.remove({output: 'immersiveengineering:light_engineering'})
-    event.shaped(Item.of('immersiveengineering:light_engineering', 4), ['SCS', 'IBI', 'SCS'], {
+    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:light_engineering', 4), ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/aluminum',
         C: 'immersiveengineering:component_iron',
         B: 'create:andesite_casing',
@@ -60,7 +60,7 @@ events.listen('recipes', function (event) {
 
     //IE Redstone Engineering Block
     event.remove({output: 'immersiveengineering:rs_engineering'})
-    event.shaped(Item.of('immersiveengineering:rs_engineering', 2), ['SCS', 'IBI', 'SCS'], {
+    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:rs_engineering', 2), ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/constantan',
         C: 'immersiveengineering:circuit_board',
         B: 'create:copper_casing',
@@ -172,6 +172,14 @@ events.listen('recipes', function (event) {
     event.shaped(Item.of('immersiveengineering:fluid_pipe', 8), ['CPC'], {
         P: '#forge:ingots/iron',
         C: '#forge:plates/iron'
+    }),
+
+    //Kinetic Dynamo
+    event.remove({output: 'immersiveengineering:dynamo'})
+    event.shaped('immersiveengineering:dynamo', ['ACA', 'PPP'], {
+        P: 'superpackutils:compressed_steel_ingot',
+        A: '#forge:dusts/redstone',
+        C: 'immersiveengineering:coil_lv'
     }),
 
     //IE Steel Block

@@ -2,6 +2,23 @@
 events.listen('recipes', function (event) {
 
 var outputRemoval = [
+
+    //Refined Storage
+    '#refinedstorage:crafter',
+    '#refinedstorage:crafting_monitor',
+    '#refinedstorage:crafter_manager',
+    '#refinedstorage:pattern_grid',
+    'refinedstorage:exporter',
+    'refinedstorage:importer',
+    'refinedstorage:constructor',
+    'refinedstorage:destructor',
+    'refinedstorage:pattern',
+    'refinedstorage:fortune_3_upgrade',
+    'refinedstorage:fortune_2_upgrade',
+    'refinedstorage:fortune_1_upgrade',
+    'refinedstorage:silk_touch_upgrade',
+    'refinedstorage:crafting_upgrade',
+
     //Mekanism
     'mekanism:basic_universal_cable',
     'mekanism:advanced_universal_cable',
@@ -21,14 +38,14 @@ var outputRemoval = [
     'mekanism:diversion_transporter',
     'mekanism:logistical_sorter',
 
+    'mekanism:formulaic_assemblicator',
+    'mekanism:crafting_formula',
+
     //Engineer's Decor
     'engineersdecor:small_tree_cutter',
     'engineersdecor:small_block_breaker',
     'engineersdecor:small_solar_panel',
     'engineersdecor:factory_placer',
-
-    //RFTools
-    'rftoolsstorage:crafting_manager',
 
     //Storage Drawers
     'storagedrawers:compacting_drawers_3',
@@ -57,15 +74,15 @@ var outputRemoval = [
     'pneumaticcraft:network_data_storage',
     'pneumaticcraft:drone',
 
-    //Immersive Engineering
-    'immersiveengineering:windmill',
-    'immersiveengineering:watermill',
+    '#pneumaticcraft:fluid_tanks',
 
     //Buzzier Bees
     'buzzier_bees:honey_apple',
 ];
 
 var typeRemoval = [
+
+    'immersiveengineering:cloche',
     'thermal:press',
     
 ];

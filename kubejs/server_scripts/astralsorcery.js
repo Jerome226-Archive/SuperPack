@@ -113,7 +113,7 @@ events.listen('recipes', function (event) {
             "item": "astralsorcery:starmetal_ingot"
           },
           "E": {
-            "item": "botania:blaze_quartz"
+            "item": "botania:sunny_quartz"
           },
           "L": {
             "item": "botania:elementium_ingot"

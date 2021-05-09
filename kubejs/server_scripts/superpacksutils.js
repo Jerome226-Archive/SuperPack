@@ -38,6 +38,15 @@ events.listen('recipes', function (event) {
         "shatterMultiplier": 30.0,
         "color": -11310593
     }),
+
+    //Reinforced Steel Casing
+    event.remove({output: 'superpackutils:big_steel_casing'})
+    event.recipes.create.mechanical_crafting('superpackutils:big_steel_casing', ['SCS', 'IBI', 'SCS'], {
+        S: 'superpackutils:tetraethyl_lead_ingot',
+        C: 'superpackutils:doublelayered_capacitor',
+        B: 'mekanism:steel_casing',
+        I: '#forge:ingots/osmium'
+    })
   
     //Dimensional Rock
     event.custom({
@@ -126,33 +135,15 @@ events.listen('recipes', function (event) {
       }
     })
 
+    //Polished Quartz
+    event.recipes.create.sandpaper_polishing('superpackutils:polished_quartz', 'minecraft:quartz')
+    event.recipes.mekanism.enriching('superpackutils:polished_quartz', 'minecraft:quartz')
+
     //Rotary (de)Condensentrating for Liquid Silicon Dioxide
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"superpackutils:silicon_dioxide"},"gasOutput":{"gas":"superpackutils:silicon_dioxide","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_dioxide"},"fluidOutput":{"fluid":"superpackutils:liquid_silicon_dioxide_fluid","amount":1}}) 
 
     //Silicon Dioxide Oxiding
     event.custom({"type":"mekanism:oxidizing","input":{"ingredient":{"tag":"forge:dusts/quartz"}},"output":{"gas":"superpackutils:silicon_dioxide","amount":100}})
-
-    //Silicon Thermoprocessing
-    event.custom({
-      "type": "pneumaticcraft:thermo_plant",
-      "item_input": {
-        "item": "minecraft:sand"
-      },
-      "fluid_input": {
-        "type": "pneumaticcraft:fluid",
-        "tag": "superpackutils:silicon_dioxide",
-        "amount": 100
-      },
-      "item_output": {
-        "item": "superpackutils:silicon"
-      },
-      "temperature": {
-        "min_temp": 528
-      },
-      "pressure": 4.5,
-      "speed": 0.5,
-      "exothermic": false
-    })
 
     //Ethyl Chloride
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:hydrogen_chloride"},"rightInput":{"amount":1,"gas":"mekanism:ethene"},"output":{"gas":"superpackutils:ethyl_chloride","amount":1}})
@@ -163,9 +154,52 @@ events.listen('recipes', function (event) {
     //Industrial Sand
     event.recipes.immersiveengineering.crusher('superpackutils:industrial_sand', 'create:limesand')
 
+    //Energetic Alloy
+    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"superpackutils:bloody_pigment"},{"item":"botania:quartz_blaze"},{"tag":"forge:dusts/redstone"}],"result":{"fluid":"superpackutils:molten_energetic_alloy_fluid","amount":288},"fluid":{"tag":"tconstruct:molten_brass","amount":144},"energy":5000})
+
+    //Vibrant Alloy
+    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"superpackutils:grassy_pigment"},{"item":"botania:quartz_elven"},{"tag":"forge:nuggets/terrasteel"}],"result":{"fluid":"superpackutils:molten_vibrant_alloy_fluid","amount":288},"fluid":{"tag":"tconstruct:molten_uranium","amount":144},"energy":10000})
+
     //Bedrock Dust & Limestone Dust
     event.recipes.create.crushing([Item.of('superpackutils:limestone_dust').withChance(0.35), 'superpackutils:bedrock_dust', Item.of('superpackutils:bedrock_dust').withChance(0.45)], 'superpackutils:deepslate', 350)
 
+    //Bloody Pigment
+    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:bloody_sawdust', Item.of('superpackutils:bloody_pigment').withChance(0.30))
+
+    //Grassy Pigment
+    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:grassy_sawdust', Item.of('superpackutils:grassy_pigment').withChance(0.30))
+
+    //Azure Pigment
+    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:azure_sawdust', Item.of('superpackutils:azure_pigment').withChance(0.30))
+
+    //Ender Pearl Nugget
+    event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "tag": "tconstruct:casts/single_use/nugget"
+      },
+      "cast_consumed": true,
+      "fluid": {
+        "name": "tconstruct:molten_ender",
+        "amount": 28
+      },
+      "result": "superpackutils:ender_pearl_nugget",
+      "cooling_time": 7
+    })
+
+    event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "tag": "tconstruct:casts/multi_use/nugget"
+      },
+      "fluid": {
+        "name": "tconstruct:molten_ender",
+        "amount": 28
+      },
+      "result": "superpackutils:ender_pearl_nugget",
+      "cooling_time": 7
+    })
+    
     //Reinforced Capacitor 
     event.shaped('superpackutils:reinforced_capacitor', ['III', 'BAB', 'CCC'], {
       C: '#forge:nuggets/electrum',

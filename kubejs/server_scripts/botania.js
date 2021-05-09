@@ -256,7 +256,11 @@ events.listen('recipes', function (event) {
 
     //Blaze Quartz
     event.remove({id: 'botania:quartz_blaze'})
-    event.recipes.create.mixing(Item.of('botania:quartz_blaze', 4), ['botania:quartz_red', 'botania:quartz_red', 'botania:quartz_red', 'botania:quartz_red', 'botania:metamorphic_desert_stone', 'minecraft:blaze_powder']).superheated()
+    event.recipes.create.mixing('botania:quartz_blaze', ['botania:quartz_mana', fluid.of('tconstruct:magma_cream', 28)]).superheated()
+
+    //Redstone Root
+    event.remove({id: 'botania:redstone_root'})
+    event.recipes.mekanism.metallurgic_infusing('botania:redstone_root', 'botania:living_root', 'mekanism:redstone', 40),
 
     //Elven Quartz
     event.remove({id: 'botania:elven_trade/elf_quartz'})
@@ -264,10 +268,10 @@ events.listen('recipes', function (event) {
         "type": "botania:elven_trade",
         "ingredients": [
             {
-                "item": "botania:metamorphic_plains_stone"
+                "item": "superpackutils:ender_pearl_nugget"
             },
           {
-            "item": "botania:quartz_blaze"
+            "item": "botania:quartz_mana"
           }
         ],
         "output": [
@@ -412,9 +416,5 @@ events.listen('recipes', function (event) {
           }
         ]
     })
-
-    //Ender Eye
-    event.remove({id: 'minecraft:ender_eye'})
-    event.recipes.mekanism.combining('minecraft:ender_eye', 'minecraft:ender_pearl', 'botania:quartz_blaze')
 
 });

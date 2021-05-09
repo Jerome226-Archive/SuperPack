@@ -5,8 +5,8 @@ events.listen('recipes', function (event) {
     //Blood Magic
     //-----------------------------------------------------
  
-    //Soul Snare
-    event.remove({id: 'bloodmagic:altar/soul_snare'})
+  //Soul Snare
+  event.remove({id: 'bloodmagic:altar/soul_snare'})
 	event.recipes.bloodmagic.altar('bloodmagic:soulsnare', 'botania:mana_string').upgradeLevel(0).altarSyphon(500).consumptionRate(5).drainRate(1)
  
 	//Blank Slate
@@ -19,19 +19,19 @@ events.listen('recipes', function (event) {
         P: '#forge:ingots/brass',
         I: 'botania:livingrock',
         A: 'botania:livingrock_slab',
-		Z: 'bloodmagic:weakbloodorb'
-    }),
+	      Z: 'bloodmagic:weakbloodorb'
+  }),
 
-    //Alchemy Table
-    event.remove({output: 'bloodmagic:alchemytable'})
-    event.shaped('bloodmagic:alchemytable', ['CBC', 'TAT', 'SPS'], {
+  //Alchemy Table
+  event.remove({output: 'bloodmagic:alchemytable'})
+  event.shaped('bloodmagic:alchemytable', ['CBC', 'TAT', 'SPS'], {
         S: 'superpackutils:dyingrock',
         P: 'bloodmagic:blankslate',
         B: 'botania:brewery',
         T: 'botania:rune_wrath',
         A: 'botania:alchemy_catalyst',
         C: 'botania:vial'
-    })
+  })
 
     //Slate-Infused Vial
     event.remove({id: 'bloodmagic:alchemytable/slate_vial'})

@@ -2,7 +2,44 @@
 
 onEvent('jei.hide.items', event => {
 
+    
+ var color = [
+    'white',
+    'orange',
+    'magenta',
+    'yellow',
+    'lime',
+    'pink',
+    'gray',
+    'light_gray',
+    'cyan',
+    'purple',
+    'blue',
+    'brown',
+    'green',
+    'red',
+    'black'
+];
+
     event.hide([
+
+        //Refined Storage
+        'refinedstorage:creative_controller',
+        'refinedstorage:crafter',
+        'refinedstorage:crafting_monitor',
+        'refinedstorage:crafter_manager',
+        'refinedstorage:pattern_grid',
+        'refinedstorage:exporter',
+        'refinedstorage:importer',
+        'refinedstorage:constructor',
+        'refinedstorage:destructor',
+        'refinedstorage:pattern',
+        'refinedstorage:fortune_3_upgrade',
+        'refinedstorage:fortune_2_upgrade',
+        'refinedstorage:fortune_1_upgrade',
+        'refinedstorage:silk_touch_upgrade',
+        'refinedstorage:crafting_upgrade',
+
         //Mekanism Pipes
         'mekanism:basic_universal_cable',
         'mekanism:advanced_universal_cable',
@@ -21,6 +58,9 @@ onEvent('jei.hide.items', event => {
         'mekanism:restrictive_transporter',
         'mekanism:diversion_transporter',
         'mekanism:logistical_sorter',
+
+        'mekanism:formulaic_assemblicator',
+        'mekanism:crafting_formula',
 
         //Pneumaticcraft
         'pneumaticcraft:logistics_configurator',
@@ -50,6 +90,11 @@ onEvent('jei.hide.items', event => {
         'pneumaticcraft:vegetable_oil_bucket',
         'pneumaticcraft:ethanol_bucket',
 
+        'pneumaticcraft:small_tank',
+        'pneumaticcraft:medium_tank',
+        'pneumaticcraft:large_tank',
+        'pneumaticcraft:huge_tank',
+
         //Engineer's Decor
         'engineersdecor:small_tree_cutter',
         'engineersdecor:small_block_breaker',
@@ -67,9 +112,13 @@ onEvent('jei.hide.items', event => {
         'immersiveengineering:dust_sulfur',
         'mekanism:dust_sulfur',
 
-        //Immersive Engineering
-        'immersiveengineering:windmill',
-        'immersiveengineering:watermill',
+        //Sawdust
+        'immersiveengineering:dust_wood',
+        'mekanism:sawdust',
+
+        //Coke
+        'immersiveengineering:coal_coke',
+        'immersiveengineering:coke',
 
         //Buzzier Bees
         'buzzier_bees:honey_apple',
@@ -229,7 +278,29 @@ onEvent('jei.hide.items', event => {
         'mekanism:nugget_bronze'
     ]);
 
+    color.forEach(c => event.hide(`refinedstorage:${c}_creative_controller`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_controller`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_grid`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_crafting_grid`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_fluid_grid`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_detector`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_relay`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_network_receiver`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_network_transmitter`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_network_relay`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_network_detector`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_security_manager`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_wireless_transmitter`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_disk_manipulator`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_pattern_grid`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_crafter_manager`));  
+    color.forEach(c => event.hide(`refinedstorage:${c}_crafting_monitor`));
+    color.forEach(c => event.hide(`refinedstorage:${c}_crafter`));
+
 })
+
+
+
 
 onEvent('jei.hide.fluids', event => {
 
@@ -241,7 +312,7 @@ onEvent('jei.hide.fluids', event => {
         'pneumaticcraft:oil',
         'pneumaticcraft:biodiesel',
         'pneumaticcraft:vegetable_oil',
-        'pneumaticcraft:ethanol',
+        'pneumaticcraft:ethanol'
 
     ]);
 

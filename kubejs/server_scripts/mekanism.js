@@ -145,16 +145,6 @@ events.listen('recipes', function (event) {
         I: 'superpackutils:reinforced_capacitor'
     }),
 
-    //Formulaic Assemblicator
-    event.remove({output: 'mekanism:formulaic_assemblicator'})
-    event.shaped('mekanism:formulaic_assemblicator', ['CBC', 'ASA', 'CIC'], {
-        C: 'thermal:invar_plate',
-        A: '#forge:circuits/basic',
-        B: 'create:mechanical_crafter',
-        S: 'mekanism:steel_casing',
-        I: '#forge:chests/wooden'
-    }),
-
     //Solar Panel
     event.remove({output: 'mekanismgenerators:solar_panel'})
     event.shaped('mekanismgenerators:solar_panel', ['GGG', 'OCO'], {
@@ -509,7 +499,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanism:superheating_element', ['CSC', 'SBS', 'CSC'], {
         S: 'superpackutils:superheated_bronze_ingot',
         C: '#mekanism:enriched/redstone',
-        B: 'rftoolsbase:machine_frame'
+        B: 'superpackutils:big_steel_casing'
     }),
 
     //Pressure Dispenser

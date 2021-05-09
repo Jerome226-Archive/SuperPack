@@ -6,20 +6,15 @@ events.listen('recipes', function (event) {
     //Misc
     //-----------------------------------------------------
 
-    //Natures Compass
-    event.remove({output: 'naturescompass:naturescompass'})
-    event.shaped('naturescompass:naturescompass', ['TWT', 'WAW', 'TWT'], {
-        A: 'minecraft:compass',
-        W: '#minecraft:logs',
-        T: '#botania:runes/earth'
-    }),
-
     //Raw Transistor
     event.remove({output: 'youmatter:transistor_raw'})
-    event.shaped('youmatter:transistor_raw', ['CCC', 'SPS', 'CCC'], {
-        S: '#forge:ingots/steel',
-        P: 'createaddition:gold_wire',
-        C: '#forge:nuggets/gold'
+    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"create:brass_sheet"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:ingot_aluminum"}},{"count":1,"base_ingredient":{"item":"create:brass_sheet"}}],"category":"components","result":{"item":"youmatter:transistor_raw","count":1}})
+
+    //Metal Crafting Table
+    event.remove({output: 'engineersdecor:metal_crafting_table'})
+    event.shaped('engineersdecor:metal_crafting_table', ['PCP'], {
+        P: 'superpackutils:compressed_steel_ingot',
+        C: 'immersiveengineering:craftingtable'
     })
 
     //Drawer Controller
