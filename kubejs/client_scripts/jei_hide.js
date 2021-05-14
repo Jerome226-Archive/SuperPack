@@ -40,6 +40,11 @@ onEvent('jei.hide.items', event => {
         'refinedstorage:silk_touch_upgrade',
         'refinedstorage:crafting_upgrade',
 
+    //Unused Ports
+    'masterfulmachinery:improved_metallurgic_fabricator_basic_port_energy_output',
+    'masterfulmachinery:metallurgic_fabricator_basic_port_energy_output',
+    'masterfulmachinery:inscriber_basic_port_energy_output',
+
         //Mekanism Pipes
         'mekanism:basic_universal_cable',
         'mekanism:advanced_universal_cable',
@@ -137,10 +142,12 @@ onEvent('jei.hide.items', event => {
         'bloodmagic:ironsand',
         'mekanism:dust_iron',
         'immersiveengineering:dust_iron',
+        'libvulpes:dustiron',
 
         //Iron Plate
         'immersiveengineering:plate_iron',
         'create:iron_sheet',
+        'libvulpes:plateiron',
 
         //Iron Rod
         'createaddition:iron_rod',
@@ -149,10 +156,15 @@ onEvent('jei.hide.items', event => {
         'bloodmagic:goldsand',
         'mekanism:dust_gold',
         'immersiveengineering:dust_gold',
+        'libvulpes:dustgold',
 
         //Gold Plate
         'immersiveengineering:plate_gold',
         'create:golden_sheet',
+        'libvulpes:plategold',
+
+        //Silicon
+        'libvulpes:dustsilicon',
 
         //Copper Ingot
         'iceandfire:copper_ingot',
@@ -160,10 +172,12 @@ onEvent('jei.hide.items', event => {
         'create:copper_ingot',
         'immersiveengineering:ingot_copper',
         'tconstruct:copper_ingot',
+        'libvulpes:ingotcopper',
 
         //Copper Dust
         'immersiveengineering:dust_copper',
         'mekanism:dust_copper',
+        'libvulpes:dustcopper',
 
         //Copper Nugget
         'iceandfire:copper_nugget',
@@ -171,19 +185,27 @@ onEvent('jei.hide.items', event => {
         'create:copper_nugget',
         'immersiveengineering:nugget_copper',
         'tconstruct:copper_nugget',
+        'libvulpes:nuggetcopper',
 
         //Copper Plate
         'immersiveengineering:plate_copper',
         'create:copper_sheet',
+        'libvulpes:platecopper',
 
         //Tin Ingot
         'mekanism:ingot_tin',
+        'libvulpes:ingottin',
 
         //Tin Dust
         'mekanism:dust_tin',
+        'libvulpes:dusttin',
 
         //Tin Nugget
         'mekanism:nugget_tin',
+        'libvulpes:nuggettin',
+
+        //Tin Plate
+        'libvulpes:platetin',
 
         //Lead Ingot
         'immersiveengineering:ingot_lead',
@@ -237,12 +259,21 @@ onEvent('jei.hide.items', event => {
 
         //Steel Ingot
         'immersiveengineering:ingot_steel',
+        'libvulpes:ingotsteel',
 
         //Steel Nugget
         'immersiveengineering:nugget_steel',
+        'libvulpes:nuggetsteel',
 
         //Steel Dust
         'immersiveengineering:dust_steel',
+        'libvulpes:duststeel',
+
+        //Steel Plate
+        'libvulpes:platesteel',
+
+        //Steel Gear
+        'libvulpes:gearsteel',
 
         //Electrum Ingot
         'immersiveengineering:ingot_electrum',
@@ -275,7 +306,20 @@ onEvent('jei.hide.items', event => {
         'mekanism:dust_bronze',
 
         //Bronze Nugget
-        'mekanism:nugget_bronze'
+        'mekanism:nugget_bronze',
+
+        //Aluminum Dust
+        'libvulpes:dustaluminum',
+
+        //Aluminum Ingot
+        'libvulpes:ingotaluminum',
+        
+        //Aluminum Nugget
+        'libvulpes:nuggetaluminum',
+
+        //Aluminum Plate
+        'libvulpes:platealuminum'
+
     ]);
 
     color.forEach(c => event.hide(`refinedstorage:${c}_creative_controller`));

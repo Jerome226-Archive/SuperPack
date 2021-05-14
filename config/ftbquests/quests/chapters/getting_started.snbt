@@ -13,7 +13,7 @@
 			x: 1.0d,
 			y: 2.0d,
 			shape: "hexagon",
-			subtitle: "Thanks for downloading Superpack! Follow the quests and have fun!",
+			subtitle: "Thanks for downloading and playing Superpack! Follow the quests below to get started with the pack!",
 			size: 1.5d,
 			id: "28F37F0179AB9A0C",
 			tasks: [{
@@ -27,7 +27,7 @@
 			title: "Chopping wood!",
 			x: 1.0d,
 			y: 3.5d,
-			subtitle: "Cut some trees to get started!",
+			subtitle: "Chop down some trees in order to start progressing through the quests.",
 			dependencies: ["28F37F0179AB9A0C"],
 			id: "492E0DBCFF16AE61",
 			tasks: [{
@@ -47,7 +47,7 @@
 			title: "Smelting!",
 			x: 1.0d,
 			y: 7.0d,
-			subtitle: "The Furnace allows you to smelt your ores and other things!",
+			subtitle: "Nothing goes wrong with at least a furnace to cook you up all of your ores and food!",
 			dependencies: ["2BD88FEF8627EBDE"],
 			id: "1910BABD0FF02C8E",
 			tasks: [{
@@ -60,7 +60,7 @@
 			title: "Early Storage!",
 			x: 2.5d,
 			y: 5.0d,
-			subtitle: "Store your things in a chest!",
+			subtitle: "Craft a chest in order to store some of the items you have been picking up.",
 			dependencies: ["2BD88FEF8627EBDE"],
 			id: "135CE149A8C95267",
 			tasks: [{
@@ -81,9 +81,9 @@
 			icon: "immersiveengineering:coke_oven",
 			x: 1.0d,
 			y: 8.5d,
-			subtitle: "Make a Coke Oven. It will be required to start the Tech in the pack!",
+			subtitle: "For more in-depth detail, check the Engineers manual. Create 27 Coke Bricks and place them in a 3x3x3 shape, then right-click the center block of any side (not the top of course) and it should transform into a Coke Oven.",
 			description: [
-				"A Coke Oven is made with 27 Coke Brick.",
+				"",
 				""
 			],
 			dependencies: [
@@ -103,7 +103,7 @@
 			x: 1.0d,
 			y: 10.0d,
 			shape: "hexagon",
-			subtitle: "Make some Treated Wood to unlock Technology tier 1.",
+			subtitle: "Craft some Treated Wooden Planks. Treated Wood is made with Creosote Oil and Creosote Oil is obtained by using the Coke Oven. After creating these planks, you will now be able to start Tier 1!",
 			dependencies: ["4B35364D1E32F527"],
 			size: 1.5d,
 			id: "5E22B7E09B86A844",
@@ -118,7 +118,13 @@
 			x: -1.0d,
 			y: 5.0d,
 			shape: "hexagon",
-			subtitle: "Make a Resonating Wand and try to find some Rock Crystal!",
+			subtitle: "The source of power for most of Astral Sorcery, the Resonating Wand. This wand will be used the most often for Astral Sorcery as it is a key component to the mod.",
+			description: [
+				"By creating this wand, you will now have the ability to find Rock Crystal Ore easier instead of strip mining for them.",
+				"The wand, when held in hand, when nearby an ore will emit a column of particles coming from the ground indicating that there is an ore below.",
+				"These ores will spawn close to bedrock so digging down will be needed in order to obtain these.",
+				"Each ore drops a few crystals that do not stack, so make sure to have a few slots open in your inventory."
+			],
 			dependencies: ["2BD88FEF8627EBDE"],
 			size: 1.5d,
 			id: "46386455CC4203D0",
@@ -131,6 +137,7 @@
 		{
 			x: 2.0484693877551123d,
 			y: 7.770408163265309d,
+			subtitle: 'This quest can be completed by using the Morphing Tool in your inventory. If you do not currently have it, check the top right of the quest book window. A book labeled "Superpack" should be there and this will give your starting items by clicking on it.',
 			dependencies: ["1910BABD0FF02C8E"],
 			id: "4F3776448618CD2E",
 			tasks: [{
@@ -148,7 +155,7 @@
 		{
 			x: 1.0d,
 			y: 5.0d,
-			subtitle: "A crafting station is a upgraded version of the Vanilla Crafting Table.",
+			subtitle: "Craft a Crafting Station which is a crafting table but will keep items in them, if exited, and allow access to chests placed next to them.",
 			description: [""],
 			dependencies: ["492E0DBCFF16AE61"],
 			id: "2BD88FEF8627EBDE",
@@ -162,7 +169,12 @@
 			title: "Tools!!!",
 			x: -0.5d,
 			y: 6.5d,
-			subtitle: "These two blocks allows you to make basic stone/wooden tools.",
+			subtitle: "Crafting a part builder and a tool station will allow you to create some basic tinkers' construct tools.",
+			description: [
+				"Craft Patterns and grab the resource you'd like to make the part out of and put them in the part builder and select the part.",
+				"One pattern and one of the material will be consumed in order to create the new part.",
+				"Once that is complete, select a tool recipe in the Tool Station and put the parts in their respective spots and ta-da, your first tinkers tool!"
+			],
 			dependencies: ["2BD88FEF8627EBDE"],
 			id: "51F4C0110F3F86A5",
 			tasks: [
@@ -194,7 +206,15 @@
 			title: "Cheap Smeltery",
 			x: -0.5d,
 			y: 8.0d,
-			subtitle: "These blocks allows you to make metals tools.",
+			subtitle: "Making a basic melter setup will allow you to create some basic metals tools.",
+			description: [
+				"All the blocks listed above are blocks needed to create your first version of your smeltery.",
+				"It will not allow you to mix liquids together but it will allow you to smelt certain materials in order to create better tools.",
+				"The way that this version of the smeltery works is by placing the Seared Tank and then placing the Melter on top of the tank.",
+				"If done correctly, there will be a new fire texture on the Melter.",
+				"Add some lava into the tank below it and your Melter is ready to melt down some materials.",
+				"Attach one or two faucets to either side of the Melter and add either the basin or casting table under them and you'll be able to extract the liquid inside."
+			],
 			dependencies: ["51F4C0110F3F86A5"],
 			id: "4702984FC2443492",
 			tasks: [
@@ -234,6 +254,7 @@
 			title: "Drawers",
 			x: 4.0d,
 			y: 5.0d,
+			subtitle: "Chests weren't enough for you? Maybe craft some drawers! These drawers come in different sizes allowing for a different amount of items to be stored.",
 			dependencies: ["135CE149A8C95267"],
 			id: "2A559968B5696308",
 			tasks: [{

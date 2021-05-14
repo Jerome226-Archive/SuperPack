@@ -113,27 +113,15 @@ events.listen('recipes', function (event) {
 
     //Advanced Processor
     event.remove({id: 'refinedstorage:advanced_processor'})
-    event.recipes.create.compacting('refinedstorage:advanced_processor', ['refinedstorage:raw_advanced_processor', fluid.of('thermal:latex', 100)])
-
-    //Raw Advanced Processor
-    event.remove({id: 'refinedstorage:raw_advanced_processor'})
-    event.recipes.create.mixing('refinedstorage:raw_advanced_processor', ['refinedstorage:silicon', 'refinedstorage:processor_binding', 'superpackutils:platinum_ingot', 'minecraft:redstone'])
+    event.recipes.create.compacting('refinedstorage:advanced_processor', ['refinedstorage:raw_advanced_processor', 'superpackutils:bio_plastic'])
 
     //Improved Processor
     event.remove({id: 'refinedstorage:improved_processor'})
-    event.recipes.create.compacting('refinedstorage:improved_processor', ['refinedstorage:raw_improved_processor', fluid.of('thermal:latex', 100)])
-
-    //Raw Improved Processor
-    event.remove({id: 'refinedstorage:raw_improved_processor'})
-    event.recipes.create.mixing('refinedstorage:raw_improved_processor', ['refinedstorage:silicon', 'refinedstorage:processor_binding', 'thermal:electrum_ingot', 'minecraft:redstone'])
+    event.recipes.create.compacting('refinedstorage:improved_processor', ['refinedstorage:raw_improved_processor', 'superpackutils:bio_plastic'])
 
     //Basic Processor
     event.remove({id: 'refinedstorage:basic_processor'})
-    event.recipes.create.compacting('refinedstorage:basic_processor', ['refinedstorage:raw_basic_processor', fluid.of('thermal:latex', 100)])
-
-    //Raw Basic Processor
-    event.remove({id: 'refinedstorage:raw_basic_processor'})
-    event.recipes.create.mixing('refinedstorage:raw_basic_processor', ['refinedstorage:silicon', 'refinedstorage:processor_binding', 'refinedstorage:quartz_enriched_iron', 'minecraft:redstone'])
+    event.recipes.create.compacting('refinedstorage:basic_processor', ['refinedstorage:raw_basic_processor', 'superpackutils:bio_plastic'])
 
     //Processing Binding
     event.remove({output: 'refinedstorage:processor_binding'})

@@ -8,7 +8,7 @@ events.listen('recipes', function (event) {
 
     //Raw Transistor
     event.remove({output: 'youmatter:transistor_raw'})
-    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"create:brass_sheet"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:ingot_aluminum"}},{"count":1,"base_ingredient":{"item":"create:brass_sheet"}}],"category":"components","result":{"item":"youmatter:transistor_raw","count":1}})
+    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"immersiveengineering:hemp_fiber"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:ingot_aluminum"}},{"count":1,"base_ingredient":{"item":"create:brass_sheet"}}],"category":"components","result":{"item":"youmatter:transistor_raw","count":1}})
 
     //Metal Crafting Table
     event.remove({output: 'engineersdecor:metal_crafting_table'})

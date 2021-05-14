@@ -135,12 +135,72 @@ events.listen('recipes', function (event) {
       }
     })
 
+      //Inscriber Casing
+      event.remove({output: 'superpackutils:inscriber_casing'})
+      event.shaped(Item.of('superpackutils:inscriber_casing', 4), ['BCB', 'AIA', 'BCB'], {
+          C: 'refinedstorage:quartz_enriched_iron',
+          A: 'superpackutils:reinforced_capacitor',
+          B: '#forge:sheetmetals/aluminum',
+          I: 'refinedstorage:machine_casing'
+      }),
+
+    //Inscriber Controller
+    event.remove({output: 'masterfulmachinery:inscriber_controller'})
+    event.recipes.create.mechanical_crafting('masterfulmachinery:inscriber_controller', [
+        'CPPPC',
+        'PSESP',
+        'PGHGP',
+        'PSESP',
+        'CPPPC'
+      ], {
+        C: 'create:mechanical_press',
+        P: 'superpackutils:inscriber_casing',
+        S: 'superpackutils:mixed_alloy_ingot',
+        E: 'create:integrated_circuit',
+        G: 'immersiveengineering:circuit_board',
+        H: 'refinedstorage:machine_casing'
+    })
+
+    //Inscriber Item Output
+    event.shaped('masterfulmachinery:inscriber_basic_port_items_output', ['ACA', 'CIC', 'ACA'], {
+      I: 'create:integrated_circuit',
+      A: 'thermal:copper_ingot',
+      C: 'superpackutils:inscriber_casing'
+  }),
+
+    //Inscriber Item Input
+    event.shaped('masterfulmachinery:inscriber_basic_port_items_input', ['ACA', 'CIC', 'ACA'], {
+      I: 'create:integrated_circuit',
+      A: 'tconstruct:cobalt_ingot',
+      C: 'superpackutils:inscriber_casing'
+  }),
+
+    //Inscriber Energy Input
+    event.shaped('masterfulmachinery:inscriber_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
+      I: 'create:integrated_circuit',
+      A: 'mekanism:energy_tablet',
+      C: 'superpackutils:inscriber_casing'
+  }),
+
+        //Metallurgic Casing
+        event.remove({output: 'superpackutils:metallurgic_casing'})
+        event.shaped(Item.of('superpackutils:metallurgic_casing', 4), ['BCB', 'AIA', 'BCB'], {
+            C: 'libvulpes:ingotsilicon',
+            A: 'superpackutils:reinforced_capacitor',
+            B: '#forge:sheetmetals/lead',
+            I: 'refinedstorage:machine_casing'
+        }),
+
+    //Mixed Alloy Ingot
+    event.shaped('superpackutils:mixed_alloy_ingot', ['III', 'NNN', 'CCC'], {
+      C: 'thermal:copper_plate',
+      N: 'thermal:nickel_plate',
+      I: 'thermal:tin_plate'
+  }),
+  
     //Polished Quartz
     event.recipes.create.sandpaper_polishing('superpackutils:polished_quartz', 'minecraft:quartz')
     event.recipes.mekanism.enriching('superpackutils:polished_quartz', 'minecraft:quartz')
-
-    //Rotary (de)Condensentrating for Liquid Silicon Dioxide
-    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"superpackutils:silicon_dioxide"},"gasOutput":{"gas":"superpackutils:silicon_dioxide","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_dioxide"},"fluidOutput":{"fluid":"superpackutils:liquid_silicon_dioxide_fluid","amount":1}}) 
 
     //Silicon Dioxide Oxiding
     event.custom({"type":"mekanism:oxidizing","input":{"ingredient":{"tag":"forge:dusts/quartz"}},"output":{"gas":"superpackutils:silicon_dioxide","amount":100}})
@@ -153,12 +213,6 @@ events.listen('recipes', function (event) {
 
     //Industrial Sand
     event.recipes.immersiveengineering.crusher('superpackutils:industrial_sand', 'create:limesand')
-
-    //Energetic Alloy
-    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"superpackutils:bloody_pigment"},{"item":"botania:quartz_blaze"},{"tag":"forge:dusts/redstone"}],"result":{"fluid":"superpackutils:molten_energetic_alloy_fluid","amount":288},"fluid":{"tag":"tconstruct:molten_brass","amount":144},"energy":5000})
-
-    //Vibrant Alloy
-    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"superpackutils:grassy_pigment"},{"item":"botania:quartz_elven"},{"tag":"forge:nuggets/terrasteel"}],"result":{"fluid":"superpackutils:molten_vibrant_alloy_fluid","amount":288},"fluid":{"tag":"tconstruct:molten_uranium","amount":144},"energy":10000})
 
     //Bedrock Dust & Limestone Dust
     event.recipes.create.crushing([Item.of('superpackutils:limestone_dust').withChance(0.35), 'superpackutils:bedrock_dust', Item.of('superpackutils:bedrock_dust').withChance(0.45)], 'superpackutils:deepslate', 350)

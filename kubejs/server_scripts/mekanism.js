@@ -18,6 +18,10 @@ events.listen('recipes', function (event) {
     //Sulfur Replace Output
     event.replaceOutput({}, 'mekanism:dust_sulfur', 'thermal:sulfur_dust')
 
+    //Ethylene
+    event.remove({id: 'mekanism:reaction/substrate/water_hydrogen'})
+    event.custom({"type":"mekanism:reaction","itemInput":{"amount":2,"ingredient":{"tag":"forge:fuels/bio"}},"fluidInput":{"amount":200,"tag":"forge:ethanol"},"gasInput":{"amount":100,"gas":"mekanism:sulfuric_acid"},"duration":100,"itemOutput":{"item":"mekanism:substrate"},"gasOutput":{"gas":"mekanism:ethene","amount":100}})
+
     //Uranium Smelting Induction Smelter
     event.custom({
         "type": "thermal:smelter",
@@ -120,9 +124,9 @@ events.listen('recipes', function (event) {
         'PSESP',
         'CPPPC'
       ], {
-        C: '#forge:plates/bronze',
+        C: 'superpackutils:superheated_bronze_ingot',
         P: 'mekanism:thermal_evaporation_block',
-        S: 'superpackutils:superheated_bronze_ingot',
+        S: 'superpackutils:vibrant_alloy_ingot',
         E: 'create:integrated_circuit',
         G: '#forge:circuits/advanced',
         H: 'mekanism:steel_casing'
@@ -130,10 +134,11 @@ events.listen('recipes', function (event) {
 
     //Thermal Evaporation Casing
     event.remove({output: 'mekanism:thermal_evaporation_block'})
-    event.shaped(Item.of('mekanism:thermal_evaporation_block', 4), ['BCB', 'CIC', 'BCB'], {
+    event.shaped(Item.of('mekanism:thermal_evaporation_block', 4), ['BCB', 'AIA', 'BCB'], {
         C: 'superpackutils:tin_brass_ingot',
+        A: 'superpackutils:sturdy_capacitor',
         B: '#forge:sheetmetals/copper',
-        I: 'superpackutils:bio_plastic'
+        I: 'mekanism:steel_casing'
     }),
 
     //Metallurgic Infuser
@@ -513,15 +518,16 @@ events.listen('recipes', function (event) {
 
     //Boiler Casing
     event.remove({output: 'mekanism:boiler_casing'})
-    event.shaped(Item.of('mekanism:boiler_casing', 4), ['BCB', 'CIC', 'BCB'], {
-        C: '#forge:ingots/compressed_iron',
+    event.shaped(Item.of('mekanism:boiler_casing', 4), ['BCB', 'AIA', 'BCB'], {
+        C: 'mekanism:hdpe_sheet',
+        A: 'superpackutils:doublelayered_capacitor',
         B: '#forge:sheetmetals/steel',
-        I: 'mekanism:hdpe_sheet'
+        I: 'superpackutils:big_steel_casing'
     }),
 
     //Sheets
     event.remove({id: 'mekanism:reaction/substrate/ethene_oxygen'})
-    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"pneumaticcraft:plastic"}},"fluidInput":{"amount":50,"tag":"forge:ethene"},"gasInput":{"amount":10,"gas":"mekanism:oxygen"},"energyRequired":1000,"duration":60,"itemOutput":{"item":"mekanism:hdpe_pellet"},"gasOutput":{"gas":"mekanism:oxygen","amount":5}})
+    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"pneumaticcraft:plastic"}},"fluidInput":{"amount":50,"tag":"forge:oxygen"},"gasInput":{"amount":50,"gas":"superpackutils:polyethene"},"energyRequired":1000,"duration":60,"itemOutput":{"item":"mekanism:hdpe_pellet"},"gasOutput":{"gas":"mekanism:oxygen","amount":5}})
 
     //Infused Alloy
     event.remove({output: 'mekanism:alloy_infused'})

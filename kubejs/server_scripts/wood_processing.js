@@ -69,6 +69,24 @@ onEvent('recipes', event => {
         //Log to Planks
         event.shapeless(item.of(plankItem, 2), [`#${modName}:${woodName}_${logType}s`])
 
+        //Advanced Rocketry Cutting Machine
+        event.custom({
+            "type": "advancedrocketry:cuttingmachine",
+            "itemingredients":
+            [
+                {
+                    "tag": `#${modName}:${woodName}_${logType}s`
+                }
+            ],
+            "time": 80,
+            "energy": 10,
+            "itemresults":
+            {
+                    "item": plankItem,
+                    "count": 10
+            }
+        })
+
     }
     
     if (plankItem !== null && vertPlankItem !== null) {

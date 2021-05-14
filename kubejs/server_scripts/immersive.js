@@ -159,6 +159,20 @@ events.listen('recipes', function (event) {
         I: '#forge:wires/steel'
     }),
 
+    //Hemp Rope Coil
+    event.remove({output: 'immersiveengineering:wirecoil_structure_rope'})
+    event.shaped(Item.of('immersiveengineering:wirecoil_structure_rope', 4), [' I ', 'ICI', ' I '], {
+        C: 'createaddition:spool',
+        I: 'immersiveengineering:hemp_fiber'
+    }),
+
+    //Steel Wire
+    event.remove({output: 'immersiveengineering:wirecoil_structure_steel'})
+    event.shaped(Item.of('immersiveengineering:wirecoil_structure_steel', 4), [' I ', 'ICI', ' I '], {
+        C: 'createaddition:spool',
+        I: 'immersiveengineering:wire_steel'
+    }),
+
     //Redstone Wire
     event.remove({output: 'immersiveengineering:wirecoil_redstone'})
     event.shaped(Item.of('immersiveengineering:wirecoil_redstone', 4), [' I ', 'JCJ', ' I '], {

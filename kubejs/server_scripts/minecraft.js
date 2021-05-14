@@ -35,14 +35,8 @@ events.listen('recipes', function (event) {
     //Warped Fungus
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:warped_fungus","count":1}],"input":{"item":"minecraft:warped_fungus"},"soil":{"item":"minecraft:warped_nylium"},"time":480,"render":{"type":"generic","block":"minecraft:warped_fungus"}})
     
-    //Melon
-    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:melon","count":1}],"input":{"item":"minecraft:melon_seeds"},"soil":{"item":"minecraft:dirt"},"time":800,"render":{"type":"stem","block":"minecraft:melon"}})
-
     //Chorus Fruit
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:chorus_fruit"}],"input":{"item":"minecraft:chorus_flower"},"soil":{"item":"minecraft:end_stone"},"time":480,"render":{"type":"chorus","block":"minecraft:chorus_flower"}})
-
-    //Pumpkin
-    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:pumpkin"}],"input":{"item":"minecraft:pumpkin_seeds"},"soil":{"item":"minecraft:dirt"},"time":800,"render":{"type":"stem","block":"minecraft:pumpkin"}})
 
     //Cactus
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:cactus"}],"input":{"item":"minecraft:cactus"},"soil":{"tag":"forge:sand"},"time":560,"render":{"type":"stacking","block":"minecraft:cactus"}})

@@ -1,0 +1,23 @@
+{
+  "controllerId": "improved_metallurgic_fabricator",
+  "name": "Improved Metallurgic Fabricator",
+  "ports": [
+    {
+      "type": "masterfulmachinery:items",
+      "name": "Item",
+      "id": "basic",
+      "data": {
+        "rows": 3,
+        "columns": 3
+      }
+    },
+    {
+      "type": "masterfulmachinery:energy",
+      "name": "Energy",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    }
+  ]
+}

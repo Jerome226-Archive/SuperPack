@@ -143,6 +143,7 @@
 		{
 			x: 1.5d,
 			y: -3.0d,
+			subtitle: "The Blaze Burner will be a help when it comes to creating alloys. In order for this to be a functional block, you will need to capture a blaze inside of it. To do so, right-click a blaze with this block in your hand and you'll capture the blaze inside.",
 			dependencies: [
 				"7F3943424622371B",
 				"2C214049E79CC74A"
@@ -158,6 +159,7 @@
 			x: 1.0d,
 			y: -2.0d,
 			shape: "hexagon",
+			subtitle: "Exactly what you think, go visit the glorious: Hell.",
 			dependencies: ["695D23C209DB8953"],
 			id: "7F3943424622371B",
 			tasks: [{
@@ -375,6 +377,7 @@
 			icon: "immersiveengineering:blast_furnace",
 			x: 2.5d,
 			y: -0.5d,
+			subtitle: "Creating a Blast Furnace will be done in the same way as the Coke Oven but instead with Blast Bricks instead.",
 			dependencies: ["7F3943424622371B"],
 			id: "5985D6F3B37AD32E",
 			tasks: [{
@@ -387,6 +390,7 @@
 		{
 			x: 5.0d,
 			y: -1.0d,
+			subtitle: "Craft an Electron Tube. These will come in handing for blocks that will need this.",
 			dependencies: ["58050F41AD56343F"],
 			id: "585E447E78E33062",
 			tasks: [{
@@ -531,6 +535,7 @@
 			icon: "immersiveengineering:advanced_blast_furnace",
 			x: 3.5d,
 			y: 1.0d,
+			subtitle: "Normal Blast Furnace wasn't enough? Create an Improved Blast Furnace using Reinforced Blast Bricks and a hopper placed on top.",
 			dependencies: ["5985D6F3B37AD32E"],
 			id: "56637C803A8F372D",
 			tasks: [
@@ -550,6 +555,7 @@
 		{
 			x: -3.5d,
 			y: -1.0d,
+			subtitle: "This here stone will allow you to go to The Nether. You can make this stone in the Petal Apothecary then put this in a Lightwell in order to get a bucket of Dimensional Plasma. This liquid will have to be placed far under ground so make sure to have a place for this liquid setup for quick access.",
 			dependencies: [
 				"1BC816952304F066",
 				"52412904E957777A",
@@ -566,6 +572,8 @@
 		{
 			x: -4.5d,
 			y: 1.0d,
+			subtitle: "The first block to start your journey through Botania! A magical mod based around Mana and Flowers to help you through it.",
+			description: ["The apothecary will be used to make your flowers. Fill it with water and throw the respective items needed. If you don't know the items that are needed, check JEI. Once the items are correctly thrown in, the GUI the appears while looking at this block will tell you the flower that it makes and that you need to throw in a seed."],
 			dependencies: [
 				"27555EED26DD0507",
 				"462F614445439672"
@@ -580,6 +588,8 @@
 		{
 			x: -6.5d,
 			y: -2.5d,
+			subtitle: "The Mana Pool is where all of your mana will be stored. The amount of mana that can be stored in one pool is 1 million.",
+			description: ["In order to fill these pools, link Mana Spreaders to them and they will burst their mana towards the pool and begin filling them. The spreaders can also be linked to a Mana Splitter in order to have more pools setup for larger storage, up to 4 million."],
 			dependencies: [
 				"53E6E3524B5582D2",
 				"1A311155C68A45F9"
@@ -594,6 +604,7 @@
 		{
 			x: -6.5d,
 			y: 1.0d,
+			subtitle: "A Pure Daisy is the flower that will allow you to create Livingwood and Livingrock amongst a few other recipes that it will be able to handle. ",
 			dependencies: ["1BC816952304F066"],
 			id: "4FDCC531A7A3490C",
 			tasks: [{
@@ -605,6 +616,7 @@
 		{
 			x: -6.5d,
 			y: -1.0d,
+			subtitle: "Placing Marble around the Pure Daisy will turn it into Livingrock after some time.",
 			dependencies: ["4FDCC531A7A3490C"],
 			id: "53E6E3524B5582D2",
 			tasks: [{
@@ -616,6 +628,8 @@
 		{
 			x: -8.0d,
 			y: -2.5d,
+			subtitle: "The Mana Spreader will allow your flowers that generate mana flow into them and transfer them somewhere else.",
+			description: ["Shift + Right-click with a Wand of the Forest to select a flower/block in order to bind it to another block (For example, Shift + Right-click a generating flower then Shift + Right-click a Mana Spreader will link the flower to that Mana Spreader)."],
 			dependencies: ["12A7ABA1B1133E3A"],
 			id: "1A311155C68A45F9",
 			tasks: [{
@@ -627,6 +641,7 @@
 		{
 			x: -8.0d,
 			y: -0.5d,
+			subtitle: "Placing Infused Wood around the Pure Daisy will turn it into Livingwood after some time.",
 			dependencies: [
 				"4FDCC531A7A3490C",
 				"2DE385D41076CC84"
@@ -641,6 +656,7 @@
 		{
 			x: -7.5d,
 			y: 2.5d,
+			subtitle: "The Lightwell can be used for many reasons, check the usages (default key U/Right-Click) of the Lightwell to find out what these reasons are! ",
 			dependencies: ["27555EED26DD0507"],
 			id: "1C0A2B260DDC2C6C",
 			tasks: [{
@@ -652,6 +668,7 @@
 		{
 			x: -5.5d,
 			y: 3.0d,
+			subtitle: "The Luminous Crafting Table is obtained by placing a crafting table around a Collector Crystal (which is found under the fountain in Astral Sorcery Temples, not the normal fountains) and this crystal must be exposed to the sky in order for this process to work.",
 			dependencies: ["6010E044C068178A"],
 			id: "27555EED26DD0507",
 			tasks: [{
@@ -663,6 +680,7 @@
 		{
 			x: -8.0d,
 			y: 1.0d,
+			subtitle: "Infused Wood can be made by throwing Wood Logs into Liquid Starlight.",
 			dependencies: ["1C0A2B260DDC2C6C"],
 			id: "2DE385D41076CC84",
 			tasks: [{
@@ -674,6 +692,7 @@
 		{
 			x: -5.0d,
 			y: -2.0d,
+			subtitle: "Throwing a Ender Pearl into a Mana Pool filled with enough mana will turn it into a Mana Pearl.",
 			dependencies: ["0A11E6E25119BE31"],
 			id: "52412904E957777A",
 			tasks: [{
@@ -685,6 +704,8 @@
 		{
 			x: -4.0d,
 			y: 2.5d,
+			subtitle: "Nice! You found your first rock crystal! Now you can do some more crafting recipes with these as well as split these with a Starmetal Cutting Tool in order to get more of them (if they have multiple attributes).",
+			description: ["They can also be grown to be given new attributes by throwing one in a source block of Liquid Starlight (doing this WILL consume source block once the crystal has grown)."],
 			dependencies: ["6010E044C068178A"],
 			id: "462F614445439672",
 			tasks: [{
@@ -703,6 +724,7 @@
 			x: -4.5d,
 			y: 4.5d,
 			shape: "hexagon",
+			subtitle: "Now get out there with this wand and find you some rock crystals!",
 			size: 1.5d,
 			id: "6010E044C068178A",
 			tasks: [{
@@ -776,6 +798,7 @@
 		{
 			x: -4.660714285714285d,
 			y: -2.933673469387749d,
+			subtitle: "Throwing a Iron Ingot into a Mana Pool filled with enough mana will turn it into a Manasteel Ingot.",
 			dependencies: ["0A11E6E25119BE31"],
 			id: "29D97508558C67C6",
 			tasks: [{
@@ -787,6 +810,7 @@
 		{
 			x: 3.0d,
 			y: -3.5d,
+			subtitle: "Create a Brass Ingot by using a Mixer from Create. You will need a Blaze Burner with a Blaze stored under the Basin of the Mixer in order for this to work.",
 			dependencies: ["047D68D5CD887601"],
 			id: "75BBB0EC91B63BFB",
 			tasks: [{
@@ -798,6 +822,7 @@
 		{
 			x: 4.0d,
 			y: -0.5d,
+			subtitle: "Now that you have a Blast Furnace, you can now create Steel using Enriched Iron. This will help with some upcoming recipes. Check JEI for the recipe.",
 			dependencies: ["5985D6F3B37AD32E"],
 			id: "58050F41AD56343F",
 			tasks: [{
@@ -809,6 +834,7 @@
 		{
 			x: -6.5d,
 			y: -4.0d,
+			subtitle: "Throwing a Diamond into a Mana Pool filled with enough mana will turn it into a Mana Diamond.",
 			dependencies: ["0A11E6E25119BE31"],
 			id: "4C87285497B7DEB5",
 			tasks: [{
@@ -820,6 +846,8 @@
 		{
 			x: -6.5d,
 			y: -5.0d,
+			subtitle: "The Runic Altar is a block that will allow you to create runes. Items can be placed on the Altar by right-clicking the item on to it.",
+			description: ["Check JEI for different rune recipes. To get mana to an altar once a rune has been selected to craft, you can link a Mana Spreader (or many) to it or put a Spark above a Mana Pool (or multiple pools) and put a Spark above the Altar and it will transfer mana to it."],
 			dependencies: ["4C87285497B7DEB5"],
 			id: "6FF26BCE98D5E652",
 			tasks: [{
@@ -831,6 +859,7 @@
 		{
 			x: -7.5d,
 			y: -5.5d,
+			subtitle: "Create a Rune of Water using the Runic Altar.",
 			dependencies: ["6FF26BCE98D5E652"],
 			id: "0A77DB767D2C8557",
 			tasks: [{
@@ -842,6 +871,7 @@
 		{
 			x: -7.5d,
 			y: -4.5d,
+			subtitle: "Create a Rune of Fire using the Runic Altar.",
 			dependencies: ["6FF26BCE98D5E652"],
 			id: "764E76B7F677CD1E",
 			tasks: [{
@@ -853,6 +883,7 @@
 		{
 			x: -5.5d,
 			y: -4.5d,
+			subtitle: "Create a Rune of Earth using the Runic Altar.",
 			dependencies: ["6FF26BCE98D5E652"],
 			id: "2290A244CDE42293",
 			tasks: [{
@@ -864,6 +895,7 @@
 		{
 			x: -5.5d,
 			y: -5.5d,
+			subtitle: "Create a Rune of Air using the Runic Altar.",
 			dependencies: ["6FF26BCE98D5E652"],
 			id: "574B0B75AD95FF6E",
 			tasks: [{
@@ -903,17 +935,6 @@
 				id: "781D57EB8B5F2C49",
 				type: "item",
 				item: "thermal:device_water_gen"
-			}]
-		},
-		{
-			x: 2.0d,
-			y: -8.5d,
-			dependencies: ["091EA885EFE53713"],
-			id: "6A5FDFB571E697FB",
-			tasks: [{
-				id: "4503BAE6B99F2A4A",
-				type: "item",
-				item: "create:smart_fluid_pipe"
 			}]
 		}
 	]

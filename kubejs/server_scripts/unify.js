@@ -1,4 +1,4 @@
-//priority: 1200
+//priority: 10000
 
 onEvent('recipes', event => {
 
@@ -403,6 +403,7 @@ onEvent('recipes', event => {
   if (plateItem !== null && isGem == false) {
 
   event.remove({ output:  `#forge:plates/${nameUnify}`});
+  event.remove({id: `advancedrocketry:autogen/rolling_${nameUnify}`})  
   
   //IE Metal Press
   event.remove({ output: `#forge:plates/${nameUnify}`, type: 'immersiveengineering:metal_press'});
@@ -411,6 +412,64 @@ onEvent('recipes', event => {
   //Create Press
   event.remove({ output: `#forge:plates/${nameUnify}`, type: 'create:pressing'});
   event.recipes.create.pressing(plateItem, ingotItem)
+
+  //Advanced Rocketry Rolling Machine
+  event.custom({
+    "type": "advancedrocketry:rollingmachine",
+    "itemingredients":
+    [
+        
+        {
+            "item": ingotItem
+        }
+    ],
+    "fluidingredients":
+    [
+        {
+            "fluid": "minecraft:water",
+            "amount": 10
+        }
+    ],
+    "time": 300,
+    "energy": 20,
+    "itemresults":
+    {
+            "item": plateItem,
+            "count": 1
+    }
+  })
+
+  }
+
+  if (plateItem !== null && blockItem !== null && isGem == false) {
+
+    event.remove({id: `advancedrocketry:autogen/rolling_block_${nameUnify}`})  
+
+    //Advanced Rocketry Rolling Machine
+    event.custom({
+      "type": "advancedrocketry:rollingmachine",
+      "itemingredients":
+      [
+          
+          {
+              "item": blockItem
+          }
+      ],
+      "fluidingredients":
+      [
+          {
+              "fluid": "minecraft:water",
+              "amount": 10
+          }
+      ],
+      "time": 300,
+      "energy": 20,
+      "itemresults":
+      {
+              "item": plateItem,
+              "count": 9
+      }
+  })
 
   }
 
@@ -534,6 +593,27 @@ onEvent('recipes', event => {
       }
   })
 
+  //Advanced Rocketry Lathe
+  event.remove({id: `advancedrocketry:autogen/lathe_${nameUnify}`})  
+
+  event.custom({
+    "type": "advancedrocketry:lathe",
+        "itemingredients":
+        [
+            
+            {
+                "item": ingotItem
+            }
+        ],
+        "time": 300,
+        "energy": 20,
+        "itemresults":
+        {
+                "item": rodItem,
+                "count": 2
+        }
+    })
+
   }
 
   if (rodItem !== null && moltenFluid !== null) {
@@ -644,14 +724,17 @@ onEvent('recipes', event => {
   unifyOre(false, 'rose_gold', null, 'tconstruct:rose_gold_ingot', null, null, 'tconstruct:rose_gold_block', 'tconstruct:rose_gold_nugget', null, null, null, null, null, null, 'tconstruct:molten_rose_gold', 155, 52, 17, 0, null, 2, null);
   unifyOre(false, 'pig_iron', null, 'tconstruct:pig_iron_ingot', null, null, 'tconstruct:pig_iron_block', 'tconstruct:pig_iron_nugget', null, null, null, null, null, null, 'tconstruct:molten_pig_iron', 181, 60, 20, 0, null, 2, null);
   unifyOre(false, 'silicon_bronze', null, 'tconstruct:tinkers_bronze_ingot', null, null, 'tconstruct:tinkers_bronze_block', 'tconstruct:tinkers_bronze_nugget', null, null, null, null, null, null, 'tconstruct:molten_tinkers_bronze', 171, 57, 19, 0, null, 2, null);
+  unifyOre(false, 'titanium', 'libvulpes:orerutile', 'libvulpes:ingottitanium', 'libvulpes:dusttitanium', null, 'libvulpes:blocktitanium', 'libvulpes:nuggettitanium', null, 'libvulpes:geartitanium', 'libvulpes:platetitanium', null, 'libvulpes:sticktitanium', null, null, 0, 0, 0, 0, 0, 2, null);
+  unifyOre(false, 'titaniumiridium', null, 'advancedrocketry:ingottitaniumiridium', 'advancedrocketry:dusttitaniumiridium', null, 'advancedrocketry:blocktitaniumiridium', 'advancedrocketry:nuggettitaniumiridium', null, 'advancedrocketry:geartitaniumiridium', 'advancedrocketry:platetitaniumiridium', null, 'advancedrocketry:sticktitaniumiridium', null, null, 0, 0, 0, 0, 0, 2, null);
+  unifyOre(false, 'titaniumaluminide', null, 'advancedrocketry:ingottitaniumaluminide', 'advancedrocketry:dusttitaniumaluminide', null, 'advancedrocketry:blocktitaniumaluminide', 'advancedrocketry:nuggettitaniumaluminide', null, 'advancedrocketry:geartitaniumaluminide', 'advancedrocketry:platetitaniumaluminide', null, 'advancedrocketry:sticktitaniumaluminide', null, null, 0, 0, 0, 0, 0, 2, null);
+  unifyOre(false, 'iridium', 'libvulpes:orerutile', 'libvulpes:ingotiridium', 'libvulpes:dustiridium', null, 'libvulpes:blockiridium', 'libvulpes:nuggetiridium', null, null, 'libvulpes:plateiridium', null, 'libvulpes:stickiridium', null, null, 0, 0, 0, 0, 0, 2, null);
+  unifyOre(false, 'silicon', null, 'libvulpes:ingotsilicon', 'refinedstorage:silicon', null, null, 'libvulpes:nuggetsilicon', null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, null);
   unifyOre(false, 'slimesteel', null, 'tconstruct:slimesteel_ingot', null, null, 'tconstruct:slimesteel_block', 'tconstruct:slimesteel_nugget', null, null, null, null, null, null, 'tconstruct:molten_slimesteel', 190, 63, 21, 0, null, 2, null);
   unifyOre(false, 'queens_slime', null, 'tconstruct:queens_slime_ingot', null, null, 'tconstruct:queens_slime_block', 'tconstruct:queens_slime_nugget', null, null, null, null, null, null, 'tconstruct:molten_queens_slime', 212, 71, 24, 0, null, 2, null);
   unifyOre(false, 'manyullyn', null, 'tconstruct:manyullyn_ingot', null, null, 'tconstruct:manyullyn_block', 'tconstruct:manyullyn_nugget', null, null, null, null, null, null, 'tconstruct:molten_manyullyn', 216, 72, 24, 0, null, 2, null);
   unifyOre(false, 'hepatizon', null, 'tconstruct:hepatizon_ingot', null, null, 'tconstruct:hepatizon_block', 'tconstruct:hepatizon_nugget', null, null, null, null, null, null, 'tconstruct:molten_hepatizon', 233, 78, 26, 0, null, 2, null);
   unifyOre(false, 'compressed_iron', null, 'pneumaticcraft:ingot_iron_compressed', null, null, 'pneumaticcraft:compressed_iron_block', null, null, 'pneumaticcraft:compressed_iron_gear', null, null, null, null, null, 0, 0, 0, 0, null, 0, null);
   unifyOre(false, 'starmetal', 'astralsorcery:starmetal_ore', 'astralsorcery:starmetal_ingot', 'astralsorcery:stardust', null, 'astralsorcery:starmetal', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 0, null);
-  unifyOre(false, 'energetic_alloy', null, 'superpackutils:energetic_alloy_ingot', null, null, null, null, null, null, null, null, null, null, 'superpackutils:molten_energetic_alloy_fluid', 194, 65, 22, 0, null, 0, null);
-  unifyOre(false, 'vibrant_alloy', null, 'superpackutils:vibrant_alloy_ingot', null, null, null, null, null, null, null, null, null, null, 'superpackutils:molten_vibrant_alloy_fluid', 194, 65, 22, 0, null, 0, null);
   unifyOre(false, 'tetraethyl', null, 'superpackutils:tetraethyl_lead_ingot', 'superpackutils:tetraethyl_lead_dust', null, null, null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 0, null);
   unifyOre(false, 'brass', null, 'create:brass_ingot', null, null, 'create:brass_block', 'create:brass_nugget', null, null, 'create:brass_sheet', 'create:crushed_brass', 'createaddition:brass_rod', null, 'tconstruct:molten_brass', 233, 78, 26, 0, null, 2, null);
   unifyOre(false, 'netherite', null, 'minecraft:netherite_ingot', 'mekanism:dust_netherite', null, 'minecraft:netherite_block', 'tconstruct:netherite_nugget', null, null, null, null, null, null, 'tconstruct:molten_netherite', 221, 74, 25, 0, null, 2, null);
