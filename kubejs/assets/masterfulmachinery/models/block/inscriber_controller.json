@@ -1,1 +1,8 @@
-{"parent":"minecraft:block/orientable","textures":{"sides":"masterfulmachinery:block/inscriber_casing","front":"masterfulmachinery:block/inscriber_controller"}}
+{
+    "parent":"minecraft:block/orientable",
+    "textures":{
+        "side":"masterfulmachinery:block/inscriber_casing",
+        "top":"masterfulmachinery:block/inscriber_casing",
+        "front":"masterfulmachinery:block/inscriber_controller"
+    }
+}
