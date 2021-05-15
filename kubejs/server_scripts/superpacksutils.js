@@ -153,7 +153,7 @@ events.listen('recipes', function (event) {
         'PSESP',
         'CPPPC'
       ], {
-        C: 'create:mechanical_press',
+        C: 'thermal:invar_plate',
         P: 'superpackutils:inscriber_casing',
         S: 'superpackutils:mixed_alloy_ingot',
         E: 'create:integrated_circuit',
