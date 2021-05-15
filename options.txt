@@ -1,0 +1,2 @@
+resourcePacks:["vanilla","mod_resources","quark:emote_resources","mm_resource","kubejs:resource_pack"]
+incompatibleResourcePacks:["quark:emote_resources"]
