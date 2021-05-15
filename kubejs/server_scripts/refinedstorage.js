@@ -109,7 +109,7 @@ events.listen('recipes', function (event) {
 
     //Silicon
     event.remove({id: 'refinedstorage:silicon'})
-    event.recipes.immersiveengineering.arc_furnace(['refinedstorage:silicon'], 'superpackutils:polished_quartz')
+    event.smelting('refinedstorage:silicon', 'superpackutils:polished_quartz')
 
     //Advanced Processor
     event.remove({id: 'refinedstorage:advanced_processor'})
@@ -122,12 +122,5 @@ events.listen('recipes', function (event) {
     //Basic Processor
     event.remove({id: 'refinedstorage:basic_processor'})
     event.recipes.create.compacting('refinedstorage:basic_processor', ['refinedstorage:raw_basic_processor', 'superpackutils:bio_plastic'])
-
-    //Processing Binding
-    event.remove({output: 'refinedstorage:processor_binding'})
-    event.shaped(Item.of('refinedstorage:processor_binding', 8), ['PCP'], {
-        P: 'botania:mana_string',
-        C: '#forge:slimeball/green'
-    })
 
 });

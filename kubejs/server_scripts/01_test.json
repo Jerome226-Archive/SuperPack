@@ -1,1 +1,0 @@
-{"variants":{"facing=north":{"model":"mekanism:block/thermal_evaporation/controller"},"facing=south":{"model":"mekanism:block/thermal_evaporation/controller","y":180},"facing=east":{"model":"mekanism:block/thermal_evaporation/controller","y":90},"facing=west":{"model":"mekanism:block/thermal_evaporation/controller","y":-90}}}

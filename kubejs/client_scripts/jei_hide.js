@@ -163,6 +163,9 @@ onEvent('jei.hide.items', event => {
         'create:golden_sheet',
         'libvulpes:plategold',
 
+        //Gold Rod
+        'immersiveposts:stick_gold',
+
         //Silicon
         'libvulpes:dustsilicon',
 
@@ -191,6 +194,9 @@ onEvent('jei.hide.items', event => {
         'immersiveengineering:plate_copper',
         'create:copper_sheet',
         'libvulpes:platecopper',
+
+        //Copper Rod
+        'immersiveposts:stick_copper',
 
         //Tin Ingot
         'mekanism:ingot_tin',
