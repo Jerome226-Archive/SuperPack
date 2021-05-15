@@ -71,7 +71,7 @@ events.listen('recipes', function (event) {
  
 	//Inscription Tool Earth
 	event.remove({id: 'bloodmagic:altar/earth_tool'})
-	event.recipes.bloodmagic.altar('bloodmagic:earthscribetool', 'botania:rune_fire').upgradeLevel(2).altarSyphon(1000).consumptionRate(5).drainRate(5)
+	event.recipes.bloodmagic.altar('bloodmagic:earthscribetool', 'botania:rune_earth').upgradeLevel(2).altarSyphon(1000).consumptionRate(5).drainRate(5)
  
 	//Inscription Tool Dusk
 	event.remove({id: 'bloodmagic:altar/dusk_tool'})
