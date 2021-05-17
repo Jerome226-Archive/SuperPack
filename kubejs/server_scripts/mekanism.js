@@ -124,7 +124,7 @@ events.listen('recipes', function (event) {
         'PSESP',
         'CPPPC'
       ], {
-        C: 'superpackutils:superheated_bronze_ingot',
+        C: 'thermal:bronze_plate',
         P: 'mekanism:thermal_evaporation_block',
         S: 'superpackutils:vibrant_alloy_ingot',
         E: 'create:integrated_circuit',
@@ -166,6 +166,9 @@ events.listen('recipes', function (event) {
         O: 'superpackutils:compressed_steel_ingot',
         C: 'superpackutils:reinforced_capacitor'
     }),
+
+    //Netherite Dust removal
+    event.remove({output: 'mekanism:thermal_evaporation_block'})
 
     //Enrichment Chamber
     event.remove({output: 'mekanism:enrichment_chamber'})

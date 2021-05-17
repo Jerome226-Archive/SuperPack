@@ -57,4 +57,3 @@ worldgen = true
 	#List of mod names for rannuncarpuses to ignore.
 	#Ignores Storage Drawers by default due to crashes with placing drawer blocks without player involvement.
 	modBlacklist = ["storagedrawers"]
-

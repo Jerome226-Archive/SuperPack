@@ -6,5 +6,221 @@
 	title: "Tier 3: Little Machines",
 	icon: "mekanism:enrichment_chamber",
 	default_quest_shape: "",
-	quests: []
+	quests: [
+		{
+			x: 0.0d,
+			y: 2.25d,
+			shape: "hexagon",
+			size: 1.5d,
+			id: "35DADFE2E8883A0C",
+			tasks: [{
+				id: "6C5304C91C4B2E49",
+				type: "item",
+				item: "mekanism:steel_casing"
+			}]
+		},
+		{
+			x: 0.04081632653061007d,
+			y: -2.0535714285714306d,
+			dependencies: ["35DADFE2E8883A0C"],
+			size: 1.2d,
+			id: "5823070068F307C5",
+			tasks: [{
+				id: "37EA78D2A33800D1",
+				type: "item",
+				item: "mekanism:basic_control_circuit"
+			}]
+		},
+		{
+			x: -1.0d,
+			y: -4.0d,
+			dependencies: ["5823070068F307C5"],
+			id: "76C0A7CAAD7AE11B",
+			tasks: [{
+				id: "060241398815CF18",
+				type: "item",
+				item: "mekanism:energized_smelter"
+			}]
+		},
+		{
+			x: -2.0d,
+			y: -1.5d,
+			dependencies: ["5823070068F307C5"],
+			id: "74E4516F7097D97D",
+			tasks: [{
+				id: "655179EBB2C94EE1",
+				type: "item",
+				item: "mekanism:enrichment_chamber"
+			}]
+		},
+		{
+			x: -1.0d,
+			y: 0.0d,
+			dependencies: ["5823070068F307C5"],
+			id: "368475C9CF36F0C9",
+			tasks: [{
+				id: "57C8073F4C0A6F9B",
+				type: "item",
+				item: "mekanism:precision_sawmill"
+			}]
+		},
+		{
+			x: -2.0d,
+			y: -2.5d,
+			dependencies: ["5823070068F307C5"],
+			id: "75C4A9B41B7778AC",
+			tasks: [{
+				id: "4E7177A943730C45",
+				type: "item",
+				item: "mekanism:nutritional_liquifier"
+			}]
+		},
+		{
+			x: -1.7857142857142847d,
+			y: -3.441326530612244d,
+			dependencies: ["5823070068F307C5"],
+			id: "1CE040DD9F659BBF",
+			tasks: [{
+				id: "4C79DFCE6FB2F858",
+				type: "item",
+				item: "mekanism:chemical_infuser"
+			}]
+		},
+		{
+			x: 2.0d,
+			y: -2.5d,
+			dependencies: ["5823070068F307C5"],
+			id: "0843854C2977FD75",
+			tasks: [{
+				id: "1CEC307216BDDCBF",
+				type: "item",
+				item: "mekanism:seismic_vibrator"
+			}]
+		},
+		{
+			x: 1.7857142857142918d,
+			y: -3.441326530612251d,
+			dependencies: ["5823070068F307C5"],
+			id: "724570CF3755495B",
+			tasks: [{
+				id: "5BB526121CFCE488",
+				type: "item",
+				item: "mekanism:chemical_oxidizer"
+			}]
+		},
+		{
+			x: 1.0d,
+			y: -4.0d,
+			dependencies: ["5823070068F307C5"],
+			id: "7A57727863ACAFFD",
+			tasks: [{
+				id: "746DCC68E9E23EFC",
+				type: "item",
+				item: "mekanism:combiner"
+			}]
+		},
+		{
+			x: 2.0d,
+			y: -1.5d,
+			dependencies: ["5823070068F307C5"],
+			id: "33E17299E5BFF188",
+			tasks: [{
+				id: "76CDC3BF11BFF0A4",
+				type: "item",
+				item: "mekanism:crusher"
+			}]
+		},
+		{
+			x: -1.7142857142857153d,
+			y: -0.6045918367346843d,
+			dependencies: ["5823070068F307C5"],
+			id: "05BF96B1F6EF32A0",
+			tasks: [{
+				id: "359B3154DCD5D96D",
+				type: "item",
+				item: "mekanism:oredictionificator"
+			}]
+		},
+		{
+			x: 1.7142857142857153d,
+			y: -0.6045918367346843d,
+			dependencies: ["5823070068F307C5"],
+			id: "2D9E52645ED95F7E",
+			tasks: [{
+				id: "7D43F15D91EE95E9",
+				type: "item",
+				item: "mekanism:rotary_condensentrator"
+			}]
+		},
+		{
+			x: 1.0d,
+			y: 0.0d,
+			dependencies: ["5823070068F307C5"],
+			id: "1560CD33560A70BB",
+			tasks: [{
+				id: "28976AFB85C62FA7",
+				type: "item",
+				item: "mekanism:personal_chest"
+			}]
+		},
+		{
+			x: 0.0d,
+			y: -6.0d,
+			dependencies: [
+				"7A57727863ACAFFD",
+				"5823070068F307C5",
+				"41D8AE75C5DAF834"
+			],
+			id: "3D1C90CA4D814351",
+			tasks: [{
+				id: "3E57648ADE42EB36",
+				type: "item",
+				item: "mekanism:advanced_control_circuit"
+			}]
+		},
+		{
+			x: -1.5d,
+			y: -6.0d,
+			dependencies: ["4FDF6C188252970B"],
+			id: "41D8AE75C5DAF834",
+			tasks: [{
+				id: "7E47A579BD0C9829",
+				type: "item",
+				item: "mekanism:alloy_infused"
+			}]
+		},
+		{
+			x: -4.5d,
+			y: -3.5d,
+			shape: "hexagon",
+			id: "2633B52B2C5FC787",
+			tasks: [{
+				id: "6B699ECF40CF30E0",
+				type: "item",
+				item: "immersivepetroleum:gasoline_bucket"
+			}]
+		},
+		{
+			x: -4.0d,
+			y: -5.0d,
+			dependencies: ["2633B52B2C5FC787"],
+			id: "1F71EBA4CC33090D",
+			tasks: [{
+				id: "6E93A18B19975C7A",
+				type: "item",
+				item: "immersivepetroleum:napalm_bucket"
+			}]
+		},
+		{
+			x: -3.0d,
+			y: -6.0d,
+			dependencies: ["1F71EBA4CC33090D"],
+			id: "4FDF6C188252970B",
+			tasks: [{
+				id: "6A0BAF2C6E9FB8B5",
+				type: "item",
+				item: "thermal:rich_slag"
+			}]
+		}
+	]
 }

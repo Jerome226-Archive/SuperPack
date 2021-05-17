@@ -10,6 +10,9 @@ events.listen('recipes', function (event) {
     event.replaceInput({type: 'minecraft:crafting_shaped'}, 'immersiveengineering:slag', 'thermal:slag')
     event.replaceInput({type: 'immersiveengineering:turn_and_copy'}, 'immersiveengineering:slag', 'thermal:slag')
 
+    //Easy Sawdust
+    event.remove({id: 'thermal:machine/pulverizer/pulverizer_logs'})
+
     //Cured Rubber
     event.remove({id: 'thermal:smelting/cured_rubber_from_smelting'})
     event.remove({id: 'thermal:machine/smelter/smelter_cured_rubber'})

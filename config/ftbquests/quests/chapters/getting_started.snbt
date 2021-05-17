@@ -13,7 +13,7 @@
 			x: 1.0d,
 			y: 2.0d,
 			shape: "hexagon",
-			subtitle: "Thanks for downloading and playing Superpack! Follow the quests below to get started with the pack!",
+			subtitle: "Thank you for downloading Superpack! Follow the quests below to get started!",
 			size: 1.5d,
 			id: "28F37F0179AB9A0C",
 			tasks: [{
@@ -24,7 +24,7 @@
 			}]
 		},
 		{
-			title: "Chopping wood!",
+			title: "Punching trees",
 			x: 1.0d,
 			y: 3.5d,
 			subtitle: "Chop down some trees in order to start progressing through the quests.",
@@ -66,7 +66,7 @@
 			tasks: [{
 				id: "021C0E0087B1022B",
 				type: "item",
-				title: "Any #forge:chests/wooden",
+				title: "Any Chests",
 				item: {
 					id: "itemfilters:tag",
 					Count: 1b,
@@ -81,7 +81,7 @@
 			icon: "immersiveengineering:coke_oven",
 			x: 1.0d,
 			y: 8.5d,
-			subtitle: "For more in-depth detail, check the Engineers manual. Create 27 Coke Bricks and place them in a 3x3x3 shape, then right-click the center block of any side (not the top of course) and it should transform into a Coke Oven.",
+			subtitle: "Craft 27 Coke Bricks and place them in a 3x3x3 shape, then right-click the center block of any side and it should transform into a Coke Oven.",
 			description: [
 				"",
 				""
@@ -118,10 +118,10 @@
 			x: -1.0d,
 			y: 5.0d,
 			shape: "hexagon",
-			subtitle: "The source of power for most of Astral Sorcery, the Resonating Wand. This wand will be used the most often for Astral Sorcery as it is a key component to the mod.",
+			subtitle: "The source of power for most of Astral Sorcery, the Resonating Wand. ",
 			description: [
-				"By creating this wand, you will now have the ability to find Rock Crystal Ore easier instead of strip mining for them.",
-				"The wand, when held in hand, when nearby an ore will emit a column of particles coming from the ground indicating that there is an ore below.",
+				"By creating this wand, you will now have the ability to find Rock Crystal Ore easier instead of mining for them.",
+				"When held in your hand, the wand will emit a column of particles coming from the ground when you're near an ore, indicating that there is an ore below.",
 				"These ores will spawn close to bedrock so digging down will be needed in order to obtain these.",
 				"Each ore drops a few crystals that do not stack, so make sure to have a few slots open in your inventory."
 			],
@@ -155,7 +155,7 @@
 		{
 			x: 1.0d,
 			y: 5.0d,
-			subtitle: "Craft a Crafting Station which is a crafting table but will keep items in them, if exited, and allow access to chests placed next to them.",
+			subtitle: "The Crafting Station holds your items in place even after exiting and allows access to chests placed next to it.",
 			description: [""],
 			dependencies: ["492E0DBCFF16AE61"],
 			id: "2BD88FEF8627EBDE",
@@ -166,7 +166,7 @@
 			}]
 		},
 		{
-			title: "Tools!!!",
+			title: "Tools!",
 			x: -0.5d,
 			y: 6.5d,
 			subtitle: "Crafting a part builder and a tool station will allow you to create some basic tinkers' construct tools.",
@@ -254,7 +254,7 @@
 			title: "Drawers",
 			x: 4.0d,
 			y: 5.0d,
-			subtitle: "Chests weren't enough for you? Maybe craft some drawers! These drawers come in different sizes allowing for a different amount of items to be stored.",
+			subtitle: "Chests weren't enough for you? Maybe craft some drawers! These drawers come in different sizes allowing for a different amounts of items to be stored.",
 			dependencies: ["135CE149A8C95267"],
 			id: "2A559968B5696308",
 			tasks: [{

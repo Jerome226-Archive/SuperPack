@@ -217,6 +217,7 @@
 				"7A8D1C6C720E832F",
 				"7B36E066D9872D98"
 			],
+			size: 1.2d,
 			id: "5B9F70B7795FDD93",
 			tasks: [{
 				id: "3104B68F32AEE764",
@@ -288,7 +289,8 @@
 			dependencies: [
 				"14A2B179883CE7C4",
 				"47254171743913BF",
-				"5B9F70B7795FDD93"
+				"5B9F70B7795FDD93",
+				"1820B9F2DF7792D0"
 			],
 			size: 1.5d,
 			id: "718889039737D287",
@@ -519,6 +521,379 @@
 				id: "5DAF780F604CF192",
 				type: "item",
 				item: "superpackutils:reinforced_capacitor"
+			}]
+		},
+		{
+			x: -1.5d,
+			y: -13.0d,
+			subtitle: "Craft a sturdy capacitor.",
+			dependencies: ["1C953DA68E487378"],
+			id: "1820B9F2DF7792D0",
+			tasks: [{
+				id: "1D2B91B1B2EB1A37",
+				type: "item",
+				item: "superpackutils:sturdy_capacitor"
+			}]
+		},
+		{
+			x: -3.5d,
+			y: -13.0d,
+			dependencies: ["4F708402AB5FB00C"],
+			id: "1C953DA68E487378",
+			tasks: [{
+				id: "570DA2A12069481B",
+				type: "item",
+				item: "superpackutils:energetic_alloy_ingot"
+			}]
+		},
+		{
+			title: "Metallurgic Fabricator",
+			icon: "masterfulmachinery:metallurgic_fabricator_controller",
+			x: -4.0d,
+			y: -11.5d,
+			dependencies: [
+				"7F0FAEFEA68782C8",
+				"04BD55780D9DCDD2"
+			],
+			id: "4F708402AB5FB00C",
+			tasks: [
+				{
+					id: "5348A2D13209457A",
+					type: "item",
+					item: "superpackutils:metallurgic_casing",
+					count: 18L
+				},
+				{
+					id: "36FAD73C2C126D9C",
+					type: "item",
+					item: "masterfulmachinery:metallurgic_fabricator_controller"
+				},
+				{
+					id: "039B0C02FACE41CD",
+					type: "item",
+					item: "masterfulmachinery:metallurgic_fabricator_basic_port_items_input"
+				},
+				{
+					id: "6B427E250F17DF3B",
+					type: "item",
+					item: "masterfulmachinery:metallurgic_fabricator_basic_port_items_output"
+				},
+				{
+					id: "2DDB21E0ECE656F0",
+					type: "item",
+					item: "masterfulmachinery:metallurgic_fabricator_basic_port_energy_input"
+				},
+				{
+					id: "5C91A2E2C5829841",
+					type: "item",
+					item: "immersiveengineering:heavy_engineering",
+					count: 3L
+				},
+				{
+					id: "2DE520240E8EC327",
+					type: "item",
+					item: "mekanism:metallurgic_infuser"
+				},
+				{
+					id: "24AF2F56791DE542",
+					type: "item",
+					item: "refinedstorage:machine_casing"
+				}
+			]
+		},
+		{
+			x: -4.0d,
+			y: -10.0d,
+			dependencies: ["461A1FFF9F12A0F5"],
+			id: "7F0FAEFEA68782C8",
+			tasks: [{
+				id: "313639C4EA02039B",
+				type: "item",
+				item: "mekanism:metallurgic_infuser"
+			}]
+		},
+		{
+			x: -4.0d,
+			y: -8.5d,
+			dependencies: ["5B9F70B7795FDD93"],
+			id: "461A1FFF9F12A0F5",
+			tasks: [{
+				id: "5A423F4EB8C25D11",
+				type: "item",
+				item: "refinedstorage:machine_casing"
+			}]
+		},
+		{
+			title: "Inscriber Controller",
+			icon: "masterfulmachinery:inscriber_controller",
+			x: -6.0d,
+			y: -8.5d,
+			dependencies: ["461A1FFF9F12A0F5"],
+			id: "5ADE365FB109E180",
+			tasks: [
+				{
+					id: "4D3FF4D7A8DD0BD8",
+					type: "item",
+					item: "superpackutils:inscriber_casing",
+					count: 22L
+				},
+				{
+					id: "61B4DED7A3AA90EE",
+					type: "item",
+					item: "masterfulmachinery:inscriber_controller"
+				},
+				{
+					id: "6B1318ADB7659024",
+					type: "item",
+					item: "masterfulmachinery:inscriber_basic_port_items_input"
+				},
+				{
+					id: "67885358D6806998",
+					type: "item",
+					item: "masterfulmachinery:inscriber_basic_port_items_output"
+				},
+				{
+					id: "0B7E6615E4991A2F",
+					type: "item",
+					item: "masterfulmachinery:inscriber_basic_port_energy_input"
+				},
+				{
+					id: "419CE6ABB4CFF86E",
+					type: "item",
+					item: "create:mechanical_press",
+					count: 4L
+				},
+				{
+					id: "7C27F074B8F932D9",
+					type: "item",
+					item: "refinedstorage:machine_casing"
+				}
+			]
+		},
+		{
+			x: -7.0d,
+			y: -8.5d,
+			dependencies: ["5ADE365FB109E180"],
+			id: "19956CE9BA0E8D5B",
+			tasks: [{
+				id: "0B72F99B9D5E4E8F",
+				type: "item",
+				item: "refinedstorage:raw_basic_processor"
+			}]
+		},
+		{
+			x: -6.0d,
+			y: -10.0d,
+			dependencies: ["5ADE365FB109E180"],
+			id: "13687F18EA511853",
+			tasks: [{
+				id: "4EF34955D648A6AA",
+				type: "item",
+				item: "refinedstorage:raw_improved_processor"
+			}]
+		},
+		{
+			x: -6.0d,
+			y: -7.0d,
+			dependencies: ["5ADE365FB109E180"],
+			id: "722E12D5B29F5C5E",
+			tasks: [{
+				id: "2EF724B9D5FCA46B",
+				type: "item",
+				item: "refinedstorage:raw_advanced_processor"
+			}]
+		},
+		{
+			x: -7.0d,
+			y: -6.5d,
+			dependencies: ["722E12D5B29F5C5E"],
+			id: "76AE400C3AB54492",
+			tasks: [{
+				id: "600637612684323E",
+				type: "item",
+				item: "refinedstorage:advanced_processor"
+			}]
+		},
+		{
+			x: -7.0d,
+			y: -10.5d,
+			dependencies: ["13687F18EA511853"],
+			id: "62E23B46C3BE9CC2",
+			tasks: [{
+				id: "1F543722C9050ED9",
+				type: "item",
+				item: "refinedstorage:improved_processor"
+			}]
+		},
+		{
+			x: -8.0d,
+			y: -8.5d,
+			dependencies: ["19956CE9BA0E8D5B"],
+			id: "5D12809FD5F5DABE",
+			tasks: [{
+				id: "77F621942BDF8F37",
+				type: "item",
+				item: "refinedstorage:basic_processor"
+			}]
+		},
+		{
+			x: -10.5d,
+			y: -8.5d,
+			dependencies: [
+				"39AE7B468FC42D2A",
+				"15E45ABE49A903A1"
+			],
+			id: "7F806DE67339910A",
+			tasks: [{
+				id: "720EF626DE5E0CF8",
+				type: "item",
+				item: "refinedstorage:controller"
+			}]
+		},
+		{
+			x: -8.0d,
+			y: -10.0d,
+			dependencies: ["62E23B46C3BE9CC2"],
+			id: "15E45ABE49A903A1",
+			tasks: [{
+				id: "11CF2F8B1D1DB3C5",
+				type: "item",
+				item: "refinedstorage:destruction_core"
+			}]
+		},
+		{
+			x: -8.0d,
+			y: -7.0d,
+			dependencies: ["76AE400C3AB54492"],
+			id: "39AE7B468FC42D2A",
+			tasks: [{
+				id: "362264DF65967293",
+				type: "item",
+				item: "refinedstorage:construction_core"
+			}]
+		},
+		{
+			x: -10.5d,
+			y: -10.0d,
+			dependencies: ["7F806DE67339910A"],
+			id: "0280DFE680A4C4F4",
+			tasks: [{
+				id: "75767EDA48B44C00",
+				type: "item",
+				item: "refinedstorage:grid"
+			}]
+		},
+		{
+			x: -9.5d,
+			y: -7.5d,
+			dependencies: ["7F806DE67339910A"],
+			id: "41870C220C7EFD1D",
+			tasks: [{
+				id: "64C0E450506C4F45",
+				type: "item",
+				item: "refinedstorage:crafting_grid"
+			}]
+		},
+		{
+			x: -12.0d,
+			y: -8.5d,
+			dependencies: ["7F806DE67339910A"],
+			id: "0DB9C8730400E539",
+			tasks: [{
+				id: "2F045DFE440EB7FF",
+				type: "item",
+				item: "refinedstorage:cable"
+			}]
+		},
+		{
+			x: -11.5d,
+			y: -7.5d,
+			dependencies: ["7F806DE67339910A"],
+			id: "08BE085AE81C924E",
+			tasks: [{
+				id: "443832FF0F604BA2",
+				type: "item",
+				item: "refinedstorage:external_storage"
+			}]
+		},
+		{
+			x: -9.5d,
+			y: -9.5d,
+			dependencies: ["7F806DE67339910A"],
+			id: "35A890716F8635B7",
+			tasks: [{
+				id: "62F03F21E9F69FB8",
+				type: "item",
+				item: "refinedstorage:fluid_grid"
+			}]
+		},
+		{
+			x: -11.5d,
+			y: -9.5d,
+			subtitle: "The storage monitor displays the current amount of a certain item or fluid in your storage system.",
+			dependencies: ["7F806DE67339910A"],
+			id: "2FFFA60EAFAFF882",
+			tasks: [{
+				id: "781ED6EBC5801688",
+				type: "item",
+				item: "refinedstorage:storage_monitor"
+			}]
+		},
+		{
+			x: -10.5d,
+			y: -7.0d,
+			dependencies: ["7F806DE67339910A"],
+			id: "0F1C25B1DA7EB4BB",
+			tasks: [{
+				id: "7BEF80F921C1F756",
+				type: "item",
+				item: "refinedstorage:relay"
+			}]
+		},
+		{
+			x: -2.5d,
+			y: -11.0d,
+			dependencies: ["679809E21062D10A"],
+			id: "04BD55780D9DCDD2",
+			tasks: [{
+				id: "298D7D2A181176C8",
+				type: "item",
+				item: "libvulpes:ingotsilicon"
+			}]
+		},
+		{
+			x: 4.0d,
+			y: -8.0d,
+			shape: "hexagon",
+			dependencies: ["3C85FD73C813F0E0"],
+			size: 1.2d,
+			id: "16F889FE2F51535D",
+			tasks: [{
+				id: "33669EC4C4D4331E",
+				type: "item",
+				item: "immersivepetroleum:gasoline_bucket"
+			}]
+		},
+		{
+			x: 3.5d,
+			y: -9.0d,
+			dependencies: ["3C85FD73C813F0E0"],
+			id: "6BBC476277F307F1",
+			tasks: [{
+				id: "3753F02E477C6D3D",
+				type: "item",
+				item: "immersivepetroleum:diesel_bucket"
+			}]
+		},
+		{
+			x: 3.5d,
+			y: -7.0d,
+			dependencies: ["3C85FD73C813F0E0"],
+			id: "3F85BBE5E33BA503",
+			tasks: [{
+				id: "70DFB1E319BA9A53",
+				type: "item",
+				item: "immersivepetroleum:lubricant_bucket"
 			}]
 		}
 	]

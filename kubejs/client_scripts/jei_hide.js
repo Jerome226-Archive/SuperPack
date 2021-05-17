@@ -40,10 +40,12 @@ onEvent('jei.hide.items', event => {
         'refinedstorage:silk_touch_upgrade',
         'refinedstorage:crafting_upgrade',
 
-    //Unused Ports
-    'masterfulmachinery:improved_metallurgic_fabricator_basic_port_energy_output',
-    'masterfulmachinery:metallurgic_fabricator_basic_port_energy_output',
-    'masterfulmachinery:inscriber_basic_port_energy_output',
+        //Unused Ports
+        'masterfulmachinery:improved_metallurgic_fabricator_basic_port_energy_output',
+        'masterfulmachinery:metallurgic_fabricator_basic_port_energy_output',
+        'masterfulmachinery:inscriber_basic_port_energy_output',
+        'masterfulmachinery:infuser_basic_port_fluids_output',
+        'masterfulmachinery:infuser_basic_port_energy_output',
 
         //Mekanism Pipes
         'mekanism:basic_universal_cable',

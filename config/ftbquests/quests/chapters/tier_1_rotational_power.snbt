@@ -55,6 +55,7 @@
 			x: -0.5d,
 			y: 1.5d,
 			dependencies: ["0F62021D31E792EF"],
+			size: 1.2d,
 			id: "3445CBB90C54C1F3",
 			tasks: [{
 				id: "1B754B5B29383152",
@@ -88,6 +89,8 @@
 		{
 			x: 1.2857142857143202d,
 			y: -4.903061224489786d,
+			subtitle: "The mechanical drill is used to break blocks.",
+			description: [""],
 			dependencies: ["2C214049E79CC74A"],
 			id: "268888A821C73966",
 			tasks: [{
@@ -99,6 +102,8 @@
 		{
 			x: 0.5d,
 			y: -5.5d,
+			subtitle: "The mechanical saw is used to chop wood. ",
+			description: ["When chopping down a tree, it will automatically destroy the entire tree by only destroying the bottom-most block. Moreover, when mechanical saws are placed facing upwards, logs and woods can be dropped on top of them to make them into stripped logs and stripped woods respectively."],
 			dependencies: ["2C214049E79CC74A"],
 			id: "6DCD03E99A9E3C1C",
 			tasks: [{
@@ -110,6 +115,8 @@
 		{
 			x: -1.5d,
 			y: -5.5d,
+			subtitle: "The mechanical harvester is used to harvest crops.",
+			description: ["The mechanical harvester will harvest all mature crops it comes in contact with while moving. It will then either deposit the items to an inventory on the moving structure, or, if no inventories are available, it will drop the items on to the ground."],
 			dependencies: ["2C214049E79CC74A"],
 			id: "6557E740456313B7",
 			tasks: [{
@@ -121,6 +128,7 @@
 		{
 			x: -2.5d,
 			y: -4.0d,
+			description: [""],
 			dependencies: ["2C214049E79CC74A"],
 			id: "2E74DA560DDDC91D",
 			tasks: [{
@@ -143,7 +151,7 @@
 		{
 			x: 1.5d,
 			y: -3.0d,
-			subtitle: "The Blaze Burner will be a help when it comes to creating alloys. In order for this to be a functional block, you will need to capture a blaze inside of it. To do so, right-click a blaze with this block in your hand and you'll capture the blaze inside.",
+			subtitle: "The Blaze Burner will help you when creating alloys. In order for this to be a functional block, you will need to capture a blaze inside of it. To do so, right-click a blaze with this block in your hand.",
 			dependencies: [
 				"7F3943424622371B",
 				"2C214049E79CC74A"
@@ -182,8 +190,10 @@
 			}]
 		},
 		{
-			x: -2.1428571428571317d,
-			y: -4.846938775510203d,
+			x: -2.267857142857146d,
+			y: -4.9540816326530575d,
+			subtitle: "The encased fan can create air streams and generate power.",
+			description: ["Its air streams are used for moving entities or for bulk washing, bulk blasting, and bulk smoking. When an Encased Fan is placed facedown directly over a heat source and powered by redstone, it will provide 64 units of Kinetic Stress at 4 RPM."],
 			dependencies: ["2C214049E79CC74A"],
 			id: "308D9E4382718441",
 			tasks: [{
@@ -195,6 +205,7 @@
 		{
 			x: 4.5d,
 			y: -3.5d,
+			subtitle: "Craft a brass casing.",
 			dependencies: ["75BBB0EC91B63BFB"],
 			size: 1.2d,
 			id: "72A2ED01F231B66F",
@@ -218,6 +229,7 @@
 		{
 			x: -0.5102040816326436d,
 			y: -5.846938775510203d,
+			subtitle: "Craft a copper casing.",
 			dependencies: ["2C214049E79CC74A"],
 			id: "091EA885EFE53713",
 			tasks: [{
@@ -240,6 +252,8 @@
 		{
 			x: -2.5d,
 			y: 1.0d,
+			subtitle: "A mechanical belt can be used to move items and entities.",
+			description: ["Placing a belt requires two shafts that face the same direction. A mechanical belt can be up to 20 blocks long."],
 			dependencies: ["3445CBB90C54C1F3"],
 			id: "150DE3B401D8C17B",
 			tasks: [{
@@ -328,6 +342,8 @@
 		{
 			x: -3.0d,
 			y: -7.5d,
+			subtitle: "A spout is used for filling liquid containers or for crafting with liquids.",
+			description: ["A spout can be filled up with up to 1 bucket of a fluid using fluid pipes."],
 			dependencies: ["091EA885EFE53713"],
 			id: "54B7EC9FD13883AC",
 			tasks: [{
@@ -339,6 +355,8 @@
 		{
 			x: -1.5d,
 			y: -9.0d,
+			subtitle: "A fluid tank can store up to 8 buckets of fluid. Fluid tanks will also merge with adjacent tanks, up to 3x32x3.",
+			description: ["You can input and extract fluids from a fluid tank using a fluid pipe."],
 			dependencies: ["091EA885EFE53713"],
 			id: "19A3A6642FCBC985",
 			tasks: [{
@@ -390,7 +408,7 @@
 		{
 			x: 5.0d,
 			y: -1.0d,
-			subtitle: "Craft an Electron Tube. These will come in handing for blocks that will need this.",
+			subtitle: "Craft an Electron Tube. ",
 			dependencies: ["58050F41AD56343F"],
 			id: "585E447E78E33062",
 			tasks: [{
@@ -449,6 +467,7 @@
 		{
 			x: 1.5d,
 			y: 1.0d,
+			subtitle: "An andesite funnel is used to extract or insert materials into inventories.",
 			dependencies: ["3445CBB90C54C1F3"],
 			id: "0F42AFBF4423D93B",
 			tasks: [{
@@ -493,6 +512,8 @@
 		{
 			x: 3.5d,
 			y: -4.5d,
+			subtitle: "The mechanical arm is used to transfer items.",
+			description: ["With the Mechanical Arm in hand, right clicking valid inventories will select them to be taken from, or deposited to if the inventory cannot be taken from. From there, further right clicking will toggle between taking from and depositing to. The Mechanical Arm can then be placed by right clicking on a block, and powered."],
 			dependencies: ["72A2ED01F231B66F"],
 			id: "29B7E9A3D73DE497",
 			tasks: [{
@@ -555,7 +576,7 @@
 		{
 			x: -3.5d,
 			y: -1.0d,
-			subtitle: "This here stone will allow you to go to The Nether. You can make this stone in the Petal Apothecary then put this in a Lightwell in order to get a bucket of Dimensional Plasma. This liquid will have to be placed far under ground so make sure to have a place for this liquid setup for quick access.",
+			subtitle: "This stone will allow you to go to The Nether. Made in the Petal Apothecary, you then put this in a Lightwell in order to get a bucket of Dimensional Plasma. This liquid will have to be placed far under ground.",
 			dependencies: [
 				"1BC816952304F066",
 				"52412904E957777A",
@@ -572,8 +593,8 @@
 		{
 			x: -4.5d,
 			y: 1.0d,
-			subtitle: "The first block to start your journey through Botania! A magical mod based around Mana and Flowers to help you through it.",
-			description: ["The apothecary will be used to make your flowers. Fill it with water and throw the respective items needed. If you don't know the items that are needed, check JEI. Once the items are correctly thrown in, the GUI the appears while looking at this block will tell you the flower that it makes and that you need to throw in a seed."],
+			subtitle: "The first block to start your journey through Botania! This is used to create all functional flowers. ",
+			description: ["The apothecary will be used to make your flowers. To do so, fill it with water, throw some petals in and then throw in a seed to finalize the process"],
 			dependencies: [
 				"27555EED26DD0507",
 				"462F614445439672"
@@ -604,7 +625,7 @@
 		{
 			x: -6.5d,
 			y: 1.0d,
-			subtitle: "A Pure Daisy is the flower that will allow you to create Livingwood and Livingrock amongst a few other recipes that it will be able to handle. ",
+			subtitle: "The Pure Daisy is (mainly) used to create Livingwood and Livingrock. The conversion process takes 60 seconds.",
 			dependencies: ["1BC816952304F066"],
 			id: "4FDCC531A7A3490C",
 			tasks: [{
@@ -616,7 +637,8 @@
 		{
 			x: -6.5d,
 			y: -1.0d,
-			subtitle: "Placing Marble around the Pure Daisy will turn it into Livingrock after some time.",
+			subtitle: "Placing marble around the Pure Daisy will turn it into Livingrock after some time.",
+			description: [""],
 			dependencies: ["4FDCC531A7A3490C"],
 			id: "53E6E3524B5582D2",
 			tasks: [{
@@ -680,7 +702,7 @@
 		{
 			x: -8.0d,
 			y: 1.0d,
-			subtitle: "Infused Wood can be made by throwing Wood Logs into Liquid Starlight.",
+			subtitle: "Infused Wood can be made by throwing wood logs into Liquid Starlight.",
 			dependencies: ["1C0A2B260DDC2C6C"],
 			id: "2DE385D41076CC84",
 			tasks: [{
@@ -692,7 +714,7 @@
 		{
 			x: -5.0d,
 			y: -2.0d,
-			subtitle: "Throwing a Ender Pearl into a Mana Pool filled with enough mana will turn it into a Mana Pearl.",
+			subtitle: "Throwing an ender pearl into a mana pool filled with enough mana will turn it into a Mana Pearl.",
 			dependencies: ["0A11E6E25119BE31"],
 			id: "52412904E957777A",
 			tasks: [{
@@ -736,6 +758,8 @@
 		{
 			x: -2.0d,
 			y: 5.0d,
+			subtitle: "The cart assembler can attach a structure to carts that pass through it when supplied with a redstone signal.",
+			description: [""],
 			dependencies: ["0F62021D31E792EF"],
 			id: "1F95FB139DB0E310",
 			tasks: [{
@@ -765,6 +789,7 @@
 		{
 			x: 1.0d,
 			y: 5.0d,
+			subtitle: "The mechanical piston allows you to extend multiple blocks when powered with rotational power.",
 			dependencies: ["0F62021D31E792EF"],
 			id: "7E81E5CF9EE915D3",
 			tasks: [{
@@ -798,7 +823,7 @@
 		{
 			x: -4.660714285714285d,
 			y: -2.933673469387749d,
-			subtitle: "Throwing a Iron Ingot into a Mana Pool filled with enough mana will turn it into a Manasteel Ingot.",
+			subtitle: "Throwing an iron ingot into a mana pool filled with enough mana will turn it into a Manasteel Ingot.",
 			dependencies: ["0A11E6E25119BE31"],
 			id: "29D97508558C67C6",
 			tasks: [{
@@ -810,7 +835,7 @@
 		{
 			x: 3.0d,
 			y: -3.5d,
-			subtitle: "Create a Brass Ingot by using a Mixer from Create. You will need a Blaze Burner with a Blaze stored under the Basin of the Mixer in order for this to work.",
+			subtitle: "Create a Brass Ingot using a mixer from Create. You will need a Blaze Burner with a blaze stored under the basin of the mixer in order for this to work.",
 			dependencies: ["047D68D5CD887601"],
 			id: "75BBB0EC91B63BFB",
 			tasks: [{
@@ -822,7 +847,7 @@
 		{
 			x: 4.0d,
 			y: -0.5d,
-			subtitle: "Now that you have a Blast Furnace, you can now create Steel using Enriched Iron. This will help with some upcoming recipes. Check JEI for the recipe.",
+			subtitle: "Now that you have a Blast Furnace, you can create Steel using Enriched Iron. This will help with some upcoming recipes.",
 			dependencies: ["5985D6F3B37AD32E"],
 			id: "58050F41AD56343F",
 			tasks: [{
@@ -846,9 +871,10 @@
 		{
 			x: -6.5d,
 			y: -5.0d,
-			subtitle: "The Runic Altar is a block that will allow you to create runes. Items can be placed on the Altar by right-clicking the item on to it.",
+			subtitle: "The Runic Altar allows you to create runes. To complete crafting, right-click or throw a livingrock on top of the altar, then use the wand of the forest.",
 			description: ["Check JEI for different rune recipes. To get mana to an altar once a rune has been selected to craft, you can link a Mana Spreader (or many) to it or put a Spark above a Mana Pool (or multiple pools) and put a Spark above the Altar and it will transfer mana to it."],
 			dependencies: ["4C87285497B7DEB5"],
+			size: 1.2d,
 			id: "6FF26BCE98D5E652",
 			tasks: [{
 				id: "13BEFD6D855D1BE5",
@@ -859,7 +885,7 @@
 		{
 			x: -7.5d,
 			y: -5.5d,
-			subtitle: "Create a Rune of Water using the Runic Altar.",
+			subtitle: "Craft a Rune of Water.",
 			dependencies: ["6FF26BCE98D5E652"],
 			id: "0A77DB767D2C8557",
 			tasks: [{
@@ -871,7 +897,7 @@
 		{
 			x: -7.5d,
 			y: -4.5d,
-			subtitle: "Create a Rune of Fire using the Runic Altar.",
+			subtitle: "Craft a Rune of Fire.",
 			dependencies: ["6FF26BCE98D5E652"],
 			id: "764E76B7F677CD1E",
 			tasks: [{
@@ -883,7 +909,7 @@
 		{
 			x: -5.5d,
 			y: -4.5d,
-			subtitle: "Create a Rune of Earth using the Runic Altar.",
+			subtitle: "Craft a Rune of Earth.",
 			dependencies: ["6FF26BCE98D5E652"],
 			id: "2290A244CDE42293",
 			tasks: [{
@@ -895,7 +921,7 @@
 		{
 			x: -5.5d,
 			y: -5.5d,
-			subtitle: "Create a Rune of Air using the Runic Altar.",
+			subtitle: "Craft a Rune of Air.",
 			dependencies: ["6FF26BCE98D5E652"],
 			id: "574B0B75AD95FF6E",
 			tasks: [{

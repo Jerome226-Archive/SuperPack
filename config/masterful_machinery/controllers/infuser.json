@@ -1,0 +1,39 @@
+{
+  "controllerId": "infuser",
+  "name": "Infuser",
+  "ports": [
+    {
+      "type": "masterfulmachinery:items",
+      "name": "Item",
+      "id": "basic",
+      "data": {
+        "rows": 3,
+        "columns": 3
+      }
+    },
+    {
+      "type": "masterfulmachinery:mekanism_gas",
+      "name": "Gas",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    },
+    {
+      "type": "masterfulmachinery:fluids",
+      "name": "Fluid",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    },
+    {
+      "type": "masterfulmachinery:energy",
+      "name": "Energy",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    }
+  ]
+}

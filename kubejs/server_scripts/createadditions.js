@@ -15,6 +15,9 @@ events.listen('recipes', function (event) {
         M: '#forge:plates/copper'
     })
 
+    //Easy Seed Oil Remove
+    event.remove({id: 'createaddition:compacting/seed_oil'})
+
     //Induction Heater
     event.remove({output: 'createaddition:heater'})
     event.shaped('createaddition:heater', [' C ', 'IBI', 'SPS'], {
