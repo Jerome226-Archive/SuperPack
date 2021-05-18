@@ -325,7 +325,7 @@ event.custom({
             [
               "AFA",
               "FMF",
-              "AFA"
+              "APA"
             ],
             [
                 "AAA",
