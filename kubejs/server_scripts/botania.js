@@ -501,7 +501,7 @@ events.listen('recipes', function (event) {
         ]
     })
 
-    //Rune of Water
+    //Rune of Winter
     event.remove({id: 'botania:runic_altar/winter'})
     event.custom({
         "type": "botania:runic_altar",
