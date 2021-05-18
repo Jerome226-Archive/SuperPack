@@ -16,7 +16,7 @@ events.listen('recipes', function (event) {
           ], {
             C: 'thermal:invar_plate',
             P: 'superpackutils:inscriber_casing',
-            S: 'create:zinc_ingot',
+            S: 'immersiveengineering:ingot_aluminum',
             E: 'create:integrated_circuit',
             G: 'immersiveengineering:circuit_board',
             H: 'refinedstorage:machine_casing'
@@ -51,270 +51,53 @@ events.listen('recipes', function (event) {
         "type": "masterfulmachinery:machine_structure",
         "controllerId": "inscriber",
         "id": "inscriber",
-        "blocks": [
-
-    //-----------------------------------------------------
-    //Layer 1
-    //-----------------------------------------------------
-
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 0,
-                    "z": -1
-                },
-                "block": "masterfulmachinery:inscriber_basic_port_items_input"
+        "name": "Inscriber",
+        "layout": [
+            [
+              "AEA",
+              "IAO",
+              "ACA"
+            ],
+            [
+              "A A",
+              " M ",
+              "A A"
+            ],
+            [
+                "APA",
+                "P P",
+                "APA"
+            ],
+            [
+                "AAA",
+                "AAA",
+                "AAA"
+            ],
+            
+          ],
+          "legend": {
+            "A": {
+                "block": "superpackutils:inscriber_casing"
             },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 0,
-                    "z": -1
-                },
-                "block": "masterfulmachinery:inscriber_basic_port_items_output"
-            },
-            {
-                "pos":{
-                    "x": 0,
-                    "y": 0,
-                    "z": -2
-                },
+            "E": {
                 "block": "masterfulmachinery:inscriber_basic_port_energy_input"
             },
-
-            {
-                "pos":{
-                    "x": 0,
-                    "y": 0,
-                    "z": -1
-                },
-                "block": "superpackutils:inscriber_casing"
+            "I":  {
+                "block": "masterfulmachinery:inscriber_basic_port_items_input"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 0,
-                    "z": 0
-                },
-                "block": "superpackutils:inscriber_casing"
+            "C":  {
+              "block": "masterfulmachinery:inscriber_controller"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 0,
-                    "z": -2
-                },
-                "block": "superpackutils:inscriber_casing"
-            },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 0,
-                    "z": 0
-                },
-                "block": "superpackutils:inscriber_casing"
-            },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 0,
-                    "z": -2
-                },
-                "block": "superpackutils:inscriber_casing"
-            },
-
-    //-----------------------------------------------------
-    //Layer 2
-    //-----------------------------------------------------
-
-            {
-                "pos":{
-                    "x": 0,
-                    "y": 1,
-                    "z": -1
-                },
+            "M":  {
                 "block": "refinedstorage:machine_casing"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 1,
-                    "z": 0
-                },
-                "block": "superpackutils:inscriber_casing"
+            "P":  {
+                "block": "create:mechanical_press"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 1,
-                    "z": -2
-                },
-                "block": "superpackutils:inscriber_casing"
-            },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 1,
-                    "z": 0
-                },
-                "block": "superpackutils:inscriber_casing"
-            },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 1,
-                    "z": -2
-                },
-                "block": "superpackutils:inscriber_casing"
-            },
-        
-    //-----------------------------------------------------
-    //Layer 3
-    //-----------------------------------------------------
-
-        {
-            "pos":{
-                "x": -1,
-                "y": 2,
-                "z": -1
-            },
-            "block": "create:mechanical_press"
-        },
-        {
-            "pos":{
-                "x": 1,
-                "y": 2,
-                "z": -1
-            },
-            "block": "create:mechanical_press"
-        },
-        {
-            "pos":{
-                "x": 0,
-                "y": 2,
-                "z": -2
-            },
-            "block": "create:mechanical_press"
-        },
-        {
-            "pos":{
-                "x": 0,
-                "y": 2,
-                "z": 0
-            },
-            "block": "create:mechanical_press"
-        },
-        {
-            "pos":{
-                "x": -1,
-                "y": 2,
-                "z": 0
-            },
-            "block": "superpackutils:inscriber_casing"
-        },
-        {
-            "pos":{
-                "x": -1,
-                "y": 2,
-                "z": -2
-            },
-            "block": "superpackutils:inscriber_casing"
-        },
-        {
-            "pos":{
-                "x": 1,
-                "y": 2,
-                "z": 0
-            },
-            "block": "superpackutils:inscriber_casing"
-        },
-        {
-            "pos":{
-                "x": 1,
-                "y": 2,
-                "z": -2
-            },
-            "block": "superpackutils:inscriber_casing"
-        },
-        
-    //-----------------------------------------------------
-    //Layer 4
-    //-----------------------------------------------------
-
-    {
-        "pos":{
-            "x": 0,
-            "y": 3,
-            "z": -1
-        },
-        "block": "superpackutils:inscriber_casing"
-    },
-    {
-        "pos":{
-            "x": -1,
-            "y": 3,
-            "z": -1
-        },
-        "block": "superpackutils:inscriber_casing"
-    },
-    {
-        "pos":{
-            "x": 1,
-            "y": 3,
-            "z": -1
-        },
-        "block": "superpackutils:inscriber_casing"
-    },
-    {
-        "pos":{
-            "x": 0,
-            "y": 3,
-            "z": -2
-        },
-        "block": "superpackutils:inscriber_casing"
-    },
-    {
-        "pos":{
-            "x": 0,
-            "y": 3,
-            "z": 0
-        },
-        "block": "superpackutils:inscriber_casing"
-    },
-    {
-        "pos":{
-            "x": -1,
-            "y": 3,
-            "z": 0
-        },
-        "block": "superpackutils:inscriber_casing"
-    },
-    {
-        "pos":{
-            "x": -1,
-            "y": 3,
-            "z": -2
-        },
-        "block": "superpackutils:inscriber_casing"
-    },
-    {
-        "pos":{
-            "x": 1,
-            "y": 3,
-            "z": 0
-        },
-        "block": "superpackutils:inscriber_casing"
-    },
-    {
-        "pos":{
-            "x": 1,
-            "y": 3,
-            "z": -2
-        },
-        "block": "superpackutils:inscriber_casing"
-    },
-
-        ]
+            "O": {
+                "block": "masterfulmachinery:inscriber_basic_port_items_output"
+            }
+        }
     })
 
     //-----------------------------------------------------
@@ -532,234 +315,50 @@ event.custom({
         "type": "masterfulmachinery:machine_structure",
         "controllerId": "metallurgic_fabricator",
         "id": "metallurgic_fabricator",
-        "blocks": [
-
-    //-----------------------------------------------------
-    //Layer 1
-    //-----------------------------------------------------
-
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 0,
-                    "z": -1
-                },
-                "block": "masterfulmachinery:metallurgic_fabricator_basic_port_items_input"
+        "name": "Metallurgic Fabricator",
+        "layout": [
+            [
+              "AEA",
+              "IAO",
+              "ACA"
+            ],
+            [
+              "AFA",
+              "FMF",
+              "AFA"
+            ],
+            [
+                "AAA",
+                "AAA",
+                "AAA"
+            ]
+          ],
+          "legend": {
+            "A": {
+                "block": "superpackutils:metallurgic_casing"
             },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 0,
-                    "z": -1
-                },
-                "block": "masterfulmachinery:metallurgic_fabricator_basic_port_items_output"
-            },
-            {
-                "pos":{
-                    "x": 0,
-                    "y": 0,
-                    "z": -2
-                },
+            "E": {
                 "block": "masterfulmachinery:metallurgic_fabricator_basic_port_energy_input"
             },
-
-            {
-                "pos":{
-                    "x": 0,
-                    "y": 0,
-                    "z": -1
-                },
-                "block": "superpackutils:metallurgic_casing"
+            "I":  {
+                "block": "masterfulmachinery:metallurgic_fabricator_basic_port_items_input"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 0,
-                    "z": 0
-                },
-                "block": "superpackutils:metallurgic_casing"
+            "C":  {
+              "block": "masterfulmachinery:metallurgic_fabricator_controller"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 0,
-                    "z": -2
-                },
-                "block": "superpackutils:metallurgic_casing"
-            },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 0,
-                    "z": 0
-                },
-                "block": "superpackutils:metallurgic_casing"
-            },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 0,
-                    "z": -2
-                },
-                "block": "superpackutils:metallurgic_casing"
-            },
-
-    //-----------------------------------------------------
-    //Layer 2
-    //-----------------------------------------------------
-
-    {
-        "pos":{
-            "x": -1,
-            "y": 1,
-            "z": -1
-        },
-        "block": "immersiveengineering:heavy_engineering"
-    },
-    {
-        "pos":{
-            "x": 1,
-            "y": 1,
-            "z": -1
-        },
-        "block": "immersiveengineering:heavy_engineering"
-    },
-    {
-        "pos":{
-            "x": 0,
-            "y": 1,
-            "z": -2
-        },
-        "block": "immersiveengineering:heavy_engineering"
-    },
-    {
-        "pos":{
-            "x": 0,
-            "y": 1,
-            "z": 0
-        },
-        "block": "mekanism:metallurgic_infuser"
-    },
-
-            {
-                "pos":{
-                    "x": 0,
-                    "y": 1,
-                    "z": -1
-                },
+            "M":  {
                 "block": "refinedstorage:machine_casing"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 1,
-                    "z": 0
-                },
-                "block": "superpackutils:metallurgic_casing"
+            "P":  {
+                "block": "mekanism:metallurgic_infuser"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 1,
-                    "z": -2
-                },
-                "block": "superpackutils:metallurgic_casing"
+            "F":  {
+                "block": "immersiveengineering:heavy_engineering"
             },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 1,
-                    "z": 0
-                },
-                "block": "superpackutils:metallurgic_casing"
-            },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 1,
-                    "z": -2
-                },
-                "block": "superpackutils:metallurgic_casing"
-            },
-        
-    //-----------------------------------------------------
-    //Layer 3
-    //-----------------------------------------------------
-
-    {
-        "pos":{
-            "x": 0,
-            "y": 2,
-            "z": -1
-        },
-        "block": "superpackutils:metallurgic_casing"
-    },
-        {
-            "pos":{
-                "x": -1,
-                "y": 2,
-                "z": -1
-            },
-            "block": "superpackutils:metallurgic_casing"
-        },
-        {
-            "pos":{
-                "x": 1,
-                "y": 2,
-                "z": -1
-            },
-            "block": "superpackutils:metallurgic_casing"
-        },
-        {
-            "pos":{
-                "x": 0,
-                "y": 2,
-                "z": -2
-            },
-            "block": "superpackutils:metallurgic_casing"
-        },
-        {
-            "pos":{
-                "x": 0,
-                "y": 2,
-                "z": 0
-            },
-            "block": "superpackutils:metallurgic_casing"
-        },
-        {
-            "pos":{
-                "x": -1,
-                "y": 2,
-                "z": 0
-            },
-            "block": "superpackutils:metallurgic_casing"
-        },
-        {
-            "pos":{
-                "x": -1,
-                "y": 2,
-                "z": -2
-            },
-            "block": "superpackutils:metallurgic_casing"
-        },
-        {
-            "pos":{
-                "x": 1,
-                "y": 2,
-                "z": 0
-            },
-            "block": "superpackutils:metallurgic_casing"
-        },
-        {
-            "pos":{
-                "x": 1,
-                "y": 2,
-                "z": -2
-            },
-            "block": "superpackutils:metallurgic_casing"
-        },
-
-        ]
+            "O": {
+                "block": "masterfulmachinery:metallurgic_fabricator_basic_port_items_output"
+            }
+        }
     })
 
     //-----------------------------------------------------
@@ -775,14 +374,14 @@ event.custom({
             {
                 "type": "masterfulmachinery:energy",
                 "data":{
-                    "amount": 2000
+                    "amount": 5000
                 }
             },
             {
                 "type": "masterfulmachinery:items",
                 "data":{
-                    "item": "minecraft:redstone",
-                    "count": 2
+                    "item": "minecraft:glowstone_dust",
+                    "count": 3
                 }
             },
             {
@@ -819,6 +418,119 @@ event.custom({
     })
 
     //-----------------------------------------------------
+    //Improved Metallurgic Fabricator
+    //-----------------------------------------------------
+
+    event.custom({
+        "type": "masterfulmachinery:machine_structure",
+        "controllerId": "improved_metallurgic_fabricator",
+        "id": "improved_metallurgic_fabricator",
+        "name": "Improved Metallurgic Fabricator",
+        "layout": [
+            [
+              "AAIAA",
+              "AAAAA",
+              "AAAAA",
+              "EAAAO"
+            ],
+            [
+              "AAAAA",
+              "ASSSA",
+              "ASSSA",
+              "AACAA"
+            ],
+            [
+                " AAA ",
+                "AGGGA",
+                "AGGGA",
+                " AAA "
+            ]
+          ],
+          "legend": {
+            "A": {
+                "block": "superpackutils:improved_metallurgic_casing"
+            },
+            "S": {
+                "block": "mekanism:superheating_element"
+            },
+            "G": {
+                "block": "thermal:obsidian_glass"
+            },
+            "F": {
+                "block": "mekanism:metallurgic_infuser"
+            },
+            "E": {
+                "block": "masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_input"
+            },
+            "O": {
+                "block": "masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_output"
+            },
+            "I":  {
+                "block": "masterfulmachinery:improved_metallurgic_fabricator_basic_port_energy_input"
+            },
+            "C":  {
+              "block": "masterfulmachinery:improved_metallurgic_fabricator_controller"
+            }
+        }
+    })
+
+    //-----------------------------------------------------
+    //Improved Metallurgic Fabricator Recipe
+    //-----------------------------------------------------
+    
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "improved_metallurgic_fabricator",
+        "controllerId": "improved_metallurgic_fabricator",
+        "ticks": 1000,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 10000
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:ender_pearl_dust",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "botania:quartz_elven",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:grassy_pigment",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "mekanism:ingot_uranium",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:vibrant_alloy_ingot",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //-----------------------------------------------------
     //Infuser
     //-----------------------------------------------------
 
@@ -826,310 +538,80 @@ event.custom({
         "type": "masterfulmachinery:machine_structure",
         "controllerId": "infuser",
         "id": "infuser",
-        "blocks": [
-
-    //-----------------------------------------------------
-    //Layer 1
-    //-----------------------------------------------------
-
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 0,
-                    "z": -1
-                },
-                "block": "masterfulmachinery:infuser_basic_port_mekanism_gas_input"
+        "name": "Infuser",
+        "layout": [
+            [
+              "AEA",
+              "IAO",
+              "ACA"
+            ],
+            [
+              "P P",
+              "ZMW",
+              "P P"
+            ],
+            [
+                "P P",
+                "   ",
+                "P P"
+            ],
+            [
+                "P P",
+                " S ",
+                "P P"
+            ],
+            [
+                "AAA",
+                "AFA",
+                "AAA"
+            ]
+          ],
+          "legend": {
+            "A": {
+                "block": "superpackutils:infuser_casing"
             },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 0,
-                    "z": -1
-                },
-                "block": "masterfulmachinery:infuser_basic_port_mekanism_gas_output"
-            },
-            {
-                "pos":{
-                    "x": 0,
-                    "y": 0,
-                    "z": -2
-                },
+            "E": {
                 "block": "masterfulmachinery:infuser_basic_port_energy_input"
             },
-
-            {
-                "pos":{
-                    "x": 0,
-                    "y": 0,
-                    "z": -1
-                },
-                "block": "superpackutils:infuser_casing"
+            "I":  {
+                "block": "masterfulmachinery:infuser_basic_port_mekanism_gas_input"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 0,
-                    "z": 0
-                },
-                "block": "superpackutils:infuser_casing"
+            "C":  {
+              "block": "masterfulmachinery:infuser_controller"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 0,
-                    "z": -2
-                },
-                "block": "superpackutils:infuser_casing"
-            },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 0,
-                    "z": 0
-                },
-                "block": "superpackutils:infuser_casing"
-            },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 0,
-                    "z": -2
-                },
-                "block": "superpackutils:infuser_casing"
-            },
-
-    //-----------------------------------------------------
-    //Layer 2
-    //-----------------------------------------------------
-
-    {
-        "pos":{
-            "x": -1,
-            "y": 1,
-            "z": -1
-        },
-        "block": "masterfulmachinery:infuser_basic_port_items_input"
-    },
-    {
-        "pos":{
-            "x": 1,
-            "y": 1,
-            "z": -1
-        },
-        "block": "masterfulmachinery:infuser_basic_port_items_output"
-    },
-
-            {
-                "pos":{
-                    "x": 0,
-                    "y": 1,
-                    "z": -1
-                },
+            "M":  {
                 "block": "create:depot"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 1,
-                    "z": 0
-                },
+            "S":  {
+                "block": "create:spout"
+            },
+            "F":  {
+                "block": "masterfulmachinery:infuser_basic_port_fluids_input"
+            },
+            "P":  {
                 "block": "immersiveengineering:steel_fence"
             },
-            {
-                "pos":{
-                    "x": -1,
-                    "y": 1,
-                    "z": -2
-                },
-                "block": "immersiveengineering:steel_fence"
+            "Z":  {
+                "block": "masterfulmachinery:infuser_basic_port_items_input"
             },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 1,
-                    "z": 0
-                },
-                "block": "immersiveengineering:steel_fence"
+            "W":  {
+                "block": "masterfulmachinery:infuser_basic_port_items_output"
             },
-            {
-                "pos":{
-                    "x": 1,
-                    "y": 1,
-                    "z": -2
-                },
-                "block": "immersiveengineering:steel_fence"
-            },
-        
-    //-----------------------------------------------------
-    //Layer 3
-    //-----------------------------------------------------
-
-    {
-        "pos":{
-            "x": -1,
-            "y": 2,
-            "z": 0
-        },
-        "block": "immersiveengineering:steel_fence"
-    },
-    {
-        "pos":{
-            "x": -1,
-            "y": 2,
-            "z": -2
-        },
-        "block": "immersiveengineering:steel_fence"
-    },
-    {
-        "pos":{
-            "x": 1,
-            "y": 2,
-            "z": 0
-        },
-        "block": "immersiveengineering:steel_fence"
-    },
-    {
-        "pos":{
-            "x": 1,
-            "y": 2,
-            "z": -2
-        },
-        "block": "immersiveengineering:steel_fence"
-    },
-
-    //-----------------------------------------------------
-    //Layer 4
-    //-----------------------------------------------------
-
-    {
-        "pos":{
-            "x": -1,
-            "y": 3,
-            "z": 0
-        },
-        "block": "immersiveengineering:steel_fence"
-    },
-    {
-        "pos":{
-            "x": -1,
-            "y": 3,
-            "z": -2
-        },
-        "block": "immersiveengineering:steel_fence"
-    },
-    {
-        "pos":{
-            "x": 1,
-            "y": 3,
-            "z": 0
-        },
-        "block": "immersiveengineering:steel_fence"
-    },
-    {
-        "pos":{
-            "x": 1,
-            "y": 3,
-            "z": -2
-        },
-        "block": "immersiveengineering:steel_fence"
-    },
-    {
-        "pos":{
-            "x": 0,
-            "y": 3,
-            "z": -1
-        },
-        "block": "create:spout"
-    },
-
-    //-----------------------------------------------------
-    //Layer 5
-    //-----------------------------------------------------
-
-    {
-        "pos":{
-            "x": 0,
-            "y": 4,
-            "z": -1
-        },
-        "block": "masterfulmachinery:infuser_basic_port_fluids_input"
-    },
-        {
-            "pos":{
-                "x": -1,
-                "y": 4,
-                "z": -1
-            },
-            "block": "superpackutils:infuser_casing"
-        },
-        {
-            "pos":{
-                "x": 1,
-                "y": 4,
-                "z": -1
-            },
-            "block": "superpackutils:infuser_casing"
-        },
-        {
-            "pos":{
-                "x": 0,
-                "y": 4,
-                "z": -2
-            },
-            "block": "superpackutils:infuser_casing"
-        },
-        {
-            "pos":{
-                "x": 0,
-                "y": 4,
-                "z": 0
-            },
-            "block": "superpackutils:infuser_casing"
-        },
-        {
-            "pos":{
-                "x": -1,
-                "y": 4,
-                "z": 0
-            },
-            "block": "superpackutils:infuser_casing"
-        },
-        {
-            "pos":{
-                "x": -1,
-                "y": 4,
-                "z": -2
-            },
-            "block": "superpackutils:infuser_casing"
-        },
-        {
-            "pos":{
-                "x": 1,
-                "y": 4,
-                "z": 0
-            },
-            "block": "superpackutils:infuser_casing"
-        },
-        {
-            "pos":{
-                "x": 1,
-                "y": 4,
-                "z": -2
-            },
-            "block": "superpackutils:infuser_casing"
-        },
-
-        ]
+            "O": {
+                "block": "masterfulmachinery:infuser_basic_port_mekanism_gas_output"
+            }
+        }
     })
 
-        //-----------------------------------------------------
-    //Metallurgic Recipe
+    //-----------------------------------------------------
+    //Infuser Recipe
     //-----------------------------------------------------
     
+    //Rich Slag
     event.custom({
         "type": "masterfulmachinery:machine_process",
-        "structureId": "inscriber",
-        "controllerId": "inscriber",
+        "structureId": "infuser",
+        "controllerId": "infuser",
         "ticks": 1000,
         "inputs": [
             {
@@ -1165,6 +647,52 @@ event.custom({
                 "type": "masterfulmachinery:items",
                 "data":{
                     "item": "thermal:rich_slag",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Starlight Shard
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "infuser",
+        "controllerId": "infuser",
+        "ticks": 3000,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 1000
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:ender_pearl_nugget",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:fluids",
+                "data":{
+                    "fluid": "astralsorcery:liquid_starlight",
+                    "amount": 250
+                }
+            },
+            {
+                "type": "masterfulmachinery:mekanism_gas",
+                "data":{
+                    "gas": "superpackutils:chemical_death",
+                    "amount": 100
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:starlight_shard",
                     "count": 1
                 }
             }

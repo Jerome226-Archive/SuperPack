@@ -18,6 +18,11 @@ events.listen('recipes', function (event) {
     //Easy Seed Oil Remove
     event.remove({id: 'createaddition:compacting/seed_oil'})
 
+    //Easy Ingots Remove
+    event.remove({id: 'createaddition:compat/immersiveengineering/constantan'})
+    event.remove({id: 'createaddition:compat/immersiveengineering/electrum'})
+    event.remove({id: 'createaddition:compat/tconstruct/manyullyn'})
+
     //Induction Heater
     event.remove({output: 'createaddition:heater'})
     event.shaped('createaddition:heater', [' C ', 'IBI', 'SPS'], {

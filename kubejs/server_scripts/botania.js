@@ -417,4 +417,116 @@ events.listen('recipes', function (event) {
         ]
     })
 
+    //Rune of Autumn
+    event.remove({id: 'botania:runic_altar/autumn'})
+    event.custom({
+        "type": "botania:runic_altar",
+        "output": {
+          "item": "botania:rune_autumn",
+          "count": 1
+        },
+        "mana": 8000,
+        "ingredients": [
+          {
+            "item": "botania:rune_air"
+          },
+          {
+            "item": "botania:rune_fire"
+          },
+          {
+            "item": "create:honeyed_apple"
+          },
+          {
+            "item": "farmersdelight:hot_cocoa"
+          },
+          {
+            "item": "minecraft:spider_eye"
+          }
+        ]
+    })
+
+    //Rune of Summer
+    event.remove({id: 'botania:runic_altar/summer'})
+    event.custom({
+        "type": "botania:runic_altar",
+        "output": {
+          "item": "botania:rune_summer",
+          "count": 1
+        },
+        "mana": 8000,
+        "ingredients": [
+          {
+            "item": "botania:rune_air"
+          },
+          {
+            "item": "botania:rune_earth"
+          },
+          {
+            "item": "farmersdelight:chocolate_pie"
+          },
+          {
+            "item": "farmersdelight:melon_popsicle"
+          },
+          {
+            "item": "minecraft:apple"
+          }
+        ]
+    })
+
+    //Rune of Spring
+    event.remove({id: 'botania:runic_altar/spring'})
+    event.custom({
+        "type": "botania:runic_altar",
+        "output": {
+          "item": "botania:rune_spring",
+          "count": 1
+        },
+        "mana": 8000,
+        "ingredients": [
+          {
+            "item": "botania:rune_water"
+          },
+          {
+            "item": "botania:rune_fire"
+          },
+          {
+            "item": "farmersdelight:red_mushroom_colony"
+          },
+          {
+            "item": "atmospheric:aloe_leaves"
+          },
+          {
+            "item": "autumnity:sap_bottle"
+          }
+        ]
+    })
+
+    //Rune of Water
+    event.remove({id: 'botania:runic_altar/winter'})
+    event.custom({
+        "type": "botania:runic_altar",
+        "output": {
+          "item": "botania:rune_winter",
+          "count": 1
+        },
+        "mana": 8000,
+        "ingredients": [
+          {
+            "item": "botania:rune_water"
+          },
+          {
+            "item": "botania:rune_earth"
+          },
+          {
+            "item": "minecraft:cake"
+          },
+          {
+            "item": "thermal:frost_melon_slice"
+          },
+          {
+            "item": "minecraft:packed_ice"
+          }
+        ]
+    })
+
 });

@@ -55,6 +55,7 @@ var outputRemoval = [
     'createaddition:gold_spool',
     'createaddition:connector',
     'createaddition:accumulator',
+    'createaddition:redstone_relay',
 
     //Pneumaticcraft
     'pneumaticcraft:logistics_configurator',

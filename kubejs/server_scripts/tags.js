@@ -16,7 +16,5 @@ events.listen('item.tags', function (event) {
     event.get('forge:storage_blocks/starmetal').add('astralsorcery:starmetal')
     event.get('forge:dusts/starmetal').add('astralsorcery:stardust')
     event.get('forge:ores/starmetal').add('astralsorcery:starmetal_ore')
-
-    event.get('forge:storage_blocks/steel').remove('immersiveengineering:storage_steel')
-
+    
 });

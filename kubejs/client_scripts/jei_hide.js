@@ -139,6 +139,8 @@ onEvent('jei.hide.items', event => {
         'createaddition:gold_spool',
         'createaddition:iron_spool',
         'createaddition:connector',
+        'createaddition:accumulator',
+        'createaddition:redstone_relay',
 
         //Iron Dust
         'bloodmagic:ironsand',
@@ -199,6 +201,9 @@ onEvent('jei.hide.items', event => {
 
         //Copper Rod
         'immersiveposts:stick_copper',
+
+        //Copper Wire
+        'createaddition:copper_wire',
 
         //Tin Ingot
         'mekanism:ingot_tin',

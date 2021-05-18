@@ -79,4 +79,12 @@ events.listen('recipes', function (event) {
     event.remove({output: 'buzzier_bees:glazed_porkchop'})
     event.recipes.create.filling('buzzier_bees:glazed_porkchop', ['minecraft:cooked_porkchop', fluid.of('create:honey', 250)])
 
+    //Sap Bottle
+    event.remove({output: 'autumnity:sap_bottle'})
+    event.recipes.create.filling('autumnity:sap_bottle', ['minecraft:glass_bottle', fluid.of('thermal:sap', 250)])
+
+    //Syrup Bottle
+    event.remove({output: 'autumnity:syrup_bottle'})
+    event.recipes.create.filling('autumnity:syrup_bottle', ['minecraft:glass_bottle', fluid.of('thermal:syrup', 250)])
+
 });

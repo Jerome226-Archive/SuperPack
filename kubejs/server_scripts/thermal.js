@@ -124,9 +124,6 @@ events.listen('recipes', function (event) {
         T: '#forge:treated_wood'
     }),
 
-    //Rich Slag
-    event.recipes.create.filling('thermal:rich_slag', ['thermal:slag', fluid.of('immersivepetroleum:napalm', 35)]),
-
     //Redstone Flux Coil
     event.remove({id: 'thermal:rf_coil'})
     event.recipes.mekanism.metallurgic_infusing('thermal:rf_coil', 'immersiveengineering:coil_mv', 'mekanism:redstone', 160),

@@ -144,44 +144,6 @@ events.listen('recipes', function (event) {
           I: 'refinedstorage:machine_casing'
       }),
 
-    //Inscriber Controller
-    event.remove({output: 'masterfulmachinery:inscriber_controller'})
-    event.recipes.create.mechanical_crafting('masterfulmachinery:inscriber_controller', [
-        'CPPPC',
-        'PSESP',
-        'PGHGP',
-        'PSESP',
-        'CPPPC'
-      ], {
-        C: 'thermal:invar_plate',
-        P: 'superpackutils:inscriber_casing',
-        S: 'superpackutils:mixed_alloy_ingot',
-        E: 'create:integrated_circuit',
-        G: 'immersiveengineering:circuit_board',
-        H: 'refinedstorage:machine_casing'
-    })
-
-    //Inscriber Item Output
-    event.shaped('masterfulmachinery:inscriber_basic_port_items_output', ['ACA', 'CIC', 'ACA'], {
-      I: 'create:integrated_circuit',
-      A: 'thermal:copper_ingot',
-      C: 'superpackutils:inscriber_casing'
-  }),
-
-    //Inscriber Item Input
-    event.shaped('masterfulmachinery:inscriber_basic_port_items_input', ['ACA', 'CIC', 'ACA'], {
-      I: 'create:integrated_circuit',
-      A: 'tconstruct:cobalt_ingot',
-      C: 'superpackutils:inscriber_casing'
-  }),
-
-    //Inscriber Energy Input
-    event.shaped('masterfulmachinery:inscriber_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
-      I: 'create:integrated_circuit',
-      A: 'mekanism:energy_tablet',
-      C: 'superpackutils:inscriber_casing'
-  }),
-
         //Metallurgic Casing
         event.remove({output: 'superpackutils:metallurgic_casing'})
         event.shaped(Item.of('superpackutils:metallurgic_casing', 4), ['BCB', 'AIA', 'BCB'], {
@@ -204,6 +166,9 @@ events.listen('recipes', function (event) {
 
     //Silicon Dioxide Oxiding
     event.custom({"type":"mekanism:oxidizing","input":{"ingredient":{"tag":"forge:dusts/quartz"}},"output":{"gas":"superpackutils:silicon_dioxide","amount":100}})
+
+    //Chemical Death
+    event.custom({"type":"mekanism:oxidizing","input":{"ingredient":{"item":"superpackutils:dyingrock"}},"output":{"gas":"superpackutils:chemical_death","amount":50}})
 
     //Ethyl Chloride
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:hydrogen_chloride"},"rightInput":{"amount":1,"gas":"mekanism:ethene"},"output":{"gas":"superpackutils:ethyl_chloride","amount":1}})
@@ -279,9 +244,6 @@ events.listen('recipes', function (event) {
       S: 'superpackutils:reinforced_capacitor',
       I: '#forge:gears/compressed_iron'
     }),
-
-    //Starlight Shard
-    event.recipes.create.filling('superpackutils:starlight_shard', ['astralsorcery:illumination_powder', fluid.of('astralsorcery:liquid_starlight', 1000)]),
 
     //Starlight-Infused Mana Pearl
     event.custom({

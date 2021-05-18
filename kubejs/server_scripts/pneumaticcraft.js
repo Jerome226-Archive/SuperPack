@@ -16,14 +16,13 @@ events.listen('recipes', function (event) {
     //Ethanol & Plant Oil
     event.remove({id: 'pneumaticcraft:thermo_plant/ethanol_from_poisonous_potato'})
     event.remove({id: 'pneumaticcraft:thermo_plant/ethanol_from_potato'})
-    event.remove({id: 'pneumaticcraft:thermo_plant/ethanol_from_sweat_berries'})
+    event.remove({id: 'pneumaticcraft:thermo_plant/ethanol_from_sweet_berries'})
     event.remove({id: 'pneumaticcraft:thermo_plant/ethanol_from_apple'})
     event.remove({id: 'pneumaticcraft:thermo_plant/ethanol_from_melon'})
     event.remove({id: 'pneumaticcraft:thermo_plant/ethanol_from_sugar'})
 
     event.remove({id: 'pneumaticcraft:thermo_plant/vegetable_oil_from_seeds'})
     event.remove({id: 'pneumaticcraft:thermo_plant/vegetable_oil_from_crops'})
-
 
     //Refinery
     event.remove({id: 'pneumaticcraft:refinery/oil_2'})

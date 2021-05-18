@@ -168,7 +168,7 @@ events.listen('recipes', function (event) {
     }),
 
     //Netherite Dust removal
-    event.remove({output: 'mekanism:thermal_evaporation_block'})
+    event.remove({id: 'mekanism:processing/netherite/scrap_to_dust'})
 
     //Enrichment Chamber
     event.remove({output: 'mekanism:enrichment_chamber'})
@@ -507,7 +507,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanism:superheating_element', ['CSC', 'SBS', 'CSC'], {
         S: 'superpackutils:superheated_bronze_ingot',
         C: '#mekanism:enriched/redstone',
-        B: 'superpackutils:big_steel_casing'
+        B: 'mekanism:steel_casing'
     }),
 
     //Pressure Dispenser

@@ -104,6 +104,14 @@ events.listen('recipes', function (event) {
         T: '#forge:treated_wood'
     }),
 
+    //Sawblade
+    event.remove({output: 'immersiveengineering:sawblade'})
+    event.shaped('immersiveengineering:sawblade', ['STS', 'TAT', 'STS'], {
+        A: 'thermal:saw_blade',
+        S: 'immersiveengineering:plate_steel',
+        T: 'mekanism:ingot_steel'
+    }),
+
     //LV Capacitor
     event.remove({output: 'immersiveengineering:capacitor_lv'})
     event.shaped('immersiveengineering:capacitor_lv', ['GCG', 'JBJ', 'ATA'], {
@@ -194,14 +202,5 @@ events.listen('recipes', function (event) {
         P: 'superpackutils:compressed_steel_ingot',
         A: '#forge:dusts/redstone',
         C: 'immersiveengineering:coil_lv'
-    }),
-
-    //IE Steel Block
-    event.remove({output: 'immersiveengineering:storage_steel'})
-    event.shaped(Item.of('immersiveengineering:storage_steel', 3), ['CSC', 'SBS', 'CSC'], {
-        C: 'immersiveengineering:component_steel',
-        S: 'immersiveengineering:sheetmetal_steel',
-        B: 'mekanism:block_steel'
     })
-
 });
