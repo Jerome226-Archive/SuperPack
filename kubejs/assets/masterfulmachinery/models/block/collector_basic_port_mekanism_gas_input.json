@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "masterfulmachinery:block/collector_basic_port_mekanism_gas_input"
+  }
+}

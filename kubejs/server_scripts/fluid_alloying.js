@@ -40,7 +40,7 @@ events.listen('recipes', function (event) {
 
     //Queens Slime
     event.remove({id: 'tconstruct:smeltery/alloys/molten_queens_slime'})
-    event.recipes.create.mixing(fluid.of('tconstruct:molten_queens_slime', 288), [fluid.of('tconstruct:molten_cobalt', 144), fluid.of('tconstruct:molten_gold', 144), 'minecraft:magma_cream']).superheated()
+    event.recipes.create.mixing(fluid.of('tconstruct:molten_queens_slime', 288), [fluid.of('tconstruct:molten_cobalt', 144), fluid.of('tconstruct:molten_uranium', 144), 'minecraft:magma_cream']).superheated()
 
     //Hepatizon
     event.remove({id: 'tconstruct:smeltery/alloys/molten_hepatizon'})

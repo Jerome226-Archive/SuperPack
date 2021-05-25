@@ -27,4 +27,11 @@ onEvent('jei.add.items', event => {
     event.add('immersiveengineering:silo')
     event.add('immersiveengineering:tank')
 
+    //Ruby
+    event.add('thermal:ruby')
+    event.add('thermal:ruby_block')
+    event.add('thermal:ruby_dust')
+    event.add('thermal:ruby_gear')
+    event.add('thermal:ruby_ore')
+
 })

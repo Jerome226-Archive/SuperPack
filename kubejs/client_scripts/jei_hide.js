@@ -23,8 +23,10 @@ onEvent('jei.hide.items', event => {
 
     event.hide([
 
+        //Light Source
+        'advancedrocketry:lightsource',
+
         //Refined Storage
-        'refinedstorage:creative_controller',
         'refinedstorage:crafter',
         'refinedstorage:crafting_monitor',
         'refinedstorage:crafter_manager',
@@ -46,6 +48,11 @@ onEvent('jei.hide.items', event => {
         'masterfulmachinery:inscriber_basic_port_energy_output',
         'masterfulmachinery:infuser_basic_port_fluids_output',
         'masterfulmachinery:infuser_basic_port_energy_output',
+        'masterfulmachinery:improved_metallurgic_fabricator_basic_port_pncr_pressure_output',
+        'masterfulmachinery:collector_basic_port_energy_output',
+        'masterfulmachinery:assembler_basic_port_energy_output',
+        'masterfulmachinery:assembler_basic_port_fluids_output',
+        'masterfulmachinery:assembler_basic_port_pncr_pressure_output',
 
         //Mekanism Pipes
         'mekanism:basic_universal_cable',
@@ -65,9 +72,6 @@ onEvent('jei.hide.items', event => {
         'mekanism:restrictive_transporter',
         'mekanism:diversion_transporter',
         'mekanism:logistical_sorter',
-
-        'mekanism:formulaic_assemblicator',
-        'mekanism:crafting_formula',
 
         //Pneumaticcraft
         'pneumaticcraft:logistics_configurator',
@@ -113,6 +117,9 @@ onEvent('jei.hide.items', event => {
 
         //Emerald
         'mekanism:dust_emerald',
+
+        //Quartz
+        'mekanism:dust_quartz',
 
         //Sulfur
         'bloodmagic:sulfur',
@@ -169,9 +176,6 @@ onEvent('jei.hide.items', event => {
 
         //Gold Rod
         'immersiveposts:stick_gold',
-
-        //Silicon
-        'libvulpes:dustsilicon',
 
         //Copper Ingot
         'iceandfire:copper_ingot',

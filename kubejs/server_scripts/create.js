@@ -51,6 +51,22 @@ events.listen('recipes', function (event) {
         T: '#forge:treated_wood'
     }),
 
+    //Create Shadow Casing
+    event.remove({output: 'create:shadow_steel_casing'})
+    event.shaped('create:shadow_steel_casing', ['CTC', 'TWT', 'CTC'], {
+        C: 'create:shadow_steel',
+        W: 'thermal:enderium_glass',
+        T: 'thermal:enderium_plate'
+    }),
+
+    //Create Radiant Casing
+    event.remove({output: 'create:refined_radiance_casing'})
+    event.shaped('create:refined_radiance_casing', ['CTC', 'TWT', 'CTC'], {
+        C: 'create:refined_radiance',
+        W: 'thermal:lumium_glass',
+        T: 'thermal:lumium_plate'
+    }),
+
     //Create Cogwheel
     event.remove({output: 'create:cogwheel'})
     event.shaped(Item.of('create:cogwheel', 6), ['STS', 'TAT', 'STS'], {

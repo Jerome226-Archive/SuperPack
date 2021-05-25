@@ -18,6 +18,76 @@ events.listen('recipes', function (event) {
     event.remove({id: 'thermal:machine/smelter/smelter_cured_rubber'})
     event.custom({"type":"mekanism:purifying","itemInput":{"ingredient":{"item":"thermal:rubber"}},"gasInput":{"amount":1,"gas":"mekanism:oxygen"},"output":{"item":"thermal:cured_rubber"}})
 
+    //Sap Bottle Empying
+    event.recipes.create.emptying([fluid.of('thermal:sap', 250), 'minecraft:glass_bottle'], 'autumnity:sap_bottle')
+
+    //Syrup Bottle Empying
+    event.recipes.create.emptying([fluid.of('thermal:syrup', 250), 'minecraft:glass_bottle'], 'autumnity:syrup_bottle')
+
+    //Hardened Glass
+    event.remove({output: 'thermal:obsidian_glass'})
+    event.recipes.create.mixing(Item.of('thermal:obsidian_glass', 2), ['thermal:quartz_dust', 'minecraft:obsidian', '#forge:sand'])
+
+    //Signalum Glass
+    event.remove({output: 'thermal:signalum_glass'})
+    event.custom({
+      "type": "pneumaticcraft:pressure_chamber",
+      "inputs": [
+        {
+          "item": "thermal:obsidian_glass"
+        },
+        {
+          "item": "thermal:signalum_dust"
+        },
+      ],
+      "pressure": 3,
+      "results": [
+        {
+          "item": "thermal:signalum_glass"
+        }
+      ]
+  })
+  
+    //Lumium Glass
+    event.remove({output: 'thermal:lumium_glass'})
+    event.custom({
+      "type": "pneumaticcraft:pressure_chamber",
+      "inputs": [
+        {
+          "item": "thermal:obsidian_glass"
+        },
+        {
+          "item": "thermal:lumium_dust"
+        },
+      ],
+      "pressure": 3,
+      "results": [
+        {
+          "item": "thermal:lumium_glass"
+        }
+      ]
+  })
+
+    //Enderium Glass
+    event.remove({output: 'thermal:enderium_glass'})
+    event.custom({
+      "type": "pneumaticcraft:pressure_chamber",
+      "inputs": [
+        {
+          "item": "thermal:obsidian_glass"
+        },
+        {
+          "item": "thermal:enderium_dust"
+        },
+      ],
+      "pressure": 3,
+      "results": [
+        {
+          "item": "thermal:enderium_glass"
+        }
+      ]
+  })
+
     //Thermal Arboreal Extractor
     event.remove({output: 'thermal:device_tree_extractor'})
     event.shaped('thermal:device_tree_extractor', ['TDT', 'BCB', 'TST'], {
@@ -152,6 +222,211 @@ events.listen('recipes', function (event) {
         I: '#forge:rods'
     }),
 
+    //Rich Slag
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "infuser",
+        "controllerId": "infuser",
+        "ticks": 1000,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 1000
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:slag",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:fluids",
+                "data":{
+                    "fluid": "immersivepetroleum:napalm",
+                    "amount": 35
+                }
+            },
+            {
+                "type": "masterfulmachinery:mekanism_gas",
+                "data":{
+                    "gas": "mekanism:sulfur_dioxide",
+                    "amount": 100
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:rich_slag",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Enderium
+    event.custom({
+      "type": "masterfulmachinery:machine_process",
+      "structureId": "improved_metallurgic_fabricator",
+      "controllerId": "improved_metallurgic_fabricator",
+      "ticks": 1000,
+      "inputs": [
+          {
+              "type": "masterfulmachinery:pncr_pressure",
+              "data":{
+                  "air": 100
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:blizz_powder",
+                  "count": 1
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "superpackutils:platinum_ingot",
+                  "count": 1
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:lead_ingot",
+                  "count": 1
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "mekanism:ingot_refined_obsidian",
+                  "count": 1
+              }
+          }
+      ],
+      "outputs":[
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:enderium_ingot",
+                  "count": 1
+              }
+          }
+      ]
+  })
+
+  //Signalum
+  event.custom({
+      "type": "masterfulmachinery:machine_process",
+      "structureId": "improved_metallurgic_fabricator",
+      "controllerId": "improved_metallurgic_fabricator",
+      "ticks": 1000,
+      "inputs": [
+          {
+              "type": "masterfulmachinery:pncr_pressure",
+              "data":{
+                  "air": 100
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:basalz_powder",
+                  "count": 1
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:copper_ingot",
+                  "count": 1
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:silver_ingot",
+                  "count": 1
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "superpackutils:redstone_alloy_ingot",
+                  "count": 1
+              }
+          }
+      ],
+      "outputs":[
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:signalum_ingot",
+                  "count": 1
+              }
+          }
+      ]
+  })
+
+  //Lumium
+  event.custom({
+      "type": "masterfulmachinery:machine_process",
+      "structureId": "improved_metallurgic_fabricator",
+      "controllerId": "improved_metallurgic_fabricator",
+      "ticks": 1000,
+      "inputs": [
+          {
+              "type": "masterfulmachinery:pncr_pressure",
+              "data":{
+                  "air": 100
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:blitz_powder",
+                  "count": 1
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:silver_ingot",
+                  "count": 1
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:tin_ingot",
+                  "count": 1
+              }
+          },
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "mekanism:ingot_refined_glowstone",
+                  "count": 1
+              }
+          }
+      ],
+      "outputs":[
+          {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "thermal:lumium_ingot",
+                  "count": 1
+              }
+          }
+      ]
+  })
+  
     //Coal Coke
     event.remove({id: 'thermal:machine/pyrolyzer/pyrolyzer_logs'})
     event.custom({
@@ -191,6 +466,63 @@ events.listen('recipes', function (event) {
           }
         ],
         "experience": 0.15
+    })
+
+    //Oil Sand
+    event.remove({id: 'thermal:machine/centrifuge/centrifuge_oil_red_sand'})
+    event.custom({
+      "type": "thermal:centrifuge",
+      "ingredient": {
+        "item": "thermal:oil_red_sand"
+      },
+      "result": [
+        {
+          "item": "minecraft:red_sand",
+          "chance": 0.75,
+          "locked": true
+        },
+        {
+          "item": "thermal:bitumen",
+          "chance": 1.5
+        },
+        {
+          "item": "thermal:tar",
+          "chance": 1.0
+        },
+        {
+          "fluid": "immersivepetroleum:oil",
+          "amount": 100
+        }
+      ],
+      "energy": 20000
+    })
+
+    event.remove({id: 'thermal:machine/centrifuge/centrifuge_oil_sand'})
+    event.custom({
+      "type": "thermal:centrifuge",
+      "ingredient": {
+        "item": "thermal:oil_sand"
+      },
+      "result": [
+        {
+          "item": "minecraft:sand",
+          "chance": 0.75,
+          "locked": true
+        },
+        {
+          "item": "thermal:bitumen",
+          "chance": 1.5
+        },
+        {
+          "item": "thermal:tar",
+          "chance": 1.0
+        },
+        {
+          "fluid": "immersivepetroleum:oil",
+          "amount": 100
+        }
+      ],
+      "energy": 20000
     })
 
 });

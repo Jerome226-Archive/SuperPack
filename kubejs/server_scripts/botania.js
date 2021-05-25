@@ -114,10 +114,10 @@ events.listen('recipes', function (event) {
             "item": "botania:glimmering_livingwood"
           },
           "A": {
-            "item": "superpackutils:starlight_infused_mana_diamond"
+            "item": "tconstruct:queens_slime_ingot"
           },
           "D": {
-            "item": "superpackutils:starlight_infused_mana_pearl"
+            "item": "superpackutils:starlight_shard"
           }
         },
         "output": [
@@ -205,6 +205,22 @@ events.listen('recipes', function (event) {
     event.shaped('botania:lens_normal', [' F ', 'FIF', ' F '], {
         F: 'botania:manasteel_ingot',
         I: 'astralsorcery:glass_lens'
+    }),
+
+    //Alchemy Catalyst
+    event.remove({output: 'botania:alchemy_catalyst'})
+    event.shaped('botania:alchemy_catalyst', ['CAC', 'IBI', 'CAC'], {
+          C: 'botania:livingrock',
+          A: 'minecraft:gold_ingot',
+          B: 'botania:mana_pearl',
+          I: 'botania:brewery'
+    }),
+
+    //Manaweave Cloth
+    event.remove({output: 'botania:manaweave_cloth'})
+    event.shaped('botania:manaweave_cloth', ['ACA', 'CAC', 'ACA'], {
+          C: 'immersiveengineering:hemp_fiber',
+          A: 'botania:mana_string'
     }),
 
     //Mana Spreader
@@ -462,7 +478,7 @@ events.listen('recipes', function (event) {
             "item": "botania:rune_earth"
           },
           {
-            "item": "farmersdelight:chocolate_pie"
+            "item": "farmersdelight:apple_pie"
           },
           {
             "item": "farmersdelight:melon_popsicle"

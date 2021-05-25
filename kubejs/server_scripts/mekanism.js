@@ -22,6 +22,10 @@ events.listen('recipes', function (event) {
     event.remove({id: 'mekanism:reaction/substrate/water_hydrogen'})
     event.custom({"type":"mekanism:reaction","itemInput":{"amount":2,"ingredient":{"tag":"forge:fuels/bio"}},"fluidInput":{"amount":200,"tag":"forge:ethanol"},"gasInput":{"amount":100,"gas":"mekanism:sulfuric_acid"},"duration":100,"itemOutput":{"item":"mekanism:substrate"},"gasOutput":{"gas":"mekanism:ethene","amount":100}})
 
+    //HDPE Rod
+    event.remove({id: 'mekanism:hdpe_rod'})
+    event.recipes.immersiveengineering.metal_press('mekanism:hdpe_rod', Item.of('mekanism:hdpe_pellet', 4), 'immersiveengineering:mold_rod')
+
     //Uranium Smelting Induction Smelter
     event.custom({
         "type": "thermal:smelter",
@@ -99,7 +103,7 @@ events.listen('recipes', function (event) {
 
     //Mekanism Steel Casing
     event.remove({output: 'mekanism:steel_casing'})
-    event.recipes.create.mechanical_crafting(Item.of('mekanism:steel_casing', 2), [
+    event.recipes.create.mechanical_crafting(Item.of('mekanism:steel_casing', 1), [
         'CPSPC',
         'PEGEP',
         'SBHBS',
@@ -115,29 +119,102 @@ events.listen('recipes', function (event) {
         B: 'superpackutils:bio_plastic'
     })
 
-    //Thermal Evaporation Tower
+    //Cheap Steel Casing
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "assembler",
+        "controllerId": "assembler",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 1000
+                }
+            },
+            {
+                "type": "masterfulmachinery:fluids",
+                "data":{
+                    "fluid": "youmatter:stabilizer",
+                    "amount": 250
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "youmatter:machine_casing",
+                    "count": 2
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "immersiveengineering:plate_steel",
+                    "count": 4
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:bio_plastic",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:sturdy_capacitor",
+                    "count": 2
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:electrical_platinum_ingot",
+                    "count": 2
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "immersiveengineering:heavy_engineering",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "mekanism:steel_casing",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Thermal Evaporation Controller
     event.remove({output: 'mekanism:thermal_evaporation_controller'})
     event.recipes.create.mechanical_crafting('mekanism:thermal_evaporation_controller', [
-        'CPPPC',
-        'PSESP',
-        'PGHGP',
-        'PSESP',
-        'CPPPC'
-      ], {
-        C: 'thermal:bronze_plate',
-        P: 'mekanism:thermal_evaporation_block',
-        S: 'superpackutils:vibrant_alloy_ingot',
-        E: 'create:integrated_circuit',
-        G: '#forge:circuits/advanced',
-        H: 'mekanism:steel_casing'
+            'VPEPV',
+            'CGHGD',
+            'VPEPV'
+          ], {
+            P: 'mekanism:thermal_evaporation_block',
+            C: 'refinedstorage:construction_core',
+            V: 'superpackutils:vibrant_alloy_ingot',
+            D: 'refinedstorage:destruction_core',
+            E: 'superpackutils:copper_solenoid',
+            G: 'mekanism:advanced_control_circuit',
+            H: 'mekanism:steel_casing'
     })
 
     //Thermal Evaporation Casing
     event.remove({output: 'mekanism:thermal_evaporation_block'})
     event.shaped(Item.of('mekanism:thermal_evaporation_block', 4), ['BCB', 'AIA', 'BCB'], {
-        C: 'superpackutils:tin_brass_ingot',
+        C: 'superpackutils:aluminum_brass_ingot',
         A: 'superpackutils:sturdy_capacitor',
-        B: '#forge:sheetmetals/copper',
+        B: 'immersiveengineering:sheetmetal_constantan',
         I: 'mekanism:steel_casing'
     }),
 
@@ -468,10 +545,21 @@ events.listen('recipes', function (event) {
 
     //Fuelwood Heater
     event.remove({output: 'mekanism:fuelwood_heater'})
-    event.shaped('mekanism:fuelwood_heater', ['SCS', 'IBI', 'SCS'], {
+    event.shaped('mekanism:fuelwood_heater', ['SCS', 'IBI', 'SAS'], {
         S: '#forge:plates/steel',
         C: 'minecraft:furnace',
         B: 'mekanism:steel_casing',
+        A: 'create:blaze_burner',
+        I: '#forge:circuits/basic'
+    }),
+
+    //Formulaic Assemblicator
+    event.remove({output: 'mekanism:formulaic_assemblicator'})
+    event.shaped('mekanism:formulaic_assemblicator', ['SCS', 'IBI', 'SAS'], {
+        S: 'immersiveengineering:plate_uranium',
+        C: 'create:mechanical_crafter',
+        B: 'mekanism:steel_casing',
+        A: 'mekanism:personal_chest',
         I: '#forge:circuits/basic'
     }),
 
@@ -507,7 +595,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanism:superheating_element', ['CSC', 'SBS', 'CSC'], {
         S: 'superpackutils:superheated_bronze_ingot',
         C: '#mekanism:enriched/redstone',
-        B: 'mekanism:steel_casing'
+        B: 'superpackutils:big_steel_casing'
     }),
 
     //Pressure Dispenser

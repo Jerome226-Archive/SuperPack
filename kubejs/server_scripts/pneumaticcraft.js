@@ -86,6 +86,31 @@ events.listen('recipes', function (event) {
 
     event.remove({id: 'pneumaticcraft:heat_frame_cooling/plastic'})
 
+    //Biodiesel
+    event.remove({id: 'pneumaticcraft:fluid_mixer/biodiesel'})
+    event.custom({
+      "type": "pneumaticcraft:fluid_mixer",
+      "input1": {
+        "type": "pneumaticcraft:fluid",
+        "tag": "forge:plantoil",
+        "amount": 25
+      },
+      "input2": {
+        "type": "pneumaticcraft:fluid",
+        "tag": "forge:ethanol",
+        "amount": 25
+      },
+      "fluid_output": {
+        "fluid": "immersiveengineering:biodiesel",
+        "amount": 50
+      },
+      "item_output": {
+        "item": "pneumaticcraft:glycerol"
+      },
+      "pressure": 2.0,
+      "time": 300
+    })
+
     //Yeast Culture
     event.remove({id: 'pneumaticcraft:thermo_plant/yeast_culture'})
     event.custom({"type":"immersiveengineering:fermenter","fluid":{"fluid":"pneumaticcraft:yeast_culture","amount":50},"input":{"item":"superpackutils:weird_fungu"},"energy":5000})

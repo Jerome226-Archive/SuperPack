@@ -6,6 +6,10 @@ events.listen('recipes', function (event) {
     //Misc
     //-----------------------------------------------------
 
+    //Invalid Tags
+    event.remove({id: 'byg:gray_dye'})
+    event.remove({id: 'platforms:wrench_alt'})
+
     //Raw Transistor
     event.remove({output: 'youmatter:transistor_raw'})
     event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"immersiveengineering:hemp_fiber"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:ingot_aluminum"}},{"count":1,"base_ingredient":{"item":"create:brass_sheet"}}],"category":"components","result":{"item":"youmatter:transistor_raw","count":1}})
@@ -34,6 +38,12 @@ events.listen('recipes', function (event) {
         P: 'create:piston_extension_pole',
         M: 'create:mechanical_press'
     })
+
+    //Stabilizer Condensatrator
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:stabilizer"},"gasOutput":{"gas":"superpackutils:stabilizer","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:stabilizer"},"fluidOutput":{"fluid":"youmatter:stabilizer","amount":1}})
+
+    //Stabilizer Bucket
+    event.remove({id: 'youmatter:stabilizer_bucket'})
 
     //Transistor
     event.remove({id: 'youmatter:transistor'})

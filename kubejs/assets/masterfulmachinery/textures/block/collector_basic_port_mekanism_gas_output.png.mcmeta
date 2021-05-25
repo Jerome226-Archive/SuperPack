@@ -1,0 +1,29 @@
+{
+   "ctm":{
+      "ctm_version":1,
+      "type":"CTM",
+      "layer":"SOLID",
+      "textures":[
+         "masterfulmachinery:block/collector_basic_port_mekanism_gas_output-ctm"
+      ],
+      "extra":{
+         "connect_to":[
+            {
+               "block":"mekanism:pressure_disperser"
+            },
+            {
+               "block":"masterfulmachinery:collector_controller"
+            },
+            {
+               "block":"masterfulmachinery:collector_basic_port_mekanism_gas_output"
+            },
+            {
+               "block":"masterfulmachinery:collector_basic_port_mekanism_gas_input"
+            },
+            {
+               "block":"masterfulmachinery:collector_basic_port_energy_input"
+            }
+         ]
+      }
+   }
+}

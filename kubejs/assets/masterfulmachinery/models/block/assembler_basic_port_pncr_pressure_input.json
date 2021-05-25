@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "masterfulmachinery:block/assembler_basic_port_pncr_pressure_input"
+  }
+}

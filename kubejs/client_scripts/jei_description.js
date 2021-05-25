@@ -28,10 +28,4 @@ onEvent('jei.information', event => {
     event.add('immersiveengineering:silo', ['Use a "Projector" to see how to make this multiblock.'])
     event.add('immersiveengineering:tank', ['Use a "Projector" to see how to make this multiblock.'])
 
-    event.add('refinedstorage:raw_basic_processor', ['Made in a Inscriber Multiblock.', '1 Silicon, 1 Processor Binding, 1 Redstone Dust and 1 Quartz Enriched Iron Ingot to make a Raw Basic Processor.'])
-    event.add('refinedstorage:raw_improved_processor', ['Made in a Inscriber Multiblock.', '1 Silicon, 1 Processor Binding, 1 Redstone Dust and 1 Electrum Ingot to make a Raw Improved Processor.'])
-    event.add('refinedstorage:raw_advanced_processor', ['Made in a Inscriber Multiblock.', '1 Silicon, 1 Processor Binding, 1 Redstone Dust and 1 Platinum Ingot to make a Raw Advanced Processor.'])
-
-    event.add('superpackutils:energetic_alloy_ingot', ['Made in a Metallurgic Fabricator Multiblock.', '1 Blaze Quartz, 1 Redstone Dust, 1 Bloody Pigment, 1 Brass Ingot to make a Energetic Alloy Ingot.'])
-
 });

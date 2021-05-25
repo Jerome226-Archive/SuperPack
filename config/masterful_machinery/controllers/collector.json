@@ -1,0 +1,22 @@
+{
+  "controllerId": "collector",
+  "name": "Collector",
+  "ports": [
+    {
+      "type": "masterfulmachinery:mekanism_gas",
+      "name": "Gas",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    },
+    {
+      "type": "masterfulmachinery:energy",
+      "name": "Energy",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    }
+  ]
+}

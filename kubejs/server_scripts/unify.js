@@ -564,7 +564,6 @@ onEvent('recipes', event => {
   
     }
   
-
   //-----------------------------------------------------
   //unifyOre Rod
   //-----------------------------------------------------
@@ -705,7 +704,7 @@ onEvent('recipes', event => {
   unifyOre(false, 'aluminum', 'immersiveengineering:ore_aluminum', 'immersiveengineering:ingot_aluminum', 'immersiveengineering:dust_aluminum', null, 'immersiveengineering:storage_aluminum', 'immersiveengineering:nugget_aluminum', null, 'superpackutils:aluminium_gear', 'immersiveengineering:plate_aluminum', 'create:crushed_aluminum_ore', 'immersiveengineering:stick_aluminum', 'immersiveengineering:wire_aluminum', 'tconstruct:molten_aluminum', 141, 47, 16, 0.15, 'thermal:tin_dust', 2, null);
   unifyOre(false, 'osmium', null, 'mekanism:ingot_osmium', 'mekanism:dust_osmium', 'mekanism:dirty_dust_osmium', 'mekanism:block_osmium', 'mekanism:nugget_osmium', null, 'superpackutils:osmium_gear', null, 'create:crushed_osmium_ore', null, null, 'tconstruct:molten_osmium', 233, 78, 26, 0.15, 'mekanism:dust_uranium', 2, null);
   unifyOre(false, 'zinc', 'create:zinc_ore', 'create:zinc_ingot', 'superpackutils:zinc_dust', null, 'create:zinc_block', 'create:zinc_nugget', null, null, 'createaddition:zinc_sheet', 'create:crushed_zinc_ore', null, null, 'tconstruct:molten_zinc', 141, 47, 16, 0.15, 'thermal:copper_dust', 2, null);
-  unifyOre(false, 'electrum', null, 'thermal:electrum_ingot', 'thermal:electrum_dust', null, 'thermal:electrum_block', 'thermal:electrum_nugget', 'thermal:electrum_coin', 'thermal:electrum_gear', 'thermal:electrum_plate', null, 'immersiveposts:stick_constantan', 'immersiveengineering:wire_electrum', 'tconstruct:molten_electrum', 177, 59, 20, 0.15, null, 2, null);
+  unifyOre(false, 'electrum', null, 'thermal:electrum_ingot', 'thermal:electrum_dust', null, 'thermal:electrum_block', 'thermal:electrum_nugget', 'thermal:electrum_coin', 'thermal:electrum_gear', 'thermal:electrum_plate', null, 'immersiveposts:stick_electrum', 'immersiveengineering:wire_electrum', 'tconstruct:molten_electrum', 177, 59, 20, 0.15, null, 2, null);
   unifyOre(false, 'constantan', null, 'thermal:constantan_ingot', 'thermal:constantan_dust', null, 'thermal:constantan_block', 'thermal:constantan_nugget', 'thermal:constantan_coin', 'thermal:constantan_gear', 'thermal:constantan_plate', null, 'immersiveposts:stick_constantan', null, 'tconstruct:molten_constantan', 192, 64, 21, 0.15, null, 2, null);
   unifyOre(false, 'invar', null, 'thermal:invar_ingot', 'thermal:invar_dust', null, 'thermal:invar_block', 'thermal:invar_nugget', 'thermal:invar_coin', 'thermal:invar_gear', 'thermal:invar_plate', null, null, null, 'tconstruct:molten_invar', 190, 63, 21, 0.15, null, 2, null);
   unifyOre(false, 'bronze', null, 'thermal:bronze_ingot', 'thermal:bronze_dust', null, 'thermal:bronze_block', 'thermal:bronze_nugget', 'thermal:bronze_coin', 'thermal:bronze_gear', 'thermal:bronze_plate', null, null, null, 'tconstruct:molten_bronze', 171, 57, 19, 0.15, null, 2, null);
@@ -722,8 +721,9 @@ onEvent('recipes', event => {
   unifyOre(false, 'titanium', 'libvulpes:orerutile', 'libvulpes:ingottitanium', 'libvulpes:dusttitanium', null, 'libvulpes:blocktitanium', 'libvulpes:nuggettitanium', null, 'libvulpes:geartitanium', 'libvulpes:platetitanium', null, 'libvulpes:sticktitanium', null, null, 0, 0, 0, 0, 0, 2, null);
   unifyOre(false, 'titaniumiridium', null, 'advancedrocketry:ingottitaniumiridium', 'advancedrocketry:dusttitaniumiridium', null, 'advancedrocketry:blocktitaniumiridium', 'advancedrocketry:nuggettitaniumiridium', null, 'advancedrocketry:geartitaniumiridium', 'advancedrocketry:platetitaniumiridium', null, 'advancedrocketry:sticktitaniumiridium', null, null, 0, 0, 0, 0, 0, 2, null);
   unifyOre(false, 'titaniumaluminide', null, 'advancedrocketry:ingottitaniumaluminide', 'advancedrocketry:dusttitaniumaluminide', null, 'advancedrocketry:blocktitaniumaluminide', 'advancedrocketry:nuggettitaniumaluminide', null, 'advancedrocketry:geartitaniumaluminide', 'advancedrocketry:platetitaniumaluminide', null, 'advancedrocketry:sticktitaniumaluminide', null, null, 0, 0, 0, 0, 0, 2, null);
-  unifyOre(false, 'iridium', 'libvulpes:orerutile', 'libvulpes:ingotiridium', 'libvulpes:dustiridium', null, 'libvulpes:blockiridium', 'libvulpes:nuggetiridium', null, null, 'libvulpes:plateiridium', null, 'libvulpes:stickiridium', null, null, 0, 0, 0, 0, 0, 2, null);
-  unifyOre(false, 'silicon', null, 'libvulpes:ingotsilicon', null, null, null, 'libvulpes:nuggetsilicon', null, null, 'libvulpes:platesilicon', null, null, null, null, 0, 0, 0, 0, 0, 0, null);
+  unifyOre(false, 'iridium', 'libvulpes:oreiridium', 'libvulpes:ingotiridium', 'libvulpes:dustiridium', null, 'libvulpes:blockiridium', 'libvulpes:nuggetiridium', null, null, 'libvulpes:plateiridium', null, 'libvulpes:stickiridium', null, null, 0, 0, 0, 0, 0, 2, null);
+  unifyOre(false, 'silicon', null, 'libvulpes:ingotsilicon', 'libvulpes:dustsilicon', null, null, 'libvulpes:nuggetsilicon', null, null, 'libvulpes:platesilicon', null, null, null, null, 0, 0, 0, 0, 0, 0, null);
+  unifyOre(false, 'manganese', null, 'superpackutils:manganese_ingot', 'superpackutils:manganese_dust', null, null, null, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, null);
   unifyOre(false, 'slimesteel', null, 'tconstruct:slimesteel_ingot', null, null, 'tconstruct:slimesteel_block', 'tconstruct:slimesteel_nugget', null, null, null, null, null, null, 'tconstruct:molten_slimesteel', 190, 63, 21, 0, null, 2, null);
   unifyOre(false, 'queens_slime', null, 'tconstruct:queens_slime_ingot', null, null, 'tconstruct:queens_slime_block', 'tconstruct:queens_slime_nugget', null, null, null, null, null, null, 'tconstruct:molten_queens_slime', 212, 71, 24, 0, null, 2, null);
   unifyOre(false, 'manyullyn', null, 'tconstruct:manyullyn_ingot', null, null, 'tconstruct:manyullyn_block', 'tconstruct:manyullyn_nugget', null, null, null, null, null, null, 'tconstruct:molten_manyullyn', 216, 72, 24, 0, null, 2, null);
@@ -745,6 +745,7 @@ onEvent('recipes', event => {
   unifyOre(true, 'apatite', 'thermal:apatite_ore', 'thermal:apatite', 'thermal:apatite_dust', null, 'thermal:apatite_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
   unifyOre(true, 'cinnabar', 'thermal:cinnabar_ore', 'thermal:cinnabar', 'thermal:cinnabar_dust', null, 'thermal:cinnabar_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
   unifyOre(true, 'niter', 'thermal:niter_ore', 'thermal:niter', 'thermal:niter_dust', null, 'thermal:niter_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
+  unifyOre(true, 'ruby', 'thermal:ruby_ore', 'thermal:ruby', 'thermal:ruby_dust', null, 'thermal:ruby_block', null, null, 'thermal:ruby_gear', null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
   unifyOre(true, 'sulfur', 'thermal:sulfur_ore', 'thermal:sulfur', 'thermal:sulfur_dust', null, 'thermal:sulfur_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 2, 1);
   unifyOre(true, 'ender_pearl', null, 'minecraft:ender_pearl', 'thermal:ender_pearl_dust', null, 'architects_palette:ender_pearl_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, null, 0, 0);
 

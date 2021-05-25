@@ -1,3 +1,17 @@
 {
+	"fluid.bloodmagic.doubt_fluid": "Doubt",
+	"item.bloodmagic.doubt_bucket": "Bucket of Doubt",
+	"block.bloodmagic.nether_soil": "Nether Soil",
+	"block.bloodmagic.dungeon_metal": "Hellforged Block",
+	"item.bloodmagic.will_power_anointment": "Will Power Anointment",
+	"item.bloodmagic.demonwillgauge": "Demon Will Gauge",
+	"item.bloodmagic.corrupted_dust": "Corrupted Dust",
+	"item.bloodmagic.corrupted_tinydust": "Corrupted Tiny Dust",
+	"item.bloodmagic.sand_hellforged": "Hellforged Sand",
+	"item.bloodmagic.ingot_hellforged": "Hellforged Ingot",
+	"item.bloodmagic.dungeon_tester": "Dungeon Tester",
+	"block.bloodmagic.mimic": "Mimic",
+	"block.bloodmagic.ethereal_mimic": "Ethereal Mimic",
+	"fluid.bloodmagic.life_essence_fluid": "Life Essence",
 	"block.bloodmagic.alchemyarray": "Alchemy Array"
 }

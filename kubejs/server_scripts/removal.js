@@ -3,6 +3,9 @@ events.listen('recipes', function (event) {
 
 var outputRemoval = [
 
+    //Lib Vulpes
+    'libvulpes:gearsteel',
+
     //Refined Storage
     '#refinedstorage:crafter',
     '#refinedstorage:crafting_monitor',
@@ -37,9 +40,6 @@ var outputRemoval = [
     'mekanism:restrictive_transporter',
     'mekanism:diversion_transporter',
     'mekanism:logistical_sorter',
-
-    'mekanism:formulaic_assemblicator',
-    'mekanism:crafting_formula',
 
     //Engineer's Decor
     'engineersdecor:small_tree_cutter',

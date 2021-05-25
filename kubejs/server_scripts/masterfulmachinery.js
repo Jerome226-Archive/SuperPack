@@ -8,16 +8,12 @@ events.listen('recipes', function (event) {
 
         //Inscriber Controller
         event.recipes.create.mechanical_crafting('masterfulmachinery:inscriber_controller', [
-            'CPPPC',
-            'PSESP',
-            'PGHGP',
-            'PSESP',
-            'CPPPC'
+            'PEP',
+            'GHG',
+            'PEP'
           ], {
-            C: 'thermal:invar_plate',
             P: 'superpackutils:inscriber_casing',
-            S: 'immersiveengineering:ingot_aluminum',
-            E: 'create:integrated_circuit',
+            E: 'superpackutils:copper_solenoid',
             G: 'immersiveengineering:circuit_board',
             H: 'refinedstorage:machine_casing'
         })
@@ -92,7 +88,7 @@ events.listen('recipes', function (event) {
                 "block": "refinedstorage:machine_casing"
             },
             "P":  {
-                "block": "create:mechanical_press"
+                "block": "minecraft:piston"
             },
             "O": {
                 "block": "masterfulmachinery:inscriber_basic_port_items_output"
@@ -101,188 +97,20 @@ events.listen('recipes', function (event) {
     })
 
     //-----------------------------------------------------
-    //Inscriber Recipe
-    //-----------------------------------------------------
-
-    //Basic Processor
-    event.remove({output: 'refinedstorage:raw_basic_processor'})
-    event.custom({
-        "type": "masterfulmachinery:machine_process",
-        "structureId": "inscriber",
-        "controllerId": "basic",
-        "ticks": 100,
-        "inputs": [
-            {
-                "type": "masterfulmachinery:energy",
-                "data":{
-                    "amount": 1000
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "refinedstorage:quartz_enriched_iron",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "minecraft:redstone",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "refinedstorage:processor_binding",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "refinedstorage:silicon",
-                    "count": 1
-                }
-            }
-        ],
-        "outputs":[
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "refinedstorage:raw_basic_processor",
-                    "count": 1
-                }
-            }
-        ]
-    })
-
-  //Improved Processor
-  event.remove({output: 'refinedstorage:raw_improved_processor'})
-  event.custom({
-    "type": "masterfulmachinery:machine_process",
-    "structureId": "inscriber",
-    "controllerId": "basic",
-    "ticks": 200,
-    "inputs": [
-        {
-            "type": "masterfulmachinery:energy",
-            "data":{
-                "amount": 2000
-            }
-        },
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "thermal:electrum_ingot",
-                "count": 1
-            }
-        },
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "minecraft:redstone",
-                "count": 1
-            }
-        },
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "refinedstorage:processor_binding",
-                "count": 1
-            }
-        },
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "refinedstorage:silicon",
-                "count": 1
-            }
-        }
-    ],
-    "outputs":[
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "refinedstorage:raw_improved_processor",
-                "count": 1
-            }
-        }
-    ]
-})
-
-//Advanced Processor
-event.remove({output: 'refinedstorage:raw_advanced_processor'})
-event.custom({
-    "type": "masterfulmachinery:machine_process",
-    "structureId": "inscriber",
-    "controllerId": "basic",
-    "ticks": 500,
-    "inputs": [
-        {
-            "type": "masterfulmachinery:energy",
-            "data":{
-                "amount": 5000
-            }
-        },
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "superpackutils:platinum_ingot",
-                "count": 1
-            }
-        },
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "minecraft:redstone",
-                "count": 1
-            }
-        },
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "refinedstorage:processor_binding",
-                "count": 1
-            }
-        },
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "refinedstorage:silicon",
-                "count": 1
-            }
-        }
-    ],
-    "outputs":[
-        {
-            "type": "masterfulmachinery:items",
-            "data":{
-                "item": "refinedstorage:raw_advanced_processor",
-                "count": 1
-            }
-        }
-    ]
-})
-
-    //-----------------------------------------------------
     //Metallurgic Fabricator Recipes
     //-----------------------------------------------------
     
         //Metallurgic Fabricator Controller
         event.recipes.create.mechanical_crafting('masterfulmachinery:metallurgic_fabricator_controller', [
-            'CPPPC',
-            'PSESP',
-            'PGHGP',
-            'PSESP',
-            'CPPPC'
+            ' PEP ',
+            'CGHGD',
+            ' PEP '
           ], {
-            C: 'libvulpes:platesilicon',
             P: 'superpackutils:metallurgic_casing',
-            S: 'immersiveengineering:ingot_hop_graphite',
-            E: 'create:integrated_circuit',
-            G: 'immersiveengineering:circuit_board',
+            C: 'refinedstorage:construction_core',
+            D: 'refinedstorage:destruction_core',
+            E: 'superpackutils:copper_solenoid',
+            G: 'mekanism:basic_control_circuit',
             H: 'refinedstorage:machine_casing'
         })
     
@@ -362,60 +190,134 @@ event.custom({
     })
 
     //-----------------------------------------------------
-    //Metallurgic Recipe
+    //Assembling Machine
+    //-----------------------------------------------------
+
+    event.custom({
+        "type": "masterfulmachinery:machine_structure",
+        "id": "assembler",
+        "controllerId": "assembler",
+        "name": "Assembling Machine",
+        "layout": [
+          [
+            " BBB ",
+            "BBBBB",
+            "BBZBB",
+            "BBBBB",
+            " BBB "
+          ],
+          [
+            "BBBBB",
+            "G   G",
+            "G E G",
+            "G   G",
+            "BDDDB"
+          ],
+          [
+            "BBIBB",
+            "G E G",
+            "FEHEJ",
+            "G E G",
+            "BDCDB"
+          ],
+          [
+            "BBBBB",
+            "G   G",
+            "G E G",
+            "G   G",
+            "BDDDB"
+          ],
+          [
+            " BBB ",
+            "BBBBB",
+            "BBLBB",
+            "BBBBB",
+            " BBB"
+          ]
+        ],
+        "legend": {
+          "B": {
+            "block": "superpackutils:assembler_frame"
+          },
+          "G": {
+            "block": "thermal:obsidian_glass"
+          },
+          "D": {
+            "block": "mekanism:formulaic_assemblicator"
+          },
+          "E": {
+            "block": "mekanism:laser"
+          },
+          "F": {
+            "block": "masterfulmachinery:assembler_basic_port_items_input"
+          },
+          "Z": {
+            "block": "masterfulmachinery:assembler_basic_port_pncr_pressure_input"
+          },
+          "C": {
+            "block": "masterfulmachinery:assembler_controller"
+          },
+          "H": {
+            "block": "refinedstorage:controller"
+          },
+          "I": {
+            "block": "masterfulmachinery:assembler_basic_port_fluids_input"
+          },
+          "J": {
+            "block": "masterfulmachinery:assembler_basic_port_items_output"
+          },
+          "L": {
+            "block": "masterfulmachinery:assembler_basic_port_energy_input"
+          }
+        }
+    })
+
+    //-----------------------------------------------------
+    //Improved Metallurgic Fabricator Recipes
     //-----------------------------------------------------
     
-    event.custom({
-        "type": "masterfulmachinery:machine_process",
-        "structureId": "metallurgic_fabricator",
-        "controllerId": "metallurgic_fabricator",
-        "ticks": 1000,
-        "inputs": [
-            {
-                "type": "masterfulmachinery:energy",
-                "data":{
-                    "amount": 5000
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "minecraft:glowstone_dust",
-                    "count": 3
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "botania:quartz_blaze",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:bloody_pigment",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "create:brass_ingot",
-                    "count": 1
-                }
-            }
-        ],
-        "outputs":[
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:energetic_alloy_ingot",
-                    "count": 1
-                }
-            }
-        ]
-    })
+        //Improved Metallurgic Fabricator Controller
+        event.recipes.create.mechanical_crafting('masterfulmachinery:improved_metallurgic_fabricator_controller', [
+            ' PEP ',
+            'CGHGD',
+            ' PEP '
+          ], {
+            P: 'superpackutils:improved_metallurgic_casing',
+            C: 'refinedstorage:construction_core',
+            D: 'refinedstorage:destruction_core',
+            E: 'superpackutils:copper_solenoid',
+            G: 'mekanism:advanced_control_circuit',
+            H: 'mekanism:steel_casing'
+        })
+    
+        //Improved Metallurgic Fabricator Item Output
+        event.shaped('masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_output', ['ACA', 'CIC', 'ACA'], {
+          I: 'create:integrated_circuit',
+          A: 'thermal:copper_ingot',
+          C: 'superpackutils:improved_metallurgic_casing'
+      }),
+    
+        //Improved Metallurgic Fabricator Item Input
+        event.shaped('masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_input', ['ACA', 'CIC', 'ACA'], {
+          I: 'create:integrated_circuit',
+          A: 'tconstruct:cobalt_ingot',
+          C: 'superpackutils:improved_metallurgic_casing'
+      }),
+    
+        //Improved Metallurgic Fabricator Energy Input
+        event.shaped('masterfulmachinery:improved_metallurgic_fabricator_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
+          I: 'create:integrated_circuit',
+          A: 'mekanism:energy_tablet',
+          C: 'superpackutils:improved_metallurgic_casing'
+      }),
+
+        //Improved Metallurgic Fabricator Presssure Input
+        event.shaped('masterfulmachinery:improved_metallurgic_fabricator_basic_port_pncr_pressure_input', ['ACA', 'CIC', 'ACA'], {
+            I: 'create:integrated_circuit',
+            A: 'pneumaticcraft:ingot_iron_compressed',
+            C: 'superpackutils:improved_metallurgic_casing'
+        }),
+  
 
     //-----------------------------------------------------
     //Improved Metallurgic Fabricator
@@ -434,15 +336,15 @@ event.custom({
               "EAAAO"
             ],
             [
-              "AAAAA",
+              "AAPAA",
               "ASSSA",
               "ASSSA",
               "AFCFA"
             ],
             [
                 " AAA ",
-                "AGGGA",
-                "AGGGA",
+                "AAAAA",
+                "AAAAA",
                 " AAA "
             ]
           ],
@@ -453,11 +355,11 @@ event.custom({
             "S": {
                 "block": "mekanism:superheating_element"
             },
-            "G": {
-                "block": "thermal:obsidian_glass"
-            },
             "F": {
                 "block": "mekanism:metallurgic_infuser"
+            },
+            "P": {
+                "block": "masterfulmachinery:improved_metallurgic_fabricator_basic_port_pncr_pressure_input"
             },
             "E": {
                 "block": "masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_input"
@@ -475,60 +377,165 @@ event.custom({
     })
 
     //-----------------------------------------------------
-    //Improved Metallurgic Fabricator Recipe
+    //Collector Recipes
     //-----------------------------------------------------
     
+        //Collector Controller
+        event.recipes.create.mechanical_crafting('masterfulmachinery:collector_controller', [
+            ' PEP ',
+            'CGHGD',
+            ' PEP '
+          ], {
+            P: 'mekanism:pressure_disperser',
+            C: 'refinedstorage:construction_core',
+            D: 'refinedstorage:destruction_core',
+            E: 'superpackutils:copper_solenoid',
+            G: 'mekanism:advanced_control_circuit',
+            H: 'refinedstorage:machine_casing'
+        })
+    
+        //Collector Gas Output
+        event.shaped('masterfulmachinery:collector_basic_port_mekanism_gas_output', ['OCO', 'CIC', 'ACA'], {
+          I: 'create:integrated_circuit',
+          A: 'mekanism:basic_chemical_tank',
+          O: 'thermal:copper_ingot',
+          C: 'mekanism:pressure_disperser'
+      }),
+
+        //Collector Gas Input
+        event.shaped('masterfulmachinery:collector_basic_port_mekanism_gas_input', ['OCO', 'CIC', 'ACA'], {
+            I: 'create:integrated_circuit',
+            A: 'mekanism:basic_chemical_tank',
+            O: 'tconstruct:cobalt_ingot',
+            C: 'mekanism:pressure_disperser'
+        }),
+    
+        //Collector Energy Input
+        event.shaped('masterfulmachinery:collector_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
+          I: 'create:integrated_circuit',
+          A: 'mekanism:energy_tablet',
+          C: 'mekanism:pressure_disperser'
+      }),
+
+    //-----------------------------------------------------
+    //Collector
+    //-----------------------------------------------------
+
     event.custom({
-        "type": "masterfulmachinery:machine_process",
-        "structureId": "improved_metallurgic_fabricator",
-        "controllerId": "improved_metallurgic_fabricator",
-        "ticks": 1000,
-        "inputs": [
-            {
-                "type": "masterfulmachinery:energy",
-                "data":{
-                    "amount": 10000
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "thermal:ender_pearl_dust",
-                    "count": 3
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "botania:quartz_elven",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:grassy_pigment",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "mekanism:ingot_uranium",
-                    "count": 1
-                }
-            }
+        "type": "masterfulmachinery:machine_structure",
+        "id": "collector",
+        "controllerId": "collector",
+        "name": "Collector",
+        "layout": [
+          [
+            "ABA",
+            "AAA",
+            "AOA"
+          ],
+          [
+            "AZA",
+            "IMI",
+            "ACA"
+          ],
+          [
+            "EIE",
+            "IFI",
+            "EIE"
+          ]
         ],
-        "outputs":[
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:vibrant_alloy_ingot",
-                    "count": 1
-                }
-            }
-        ]
+        "legend": {
+          "A": {
+            "block": "mekanism:pressure_disperser"
+          },
+          "B": {
+            "block": "masterfulmachinery:collector_basic_port_energy_input"
+          },
+          "O": {
+            "block": "masterfulmachinery:collector_basic_port_mekanism_gas_output"
+          },
+          "C": {
+            "block": "masterfulmachinery:collector_controller"
+          },
+          "Z": {
+            "block": "masterfulmachinery:collector_basic_port_mekanism_gas_input"
+          },
+          "M": {
+            "block": "refinedstorage:machine_casing"
+          },
+          "E": {
+            "block": "immersiveengineering:slab_sheetmetal_steel"
+          },
+          "I": {
+            "block": "immersiveengineering:sheetmetal_steel"
+          },
+          "F": {
+            "block": "immersiveengineering:heavy_engineering"
+          }
+        }
     })
+
+    //-----------------------------------------------------
+    //Infuser Recipes
+    //-----------------------------------------------------
+    
+        //Infuser Controller
+        event.recipes.create.mechanical_crafting('masterfulmachinery:infuser_controller', [
+            ' PEP ',
+            'CGHGD',
+            ' PEP '
+          ], {
+            P: 'superpackutils:infuser_casing',
+            C: 'refinedstorage:construction_core',
+            D: 'refinedstorage:destruction_core',
+            E: 'superpackutils:copper_solenoid',
+            G: 'mekanism:basic_control_circuit',
+            H: 'mekanism:steel_casing'
+        })
+    
+        //Infuser Gas Input
+        event.shaped('masterfulmachinery:infuser_basic_port_mekanism_gas_input', ['OCO', 'CIC', 'ACA'], {
+            I: 'create:integrated_circuit',
+            A: 'mekanism:basic_chemical_tank',
+            O: 'tconstruct:cobalt_ingot',
+            C: 'superpackutils:infuser_casing'
+        }),
+
+        //Infuser Fluid Input
+        event.shaped('masterfulmachinery:infuser_basic_port_fluids_input', ['OCO', 'CIC', 'ACA'], {
+            I: 'create:integrated_circuit',
+            A: 'create:fluid_tank',
+            O: 'tconstruct:cobalt_ingot',
+            C: 'superpackutils:infuser_casing'
+        }),
+
+        //Infuser Gas Output
+        event.shaped('masterfulmachinery:infuser_basic_port_mekanism_gas_output', ['OCO', 'CIC', 'ACA'], {
+            I: 'create:integrated_circuit',
+            A: 'mekanism:basic_chemical_tank',
+            O: 'thermal:copper_ingot',
+            C: 'superpackutils:infuser_casing'
+        }),
+    
+        //Infuser Energy Input
+        event.shaped('masterfulmachinery:infuser_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
+          I: 'create:integrated_circuit',
+          A: 'mekanism:energy_tablet',
+          C: 'superpackutils:infuser_casing'
+        }),
+
+        //Infuser Items Output
+        event.shaped('masterfulmachinery:infuser_basic_port_items_output', ['ACA', 'CIC', 'ACA'], {
+            I: 'create:integrated_circuit',
+            A: 'thermal:copper_ingot',
+            C: 'superpackutils:infuser_casing'
+        }),
+
+        //Infuser Items Input
+        event.shaped('masterfulmachinery:infuser_basic_port_items_input', ['ACA', 'CIC', 'ACA'], {
+            I: 'create:integrated_circuit',
+            A: 'tconstruct:cobalt_ingot',
+            C: 'superpackutils:infuser_casing'
+        }),
 
     //-----------------------------------------------------
     //Infuser
@@ -583,7 +590,7 @@ event.custom({
                 "block": "create:depot"
             },
             "S":  {
-                "block": "create:spout"
+                "block": "immersiveengineering:heavy_engineering"
             },
             "F":  {
                 "block": "masterfulmachinery:infuser_basic_port_fluids_input"
@@ -601,101 +608,5 @@ event.custom({
                 "block": "masterfulmachinery:infuser_basic_port_mekanism_gas_output"
             }
         }
-    })
-
-    //-----------------------------------------------------
-    //Infuser Recipe
-    //-----------------------------------------------------
-    
-    //Rich Slag
-    event.custom({
-        "type": "masterfulmachinery:machine_process",
-        "structureId": "infuser",
-        "controllerId": "infuser",
-        "ticks": 1000,
-        "inputs": [
-            {
-                "type": "masterfulmachinery:energy",
-                "data":{
-                    "amount": 1000
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "thermal:slag",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:fluids",
-                "data":{
-                    "fluid": "immersivepetroleum:napalm",
-                    "amount": 35
-                }
-            },
-            {
-                "type": "masterfulmachinery:mekanism_gas",
-                "data":{
-                    "gas": "mekanism:sulfur_dioxide",
-                    "amount": 100
-                }
-            }
-        ],
-        "outputs":[
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "thermal:rich_slag",
-                    "count": 1
-                }
-            }
-        ]
-    })
-
-    //Starlight Shard
-    event.custom({
-        "type": "masterfulmachinery:machine_process",
-        "structureId": "infuser",
-        "controllerId": "infuser",
-        "ticks": 3000,
-        "inputs": [
-            {
-                "type": "masterfulmachinery:energy",
-                "data":{
-                    "amount": 1000
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:ender_pearl_nugget",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:fluids",
-                "data":{
-                    "fluid": "astralsorcery:liquid_starlight",
-                    "amount": 250
-                }
-            },
-            {
-                "type": "masterfulmachinery:mekanism_gas",
-                "data":{
-                    "gas": "superpackutils:chemical_death",
-                    "amount": 100
-                }
-            }
-        ],
-        "outputs":[
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:starlight_shard",
-                    "count": 1
-                }
-            }
-        ]
     })
 });
