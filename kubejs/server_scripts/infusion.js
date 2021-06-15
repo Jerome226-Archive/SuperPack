@@ -147,7 +147,7 @@ event.custom({
     "item": "thermal:radish_seeds"
   },
   "output": {
-    "item": "thermal:rice_seeds"
+    "item": "farmersdelight:rice"
   },
   "mana": 6000,
   "group": "botania:crop_cycle",
@@ -161,7 +161,7 @@ event.custom({
 event.custom({
   "type": "botania:mana_infusion",
   "input": {
-    "item": "thermal:rice_seeds"
+    "item": "farmersdelight:rice"
   },
   "output": {
     "item": "thermal:sadiroot_seeds"
@@ -266,24 +266,7 @@ event.custom({
     "item": "thermal:peanut_seeds"
   },
   "output": {
-    "item": "thermal:strawberry_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Tomato Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:strawberry_seeds"
-  },
-  "output": {
-    "item": "thermal:tomato_seeds"
+    "item": "neapolitan:strawberry_pips"
   },
   "mana": 6000,
   "group": "botania:crop_cycle",
@@ -297,8 +280,8 @@ event.custom({
 event.custom({
   "type": "botania:mana_infusion",
   "input": {
-    "item": "thermal:tomato_seeds"
-  },
+    "item": "neapolitan:strawberry_pips"
+    },
   "output": {
     "item": "thermal:hops_seeds"
   },
@@ -361,28 +344,11 @@ event.custom({
   }
 })
 
-//Rice Panicle
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "farmersdelight:onion"
-  },
-  "output": {
-    "item": "farmersdelight:rice_panicle"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
 //Wheat Seeds
 event.custom({
   "type": "botania:mana_infusion",
   "input": {
-    "item": "farmersdelight:rice_panicle"
+    "item": "farmersdelight:onion"
   },
   "output": {
     "item": "minecraft:wheat_seeds"

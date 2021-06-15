@@ -16,8 +16,8 @@ events.listen('recipes', function (event) {
         'CBABC'
       ], {
         C: Item.of('tconstruct:large_plate', {Material:"tconstruct:manyullyn"}),
-        P: 'immersiveengineering:sheetmetal_steel',
-        S: 'refinedstorage:destruction_core',
+        P: 'refinedstorage:destruction_core',
+        S: 'superpackutils:circuit_board',
         A: 'storagedrawers:controller',
         M: 'refinedstorage:machine_casing',
         Y: 'superpackutils:electrical_platinum_ingot',
@@ -36,19 +36,11 @@ events.listen('recipes', function (event) {
 
     //Construction Core
     event.remove({output: 'refinedstorage:construction_core'})
-    event.shaped('refinedstorage:construction_core', [' P ', 'ACA', ' P '], {
-        P: 'botania:manasteel_ingot',
-        A: 'tconstruct:slimesteel_ingot',
-        C: 'refinedstorage:advanced_processor'
-    })
+    event.recipes.create.mixing('refinedstorage:construction_core', ['refinedstorage:advanced_processor', 'tconstruct:slimesteel_ingot', 'superpackutils:electrical_platinum_ingot'])
 
     //Destruction Core
     event.remove({output: 'refinedstorage:destruction_core'})
-    event.shaped('refinedstorage:destruction_core', [' P ', 'ACA', ' P '], {
-        P: 'tconstruct:rose_gold_ingot',
-        A: 'superpackutils:superheated_bronze_ingot',
-        C: 'refinedstorage:improved_processor'
-    })
+    event.recipes.create.mixing('refinedstorage:destruction_core', ['refinedstorage:improved_processor', 'thermal:bronze_ingot', 'tconstruct:rose_gold_ingot'])
 
     //Network Transmitter
     event.remove({output: 'refinedstorage:network_transmitter'})
@@ -76,11 +68,10 @@ events.listen('recipes', function (event) {
 
     //Grid
     event.remove({output: 'refinedstorage:grid'})
-    event.shaped('refinedstorage:grid', ['ZBC', 'GPA', 'ZDC'], {
+    event.shaped('refinedstorage:grid', ['ZBC', 'GPA', 'ZBC'], {
         P: 'refinedstorage:machine_casing',
         A: 'superpackutils:platinum_ingot',
         B: 'refinedstorage:construction_core',
-        D: 'refinedstorage:destruction_core',
         G: 'create:integrated_circuit',
         C: 'botania:mana_glass',
         Z: 'refinedstorage:improved_processor'
@@ -88,11 +79,10 @@ events.listen('recipes', function (event) {
 
     //Storage Monitor
     event.remove({output: 'refinedstorage:storage_monitor'})
-    event.shaped('refinedstorage:storage_monitor', ['ZBC', 'GPA', 'ZDC'], {
+    event.shaped('refinedstorage:storage_monitor', ['ZBC', 'GPA', 'ZBC'], {
         P: 'refinedstorage:machine_casing',
         A: 'superpackutils:platinum_ingot',
         B: 'refinedstorage:construction_core',
-        D: 'refinedstorage:destruction_core',
         G: 'create:integrated_circuit',
         C: 'botania:mana_glass',
         Z: 'refinedstorage:basic_processor'
@@ -102,7 +92,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'refinedstorage:interface'})
     event.shaped('refinedstorage:interface', ['PDP', 'SCS', 'PDP'], {
         P: 'refinedstorage:quartz_enriched_iron',
-        S: 'superpackutils:energetic_alloy_ingot',
+        S: 'refinedstorage:destruction_core',
         D: 'create:brass_funnel',
         C: 'refinedstorage:machine_casing'
     }),
@@ -271,7 +261,7 @@ event.custom({
 
     //Silicon
     event.remove({id: 'refinedstorage:silicon'})
-    event.smelting('refinedstorage:silicon', 'superpackutils:polished_quartz')
+    event.smelting('refinedstorage:silicon', 'tinyredstone:silicon_compound')
 
     //Advanced Processor
     event.remove({id: 'refinedstorage:advanced_processor'})

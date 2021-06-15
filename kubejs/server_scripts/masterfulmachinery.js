@@ -7,37 +7,27 @@ events.listen('recipes', function (event) {
     //-----------------------------------------------------
 
         //Inscriber Controller
-        event.recipes.create.mechanical_crafting('masterfulmachinery:inscriber_controller', [
+        event.shaped('masterfulmachinery:inscriber_controller', [
             'PEP',
             'GHG',
-            'PEP'
+            'PFP'
           ], {
             P: 'superpackutils:inscriber_casing',
-            E: 'superpackutils:copper_solenoid',
+            E: 'create:integrated_circuit',
+            F: 'superpackutils:bio_plastic',
             G: 'immersiveengineering:circuit_board',
             H: 'refinedstorage:machine_casing'
         })
     
         //Inscriber Item Output
-        event.shaped('masterfulmachinery:inscriber_basic_port_items_output', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'thermal:copper_ingot',
-          C: 'superpackutils:inscriber_casing'
-      }),
+        event.shapeless('masterfulmachinery:inscriber_basic_port_items_output', ['superpackutils:inscriber_casing', 'thermal:copper_ingot'])
     
         //Inscriber Item Input
-        event.shaped('masterfulmachinery:inscriber_basic_port_items_input', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'tconstruct:cobalt_ingot',
-          C: 'superpackutils:inscriber_casing'
-      }),
+        event.shapeless('masterfulmachinery:inscriber_basic_port_items_input', ['superpackutils:inscriber_casing', 'thermal:lead_ingot'])
     
         //Inscriber Energy Input
-        event.shaped('masterfulmachinery:inscriber_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'mekanism:energy_tablet',
-          C: 'superpackutils:inscriber_casing'
-      }),
+        event.shapeless('masterfulmachinery:inscriber_basic_port_energy_input', ['superpackutils:inscriber_casing', 'thermal:lead_ingot', 'superpackutils:electrical_platinum_ingot'])
+
 
     //-----------------------------------------------------
     //Inscriber
@@ -101,39 +91,26 @@ events.listen('recipes', function (event) {
     //-----------------------------------------------------
     
         //Metallurgic Fabricator Controller
-        event.recipes.create.mechanical_crafting('masterfulmachinery:metallurgic_fabricator_controller', [
-            ' PEP ',
-            'CGHGD',
-            ' PEP '
+        event.shaped('masterfulmachinery:metallurgic_fabricator_controller', [
+            'PEP',
+            'GHG',
+            'PFP'
           ], {
             P: 'superpackutils:metallurgic_casing',
-            C: 'refinedstorage:construction_core',
-            D: 'refinedstorage:destruction_core',
-            E: 'superpackutils:copper_solenoid',
+            E: 'superpackutils:circuit_board',
+            F: 'refinedstorage:construction_core',
             G: 'mekanism:basic_control_circuit',
             H: 'refinedstorage:machine_casing'
         })
     
         //Metallurgic Fabricator Item Output
-        event.shaped('masterfulmachinery:metallurgic_fabricator_basic_port_items_output', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'thermal:copper_ingot',
-          C: 'superpackutils:metallurgic_casing'
-      }),
+        event.shapeless('masterfulmachinery:metallurgic_fabricator_basic_port_items_output', ['superpackutils:metallurgic_casing', 'thermal:copper_ingot'])
     
         //Metallurgic Fabricator Item Input
-        event.shaped('masterfulmachinery:metallurgic_fabricator_basic_port_items_input', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'tconstruct:cobalt_ingot',
-          C: 'superpackutils:metallurgic_casing'
-      }),
-    
+        event.shapeless('masterfulmachinery:metallurgic_fabricator_basic_port_items_input', ['superpackutils:metallurgic_casing', 'thermal:lead_ingot'])
+
         //Metallurgic Fabricator Energy Input
-        event.shaped('masterfulmachinery:metallurgic_fabricator_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'mekanism:energy_tablet',
-          C: 'superpackutils:metallurgic_casing'
-      }),
+        event.shapeless('masterfulmachinery:metallurgic_fabricator_basic_port_energy_input', ['superpackutils:metallurgic_casing', 'thermal:lead_ingot', 'superpackutils:electrical_platinum_ingot'])
 
     //-----------------------------------------------------
     //Metallurgic Fabricator
@@ -188,6 +165,39 @@ events.listen('recipes', function (event) {
             }
         }
     })
+
+    //-----------------------------------------------------
+    //Assembling Machine Recipes
+    //-----------------------------------------------------
+    
+        //Assembler Controller
+        event.shaped('masterfulmachinery:assembler_controller', [
+          'PEP',
+          'GHG',
+          'PFP'
+        ], {
+          P: 'superpackutils:assembler_frame',
+          E: 'superpackutils:circuit_board',
+          F: 'superpackutils:vibrant_processor',
+          G: 'mekanism:advanced_control_circuit',
+          H: 'mekanism:steel_casing'
+      })
+  
+      //Assembler Item Output
+      event.shapeless('masterfulmachinery:assembler_basic_port_items_output', ['superpackutils:assembler_frame', 'thermal:copper_ingot'])
+
+      //Assembler Item Input
+      event.shapeless('masterfulmachinery:assembler_basic_port_items_input', ['superpackutils:assembler_frame', 'thermal:lead_ingot'])
+
+      //Assembler Energy Input
+      event.shapeless('masterfulmachinery:assembler_basic_port_energy_input', ['superpackutils:assembler_frame', 'thermal:lead_ingot', 'superpackutils:electrical_platinum_ingot'])
+
+      //Assembler Presssure Input
+      event.shapeless('masterfulmachinery:assembler_basic_port_pncr_pressure_input', ['superpackutils:assembler_frame', 'thermal:lead_ingot', 'pneumaticcraft:ingot_iron_compressed'])
+
+      //Assembler Fluid Input
+      event.shapeless('masterfulmachinery:assembler_basic_port_fluids_input', ['superpackutils:assembler_frame', 'thermal:lead_ingot', 'thermal:tin_ingot'])
+
 
     //-----------------------------------------------------
     //Assembling Machine
@@ -277,47 +287,29 @@ events.listen('recipes', function (event) {
     //-----------------------------------------------------
     
         //Improved Metallurgic Fabricator Controller
-        event.recipes.create.mechanical_crafting('masterfulmachinery:improved_metallurgic_fabricator_controller', [
-            ' PEP ',
-            'CGHGD',
-            ' PEP '
+        event.shaped('masterfulmachinery:improved_metallurgic_fabricator_controller', [
+            'PEP',
+            'GHG',
+            'PFP'
           ], {
             P: 'superpackutils:improved_metallurgic_casing',
-            C: 'refinedstorage:construction_core',
-            D: 'refinedstorage:destruction_core',
-            E: 'superpackutils:copper_solenoid',
+            E: 'superpackutils:circuit_board',
+            F: 'superpackutils:vibrant_processor',
             G: 'mekanism:advanced_control_circuit',
             H: 'mekanism:steel_casing'
         })
     
         //Improved Metallurgic Fabricator Item Output
-        event.shaped('masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_output', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'thermal:copper_ingot',
-          C: 'superpackutils:improved_metallurgic_casing'
-      }),
+        event.shapeless('masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_output', ['superpackutils:improved_metallurgic_casing', 'thermal:copper_ingot'])
     
         //Improved Metallurgic Fabricator Item Input
-        event.shaped('masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_input', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'tconstruct:cobalt_ingot',
-          C: 'superpackutils:improved_metallurgic_casing'
-      }),
-    
-        //Improved Metallurgic Fabricator Energy Input
-        event.shaped('masterfulmachinery:improved_metallurgic_fabricator_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'mekanism:energy_tablet',
-          C: 'superpackutils:improved_metallurgic_casing'
-      }),
+        event.shapeless('masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_input', ['superpackutils:improved_metallurgic_casing', 'thermal:lead_ingot'])
 
-        //Improved Metallurgic Fabricator Presssure Input
-        event.shaped('masterfulmachinery:improved_metallurgic_fabricator_basic_port_pncr_pressure_input', ['ACA', 'CIC', 'ACA'], {
-            I: 'create:integrated_circuit',
-            A: 'pneumaticcraft:ingot_iron_compressed',
-            C: 'superpackutils:improved_metallurgic_casing'
-        }),
-  
+        //Improved Metallurgic Fabricator Energy Input
+        event.shapeless('masterfulmachinery:improved_metallurgic_fabricator_basic_port_energy_input', ['superpackutils:improved_metallurgic_casing', 'thermal:lead_ingot', 'superpackutils:electrical_platinum_ingot'])
+
+        //Improved Metallurgic Fabricator Pressure Input
+        event.shapeless('masterfulmachinery:improved_metallurgic_fabricator_basic_port_pncr_pressure_input', ['superpackutils:improved_metallurgic_casing', 'thermal:lead_ingot', 'pneumaticcraft:ingot_iron_compressed'])
 
     //-----------------------------------------------------
     //Improved Metallurgic Fabricator
@@ -381,41 +373,26 @@ events.listen('recipes', function (event) {
     //-----------------------------------------------------
     
         //Collector Controller
-        event.recipes.create.mechanical_crafting('masterfulmachinery:collector_controller', [
-            ' PEP ',
-            'CGHGD',
-            ' PEP '
+        event.shaped('masterfulmachinery:collector_controller', [
+            'PEP',
+            'GHG',
+            'PFP'
           ], {
             P: 'mekanism:pressure_disperser',
-            C: 'refinedstorage:construction_core',
-            D: 'refinedstorage:destruction_core',
-            E: 'superpackutils:copper_solenoid',
-            G: 'mekanism:advanced_control_circuit',
-            H: 'refinedstorage:machine_casing'
+            E: 'superpackutils:circuit_board',
+            F: 'superpackutils:energetic_processor',
+            G: 'mekanism:basic_control_circuit',
+            H: 'mekanism:steel_casing'
         })
     
         //Collector Gas Output
-        event.shaped('masterfulmachinery:collector_basic_port_mekanism_gas_output', ['OCO', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'mekanism:basic_chemical_tank',
-          O: 'thermal:copper_ingot',
-          C: 'mekanism:pressure_disperser'
-      }),
+        event.shapeless('masterfulmachinery:collector_basic_port_mekanism_gas_output', ['mekanism:pressure_disperser', 'thermal:copper_ingot', 'thermal:invar_ingot'])
 
         //Collector Gas Input
-        event.shaped('masterfulmachinery:collector_basic_port_mekanism_gas_input', ['OCO', 'CIC', 'ACA'], {
-            I: 'create:integrated_circuit',
-            A: 'mekanism:basic_chemical_tank',
-            O: 'tconstruct:cobalt_ingot',
-            C: 'mekanism:pressure_disperser'
-        }),
-    
+        event.shapeless('masterfulmachinery:collector_basic_port_mekanism_gas_input', ['mekanism:pressure_disperser', 'thermal:lead_ingot', 'thermal:invar_ingot'])
+
         //Collector Energy Input
-        event.shaped('masterfulmachinery:collector_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'mekanism:energy_tablet',
-          C: 'mekanism:pressure_disperser'
-      }),
+        event.shapeless('masterfulmachinery:collector_basic_port_energy_input', ['mekanism:pressure_disperser', 'thermal:lead_ingot', 'superpackutils:electrical_platinum_ingot'])
 
     //-----------------------------------------------------
     //Collector
@@ -475,67 +452,109 @@ events.listen('recipes', function (event) {
     })
 
     //-----------------------------------------------------
+    //Mixer Recipes
+    //-----------------------------------------------------
+
+    event.custom({
+      "type": "masterfulmachinery:machine_structure",
+      "controllerId": "mixer",
+      "id": "mixer",
+      "name": "Advanced Mixer",
+      "layout": [
+          [
+            "AEA",
+            "AAA",
+            "ACA"
+          ],
+          [
+            "PGP",
+            "ZMW",
+            "P P"
+          ],
+          [
+              "P P",
+              "   ",
+              "P P"
+          ],
+          [
+              "P P",
+              " S ",
+              "P P"
+          ],
+          [
+              "AAA",
+              "AFA",
+              "AAA"
+          ]
+        ],
+        "legend": {
+          "A": {
+              "block": "superpackutils:mixer_casing"
+          },
+          "E": {
+              "block": "masterfulmachinery:mixer_basic_port_energy_input"
+          },
+          "G": {
+            "block": "masterfulmachinery:mixer_basic_port_pncr_pressure_input"
+          },
+          "C":  {
+            "block": "masterfulmachinery:mixer_controller"
+          },
+          "M":  {
+              "block": "create:basin"
+          },
+          "S":  {
+              "block": "create:mechanical_mixer"
+          },
+          "F":  {
+              "block": "masterfulmachinery:mixer_basic_port_botania_mana_input"
+          },
+          "P":  {
+              "block": "immersiveengineering:steel_fence"
+          },
+          "Z":  {
+              "block": "masterfulmachinery:mixer_basic_port_items_input"
+          },
+          "W":  {
+              "block": "masterfulmachinery:mixer_basic_port_items_output"
+          }
+      }
+  })
+
+    //-----------------------------------------------------
     //Infuser Recipes
     //-----------------------------------------------------
     
         //Infuser Controller
-        event.recipes.create.mechanical_crafting('masterfulmachinery:infuser_controller', [
-            ' PEP ',
-            'CGHGD',
-            ' PEP '
+        event.shaped('masterfulmachinery:infuser_controller', [
+            'PEP',
+            'GHG',
+            'PFP'
           ], {
             P: 'superpackutils:infuser_casing',
-            C: 'refinedstorage:construction_core',
-            D: 'refinedstorage:destruction_core',
-            E: 'superpackutils:copper_solenoid',
+            E: 'superpackutils:circuit_board',
+            F: 'superpackutils:energetic_processor',
             G: 'mekanism:basic_control_circuit',
             H: 'mekanism:steel_casing'
         })
     
         //Infuser Gas Input
-        event.shaped('masterfulmachinery:infuser_basic_port_mekanism_gas_input', ['OCO', 'CIC', 'ACA'], {
-            I: 'create:integrated_circuit',
-            A: 'mekanism:basic_chemical_tank',
-            O: 'tconstruct:cobalt_ingot',
-            C: 'superpackutils:infuser_casing'
-        }),
+        event.shapeless('masterfulmachinery:infuser_basic_port_mekanism_gas_input', ['superpackutils:infuser_casing', 'thermal:lead_ingot', 'thermal:invar_ingot'])
 
         //Infuser Fluid Input
-        event.shaped('masterfulmachinery:infuser_basic_port_fluids_input', ['OCO', 'CIC', 'ACA'], {
-            I: 'create:integrated_circuit',
-            A: 'create:fluid_tank',
-            O: 'tconstruct:cobalt_ingot',
-            C: 'superpackutils:infuser_casing'
-        }),
+        event.shapeless('masterfulmachinery:infuser_basic_port_fluids_input', ['superpackutils:infuser_casing', 'thermal:lead_ingot', 'thermal:tin_ingot'])
 
         //Infuser Gas Output
-        event.shaped('masterfulmachinery:infuser_basic_port_mekanism_gas_output', ['OCO', 'CIC', 'ACA'], {
-            I: 'create:integrated_circuit',
-            A: 'mekanism:basic_chemical_tank',
-            O: 'thermal:copper_ingot',
-            C: 'superpackutils:infuser_casing'
-        }),
-    
+        event.shapeless('masterfulmachinery:infuser_basic_port_mekanism_gas_output', ['superpackutils:infuser_casing', 'thermal:copper_ingot', 'thermal:invar_ingot'])
+
         //Infuser Energy Input
-        event.shaped('masterfulmachinery:infuser_basic_port_energy_input', ['ACA', 'CIC', 'ACA'], {
-          I: 'create:integrated_circuit',
-          A: 'mekanism:energy_tablet',
-          C: 'superpackutils:infuser_casing'
-        }),
+        event.shapeless('masterfulmachinery:infuser_basic_port_energy_input', ['superpackutils:infuser_casing', 'thermal:lead_ingot', 'superpackutils:electrical_platinum_ingot'])
 
         //Infuser Items Output
-        event.shaped('masterfulmachinery:infuser_basic_port_items_output', ['ACA', 'CIC', 'ACA'], {
-            I: 'create:integrated_circuit',
-            A: 'thermal:copper_ingot',
-            C: 'superpackutils:infuser_casing'
-        }),
+        event.shapeless('masterfulmachinery:infuser_basic_port_items_output', ['superpackutils:infuser_casing', 'thermal:copper_ingot'])
 
         //Infuser Items Input
-        event.shaped('masterfulmachinery:infuser_basic_port_items_input', ['ACA', 'CIC', 'ACA'], {
-            I: 'create:integrated_circuit',
-            A: 'tconstruct:cobalt_ingot',
-            C: 'superpackutils:infuser_casing'
-        }),
+        event.shapeless('masterfulmachinery:infuser_basic_port_items_input', ['superpackutils:infuser_casing', 'thermal:lead_ingot'])
 
     //-----------------------------------------------------
     //Infuser
@@ -590,7 +609,7 @@ events.listen('recipes', function (event) {
                 "block": "create:depot"
             },
             "S":  {
-                "block": "immersiveengineering:heavy_engineering"
+                "block": "create:spout"
             },
             "F":  {
                 "block": "masterfulmachinery:infuser_basic_port_fluids_input"

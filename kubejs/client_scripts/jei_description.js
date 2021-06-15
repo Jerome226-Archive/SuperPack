@@ -6,6 +6,8 @@ onEvent('jei.information', event => {
 
     event.add('immersivepetroleum:distillationtower', ['Use a "Projector" to see how to make this multiblock.'])
     event.add('immersivepetroleum:pumpjack', ['Use a "Projector" to see how to make this multiblock.'])
+    event.add('immersivepetroleum:hydrotreater', ['Use a "Projector" to see how to make this multiblock.'])
+    event.add('immersivepetroleum:cokerunit', ['Use a "Projector" to see how to make this multiblock.'])
     event.add('immersiveengineering:lightning_rod', ['Use a "Projector" to see how to make this multiblock.'])
     event.add('immersiveengineering:diesel_generator', ['Use a "Projector" to see how to make this multiblock.'])
     event.add('immersiveengineering:refinery', ['Use a "Projector" to see how to make this multiblock.'])

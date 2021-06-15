@@ -5,6 +5,8 @@ onEvent('jei.add.items', event => {
     //Immersive Engineering Multiblocks
     event.add('immersivepetroleum:distillationtower')
     event.add('immersivepetroleum:pumpjack')
+    event.add('immersivepetroleum:hydrotreater')
+    event.add('immersivepetroleum:cokerunit')
     event.add('immersiveengineering:lightning_rod')
     event.add('immersiveengineering:diesel_generator')
     event.add('immersiveengineering:refinery')
@@ -33,5 +35,15 @@ onEvent('jei.add.items', event => {
     event.add('thermal:ruby_dust')
     event.add('thermal:ruby_gear')
     event.add('thermal:ruby_ore')
+
+    //Sapphire
+    event.add('thermal:sapphire')
+    event.add('thermal:sapphire_block')
+    event.add('thermal:sapphire_dust')
+    event.add('thermal:sapphire_gear')
+    event.add('thermal:sapphire_ore')
+
+    //Platinum Ore Piece
+    event.add('exnihilosequentia:piece_platinum')
 
 })

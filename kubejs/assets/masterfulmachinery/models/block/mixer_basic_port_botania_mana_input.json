@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "masterfulmachinery:block/mixer_basic_port_botania_mana_input"
+  }
+}

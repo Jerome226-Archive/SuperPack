@@ -46,7 +46,7 @@ events.listen('recipes', function (event) {
         W: '#forge:plates/electrum',
         R: 'immersiveengineering:wirecoil_electrum',
         L: 'immersiveengineering:wirecoil_copper',
-        B: '#forge:rods/brass',
+        B: 'superpackutils:copper_solenoid',
         E: 'create:integrated_circuit'
     })
 
@@ -62,7 +62,7 @@ events.listen('recipes', function (event) {
         B: '#forge:plates/brass',
         C: 'createaddition:capacitor',
         W: 'immersiveengineering:wirecoil_electrum',
-        R: '#forge:rods/iron',
+        R: 'superpackutils:copper_solenoid',
         E: 'create:integrated_circuit'
     })
 

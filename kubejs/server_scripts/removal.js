@@ -23,11 +23,6 @@ var outputRemoval = [
     'refinedstorage:crafting_upgrade',
 
     //Mekanism
-    'mekanism:basic_universal_cable',
-    'mekanism:advanced_universal_cable',
-    'mekanism:elite_universal_cable',
-    'mekanism:ultimate_universal_cable',
-
     'mekanism:basic_mechanical_pipe',
     'mekanism:advanced_mechanical_pipe',
     'mekanism:elite_mechanical_pipe',
@@ -41,11 +36,54 @@ var outputRemoval = [
     'mekanism:diversion_transporter',
     'mekanism:logistical_sorter',
 
+    //Ex Nihilo
+    'exnihilosequentia:chunk_copper',
+    'exnihilosequentia:chunk_lead',
+    'exnihilosequentia:chunk_nickel',
+    'exnihilosequentia:chunk_silver',
+    'exnihilosequentia:chunk_tin',
+    'exnihilosequentia:chunk_aluminum',
+    'exnihilosequentia:chunk_uranium',
+    'exnihilosequentia:chunk_zinc',
+    'exnihilosequentia:chunk_iron',
+    'exnihilosequentia:chunk_gold',
+    'exnihilosequentia:chunk_osmium',
+    'exnihilosequentia:chunk_cobalt',
+    'exnihilosequentia:chunk_platinum',
+
     //Engineer's Decor
     'engineersdecor:small_tree_cutter',
     'engineersdecor:small_block_breaker',
     'engineersdecor:small_solar_panel',
     'engineersdecor:factory_placer',
+    'engineersdecor:fluid_barrel',
+
+    //Crates
+    'quark:carrot_crate',
+    'thermal:carrot_block',
+    'quark:potato_crate',
+    'thermal:potato_block',
+    'quark:beetroot_crate',
+    'thermal:beetroot_block',
+    'thermal:tomato_block',
+    'thermal:onion_block',
+
+    'thermal:onion',
+    'thermal:onion_seeds',
+    'sushigocrafting:rice',
+    'sushigocrafting:rice_seeds',
+    'thermal:rice',
+    'thermal:rice_seeds',
+    'thermal:strawberry',
+    'thermal:strawberry_seeds',
+    'thermal:tomato',
+    'thermal:tomato_seeds',
+
+    //Porcelain Clay
+    'exnihilosequentia:porcelain_clay',
+
+    //Silicon
+    'tinyredstone:silicon',
 
     //Storage Drawers
     'storagedrawers:compacting_drawers_3',
@@ -85,7 +123,7 @@ var typeRemoval = [
 
     'immersiveengineering:cloche',
     'thermal:press',
-    
+
 ];
 
 outputRemoval.forEach((removal) => {

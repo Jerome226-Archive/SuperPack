@@ -1,0 +1,8 @@
+{
+    "parent":"minecraft:block/orientable",
+    "textures":{
+        "side":"masterfulmachinery:block/mixer_casing",
+        "top":"masterfulmachinery:block/mixer_casing",
+        "front":"masterfulmachinery:block/mixer_controller"
+    }
+}

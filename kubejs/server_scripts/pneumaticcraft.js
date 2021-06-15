@@ -84,6 +84,9 @@ events.listen('recipes', function (event) {
       "exothermic": false
     })
 
+    event.recipes.create.compacting(Item.of('pneumaticcraft:plastic', 1), [fluid.of('pneumaticcraft:plastic', 1000)]),
+
+
     event.remove({id: 'pneumaticcraft:heat_frame_cooling/plastic'})
 
     //Biodiesel
@@ -110,6 +113,15 @@ events.listen('recipes', function (event) {
       "pressure": 2.0,
       "time": 300
     })
+
+    //Pressure Chamber Walls
+    event.remove({output: 'pneumaticcraft:pressure_chamber_wall'})
+    event.shaped(Item.of('pneumaticcraft:pressure_chamber_wall', 16), ['BCB', 'AIA', 'BCB'], {
+      C: 'pneumaticcraft:ingot_iron_compressed',
+      A: 'superpackutils:doublelayered_capacitor',
+      B: 'mekanism:pressure_disperser',
+      I: 'superpackutils:big_steel_casing'
+    }),
 
     //Yeast Culture
     event.remove({id: 'pneumaticcraft:thermo_plant/yeast_culture'})

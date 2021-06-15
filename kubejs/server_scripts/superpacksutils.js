@@ -38,148 +38,28 @@ events.listen('recipes', function (event) {
         "shatterMultiplier": 30.0,
         "color": -11310593
     }),
-
-    //Reinforced Steel Casing 
-    event.custom({
-        "type": "masterfulmachinery:machine_process",
-        "structureId": "assembler",
-        "controllerId": "assembler",
-        "ticks": 100,
-        "inputs": [
-            {
-                "type": "masterfulmachinery:energy",
-                "data":{
-                    "amount": 1000
-                }
-            },
-            {
-                "type": "masterfulmachinery:fluids",
-                "data":{
-                    "fluid": "youmatter:stabilizer",
-                    "amount": 1500
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "pneumaticcraft:ingot_iron_compressed",
-                    "count": 8
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "mekanism:ingot_osmium",
-                    "count": 2
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:doublelayered_capacitor",
-                    "count": 2
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:electrical_steel_ingot",
-                    "count": 4
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "mekanism:steel_casing",
-                    "count": 1
-                }
-            }
-        ],
-        "outputs":[
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:big_steel_casing",
-                    "count": 1
-                }
-            }
-        ]
-    })
-
-    //Redstone Alloy
-    event.custom({
-      "type": "pneumaticcraft:pressure_chamber",
-      "inputs": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:redstone"
-        },
-      ],
-      "pressure": -0.75,
-      "results": [
-        {
-          "item": "superpackutils:redstone_alloy_ingot"
-        }
-      ]
-  })
-  
-    //Dimensional Rock
-    event.custom({
-        "type": "botania:petal_apothecary",
-        "output": {
-          "item": "superpackutils:dimensional_stone"
-        },
-        "ingredients": [
-          {
-            "item": "minecraft:obsidian"
-          },
-          {
-            "item": "minecraft:obsidian"
-          },
-          {
-            "item": "minecraft:obsidian"
-          },
-          {
-            "item": "minecraft:obsidian"
-          },
-          {
-            "item": "minecraft:obsidian"
-          },
-          {
-            "item": "minecraft:obsidian"
-          },
-          {
-            "item": "botania:rune_mana"
-          },
-          {
-            "item": "botania:livingrock"
-          },
-          {
-            "item": "botania:mana_pearl"
-          },
-          {
-            "tag": "forge:ingots/manasteel"
-          }
-        ]
-    }),
   
     //Electrical Platinum Ingot
     event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_platinum_ingot', 4)], 'superpackutils:platinum_ingot', ['thermal:electrum_dust', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
  
     //Electrical Steel Ingot
-    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_steel_ingot', 4)], 'mekanism:ingot_steel', ['superpackutils:hsla_steel_ingot', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
+    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_steel_ingot', 4)], 'mekanism:ingot_steel', ['thermal:electrum_dust', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
+
+    //Electrical HSLA Steel Ingot
+    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_hsla_steel_ingot', 4)], 'superpackutils:hsla_steel_ingot', ['thermal:electrum_dust', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
 
     //Rune
     event.recipes.create.pressing('superpackutils:rune', 'botania:livingrock')
 
+    //Enriched Oil Carbon
+    event.recipes.mekanism.enriching('superpackutils:enriched_petcoke', 'immersivepetroleum:petcoke_dust')
+
     //Basic Alloy
-    event.shaped('superpackutils:basic_alloy', [' C ', 'EIE', ' C '], {
-        C: '#mekanism:enriched/carbon',
-        E: 'thermal:rich_slag',
-        I: 'create:andesite_alloy'
-    }),
+    event.recipes.mekanism.metallurgic_infusing('superpackutils:basic_alloy', 'superpackutils:rich_slag_alloy', 'superpackutils:petroleum_coke', 160),
+
+    //Petroleum Coke
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":'immersivepetroleum:petcoke_dust'}},"output":{"infuse_type":`superpackutils:petroleum_coke`,"amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":'superpackutils:enriched_petcoke'}},"output":{"infuse_type":`superpackutils:petroleum_coke`,"amount":80}})
 
     //Nugget Cast
     event.shaped('superpackutils:chiller_nugget_cast', [' C ', 'CIC', ' C '], {
@@ -378,6 +258,59 @@ events.listen('recipes', function (event) {
         ]
     })
 
+    //Mythril Ingot
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "metallurgic_fabricator",
+        "controllerId": "metallurgic_fabricator",
+        "ticks": 1000,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 5000
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:depleted_mythril_dust",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "botania:quartz_mana",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:azure_pigment",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "botania:manasteel_ingot",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:mythril_ingot",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
     //Vibrant Alloy
     event.custom({
         "type": "masterfulmachinery:machine_process",
@@ -415,7 +348,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:items",
                 "data":{
-                    "item": "mekanism:ingot_uranium",
+                    "item": "tconstruct:queens_slime_ingot",
                     "count": 1
                 }
             }
@@ -428,6 +361,25 @@ events.listen('recipes', function (event) {
                     "count": 1
                 }
             }
+        ]
+    })
+
+    //Redstone Alloy
+    event.custom({
+        "type": "pneumaticcraft:pressure_chamber",
+        "inputs": [
+          {
+            "item": "minecraft:iron_ingot"
+          },
+          {
+            "item": "minecraft:redstone"
+          },
+        ],
+        "pressure": -0.75,
+        "results": [
+          {
+            "item": "superpackutils:redstone_alloy_ingot"
+          }
         ]
     })
 
@@ -524,7 +476,6 @@ events.listen('recipes', function (event) {
     })
 
     //Inscriber Casing
-    event.remove({output: 'superpackutils:inscriber_casing'})
     event.shaped(Item.of('superpackutils:inscriber_casing', 4), ['BCB', 'AIA', 'BCB'], {
           C: 'refinedstorage:quartz_enriched_iron',
           A: 'superpackutils:reinforced_capacitor',
@@ -533,7 +484,6 @@ events.listen('recipes', function (event) {
     }),
 
     //Metallurgic Casing
-    event.remove({output: 'superpackutils:metallurgic_casing'})
     event.shaped(Item.of('superpackutils:metallurgic_casing', 4), ['BCB', 'AIA', 'BCB'], {
           C: 'libvulpes:ingotsilicon',
           A: 'superpackutils:reinforced_capacitor',
@@ -542,11 +492,26 @@ events.listen('recipes', function (event) {
     }),
 
     //Infuser Casing
-    event.remove({output: 'superpackutils:infuser_casing'})
     event.shaped(Item.of('superpackutils:infuser_casing', 4), ['BCB', 'AIA', 'BCB'], {
           C: 'thermal:constantan_ingot',
           A: 'superpackutils:sturdy_capacitor',
           B: '#forge:sheetmetals/copper',
+          I: 'mekanism:steel_casing'
+    }),
+
+    //Improved Metallurgic Casing
+    event.shaped(Item.of('superpackutils:improved_metallurgic_casing', 8), ['BCB', 'AIA', 'BCB'], {
+        C: 'pneumaticcraft:plastic',
+        A: 'superpackutils:doublelayered_capacitor',
+        B: 'superpackutils:metallurgic_casing',
+        I: 'superpackutils:big_steel_casing'
+  }),
+
+    //Assembler Casing
+    event.shaped(Item.of('superpackutils:assembler_frame', 8), ['BCB', 'AIA', 'BCB'], {
+          C: 'superpackutils:electrical_platinum_ingot',
+          A: 'superpackutils:doublelayered_capacitor',
+          B: 'superpackutils:electrical_steel_ingot',
           I: 'mekanism:steel_casing'
     }),
 
@@ -556,7 +521,84 @@ events.listen('recipes', function (event) {
       N: 'thermal:nickel_plate',
       I: 'thermal:tin_plate'
     }),
-  
+
+    //Reinforced Steel Casing
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "assembler",
+        "controllerId": "assembler",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 1000
+                }
+            },
+            {
+                "type": "masterfulmachinery:fluids",
+                "data":{
+                    "fluid": "youmatter:stabilizer",
+                    "amount": 1500
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "pneumaticcraft:ingot_iron_compressed",
+                    "count": 8
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "mekanism:ingot_osmium",
+                    "count": 2
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:doublelayered_capacitor",
+                    "count": 2
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:electrical_hsla_steel_ingot",
+                    "count": 4
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "mekanism:steel_casing",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:big_steel_casing",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Heating Element
+    event.shaped(Item.of('superpackutils:heating_element', 2), ['ICI', 'EEE', 'ICI'], {
+        C: 'superpackutils:redstone_alloy_ingot',
+        E: 'superpackutils:superheated_bronze_ingot',
+        I: 'immersiveengineering:stick_steel'
+    })
+
+    //Circuit Board
+    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"create:integrated_circuit"}},{"count":1,"base_ingredient":{"item":"superpackutils:bio_plastic"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:wire_lead"}},{"count":1,"base_ingredient":{"item":"refinedstorage:improved_processor"}}],"category":"components","result":{"item":"superpackutils:circuit_board","count":1}})
+
     //Copper Solenoid
     event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":3,"base_ingredient":{"item":"thermal:copper_plate"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:wire_electrum"}},{"count":2,"base_ingredient":{"item":"immersiveengineering:stick_aluminum"}},{"count":1,"base_ingredient":{"item":"superpackutils:mixed_alloy_ingot"}}],"category":"components","result":{"item":"superpackutils:copper_solenoid","count":1}})
 
@@ -583,22 +625,33 @@ events.listen('recipes', function (event) {
     event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"thermal:lead_dust"}},"fluidInput":{"amount":50,"tag":"forge:sodium"},"gasInput":{"amount":100,"gas":"superpackutils:ethyl_chloride"},"energyRequired":200,"duration":400,"itemOutput":{"item":"superpackutils:tetraethyl_lead_dust","count":1},"gasOutput":{"gas":"mekanism:oxygen","amount":10}})
 
     //Chemical Death
-    event.custom({"type":"mekanism:reaction","itemInput":{"amount":1,"ingredient":{"item":"botania:living_root"}},"fluidInput":{"amount":600,"tag":"minecraft:water"},"gasInput":{"amount":200,"gas":"superpackutils:cyanide"},"duration":37,"gasOutput":{"gas":"superpackutils:chemical_death","amount":100}})
+    event.custom({"type":"mekanism:reaction","itemInput":{"amount":1,"ingredient":{"item":"botania:living_root"}},"fluidInput":{"amount":600,"tag":"minecraft:water"},"gasInput":{"amount":200,"gas":"superpackutils:cyanide"},"energyRequired":200,"duration":37,"itemOutput":{"item":"biomesoplenty:dead_branch","count":1},"gasOutput":{"gas":"superpackutils:chemical_death","amount":100}})
 
     //Industrial Sand
-    event.recipes.immersiveengineering.crusher('superpackutils:industrial_sand', 'create:limesand')
+    event.custom({
+        "type": "exnihilosequentia:fluid_item",
+        "fluid": {
+          "fluid": "mekanism:heavy_water"
+        },
+        "input": {
+          "item": "create:limesand"
+        },
+        "result": {
+          "item": "superpackutils:industrial_sand"
+        }
+    })
 
     //Bedrock Dust & Limestone Dust
     event.recipes.create.crushing([Item.of('superpackutils:limestone_dust').withChance(0.35), 'superpackutils:bedrock_dust', Item.of('superpackutils:bedrock_dust').withChance(0.45)], 'superpackutils:deepslate', 350)
 
     //Bloody Pigment
-    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:bloody_sawdust', Item.of('superpackutils:bloody_pigment').withChance(0.30))
+    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:bloody_sawdust', Item.of('superpackutils:bloody_pigment').withChance(0.80))
 
     //Grassy Pigment
-    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:grassy_sawdust', Item.of('superpackutils:grassy_pigment').withChance(0.30))
+    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:grassy_sawdust', Item.of('superpackutils:grassy_pigment').withChance(0.80))
 
     //Azure Pigment
-    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:azure_sawdust', Item.of('superpackutils:azure_pigment').withChance(0.30))
+    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:azure_sawdust', Item.of('superpackutils:azure_pigment').withChance(0.80))
 
     //Ender Pearl Nugget
     event.custom({
@@ -700,9 +753,30 @@ events.listen('recipes', function (event) {
       "toColor": 2742742
     })
 
-    //Dyingrock
-    event.recipes.mekanism.metallurgic_infusing('superpackutils:dyingrock', 'botania:livingrock', 'mekanism:carbon', 80),
+    //Energetic Core
+    event.recipes.create.mixing('superpackutils:energetic_processor', ['refinedstorage:destruction_core', 'superpackutils:energetic_alloy_ingot', 'tconstruct:pig_iron_ingot'])
 
+    //Vibrant Core
+    event.recipes.create.mixing('superpackutils:vibrant_processor', ['refinedstorage:construction_core', 'superpackutils:vibrant_alloy_ingot', 'tconstruct:queens_slime_ingot'])
+
+    //Rich Slag Alloy
+    event.recipes.create.mixing('superpackutils:rich_slag_alloy', ['thermal:rich_slag', 'create:andesite_alloy'])
+
+    //Black Marble
+    event.recipes.mekanism.metallurgic_infusing(Item.of('astralsorcery:black_marble_raw', 8), Item.of('astralsorcery:marble_raw', 8), 'mekanism:carbon', 80),
+    
+    //Dyingrock
+    event.custom({
+        "type": "botania:pure_daisy",
+        "input": {
+          "type": "block",
+          "block": "astralsorcery:black_marble_raw"
+        },
+        "output": {
+          "name": "superpackutils:dyingrock"
+        }
+    })
+    
     //Superheated Bronze Ingot
     event.recipes.create.compacting('superpackutils:superheated_bronze_ingot', ['#forge:ingots/bronze', fluid.of('tconstruct:magma_cream', 50)]).superheated(),
 
@@ -711,9 +785,552 @@ events.listen('recipes', function (event) {
 
     //Bio Plastic
     event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"thermal:sawdust"},{"item":"thermal:rubber"}],"result":{"fluid":"superpackutils:molten_bio_plastic_fluid","amount":1000},"fluid":{"tag":"forge:biodiesel","amount":1000},"energy":3200}),
-    event.recipes.create.compacting('superpackutils:bio_plastic', [fluid.of('superpackutils:molten_bio_plastic_fluid', 1000)]),
-  
+    event.recipes.create.compacting(Item.of('superpackutils:bio_plastic', 1), [fluid.of('superpackutils:molten_bio_plastic_fluid', 1000)]),
+
+    //Infused Stone
+    event.recipes.create.mixing(Item.of('superpackutils:infused_stone', 2), ['create:limestone', 'botania:livingrock'])
+
     //Compressed Steel Ingot
     event.custom({"type":"immersiveengineering:squeezer","result":{"item":"superpackutils:compressed_steel_ingot"},"input":{"count":1,"base_ingredient":{"tag":"forge:ingots/steel"}},"energy":19200})
+
+    //Alchemical Iron
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "minecraft:clay_ball",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_iron_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Gold
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:sulfur",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_gold_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Copper
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:cinnabar",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_copper_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Aluminum
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "mekanism:salt",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_aluminum_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Lead
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:sapphire",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_lead_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Nickel
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:limestone_dust",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_nickel_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Silver
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "minecraft:lapis_lazuli",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_silver_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Tin
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:ruby",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_tin_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Zinc
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:niter",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_zinc_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Platinum
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:apatite",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_platinum_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Uranium
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "minecraft:emerald",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_uranium_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Alchemical Osmium
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "mixer",
+        "controllerId": "mixer",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 100
+                }
+            },
+            {
+                "type": "masterfulmachinery:botania_mana",
+                "data":{
+                    "amount": 300
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_powder",
+                    "count": 3
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "mekanism:fluorite_gem",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:alchemical_osmium_dust",
+                    "count": 1
+                }
+            }
+        ]
+    })
 
 });

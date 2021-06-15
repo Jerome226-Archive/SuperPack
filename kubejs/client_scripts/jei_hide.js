@@ -53,13 +53,19 @@ onEvent('jei.hide.items', event => {
         'masterfulmachinery:assembler_basic_port_energy_output',
         'masterfulmachinery:assembler_basic_port_fluids_output',
         'masterfulmachinery:assembler_basic_port_pncr_pressure_output',
+        'masterfulmachinery:crusher_basic_port_items_input',
+        'masterfulmachinery:crusher_basic_port_energy_output',
+        'masterfulmachinery:crusher_basic_port_pncr_pressure_output',
+        'masterfulmachinery:mixer_basic_port_pncr_pressure_output',
+        'masterfulmachinery:mixer_basic_port_botania_mana_output',
+        'masterfulmachinery:mixer_basic_port_energy_output',
+
+        //Ex Nihilo
+        'exnihilosequentia:crushed_andesite',
+        'exnihilosequentia:crushed_diorite',
+        'exnihilosequentia:crushed_granite',
 
         //Mekanism Pipes
-        'mekanism:basic_universal_cable',
-        'mekanism:advanced_universal_cable',
-        'mekanism:elite_universal_cable',
-        'mekanism:ultimate_universal_cable',
-
         'mekanism:basic_mechanical_pipe',
         'mekanism:advanced_mechanical_pipe',
         'mekanism:elite_mechanical_pipe',
@@ -111,6 +117,36 @@ onEvent('jei.hide.items', event => {
         'engineersdecor:small_block_breaker',
         'engineersdecor:small_solar_panel',
         'engineersdecor:factory_placer',
+        'engineersdecor:fluid_barrel',
+
+        //Crates
+        'quark:carrot_crate',
+        'thermal:carrot_block',
+        'quark:potato_crate',
+        'thermal:potato_block',
+        'quark:beetroot_crate',
+        'thermal:beetroot_block',
+        'thermal:tomato_block',
+        'thermal:onion_block',
+
+        'thermal:onion',
+        'thermal:onion_seeds',
+        'sushigocrafting:rice',
+        'sushigocrafting:rice_seeds',
+        'thermal:rice',
+        'thermal:rice_seeds',
+        'thermal:strawberry',
+        'thermal:strawberry_seeds',
+        'thermal:tomato',
+        'thermal:tomato_seeds',
+
+        'neapolitan:chocolate_bar',
+
+        //Porcelain Clay
+        'exnihilosequentia:porcelain_clay',
+
+        //Silicon
+        'tinyredstone:silicon',
 
         //Storage Drawers
         'storagedrawers:compacting_drawers_3',
@@ -184,6 +220,7 @@ onEvent('jei.hide.items', event => {
         'immersiveengineering:ingot_copper',
         'tconstruct:copper_ingot',
         'libvulpes:ingotcopper',
+        'exnihilosequentia:ingot_copper',
 
         //Copper Dust
         'immersiveengineering:dust_copper',
@@ -212,6 +249,7 @@ onEvent('jei.hide.items', event => {
         //Tin Ingot
         'mekanism:ingot_tin',
         'libvulpes:ingottin',
+        'exnihilosequentia:ingot_tin',
 
         //Tin Dust
         'mekanism:dust_tin',
@@ -227,6 +265,8 @@ onEvent('jei.hide.items', event => {
         //Lead Ingot
         'immersiveengineering:ingot_lead',
         'mekanism:ingot_lead',
+        'exnihilosequentia:ingot_lead',
+        'eidolon:lead_ingot',
 
         //Lead Dust
         'immersiveengineering:dust_lead',
@@ -235,6 +275,7 @@ onEvent('jei.hide.items', event => {
         //Lead Nugget
         'immersiveengineering:nugget_lead',
         'mekanism:nugget_lead',
+        'eidolon:lead_nugget',
 
         //Lead Plate
         'immersiveengineering:plate_lead',
@@ -242,6 +283,7 @@ onEvent('jei.hide.items', event => {
         //Silver Ingot
         'immersiveengineering:ingot_silver',
         'iceandfire:silver_ingot',
+        'exnihilosequentia:ingot_silver',
 
         //Silver Dust
         'immersiveengineering:dust_silver',
@@ -255,6 +297,7 @@ onEvent('jei.hide.items', event => {
 
         //Nickel Ingot
         'immersiveengineering:ingot_nickel',
+        'exnihilosequentia:ingot_nickel',
 
         //Nickel Dust
         'immersiveengineering:dust_nickel',
@@ -267,6 +310,7 @@ onEvent('jei.hide.items', event => {
 
         //Uranium Ingot
         'immersiveengineering:ingot_uranium',
+        'exnihilosequentia:ingot_uranium',
 
         //Uranium Nugget
         'immersiveengineering:nugget_uranium',
@@ -291,6 +335,9 @@ onEvent('jei.hide.items', event => {
 
         //Steel Gear
         'libvulpes:gearsteel',
+
+        //Zinc Ingot
+        'exnihilosequentia:ingot_zinc',
 
         //Electrum Ingot
         'immersiveengineering:ingot_electrum',
@@ -330,6 +377,7 @@ onEvent('jei.hide.items', event => {
 
         //Aluminum Ingot
         'libvulpes:ingotaluminum',
+        'exnihilosequentia:ingot_aluminum',
         
         //Aluminum Nugget
         'libvulpes:nuggetaluminum',

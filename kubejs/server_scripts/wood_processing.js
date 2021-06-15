@@ -75,7 +75,7 @@ onEvent('recipes', event => {
             "itemingredients":
             [
                 {
-                    "tag": `#${modName}:${woodName}_${logType}s`
+                    "item": logItem
                 }
             ],
             "time": 80,

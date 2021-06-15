@@ -164,7 +164,7 @@ events.listen('recipes', function (event) {
             "item": "botania:rune_mana"
           },
           "S": {
-            "item": "astralsorcery:starmetal_ingot"
+            "item": "superpackutils:mythril_ingot"
           },
           "D": {
             "item": "astralsorcery:stardust"
@@ -264,15 +264,69 @@ events.listen('recipes', function (event) {
 
     //Lavender Quartz
     event.remove({id: 'botania:quartz_lavender'})
-    event.recipes.create.mixing(Item.of('botania:quartz_lavender', 4), ['botania:quartz_mana', 'botania:quartz_mana', 'botania:quartz_mana', 'botania:quartz_mana', 'botania:metamorphic_fungal_stone', 'minecraft:allium']).heated()
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:quartz_lavender",
+        "count": 4
+      },
+      "mana": 2000,
+      "ingredients": [
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:rune_envy"
+        },
+        {
+          "item": "biomesoplenty:lavender"
+        }
+      ]
+    })
 
     //Red Quartz
     event.remove({id: 'botania:quartz_red'})
-    event.recipes.create.mixing(Item.of('botania:quartz_red', 4), ['botania:quartz_lavender', 'botania:quartz_lavender', 'botania:quartz_lavender', 'botania:quartz_lavender', 'botania:metamorphic_mesa_stone', 'minecraft:redstone']).superheated()
-
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:quartz_red",
+        "count": 4
+      },
+      "mana": 2000,
+      "ingredients": [
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:rune_wrath"
+        },
+        {
+          "item": "superpackutils:redstone_alloy_ingot"
+        }
+      ]
+    })
+  
     //Blaze Quartz
     event.remove({id: 'botania:quartz_blaze'})
-    event.recipes.create.mixing('botania:quartz_blaze', ['botania:quartz_mana', fluid.of('tconstruct:magma_cream', 28)]).superheated()
+    event.recipes.create.mixing('botania:quartz_blaze', ['botania:quartz_mana', fluid.of('tconstruct:molten_blaze', 28)]).heated()
 
     //Redstone Root
     event.remove({id: 'botania:redstone_root'})
@@ -457,6 +511,9 @@ events.listen('recipes', function (event) {
           },
           {
             "item": "minecraft:spider_eye"
+          },
+          {
+            "item": "superpackutils:mythril_ingot"
           }
         ]
     })
@@ -485,6 +542,9 @@ events.listen('recipes', function (event) {
           },
           {
             "item": "minecraft:apple"
+          },
+          {
+            "item": "superpackutils:mythril_ingot"
           }
         ]
     })
@@ -513,6 +573,9 @@ events.listen('recipes', function (event) {
           },
           {
             "item": "autumnity:sap_bottle"
+          },
+          {
+            "item": "superpackutils:mythril_ingot"
           }
         ]
     })
@@ -541,6 +604,9 @@ events.listen('recipes', function (event) {
           },
           {
             "item": "minecraft:packed_ice"
+          },
+          {
+            "item": "superpackutils:mythril_ingot"
           }
         ]
     })

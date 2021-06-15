@@ -28,41 +28,132 @@ events.listen('recipes', function (event) {
 
     //Tinker's Bronze
     event.remove({id: 'tconstruct:smeltery/alloys/molten_tinkers_bronze'})
-    event.recipes.create.filling('tconstruct:tinkers_bronze_ingot', ['#forge:ingots/copper', fluid.of('tconstruct:molten_glass', 500)])
-
-    //Manyullyn
-    event.remove({id: 'tconstruct:smeltery/alloys/molten_manyullyn'})
-    event.recipes.create.mixing(fluid.of('tconstruct:molten_manyullyn', 576), [fluid.of('tconstruct:molten_netherite', 144), fluid.of('tconstruct:molten_cobalt', 432)]).superheated()
-
-    //Pig Iron
-    event.remove({id: 'tconstruct:smeltery/alloys/molten_pig_iron'})
-    event.recipes.create.mixing(fluid.of('tconstruct:molten_pig_iron', 288), [fluid.of('tconstruct:molten_iron', 144), 'minecraft:clay_ball', fluid.of('tconstruct:blood', 250)]).heated()
-
-    //Queens Slime
-    event.remove({id: 'tconstruct:smeltery/alloys/molten_queens_slime'})
-    event.recipes.create.mixing(fluid.of('tconstruct:molten_queens_slime', 288), [fluid.of('tconstruct:molten_cobalt', 144), fluid.of('tconstruct:molten_uranium', 144), 'minecraft:magma_cream']).superheated()
-
-    //Hepatizon
-    event.remove({id: 'tconstruct:smeltery/alloys/molten_hepatizon'})
-    event.recipes.create.mixing(fluid.of('tconstruct:molten_hepatizon', 288), [fluid.of('tconstruct:molten_copper', 288), fluid.of('tconstruct:molten_cobalt', 144), 'minecraft:obsidian']).superheated()
+    event.recipes.create.mixing(fluid.of('tconstruct:molten_tinkers_bronze', 288), [fluid.of('tconstruct:molten_copper', 144), fluid.of('tconstruct:molten_glass', 288)]).heated()
 
     //Rose Gold
     event.remove({id: 'tconstruct:smeltery/alloys/molten_rose_gold'})
     event.recipes.create.mixing(fluid.of('tconstruct:molten_rose_gold', 576), [fluid.of('tconstruct:molten_copper', 432), fluid.of('tconstruct:molten_gold', 144)]).heated()
 
+    //Pig Iron
+    event.remove({id: 'tconstruct:smeltery/alloys/molten_pig_iron'})
+    event.custom({
+        "type": "tconstruct:alloy",
+        "inputs": [
+          {
+            "name": "tconstruct:molten_iron",
+            "amount": 144
+          },
+          {
+            "name": "tconstruct:blood",
+            "amount": 250
+          },
+          {
+            "name": "tconstruct:molten_rose_gold",
+            "amount": 288
+          },
+          {
+            "name": "tconstruct:molten_clay",
+            "amount": 250
+          }
+        ],
+        "result": {
+          "fluid": "tconstruct:molten_pig_iron",
+          "amount": 288
+        },
+        "temperature": 811
+    })
+
+    //Queens Slime
+    event.remove({id: 'tconstruct:smeltery/alloys/molten_queens_slime'})
+    event.custom({
+        "type": "tconstruct:alloy",
+        "inputs": [
+          {
+            "name": "tconstruct:molten_cobalt",
+            "amount": 144
+          },
+          {
+            "name": "tconstruct:molten_gold",
+            "amount": 144
+          },
+          {
+            "name": "tconstruct:molten_uranium",
+            "amount": 144
+          },
+          {
+            "tag": "forge:magma",
+            "amount": 250
+          }
+        ],
+        "result": {
+          "fluid": "tconstruct:molten_queens_slime",
+          "amount": 288
+        },
+        "temperature": 1150
+    })
+
+    //Hepatizon
+    event.remove({id: 'tconstruct:smeltery/alloys/molten_hepatizon'})
+    event.custom({
+        "type": "tconstruct:alloy",
+        "inputs": [
+          {
+            "name": "tconstruct:molten_copper",
+            "amount": 288
+          },
+          {
+            "name": "tconstruct:molten_lead",
+            "amount": 288
+          },
+          {
+            "name": "tconstruct:molten_cobalt",
+            "amount": 144
+          },
+          {
+            "name": "tconstruct:molten_obsidian",
+            "amount": 1000
+          }
+        ],
+        "result": {
+          "fluid": "tconstruct:molten_hepatizon",
+          "amount": 288
+        },
+        "temperature": 1400
+    })
+
     //Slimesteel
     event.remove({id: 'tconstruct:smeltery/alloys/molten_slimesteel'})
-    event.recipes.create.mixing(fluid.of('tconstruct:molten_slimesteel', 288), [fluid.of('tconstruct:molten_iron', 144), 'tconstruct:sky_slime_ball', fluid.of('tconstruct:seared_stone', 144)]).heated()
+    event.custom({
+        "type": "tconstruct:alloy",
+        "inputs": [
+          {
+            "name": "tconstruct:molten_iron",
+            "amount": 144
+          },
+          {
+            "name": "tconstruct:sky_slime",
+            "amount": 250
+          },
+          {
+            "name": "tconstruct:seared_stone",
+            "amount": 144
+          }
+        ],
+        "result": {
+          "fluid": "tconstruct:molten_slimesteel",
+          "amount": 288
+        },
+        "temperature": 900
+    })
 
-    //Netherite
-    event.remove({id: 'tconstruct:smeltery/alloys/molten_netherite'})
-    event.recipes.create.mixing(fluid.of('tconstruct:molten_netherite', 16), [fluid.of('tconstruct:molten_debris', 64), fluid.of('tconstruct:molten_gold', 32)]).superheated()
 
     //Steel
     event.remove({id: 'immersiveengineering:blastfurnace/steel'})
     event.remove({id: 'immersiveengineering:arcfurnace/steel'})
+    event.remove({id: 'immersivepetroleum:arcfurnace/steel'})
     event.remove({output: 'mekanism:enriched_iron'})
     event.remove({id: 'mekanism:processing/steel/enriched_iron_to_dust'})
+    event.remove({id: 'immersiveengineering:blastfurnace/steel_block'})
     event.remove({id: 'immersiveengineering:blastfurnace/steel_block'})
 
     event.recipes.create.mixing(Item.of('mekanism:enriched_iron', 3), ['thermal:iron_dust', 'thermal:nickel_dust', 'superpackutils:zinc_dust'])
@@ -70,6 +161,7 @@ events.listen('recipes', function (event) {
     event.recipes.immersiveengineering.blast_furnace('mekanism:ingot_steel', 'mekanism:enriched_iron', 'thermal:slag')
 
     event.recipes.immersiveengineering.arc_furnace(['mekanism:ingot_steel'], 'mekanism:enriched_iron', ['immersiveengineering:dust_coke'], 'thermal:slag')
+    event.recipes.immersiveengineering.arc_furnace(['mekanism:ingot_steel'], 'mekanism:enriched_iron', ['immersivepetroleum:petcoke_dust'], 'thermal:slag')
     event.recipes.immersiveengineering.arc_furnace(['mekanism:ingot_steel'], 'mekanism:enriched_iron', [Item.of('mekanism:dust_charcoal', 3)], 'thermal:slag')
 
 });

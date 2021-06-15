@@ -6,14 +6,15 @@ events.listen('recipes', function (event) {
     //Astral Sorcery
     //-----------------------------------------------------
 
-    //Luminous Crafting Table Compat
+    //Luminous Crafting Table
+    event.remove({id: 'astralsorcery:block_transmutation/craftingtable_altar'})
     event.custom({
         "type": "astralsorcery:block_transmutation",
         "input": [
           {
-            "block": "tconstruct:crafting_station",
+            "block": "eidolon:worktable",
             "display": {
-              "item": "tconstruct:crafting_station",
+              "item": "eidolon:worktable",
               "count": 1
             }
           }
@@ -54,7 +55,7 @@ events.listen('recipes', function (event) {
             "canBeCelestialCrystal": true
           },
           "R": {
-            "item": "botania:manasteel_ingot"
+            "item": "superpackutils:mythril_ingot"
           },
           "L": {
             "item": "botania:mana_quartz"

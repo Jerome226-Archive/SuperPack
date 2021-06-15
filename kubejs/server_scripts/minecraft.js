@@ -50,6 +50,52 @@ events.listen('recipes', function (event) {
         }
     })
 
+    //Blaze Powder
+    event.custom({
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "minecraft:glowstone_dust"
+          },
+          {
+            "fluid": "create:potion",
+            "nbt": {
+              "Bottle": "REGULAR",
+              "Potion": "quark:resistance"
+            },
+            "amount": 25
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:blaze_powder"
+          }
+        ]
+    })
+
+    //Alchemical Powder
+    event.custom({
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "minecraft:blaze_powder"
+          },
+          {
+            "fluid": "create:potion",
+            "nbt": {
+              "Bottle": "REGULAR",
+              "Potion": "minecraft:fire_resistance"
+            },
+            "amount": 25
+          }
+        ],
+        "results": [
+          {
+            "item": "superpackutils:alchemical_powder"
+          }
+        ]
+    })
+  
     //Ender Eye
     event.remove({output: 'minecraft:ender_eye'})
     event.recipes.create.mixing('minecraft:ender_eye', ['minecraft:ender_pearl', 'minecraft:blaze_powder']).heated()
@@ -81,42 +127,119 @@ events.listen('recipes', function (event) {
     //Livingroot
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":"botania:living_root"}],"input":{"item":"minecraft:dead_bush"},"soil":[{"item":"farmersdelight:organic_compost"}],"time":1200,"render":{"type":"generic","block":"minecraft:dead_bush"}})
 
+    //Caveroot
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"quark:root_item"}],"input":{"item":"quark:root_item"},"soil":[{"item":"farmersdelight:organic_compost"}],"time":1200,"render":{"type":"generic","block":"minecraft:dead_bush"}})
+
     //Glowstone Pre-Nether
-    event.recipes.create.filling('minecraft:glowstone_dust', ['minecraft:gunpowder', fluid.of('astralsorcery:liquid_starlight', 250)]),
+    event.recipes.create.filling('minecraft:glowstone_dust', ['minecraft:gunpowder', fluid.of('astralsorcery:liquid_starlight', 25)]),
+
+    //Gunpowder
+    event.remove({id: 'create:filling/gunpowder'})
+    event.recipes.immersiveengineering.crusher('minecraft:gunpowder', 'minecraft:flint')
+
+    //Redstone
+    event.remove({id: 'create:filling/redstone'})
+    event.custom({
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "minecraft:gunpowder"
+          },
+          {
+            "fluid": "create:potion",
+            "nbt": {
+              "Bottle": "REGULAR",
+              "Potion": "minecraft:strength"
+            },
+            "amount": 25
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:redstone"
+          }
+        ]
+    })
+
+    //Glowstone
+    event.remove({id: 'create:filling/glowstone'})
+    event.custom({
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "minecraft:gunpowder"
+          },
+          {
+            "fluid": "create:potion",
+            "nbt": {
+              "Bottle": "REGULAR",
+              "Potion": "minecraft:night_vision"
+            },
+            "amount": 25
+          }
+        ],
+        "results": [
+          {
+            "item": "minecraft:glowstone_dust"
+          }
+        ]
+    })
 
     //Soul Lantern 
-    event.remove({id: 'tconstruct:smeltery/casting/soul_lantern'})
+    event.remove({id: 'tconstruct:smeltery/casting/metal/iron/soul_lantern'})
     event.recipes.create.filling('minecraft:soul_lantern', ['minecraft:soul_torch', fluid.of('tconstruct:molten_iron', 128)]),
 
     //Lantern
-    event.remove({id: 'tconstruct:smeltery/casting/lantern'})
+    event.remove({id: 'tconstruct:smeltery/casting/metal/iron/lantern'})
     event.recipes.create.filling('minecraft:lantern', ['minecraft:torch', fluid.of('tconstruct:molten_iron', 128)]),
 
     //Golden Apple
-    event.remove({id: 'tconstruct:smeltery/casting/golden_apple'})
+    event.remove({id: 'tconstruct:smeltery/casting/metal/gold/apple'})
     event.recipes.create.filling('minecraft:golden_apple', ['minecraft:apple', fluid.of('tconstruct:molten_gold', 1152)]),
 
     //Golden Carrot
-    event.remove({id: 'tconstruct:smeltery/casting/golden_carrot'})
+    event.remove({id: 'tconstruct:smeltery/casting/metal/gold/carrot'})
     event.recipes.create.filling('minecraft:golden_carrot', ['minecraft:carrot', fluid.of('tconstruct:molten_gold', 128)]),
 
     //Glistering melon
-    event.remove({id: 'tconstruct:smeltery/casting/glistering_melon_slice'})
+    event.remove({id: 'tconstruct:smeltery/casting/metal/gold/melon'})
     event.recipes.create.filling('minecraft:glistering_melon_slice', ['minecraft:melon_slice', fluid.of('tconstruct:molten_gold', 128)]),
 
     //Ender Chest
-    event.remove({id: 'tconstruct:smeltery/casting/ender_chest'})
+    event.remove({id: 'tconstruct:smeltery/casting/obsidian/chest'})
     event.recipes.create.filling('minecraft:ender_chest', ['minecraft:ender_eye', fluid.of('tconstruct:molten_obsidian', 8000)]),
 
     //Compass
-    event.remove({id: 'tconstruct:smeltery/casting/compass'})
+    event.remove({id: 'tconstruct:smeltery/casting/metal/iron/compass'})
     event.recipes.create.filling('minecraft:compass', ['minecraft:redstone', fluid.of('tconstruct:molten_iron', 576)]),
 
     //Clock
-    event.remove({id: 'tconstruct:smeltery/casting/clock'})
+    event.remove({id: 'tconstruct:smeltery/casting/metal/gold/clock'})
     event.recipes.create.filling('minecraft:clock', ['minecraft:redstone', fluid.of('tconstruct:molten_gold', 576)])
 
     //Remove Soup
     event.remove({id: 'minecraft:beetroot_soup'})
+
+    //Netherrack
+    event.custom({
+        "type": "astralsorcery:block_transmutation",
+        "input": [
+          {
+            "block": "minecraft:red_sandstone",
+            "display": {
+              "item": "minecraft:red_sandstone",
+              "count": 1
+            }
+          }
+        ],
+        "output": {
+          "block": "minecraft:netherrack"
+        },
+        "display": {
+          "item": "minecraft:netherrack",
+          "count": 1
+        },
+        "starlight": 200.0
+    })
 
 });

@@ -6,14 +6,11 @@ events.listen('recipes', function (event) {
     //Early Mekanism
     //-----------------------------------------------------
 
-    //Osmium Processing
-    event.remove({id: 'mekanism:processing/osmium/clump/from_ore'})
-    event.remove({id: 'tconstruct:smeltery/melting/metal/osmium/ore'})
-    event.remove({id: 'immersiveengineering:arcfurnace/ore_osmium'})
-
-    //Uranium Processing
-    event.remove({id: 'tconstruct:smeltery/melting/metal/uranium/ore'})
-    event.remove({id: 'immersiveengineering:arcfurnace/ore_uranium'})
+    //Gas Conversione
+    event.remove({id: 'mekanism:gas_conversion/salt_to_hydrogen_chloride'})
+    event.remove({id: 'mekanism:gas_conversion/sulfur_to_sulfuric_acid'})
+    event.remove({id: 'mekanism:gas_conversion/flint_to_oxygen'})
+    event.remove({id: 'mekanism:oxidizing/brine'})
 
     //Sulfur Replace Output
     event.replaceOutput({}, 'mekanism:dust_sulfur', 'thermal:sulfur_dust')
@@ -90,6 +87,84 @@ events.listen('recipes', function (event) {
           }
         ]
     })
+
+    //Pressurized Tube
+    event.remove({output: 'mekanism:basic_pressurized_tube'})
+    event.shaped(Item.of('mekanism:basic_pressurized_tube', 8), ['CIC'], {
+        C: 'superpackutils:electrical_steel_ingot',
+        I: '#forge:glass'
+    }),
+
+    //Thermodynamic conductor
+    event.remove({output: 'mekanism:basic_thermodynamic_conductor'})
+    event.shaped(Item.of('mekanism:basic_thermodynamic_conductor', 8), ['CIC'], {
+        C: 'superpackutils:electrical_steel_ingot',
+        I: 'pneumaticcraft:thermal_lagging'
+    }),
+
+    //Speed Upgrade
+    event.remove({output: 'mekanism:upgrade_speed'})
+    event.shaped('mekanism:upgrade_speed', [' C ', 'PZP', ' P '], {
+        P: 'superpackutils:compressed_steel_ingot',
+        Z: 'immersiveengineering:ingot_aluminum',
+        C: 'thermal:electrum_plate'
+    }),
+
+    //Energy Upgrade
+    event.remove({output: 'mekanism:upgrade_energy'})
+    event.shaped('mekanism:upgrade_energy', [' C ', 'PZP', ' P '], {
+        P: 'superpackutils:compressed_steel_ingot',
+        Z: 'superpackutils:electrical_platinum_ingot',
+        C: 'thermal:electrum_plate'
+    }),
+
+    //Filter Upgrade
+    event.remove({output: 'mekanism:upgrade_filter'})
+    event.shaped('mekanism:upgrade_filter', [' C ', 'PZP', ' P '], {
+        P: 'superpackutils:compressed_steel_ingot',
+        Z: 'create:brass_ingot',
+        C: 'thermal:electrum_plate'
+    }),
+
+    //Muffling Upgrade
+    event.remove({output: 'mekanism:upgrade_muffling'})
+    event.shaped('mekanism:upgrade_muffling', [' C ', 'PZP', ' P '], {
+        P: 'superpackutils:compressed_steel_ingot',
+        Z: 'mekanism:ingot_steel',
+        C: 'thermal:electrum_plate'
+    }),
+
+    //Gas Upgrade
+    event.remove({output: 'mekanism:upgrade_gas'})
+    event.shaped('mekanism:upgrade_gas', [' C ', 'PZP', ' P '], {
+        P: 'superpackutils:compressed_steel_ingot',
+        Z: 'create:zinc_ingot',
+        C: 'thermal:electrum_plate'
+    }),
+
+    //Anchor Upgrade
+    event.remove({output: 'mekanism:upgrade_anchor'})
+    event.shaped('mekanism:upgrade_anchor', [' C ', 'PZP', ' P '], {
+        P: 'superpackutils:compressed_steel_ingot',
+        Z: 'minecraft:diamond',
+        C: 'thermal:electrum_plate'
+    }),
+
+    //Cable
+    event.remove({output: 'refinedstorage:cable'})
+    event.shaped(Item.of('refinedstorage:cable', 12), ['CCC', 'IRI', 'CCC'], {
+        C: 'refinedstorage:quartz_enriched_iron',
+        R: 'create:integrated_circuit',
+        I: '#forge:glass/colorless'
+    }),
+
+    //Pipe
+    event.remove({output: 'quark:pipe'})
+    event.shaped(Item.of('quark:pipe', 8), ['CCC', 'IRI', 'CCC'], {
+        C: 'refinedstorage:quartz_enriched_iron',
+        R: 'minecraft:redstone',
+        I: '#forge:glass/colorless'
+    }),
 
     //Mekanism Energy Tablet
     event.remove({output: 'mekanism:energy_tablet'})
@@ -195,24 +270,22 @@ events.listen('recipes', function (event) {
 
     //Thermal Evaporation Controller
     event.remove({output: 'mekanism:thermal_evaporation_controller'})
-    event.recipes.create.mechanical_crafting('mekanism:thermal_evaporation_controller', [
-            'VPEPV',
-            'CGHGD',
-            'VPEPV'
-          ], {
-            P: 'mekanism:thermal_evaporation_block',
-            C: 'refinedstorage:construction_core',
-            V: 'superpackutils:vibrant_alloy_ingot',
-            D: 'refinedstorage:destruction_core',
-            E: 'superpackutils:copper_solenoid',
-            G: 'mekanism:advanced_control_circuit',
-            H: 'mekanism:steel_casing'
+    event.shaped('mekanism:thermal_evaporation_controller', [
+        'PEP',
+        'GHG',
+        'PFP'
+      ], {
+        P: 'mekanism:thermal_evaporation_block',
+        E: 'superpackutils:circuit_board',
+        F: 'superpackutils:vibrant_processor',
+        G: 'mekanism:advanced_control_circuit',
+        H: 'mekanism:steel_casing'
     })
 
     //Thermal Evaporation Casing
     event.remove({output: 'mekanism:thermal_evaporation_block'})
     event.shaped(Item.of('mekanism:thermal_evaporation_block', 4), ['BCB', 'AIA', 'BCB'], {
-        C: 'superpackutils:aluminum_brass_ingot',
+        C: 'superpackutils:vibrant_alloy_ingot',
         A: 'superpackutils:sturdy_capacitor',
         B: 'immersiveengineering:sheetmetal_constantan',
         I: 'mekanism:steel_casing'
@@ -269,7 +342,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'mekanism:chemical_oxidizer'})
     event.shaped('mekanism:chemical_oxidizer', ['SCS', 'IBI', 'SJS'], {
         S: '#forge:plates/invar',
-        C: 'tconstruct:melter',
+        C: 'tconstruct:seared_melter',
         J: 'mekanism:basic_chemical_tank',
         B: 'mekanism:steel_casing',
         I: '#forge:circuits/basic'
@@ -485,12 +558,11 @@ events.listen('recipes', function (event) {
 
     //Electric Pump
     event.remove({output: 'mekanism:electric_pump'})
-    event.shaped('mekanism:electric_pump', ['SCS', 'IBI', 'SJS'], {
+    event.shaped('mekanism:electric_pump', [' C ', 'SBS', ' J '], {
         S: '#forge:plates/lead',
         C: 'immersiveengineering:fluid_pump',
         J: 'create:mechanical_pump',
-        B: 'mekanism:steel_casing',
-        I: '#mekanism:alloys/infused',
+        B: 'immersiveengineering:heavy_engineering'
     }),
 
     //Osmium Compressor
@@ -593,7 +665,7 @@ events.listen('recipes', function (event) {
     //Superheating Element
     event.remove({output: 'mekanism:superheating_element'})
     event.shaped('mekanism:superheating_element', ['CSC', 'SBS', 'CSC'], {
-        S: 'superpackutils:superheated_bronze_ingot',
+        S: 'superpackutils:heating_element',
         C: '#mekanism:enriched/redstone',
         B: 'superpackutils:big_steel_casing'
     }),

@@ -1,4 +1,4 @@
-//priority 69420
+//priority 100000
 
 events.listen('item.tags', function (event) {
 
@@ -19,13 +19,30 @@ events.listen('item.tags', function (event) {
     event.get('forge:storage_blocks/starmetal').add('astralsorcery:starmetal')
     event.get('forge:dusts/starmetal').add('astralsorcery:stardust')
     event.get('forge:ores/starmetal').add('astralsorcery:starmetal_ore')
+    event.get('forge:ores/platinum').add('superpackutils:platinum_ore')
     
+    event.get('forge:crops/strawberry').add('neapolitan:strawberries')
+
+    event.get('forge:ores/copper').remove('exnihilosequentia:chunk_copper')
+    event.get('forge:ores/lead').remove('exnihilosequentia:chunk_lead')
+    event.get('forge:ores/nickel').remove('exnihilosequentia:chunk_nickel')
+    event.get('forge:ores/silver').remove('exnihilosequentia:chunk_silver')
+    event.get('forge:ores/tin').remove('exnihilosequentia:chunk_tin')
+    event.get('forge:ores/aluminum').remove('exnihilosequentia:chunk_aluminum')
+    event.get('forge:ores/uranium').remove('exnihilosequentia:chunk_uranium')
+    event.get('forge:ores/zinc').remove('exnihilosequentia:chunk_zinc')
+    event.get('forge:ores/iron').remove('exnihilosequentia:chunk_iron')
+    event.get('forge:ores/gold').remove('exnihilosequentia:chunk_gold')
+    event.get('forge:ores/osmium').remove('exnihilosequentia:chunk_osmium')
+    event.get('forge:ores/cobalt').remove('exnihilosequentia:chunk_cobalt')
+
 });
 
 events.listen('fluid.tags', function (event) {
 
     event.get('forge:nitrogen').add('advancedrocketry:nitrogen')
     event.get('forge:stabilizer').add('youmatter:stabilizer')
+    event.get('forge:molten_bioplastic').add('superpackutils:molten_bio_plastic_fluid')
 
     event.get('minecraft:water').remove('create:honey')
     event.get('minecraft:water').remove('create:flowing_honey')
@@ -33,6 +50,7 @@ events.listen('fluid.tags', function (event) {
     event.get('minecraft:water').remove('create:flowing_chocolate')
     event.get('minecraft:water').remove('betterportals:portal_fluid_still')
     event.get('minecraft:water').remove('betterportals:portal_fluid_flowing')
+    event.get('minecraft:water').remove('exnihilosequentia:sea_water')
 
     event.get('forge:ethanol').remove('pneumaticcraft:ethanol')
 
@@ -47,7 +65,7 @@ events.listen('fluid.tags', function (event) {
     event.get('forge:crude_oil').remove('pneumaticcraft:oil')
     event.get('forge:crude_oil').remove('thermal:crude_oil')
 
-    event.get('forge:creosote').remove('thermal:crude_oil')
+    event.get('forge:creosote').remove('thermal:creosote')
 
     event.get('forge:gasoline').remove('pneumaticcraft:gasoline')
 

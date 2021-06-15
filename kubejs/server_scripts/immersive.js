@@ -62,7 +62,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'immersiveengineering:rs_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:rs_engineering', 2), ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/constantan',
-        C: 'immersiveengineering:circuit_board',
+        C: 'thermal:redstone_servo',
         B: 'create:copper_casing',
         I: '#forge:ingots/constantan'
     }),
@@ -90,9 +90,6 @@ events.listen('recipes', function (event) {
         Z: '#forge:treated_wood',
         M: 'create:integrated_circuit'
     }),
-
-    //Treated Wood
-    event.recipes.create.filling('immersiveengineering:treated_wood_horizontal', ['#minecraft:planks', fluid.of('immersiveengineering:creosote', 100)]),
 
     //Bio Slag
     event.custom({"type":"immersiveengineering:bottling_machine","result":{"item":"immersiveengineering:slag"},"input":{"item":"thermal:slag"},"fluid":{"tag":"pneumaticcraft:yeast_culture","amount":150}})

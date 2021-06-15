@@ -25,6 +25,7 @@ events.listen('recipes', function (event) {
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/lead"},"result": "thermal:lead_block","count": 1})
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/lead"},"result": "mekanism:block_lead","count": 1})
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/lead"},"result": "immersiveengineering:storage_lead","count": 1})
+    event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/lead"},"result": "eidolon:lead_block","count": 1})
 
     //Aluminum
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/aluminum"},"result": "immersiveengineering:storage_aluminum","count": 1})
@@ -37,6 +38,10 @@ events.listen('recipes', function (event) {
     //Constantan
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/constantan"},"result": "thermal:constantan_block","count": 1})
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/constantan"},"result": "immersiveengineering:storage_constantan","count": 1})
+
+    //Uranium
+    event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/uranium"},"result": "mekanism:block_uranium","count": 1})
+    event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/uranium"},"result": "immersiveengineering:storage_uranium","count": 1})
 
     //Electrum
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/electrum"},"result": "immersiveengineering:storage_electrum","count": 1})

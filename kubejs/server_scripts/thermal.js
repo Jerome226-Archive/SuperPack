@@ -9,6 +9,7 @@ events.listen('recipes', function (event) {
     //Replace slag in concrete recipes
     event.replaceInput({type: 'minecraft:crafting_shaped'}, 'immersiveengineering:slag', 'thermal:slag')
     event.replaceInput({type: 'immersiveengineering:turn_and_copy'}, 'immersiveengineering:slag', 'thermal:slag')
+    event.replaceInput({type: 'immersiveengineering:shaped_fluid'}, 'immersiveengineering:slag', 'thermal:slag')
 
     //Easy Sawdust
     event.remove({id: 'thermal:machine/pulverizer/pulverizer_logs'})

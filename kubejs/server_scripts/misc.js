@@ -56,7 +56,7 @@ events.listen('recipes', function (event) {
         G: '#forge:rods/gold',
         E: 'immersiveengineering:electron_tube',
         L: '#forge:plates/electrum',
-        R: 'immersiveengineering:insulating_glass',
+        R: 'immersiveengineering:circuit_board',
         P: '#forge:plates/brass'
     })
 
@@ -69,6 +69,13 @@ events.listen('recipes', function (event) {
         M: 'botania:mana_glass',
         D: 'mekanism:pressure_disperser'
     })
+
+    //Porcelain ReplaceInput
+    event.replaceInput({}, 'exnihilosequentia:porcelain_clay', 'ceramics:unfired_porcelain')
+
+    //Porcelain Recipe
+    event.remove({id: 'ceramics:unfired_porcelain'})
+    event.shapeless('ceramics:unfired_porcelain', ['minecraft:clay_ball', 'minecraft:bone_meal'])
 
     //Machine Casing
     event.remove({output: 'youmatter:machine_casing'})
