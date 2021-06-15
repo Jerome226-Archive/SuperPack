@@ -31,6 +31,8 @@ events.listen('recipes', function (event) {
     })
 
     //Sieve
+    function sieve(slabItem, sieveItem)
+
     event.remove({output: '#exnihilosequentia:sieves'})
     event.custom({
       "type": "astralsorcery:altar",
@@ -52,7 +54,7 @@ events.listen('recipes', function (event) {
           "item": "superpackutils:mythril_ingot"
         },
         "Z": {
-          "item": "minecraft:oak_slab"
+          "item": slabItem
         },
         "B": {
           "item": "botania:glimmering_livingwood"
@@ -60,7 +62,7 @@ events.listen('recipes', function (event) {
       },
       "output": [
         {
-          "item": "exnihilosequentia:sieve",
+          "item": sieveItem,
           "count": 1
         }
       ],
@@ -69,42 +71,14 @@ events.listen('recipes', function (event) {
       ]
     })
 
-    event.custom({
-      "type": "astralsorcery:altar",
-      "altar_type": 0,
-      "duration": 20,
-      "starlight": 50,
-      "pattern": [
-        "_____",
-        "_BZB_",
-        "_ACA_",
-        "_A_A_",
-        "_____"
-      ],
-      "key": {
-        "A": {
-          "item": "botania:livingwood_twig"
-        },
-        "C": {
-          "item": "superpackutils:mythril_ingot"
-        },
-        "Z": {
-          "item": "minecraft:oak_slab"
-        },
-        "B": {
-          "item": "botania:glimmering_livingwood"
-        }
-      },
-      "output": [
-        {
-          "item": "exnihilosequentia:sieve",
-          "count": 1
-        }
-      ],
-      "effects": [
-        "astralsorcery:built_in_effect_discovery_central_beam"
-      ]
-    })
+    sieve('minecraft:oak_slab', 'exnihilosequentia:sieve')
+    sieve('minecraft:spruce_slab', 'exnihilosequentia:spruce_sieve')
+    sieve('minecraft:acacia_slab', 'exnihilosequentia:acacia_sieve')
+    sieve('minecraft:birch_slab', 'exnihilosequentia:birch_sieve')
+    sieve('minecraft:dark_oak_slab', 'exnihilosequentia:dark_oak_sieve')
+    sieve('minecraft:warped_slab', 'exnihilosequentia:warped_sieve')
+    sieve('minecraft:crimson_slab', 'exnihilosequentia:crimson_sieve')
+    sieve('minecraft:jungle_slab', 'exnihilosequentia:jungle_sieve')
 
     //Dust
     event.remove({ id: 'exnihilosequentia:hammer/ens_dust' });
