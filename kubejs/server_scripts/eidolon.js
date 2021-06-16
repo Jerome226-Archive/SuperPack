@@ -21,7 +21,7 @@ events.listen('recipes', function (event) {
 
     //Crucible
     event.remove({output: 'eidolon:crucible'})
-    event.shaped('eidolon:crucible', ['WWW', 'A A', 'A A'], {
+    event.shaped('eidolon:crucible', ['ABA', 'AWA', 'AAA'], {
         A: 'eidolon:pewter_ingot',
         B: 'minecraft:wooden_shovel',
         W: 'exnihilosequentia:crucible_fired'

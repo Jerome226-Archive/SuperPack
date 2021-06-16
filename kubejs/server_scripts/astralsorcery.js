@@ -8,6 +8,7 @@ events.listen('recipes', function (event) {
 
     //Wand Recipe Removal
     event.remove({id: 'astralsorcery:altar/wand'})
+    event.remove({output: 'astralsorcery:wand'})
     event.remove({id: 'astralsorcery:altar/illumination_wand'})
     event.remove({id: 'astralsorcery:altar/architect_wand'})
     event.remove({id: 'astralsorcery:altar/exchange_wand'})
