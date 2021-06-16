@@ -32,6 +32,14 @@ events.listen('recipes', function (event) {
         T: '#forge:ingots/brick'
     }),
 
+    //IE Kiln Brick
+    event.remove({output: 'immersiveengineering:alloybrick'})
+    event.shaped(Item.of('immersiveengineering:alloybrick', 2), ['ATA', 'TWT', 'ATA'], {
+        A: 'ceramics:porcelain_brick',
+        W: '#forge:sandstone',
+        T: '#forge:ingots/brick'
+    }),
+
     //IE Light Engineering Block
     event.remove({output: 'immersiveengineering:light_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:light_engineering', 4), ['SCS', 'IBI', 'SCS'], {

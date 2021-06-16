@@ -50,6 +50,7 @@ var outputRemoval = [
     'exnihilosequentia:chunk_osmium',
     'exnihilosequentia:chunk_cobalt',
     'exnihilosequentia:chunk_platinum',
+    'exnihilosequentia:porcelain_clay',
 
     //Engineer's Decor
     'engineersdecor:small_tree_cutter',
@@ -78,9 +79,6 @@ var outputRemoval = [
     'thermal:strawberry_seeds',
     'thermal:tomato',
     'thermal:tomato_seeds',
-
-    //Porcelain Clay
-    'exnihilosequentia:porcelain_clay',
 
     //Silicon
     'tinyredstone:silicon',

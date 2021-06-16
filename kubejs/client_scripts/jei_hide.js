@@ -119,6 +119,9 @@ onEvent('jei.hide.items', event => {
         'engineersdecor:factory_placer',
         'engineersdecor:fluid_barrel',
 
+        //Ex Nihilo
+        'exnihilosequentia:porcelain_clay',
+
         //Crates
         'quark:carrot_crate',
         'thermal:carrot_block',
@@ -141,9 +144,6 @@ onEvent('jei.hide.items', event => {
         'thermal:tomato_seeds',
 
         'neapolitan:chocolate_bar',
-
-        //Porcelain Clay
-        'exnihilosequentia:porcelain_clay',
 
         //Silicon
         'tinyredstone:silicon',

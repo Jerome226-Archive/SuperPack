@@ -75,6 +75,7 @@ events.listen('recipes', function (event) {
 
     //Porcelain Recipe
     event.remove({id: 'ceramics:unfired_porcelain'})
+    event.remove({id: 'ceramics:porcelain_brick_smelting'})
     event.shapeless('ceramics:unfired_porcelain', ['minecraft:clay_ball', 'minecraft:bone_meal'])
 
     //Machine Casing

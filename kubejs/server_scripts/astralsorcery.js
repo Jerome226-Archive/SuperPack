@@ -6,6 +6,14 @@ events.listen('recipes', function (event) {
     //Astral Sorcery
     //-----------------------------------------------------
 
+    //Wand Recipe Removal
+    event.remove({id: 'astralsorcery:altar/wand'})
+    event.remove({id: 'astralsorcery:altar/illumination_wand'})
+    event.remove({id: 'astralsorcery:altar/architect_wand'})
+    event.remove({id: 'astralsorcery:altar/exchange_wand'})
+    event.remove({id: 'astralsorcery:altar/grapple_wand'})
+    event.remove({id: 'astralsorcery:altar/blink_wand'})
+
     //Luminous Crafting Table
     event.remove({id: 'astralsorcery:block_transmutation/craftingtable_altar'})
     event.custom({

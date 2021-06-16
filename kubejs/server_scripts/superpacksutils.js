@@ -793,7 +793,7 @@ events.listen('recipes', function (event) {
     //Compressed Steel Ingot
     event.custom({"type":"immersiveengineering:squeezer","result":{"item":"superpackutils:compressed_steel_ingot"},"input":{"count":1,"base_ingredient":{"tag":"forge:ingots/steel"}},"energy":19200})
 
-    //Alchemical Iron
+    //Alchemical Dusts
     function mixer(alchemicalDustItem, catalystItem)
 
     event.custom({
