@@ -793,6 +793,17 @@ events.listen('recipes', function (event) {
     //Compressed Steel Ingot
     event.custom({"type":"immersiveengineering:squeezer","result":{"item":"superpackutils:compressed_steel_ingot"},"input":{"count":1,"base_ingredient":{"tag":"forge:ingots/steel"}},"energy":19200})
 
+    //Quartz Enriched Iron
+    event.remove({output: 'refinedstorage:quartz_enriched_iron'})
+    event.recipes.immersiveengineering.alloy(Item.of('superpackutils:quartz_enriched_blend', 2), 'thermal:iron_dust', 'thermal:quartz_dust')
+    event.smelting('refinedstorage:quartz_enriched_iron', 'superpackutils:quartz_enriched_blend')
+    event.recipes.minecraft.blasting('refinedstorage:quartz_enriched_iron', 'superpackutils:quartz_enriched_blend')
+
+    //Cupronickel Blend
+    event.recipes.immersiveengineering.alloy(Item.of('superpackutils:cupronickel_blend', 2), 'thermal:nickel_dust', 'thermal:copper_dust')
+    event.smelting('superpackutils:cupronickel_ingot', 'superpackutils:cupronickel_blend')
+    event.recipes.minecraft.blasting('superpackutils:cupronickel_ingot', 'superpackutils:cupronickel_blend')
+
     //Alchemical Dusts
     function mixer(alchemicalDustItem, catalystItem)
 

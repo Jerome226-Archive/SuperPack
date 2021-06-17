@@ -1,10 +1,6 @@
 //priority: 1500
 
 events.listen('recipes', function (event) { 
-
-    //Quartz Enriched Iron
-    event.remove({output: 'refinedstorage:quartz_enriched_iron'})
-    event.recipes.immersiveengineering.alloy(Item.of('refinedstorage:quartz_enriched_iron', 4), 'minecraft:quartz', Item.of('minecraft:iron_ingot', 3))
     
     //Controller
     event.remove({output: 'refinedstorage:controller'})

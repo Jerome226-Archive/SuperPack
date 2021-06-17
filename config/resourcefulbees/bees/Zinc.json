@@ -1,0 +1,22 @@
+{
+  "flower": "tag:forge:storage_blocks/zinc",
+  "hasHoneycomb": true,
+  "maxTimeInHive": 600,
+  "baseLayerTexture": "ores/zinc/zinc_bee",
+  "ColorData": {
+    "isBeeColored": false,
+    "honeycombColor": "#8d968e",
+    "modelType": "ORE"
+  },
+  "CentrifugeData": {
+    "hasCentrifugeOutput": true,
+    "mainOutput": "create:zinc_ingot"
+  },
+  "SpawnData": {
+    "canSpawnInWorld": false
+  },
+  "BreedData": {
+    "isBreedable": true
+  },
+  "TraitData": {}
+}

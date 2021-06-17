@@ -2,6 +2,10 @@
 
 events.listen('recipes', function (event) {
 
+    //Pewter Blend
+    event.remove({output: 'eidolon:pewter_blend'})
+    event.recipes.immersiveengineering.alloy(Item.of('eidolon:pewter_blend', 2), 'thermal:iron_dust', 'thermal:lead_dust')
+
     //Tallow Remove
     event.remove({id: 'eidolon:tallow'})
 
@@ -10,13 +14,6 @@ events.listen('recipes', function (event) {
     event.shaped('eidolon:wooden_altar', ['WWW', 'A A', 'A A'], {
         A: 'eidolon:polished_planks',
         W: 'eidolon:polished_planks_slab'
-    })
-
-    //Stone Altar
-    event.remove({output: 'eidolon:stone_altar'})
-    event.shaped('eidolon:stone_altar', ['WWW', 'A A', 'A A'], {
-        A: 'eidolon:smooth_stone_bricks',
-        W: 'eidolon:smooth_stone_bricks_slab'
     })
 
     //Crucible

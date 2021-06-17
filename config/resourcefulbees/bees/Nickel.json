@@ -1,0 +1,22 @@
+{
+  "flower": "tag:forge:storage_blocks/nickel",
+  "hasHoneycomb": true,
+  "maxTimeInHive": 600,
+  "baseLayerTexture": "ores/nickel/nickel_bee",
+  "ColorData": {
+    "isBeeColored": false,
+    "honeycombColor": "#a1a152",
+    "modelType": "ORE"
+  },
+  "CentrifugeData": {
+    "hasCentrifugeOutput": true,
+    "mainOutput": "thermal:nickel_ingot"
+  },
+  "SpawnData": {
+    "canSpawnInWorld": false
+  },
+  "BreedData": {
+    "isBreedable": true
+  },
+  "TraitData": {}
+}

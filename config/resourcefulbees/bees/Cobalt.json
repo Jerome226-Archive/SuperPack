@@ -1,0 +1,22 @@
+{
+  "flower": "tag:forge:storage_blocks/cobalt",
+  "hasHoneycomb": true,
+  "maxTimeInHive": 600,
+  "baseLayerTexture": "ores/cobalt/cobalt_bee",
+  "ColorData": {
+    "isBeeColored": false,
+    "honeycombColor": "#1922d1",
+    "modelType": "ORE"
+  },
+  "CentrifugeData": {
+    "hasCentrifugeOutput": true,
+    "mainOutput": "tconstruct:cobalt_ingot"
+  },
+  "SpawnData": {
+    "canSpawnInWorld": false
+  },
+  "BreedData": {
+    "isBreedable": true
+  },
+  "TraitData": {}
+}

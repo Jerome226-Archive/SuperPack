@@ -6,6 +6,9 @@ events.listen('recipes', function (event) {
     //Create
     //-----------------------------------------------------
 
+    //Easy Dough
+    event.remove({output: 'create:crafting/appliances/dough'})
+
     //Use Create Chocolate in recipes
     event.replaceInput({}, 'neapolitan:chocolate_bar', 'create:bar_of_chocolate')
     
@@ -29,11 +32,11 @@ events.listen('recipes', function (event) {
     //Create Andesite Alloy
     event.remove({output: 'create:andesite_alloy'})
     event.recipes.create.mixing('create:andesite_alloy', [
-        '#forge:nuggets/zinc',
+        'superpackutils:cupronickel_nugget',
         'minecraft:andesite'
     ]),
 
-    event.recipes.immersiveengineering.alloy('create:andesite_alloy', Item.of('minecraft:andesite', 2), Item.of('#forge:nuggets/zinc', 2))
+    event.recipes.immersiveengineering.alloy('create:andesite_alloy', Item.of('minecraft:andesite', 2), Item.of('superpackutils:cupronickel_nugget', 2))
     
     //Create Copper Casing
     event.remove({output: 'create:copper_casing'})
