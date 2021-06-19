@@ -16,6 +16,70 @@ events.listen('recipes', function (event) {
     event.remove({id: 'immersiveengineering:cokeoven/coke_block'})
     event.recipes.immersiveengineering.coke_oven('thermal:coal_coke_block', 'minecraft:coal_block').creosote(5000).time(8100)
 
+    //Distillation Tower
+    event.remove({id: 'immersivepetroleum:distillationtower/oilcracking'})
+    event.custom({
+        "type": "immersivepetroleum:distillation",
+        "byproducts": [
+          {
+            "item": "thermal:bitumen",
+            "chance": "0.07"
+          }
+        ],
+        "results": [
+          {
+            "fluid": "immersivepetroleum:lubricant",
+            "amount": 9
+          },
+          {
+            "fluid": "immersivepetroleum:diesel_sulfur",
+            "amount": 14
+          },
+          {
+            "fluid": "pneumaticcraft:lpg",
+            "amount": 15
+          },
+          {
+            "fluid": "pneumaticcraft:kerosene",
+            "amount": 10
+          },
+          {
+            "fluid": "immersivepetroleum:gasoline",
+            "amount": 39
+          }
+        ],
+        "input": {
+          "tag": "forge:crude_oil",
+          "amount": 75
+        },
+        "time": 1,
+        "energy": 2048
+    })
+
+    //Sulfur Recovery Unit
+    event.remove({id: 'immersivepetroleum:hydrotreater/sulfur_recovery'})
+    event.custom({
+        "type": "immersivepetroleum:hydrotreater",
+        "time": 1,
+        "energy": 512,
+        "result": {
+          "fluid": "immersivepetroleum:diesel",
+          "amount": 7
+        },
+        "input": {
+          "tag": "forge:diesel_sulfur",
+          "amount": 7
+        },
+        "secondary_input": {
+          "tag": "minecraft:water",
+          "amount": 7
+        },
+        "secondary_result": {
+          "item": "thermal:sulfur_dust",
+          "chance": "0.02"
+        }
+    })
+
     //Concrete
     event.remove({id: 'immersiveengineering:crafting/concrete'})
     event.remove({id: 'immersiveengineering:crafting/concrete2'})

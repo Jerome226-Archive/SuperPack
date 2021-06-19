@@ -6,7 +6,7 @@ events.listen('recipes', function (event) {
     //Superpack: Utils
     //-----------------------------------------------------
 
-    //Lubrified LPG
+    //Condensed LPG
     event.custom({
         "type": "pneumaticcraft:fluid_mixer",
         "input1": {
@@ -16,11 +16,11 @@ events.listen('recipes', function (event) {
         },
         "input2": {
           "type": "pneumaticcraft:fluid",
-          "fluid": "immersivepetroleum:lubricant",
-          "amount": 25
+          "fluid": "mekanism:stead",
+          "amount": 75
         },
         "fluid_output": {
-          "fluid": "superpackutils:lubrified_lpg_fluid",
+          "fluid": "superpackutils:condensed_lpg_fluid",
           "amount": 50
         },
         "pressure": 2.0,

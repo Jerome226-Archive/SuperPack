@@ -35,7 +35,7 @@ events.listen('recipes', function (event) {
       "type": "pneumaticcraft:refinery",
       "input": {
         "type": "pneumaticcraft:fluid",
-        "tag": "forge:crude_oil",
+        "tag": "forge:condensed_lpg",
         "amount": 10
       },
       "temperature": {
@@ -43,12 +43,12 @@ events.listen('recipes', function (event) {
       },
       "results": [
         {
-          "fluid": "pneumaticcraft:kerosene",
+          "fluid": "superpackutils:propylene_fluid",
           "amount": 4
         },
         {
-          "fluid": "pneumaticcraft:lpg",
-          "amount": 2
+          "fluid": "superpackutils:benzene_fluid",
+          "amount": 5
         }
       ]
     })

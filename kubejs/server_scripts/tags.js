@@ -44,6 +44,7 @@ events.listen('fluid.tags', function (event) {
     event.get('forge:nitrogen').add('advancedrocketry:nitrogen')
     event.get('forge:stabilizer').add('youmatter:stabilizer')
     event.get('forge:molten_bioplastic').add('superpackutils:molten_bio_plastic_fluid')
+    event.get('forge:condensed_lpg').add('superpackutils:condensed_lpg_fluid')
 
     event.get('minecraft:water').remove('create:honey')
     event.get('minecraft:water').remove('create:flowing_honey')

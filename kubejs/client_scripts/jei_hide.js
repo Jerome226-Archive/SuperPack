@@ -161,6 +161,7 @@ onEvent('jei.hide.items', event => {
         'bloodmagic:sulfur',
         'immersiveengineering:dust_sulfur',
         'mekanism:dust_sulfur',
+        'eidolon:sulfur',
 
         //Sawdust
         'immersiveengineering:dust_wood',
