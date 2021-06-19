@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "mekanism:ingot_uranium"
+    "mainOutput": "superpackutils:uranium_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

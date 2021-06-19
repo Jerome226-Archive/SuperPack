@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "minecraft:iron_ingot"
+    "mainOutput": "superpackutils:iron_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

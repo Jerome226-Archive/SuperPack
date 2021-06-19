@@ -645,13 +645,127 @@ events.listen('recipes', function (event) {
     event.recipes.create.crushing([Item.of('superpackutils:limestone_dust').withChance(0.35), 'superpackutils:bedrock_dust', Item.of('superpackutils:bedrock_dust').withChance(0.45)], 'superpackutils:deepslate', 350)
 
     //Bloody Pigment
-    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:bloody_sawdust', Item.of('superpackutils:bloody_pigment').withChance(0.80))
+    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:bloody_sawdust', Item.of('superpackutils:bloody_pigment').withChance(0.30))
+    event.custom({
+        "type": "resourcefulbees:centrifuge",
+        "ingredient": {
+          "item": "superpackutils:bloody_sawdust"
+        },
+        "results": [
+          {
+            "item": "superpackutils:bloody_pigment"
+          },
+          {
+            "item": "thermal:sawdust"
+          },
+          {
+            "item": "superpackutils:blood_bottle"
+          }
+        ],
+        "time": 200
+    })
+
+    event.custom({
+        "type": "resourcefulbees:centrifuge",
+        "ingredient": {
+          "item": "superpackutils:bloody_sawdust"
+        },
+        "results": [
+          {
+            "item": "superpackutils:bloody_pigment"
+          },
+          {
+            "item": "thermal:sawdust"
+          },
+          {
+            "fluid": "tconstruct:blood"
+          }
+        ],
+        "time": 200,
+        "noBottleInput": true
+    })
 
     //Grassy Pigment
-    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:grassy_sawdust', Item.of('superpackutils:grassy_pigment').withChance(0.80))
+    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:grassy_sawdust', Item.of('superpackutils:grassy_pigment').withChance(0.30))
+    event.custom({
+        "type": "resourcefulbees:centrifuge",
+        "ingredient": {
+          "item": "superpackutils:grassy_sawdust"
+        },
+        "results": [
+          {
+            "item": "superpackutils:grassy_pigment"
+          },
+          {
+            "item": "thermal:sawdust"
+          },
+          {
+            "item": "superpackutils:slime_bottle"
+          }
+        ],
+        "time": 200
+    })
+
+    event.custom({
+        "type": "resourcefulbees:centrifuge",
+        "ingredient": {
+          "item": "superpackutils:grassy_sawdust"
+        },
+        "results": [
+          {
+            "item": "superpackutils:grassy_pigment"
+          },
+          {
+            "item": "thermal:sawdust"
+          },
+          {
+            "fluid": "tconstruct:earth_slime"
+          }
+        ],
+        "time": 200,
+        "noBottleInput": true
+    })
 
     //Azure Pigment
-    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:azure_sawdust', Item.of('superpackutils:azure_pigment').withChance(0.80))
+    event.recipes.immersiveengineering.crusher('thermal:sawdust', 'superpackutils:azure_sawdust', Item.of('superpackutils:azure_pigment').withChance(0.30))
+    event.custom({
+        "type": "resourcefulbees:centrifuge",
+        "ingredient": {
+          "item": "superpackutils:azure_sawdust"
+        },
+        "results": [
+          {
+            "item": "superpackutils:azure_pigment"
+          },
+          {
+            "item": "thermal:sawdust"
+          },
+          {
+            "item": "superpackutils:skyslime_bottle"
+          }
+        ],
+        "time": 200
+    })
+
+    event.custom({
+        "type": "resourcefulbees:centrifuge",
+        "ingredient": {
+          "item": "superpackutils:azure_sawdust"
+        },
+        "results": [
+          {
+            "item": "superpackutils:azure_pigment"
+          },
+          {
+            "item": "thermal:sawdust"
+          },
+          {
+            "fluid": "tconstruct:sky_slime"
+          }
+        ],
+        "time": 200,
+        "noBottleInput": true
+    })
 
     //Ender Pearl Nugget
     event.custom({
@@ -805,7 +919,7 @@ events.listen('recipes', function (event) {
     event.recipes.minecraft.blasting('superpackutils:cupronickel_ingot', 'superpackutils:cupronickel_blend')
 
     //Alchemical Dusts
-    function mixer(alchemicalDustItem, catalystItem)
+    function mixer(alchemicalDustItem, catalystItem) {
 
     event.custom({
         "type": "masterfulmachinery:machine_process",
@@ -836,7 +950,7 @@ events.listen('recipes', function (event) {
                 "type": "masterfulmachinery:items",
                 "data":{
                     "item": catalystItem,
-                    "count": 1
+                    "count": 4
                 }
             }
         ],
@@ -851,17 +965,21 @@ events.listen('recipes', function (event) {
         ]
     })
 
-    mixer('superpackutils:alchemical_iron_dust', 'minecraft:clay_ball')
-    mixer('superpackutils:alchemical_gold_dust', 'thermal:sulfur')
-    mixer('superpackutils:alchemical_copper_dust', 'thermal:cinnabar')
-    mixer('superpackutils:alchemical_aluminum_dust', 'mekanism:salt')
-    mixer('superpackutils:alchemical_lead_dust', 'thermal:sapphire')
-    mixer('superpackutils:alchemical_nickel_dust', 'superpackutils:limestone_dust')
-    mixer('superpackutils:alchemical_silver_dust', 'minecraft:lapis_lazuli')
-    mixer('superpackutils:alchemical_tin_dust', 'thermal:ruby')
-    mixer('superpackutils:alchemical_zinc_dust', 'thermal:niter')
-    mixer('superpackutils:alchemical_platinum_dust', 'thermal:apatite')
-    mixer('superpackutils:alchemical_uranium_dust', 'minecraft:emerald')
-    mixer('superpackutils:alchemical_osmium_dust', 'mekanism:fluorite_gem')
+    }
+
+    mixer('superpackutils:alchemical_iron_dust', 'superpackutils:iron_wax')
+    mixer('superpackutils:alchemical_gold_dust', 'superpackutils:gold_wax')
+    mixer('superpackutils:alchemical_copper_dust', 'superpackutils:copper_wax')
+    mixer('superpackutils:alchemical_aluminum_dust', 'superpackutils:aluminum_wax')
+    mixer('superpackutils:alchemical_lead_dust', 'superpackutils:lead_wax')
+    mixer('superpackutils:alchemical_nickel_dust', 'superpackutils:nickel_wax')
+    mixer('superpackutils:alchemical_silver_dust', 'superpackutils:silver_wax')
+    mixer('superpackutils:alchemical_tin_dust', 'superpackutils:tin_wax')
+    mixer('superpackutils:alchemical_zinc_dust', 'superpackutils:zinc_wax')
+    mixer('superpackutils:alchemical_platinum_dust', 'superpackutils:platinum_wax')
+    mixer('superpackutils:alchemical_uranium_dust', 'superpackutils:uranium_wax')
+    mixer('superpackutils:alchemical_osmium_dust', 'superpackutils:osmium_wax')
+    mixer('superpackutils:alchemical_aluminum_dust', 'superpackutils:aluminum_wax')
+    mixer('superpackutils:alchemical_cobalt_dust', 'superpackutils:cobalt_wax')
 
 });

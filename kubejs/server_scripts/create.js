@@ -208,11 +208,29 @@ events.listen('recipes', function (event) {
     //Chromatic Compound
     event.remove({id: 'create:mixing/chromatic_compound'})
     event.recipes.create.mixing('create:chromatic_compound', ['create:polished_rose_quartz', 'astralsorcery:stardust', 'botania:elementium_ingot']).superheated()
-
+    
     //Blaze Cake
     event.remove({id: 'create:filling/blaze_cake'})
-    event.recipes.create.filling('create:blaze_cake', ['create:blaze_cake_base', fluid.of('tconstruct:molten_blaze', 250)]),
-
+    event.custom({
+        "type": "pneumaticcraft:thermo_plant",
+        "item_input": {
+          "item": "create:blaze_cake_base"
+        },
+        "fluid_input": {
+          "type": "pneumaticcraft:fluid",
+          "tag": "tconstruct:molten_blaze",
+          "amount": 250
+        },
+        "item_output": {
+          "item": "create:blaze_cake"
+        },
+        "temperature": {
+          "min_temp": 525
+        },
+        "pressure": 3.5,
+        "exothermic": false
+    })
+    
     //Create Electron Tube
     event.remove({output: 'create:electron_tube'})
     event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"immersiveengineering:electron_tube"}},{"count":1,"base_ingredient":{"item":"create:polished_rose_quartz"}},{"count":1,"base_ingredient":{"item":"minecraft:redstone"}},{"count":1,"base_ingredient":{"item":"mekanism:ingot_steel"}}],"category":"components","result":{"item":"create:electron_tube","count":1}})

@@ -28,57 +28,7 @@ events.listen('recipes', function (event) {
         "type": "exnihilosequentia:heat",
         "block": "tconstruct:molten_blaze",
         "amount": 8
-    })
-
-    //Sieve
-    function sieve(slabItem, sieveItem)
-
-    event.remove({output: '#exnihilosequentia:sieves'})
-    event.custom({
-      "type": "astralsorcery:altar",
-      "altar_type": 0,
-      "duration": 20,
-      "starlight": 50,
-      "pattern": [
-        "_____",
-        "_BZB_",
-        "_ACA_",
-        "_A_A_",
-        "_____"
-      ],
-      "key": {
-        "A": {
-          "item": "botania:livingwood_twig"
-        },
-        "C": {
-          "item": "superpackutils:mythril_ingot"
-        },
-        "Z": {
-          "item": slabItem
-        },
-        "B": {
-          "item": "botania:glimmering_livingwood"
-        }
-      },
-      "output": [
-        {
-          "item": sieveItem,
-          "count": 1
-        }
-      ],
-      "effects": [
-        "astralsorcery:built_in_effect_discovery_central_beam"
-      ]
-    })
-
-    sieve('minecraft:oak_slab', 'exnihilosequentia:sieve')
-    sieve('minecraft:spruce_slab', 'exnihilosequentia:spruce_sieve')
-    sieve('minecraft:acacia_slab', 'exnihilosequentia:acacia_sieve')
-    sieve('minecraft:birch_slab', 'exnihilosequentia:birch_sieve')
-    sieve('minecraft:dark_oak_slab', 'exnihilosequentia:dark_oak_sieve')
-    sieve('minecraft:warped_slab', 'exnihilosequentia:warped_sieve')
-    sieve('minecraft:crimson_slab', 'exnihilosequentia:crimson_sieve')
-    sieve('minecraft:jungle_slab', 'exnihilosequentia:jungle_sieve')
+    });
 
     //Dust
     event.remove({ id: 'exnihilosequentia:hammer/ens_dust' });
@@ -93,7 +43,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "exnihilosequentia:dust"
         }
-    })
+    });
 
     //Andesite Cobblestone
     event.remove({ id: 'exnihilosequentia:hammer/ens_andesite' });
@@ -110,7 +60,7 @@ events.listen('recipes', function (event) {
         "input": {
           "item": "minecraft:andesite"
         }
-    })
+    });
 
     //Diorite Cobblestone
     event.remove({ id: 'exnihilosequentia:hammer/ens_diorite' });
@@ -127,7 +77,7 @@ events.listen('recipes', function (event) {
         "input": {
           "item": "minecraft:diorite"
         }
-    })
+    });
 
     //Granite Cobblestone
     event.remove({ id: 'exnihilosequentia:hammer/ens_granite' });
@@ -144,7 +94,7 @@ events.listen('recipes', function (event) {
         "input": {
           "item": "minecraft:granite"
         }
-    })
+    });
 
     //End Sand
     event.custom({
@@ -158,15 +108,15 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "byg:end_sand"
         }
-    })
+    });
 
     //Crushed Endstone
     event.remove({ id: 'exnihilosequentia:hammer/ens_end_stone' });
-    event.recipes.create.mixing(Item.of('exnihilosequentia:crushed_end_stone', 2), ['minecraft:end_stone', 'byg:end_sand'])
+    event.recipes.create.mixing(Item.of('exnihilosequentia:crushed_end_stone', 2), ['minecraft:end_stone', 'byg:end_sand']);
 
     //Crushed Netherrack
     event.remove({ id: 'exnihilosequentia:hammer/ens_netherrack' });
-    event.recipes.create.mixing(Item.of('exnihilosequentia:crushed_netherrack', 2), ['minecraft:netherrack', 'minecraft:soul_sand'])
+    event.recipes.create.mixing(Item.of('exnihilosequentia:crushed_netherrack', 2), ['minecraft:netherrack', 'minecraft:soul_sand']);
 
     //Salt
     event.remove({ id: 'exnihilomekanism:sieve/ens_piece_osmium_3' });
@@ -192,7 +142,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "mekanism:salt"
         }
-    })
+    });
 
     //Prismarine Crystals
     event.remove({ id: 'exnihilosequentia:sieve/ens_prismarine_crystals' });
@@ -210,7 +160,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "minecraft:prismarine_crystals"
         }
-    })
+    });
 
     //Prismarine Shards
     event.remove({ id: 'exnihilosequentia:sieve/ens_prismarine_shard' });
@@ -232,7 +182,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "minecraft:prismarine_shard"
         }
-    })
+    });
 
     //Aquamarine
     event.custom({
@@ -253,7 +203,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "astralsorcery:aquamarine"
         }
-    })
+    });
 
     //Sea Pickle Egg
     event.remove({ id: 'exnihilosequentia:sieve/ens_seed_pickle' });
@@ -272,7 +222,7 @@ events.listen('recipes', function (event) {
           "item": "exnihilosequentia:seed_pickle"
         },
         "waterlogged": true
-    })
+    });
 
     //Kelp Seeds
     event.remove({ id: 'exnihilosequentia:sieve/ens_seed_kelp' });
@@ -291,7 +241,7 @@ events.listen('recipes', function (event) {
           "item": "exnihilosequentia:seed_kelp"
         },
         "waterlogged": true
-    })
+    });
 
     //Blue Coral
     event.remove({ id: 'exnihilosequentia:sieve/ens_seed_blue_coral' });
@@ -310,7 +260,7 @@ events.listen('recipes', function (event) {
           "item": "exnihilosequentia:seed_blue_coral"
         },
         "waterlogged": true
-    })
+    });
 
     //Pink Coral
     event.remove({ id: 'exnihilosequentia:sieve/ens_seed_pink_coral' });
@@ -329,7 +279,7 @@ events.listen('recipes', function (event) {
           "item": "exnihilosequentia:seed_pink_coral"
         },
         "waterlogged": true
-    })
+    });
 
     //Purple Coral
     event.remove({ id: 'exnihilosequentia:sieve/ens_seed_purple_coral' });
@@ -348,7 +298,7 @@ events.listen('recipes', function (event) {
           "item": "exnihilosequentia:seed_purple_coral"
         },
         "waterlogged": true
-    })
+    });
 
     //Yellow Coral
     event.remove({ id: 'exnihilosequentia:sieve/ens_seed_yellow_coral' });
@@ -367,7 +317,7 @@ events.listen('recipes', function (event) {
           "item": "exnihilosequentia:seed_yellow_coral"
         },
         "waterlogged": true
-    })
+    });
 
     //Seagrass
     event.remove({ id: 'exnihilosequentia:sieve/ens_sea_grass' });
@@ -386,7 +336,7 @@ events.listen('recipes', function (event) {
           "item": "minecraft:seagrass"
         },
         "waterlogged": true
-    })
+    });
 
     //Apatite
     event.remove({ id: 'exnihilothermal:sieve/ens_apatite' });
@@ -412,7 +362,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "thermal:apatite"
         }
-    })
+    });
 
     //Cinnabar
     event.remove({ id: 'exnihilothermal:sieve/ens_cinnabar' });
@@ -438,7 +388,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "thermal:cinnabar"
         }
-    })
+    });
 
     //Niter
     event.remove({ id: 'exnihilothermal:sieve/ens_niter' });
@@ -464,7 +414,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "thermal:niter"
         }
-    })
+    });
 
     //Sulfur
     event.remove({ id: 'exnihilothermal:sieve/ens_sulfur' });
@@ -490,7 +440,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "thermal:sulfur"
         }
-    })
+    });
 
     //Ruby
     event.custom({
@@ -515,7 +465,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "thermal:ruby"
         }
-    })
+    });
 
     //Sapphire
     event.custom({
@@ -540,7 +490,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "thermal:sapphire"
         }
-    })
+    });
 
     //Coal
     event.remove({ id: 'exnihilosequentia:sieve/ens_coal' });
@@ -558,7 +508,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "minecraft:coal"
         }
-    })
+    });
 
     //Diamond
     event.remove({ id: 'exnihilosequentia:sieve/ens_diamond' });
@@ -580,7 +530,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "minecraft:diamond"
         }
-    })
+    });
 
     //Emerald
     event.remove({ id: 'exnihilosequentia:sieve/ens_emerald' });
@@ -602,7 +552,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "minecraft:emerald"
         }
-    })
+    });
 
     //Fluorite
     event.remove({ id: 'exnihilomekanism:sieve/ens_piece_osmium_2' });
@@ -624,7 +574,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "mekanism:fluorite_gem"
         }
-    })
+    });
 
     //Lapis Lazuli
     event.remove({ id: 'exnihilosequentia:sieve/ens_lapis_lazuli' });
@@ -642,7 +592,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "minecraft:lapis_lazuli"
         }
-    })
+    });
 
     //Ender Biotite
     event.custom({
@@ -667,7 +617,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "quark:biotite"
         }
-    })
+    });
 
     //Quartz
     event.remove({ id: 'exnihilosequentia:sieve/ens_quartz' });
@@ -697,7 +647,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "minecraft:quartz"
         }
-    })
+    });
 
     //Ghast Tear
     event.remove({ id: 'exnihilosequentia:sieve/ens_ghast_tear' });
@@ -715,7 +665,7 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "minecraft:ghast_tear"
         }
-    })
+    });
 
     //Chorus Fruit
     event.custom({
@@ -732,6 +682,58 @@ events.listen('recipes', function (event) {
         "result": {
           "item": "minecraft:chorus_fruit"
         }
+    });
+
+    //Sieve
+    function sieve(slabItem, sieveItem) {
+
+    event.remove({output: sieveItem})
+    event.custom({
+        "type": "astralsorcery:altar",
+        "altar_type": 0,
+        "duration": 20,
+        "starlight": 50,
+        "pattern": [
+          "_____",
+          "_BZB_",
+          "_ACA_",
+          "_A_A_",
+          "_____"
+        ],
+        "key": {
+          "A": {
+            "item": "botania:livingwood_twig"
+          },
+          "C": {
+            "item": "superpackutils:mythril_ingot"
+          },
+          "Z": {
+            "item": slabItem
+          },
+          "B": {
+            "item": "botania:glimmering_livingwood"
+          }
+        },
+        "output": [
+          {
+            "item": sieveItem,
+            "count": 1
+          }
+        ],
+        "effects": [
+          "astralsorcery:built_in_effect_discovery_central_beam"
+        ]
     })
+
+    }
+    
+    sieve("minecraft:oak_slab", "exnihilosequentia:sieve")
+    sieve("minecraft:spruce_slab", "exnihilosequentia:spruce_sieve")
+    sieve("minecraft:acacia_slab", "exnihilosequentia:acacia_sieve")
+    sieve("minecraft:birch_slab", "exnihilosequentia:birch_sieve")
+    sieve("minecraft:dark_oak_slab", "exnihilosequentia:dark_oak_sieve")
+    sieve("minecraft:warped_slab", "exnihilosequentia:warped_sieve")
+    sieve("minecraft:crimson_slab", "exnihilosequentia:crimson_sieve")
+    sieve("minecraft:jungle_slab", "exnihilosequentia:jungle_sieve")
 
 });

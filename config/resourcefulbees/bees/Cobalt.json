@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "tconstruct:cobalt_ingot"
+    "mainOutput": "superpackutils:cobalt_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

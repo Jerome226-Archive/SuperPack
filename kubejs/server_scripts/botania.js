@@ -285,7 +285,7 @@ events.listen('recipes', function (event) {
           "item": "botania:quartz_mana"
         },
         {
-          "item": "botania:rune_envy"
+          "item": "botania:rune_mana"
         },
         {
           "item": "biomesoplenty:lavender"
@@ -609,6 +609,195 @@ events.listen('recipes', function (event) {
             "item": "superpackutils:mythril_ingot"
           }
         ]
+    })
+
+    //Rune of Lust
+    event.remove({id: 'botania:runic_altar/lust'})
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:rune_lust"
+      },
+      "mana": 12000,
+      "ingredients": [
+        {
+          "tag": "forge:gems/dragonstone"
+        },
+        {
+          "tag": "botania:runes/summer"
+        },
+        {
+          "tag": "botania:runes/air"
+        },
+        {
+          "item": "quark:violet_crystal_cluster"
+        },
+        {
+          "item": "eidolon:lesser_soul_gem"
+        }
+      ]
+    })
+
+    //Rune of Gluttony
+    event.remove({id: 'botania:runic_altar/gluttony'})
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:rune_gluttony"
+      },
+      "mana": 12000,
+      "ingredients": [
+        {
+          "tag": "forge:gems/dragonstone"
+        },
+        {
+          "tag": "botania:runes/fire"
+        },
+        {
+          "tag": "botania:runes/winter"
+        },
+        {
+          "item": "quark:white_crystal_cluster"
+        },
+        {
+          "item": "eidolon:enchanted_ash"
+        }
+      ]
+    })
+
+    //Rune of Greed
+    event.remove({id: 'botania:runic_altar/greed'})
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:rune_greed"
+      },
+      "mana": 12000,
+      "ingredients": [
+        {
+          "tag": "forge:gems/dragonstone"
+        },
+        {
+          "tag": "botania:runes/water"
+        },
+        {
+          "tag": "botania:runes/spring"
+        },
+        {
+          "item": "quark:green_crystal_cluster"
+        },
+        {
+          "item": "eidolon:warped_sprouts"
+        }
+      ]
+    })
+
+    //Rune of Sloth
+    event.remove({id: 'botania:runic_altar/sloth'})
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:rune_sloth"
+      },
+      "mana": 12000,
+      "ingredients": [
+        {
+          "tag": "forge:gems/dragonstone"
+        },
+        {
+          "tag": "botania:runes/air"
+        },
+        {
+          "tag": "botania:runes/autumn"
+        },
+        {
+          "item": "quark:orange_crystal_cluster"
+        },
+        {
+          "item": "eidolon:fungus_sprouts"
+        }
+      ]
+    })
+
+    //Rune of Wrath
+    event.remove({id: 'botania:runic_altar/wrath'})
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:rune_wrath"
+      },
+      "mana": 12000,
+      "ingredients": [
+        {
+          "tag": "forge:gems/dragonstone"
+        },
+        {
+          "tag": "botania:runes/earth"
+        },
+        {
+          "tag": "botania:runes/winter"
+        },
+        {
+          "item": "quark:red_crystal_cluster"
+        },
+        {
+          "item": "eidolon:crimson_essence"
+        }
+      ]
+    })
+
+    //Rune of Envy
+    event.remove({id: 'botania:runic_altar/envy'})
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:rune_envy"
+      },
+      "mana": 12000,
+      "ingredients": [
+        {
+          "tag": "forge:gems/dragonstone"
+        },
+        {
+          "tag": "botania:runes/water"
+        },
+        {
+          "tag": "botania:runes/winter"
+        },
+        {
+          "item": "quark:indigo_crystal_cluster"
+        },
+        {
+          "item": "eidolon:shadow_gem"
+        }
+      ]
+    })
+
+    //Rune of Pride
+    event.remove({id: 'botania:runic_altar/pride'})
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:rune_pride"
+      },
+      "mana": 12000,
+      "ingredients": [
+        {
+          "tag": "forge:gems/dragonstone"
+        },
+        {
+          "tag": "botania:runes/fire"
+        },
+        {
+          "tag": "botania:runes/summer"
+        },
+        {
+          "item": "quark:black_crystal_cluster"
+        },
+        {
+          "item": "eidolon:death_essence"
+        }
+      ]
     })
 
 });

@@ -1,16 +1,16 @@
 {
-  "flower": "tag:forge:storage_blocks/osmium",
+  "flower": "tag:forge:storage_blocks/platinum",
   "hasHoneycomb": true,
   "maxTimeInHive": 600,
-  "baseLayerTexture": "ores/osmium/osmium_bee",
+  "baseLayerTexture": "ores/platinum/platinum_bee",
   "ColorData": {
     "isBeeColored": false,
-    "honeycombColor": "#91cecf",
+    "honeycombColor": "#26a1ff",
     "modelType": "ORE"
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "superpackutils:osmium_wax"
+    "mainOutput": "superpackutils:platinum_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

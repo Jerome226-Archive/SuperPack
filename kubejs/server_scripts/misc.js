@@ -105,4 +105,19 @@ events.listen('recipes', function (event) {
     event.remove({output: 'autumnity:syrup_bottle'})
     event.recipes.create.filling('autumnity:syrup_bottle', ['minecraft:glass_bottle', fluid.of('thermal:syrup', 250)])
 
+    //Lava Bottle
+    event.recipes.create.filling('alexsmobs:lava_bottle', ['minecraft:glass_bottle', fluid.of('minecraft:lava', 250)])
+    event.recipes.create.emptying([fluid.of('minecraft:lava', 250), 'minecraft:glass_bottle'], 'alexsmobs:lava_bottle')
+
+    //Slime Bottle
+    event.recipes.create.filling('superpackutils:slime_bottle', ['minecraft:glass_bottle', fluid.of('tconstruct:earth_slime', 50)])
+    event.recipes.create.emptying([fluid.of('tconstruct:earth_slime', 50), 'minecraft:glass_bottle'], 'superpackutils:slime_bottle')
+
+    //SkySlime Bottle
+    event.recipes.create.filling('superpackutils:skyslime_bottle', ['minecraft:glass_bottle', fluid.of('tconstruct:sky_slime', 50)])
+    event.recipes.create.emptying([fluid.of('tconstruct:sky_slime', 50), 'minecraft:glass_bottle'], 'superpackutils:skyslime_bottle')
+
+    //Blood Bottle
+    event.recipes.create.filling('superpackutils:blood_bottle', ['minecraft:glass_bottle', fluid.of('tconstruct:blood', 50)])
+    event.recipes.create.emptying([fluid.of('tconstruct:blood', 50), 'minecraft:glass_bottle'], 'superpackutils:blood_bottle')
 });

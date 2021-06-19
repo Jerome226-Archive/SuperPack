@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "thermal:tin_ingot"
+    "mainOutput": "superpackutils:tin_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "thermal:lead_ingot"
+    "mainOutput": "superpackutils:lead_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

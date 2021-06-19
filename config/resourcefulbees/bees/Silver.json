@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "thermal:silver_ingot"
+    "mainOutput": "superpackutils:silver_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

@@ -35,6 +35,7 @@ events.listen('item.tags', function (event) {
     event.get('forge:ores/gold').remove('exnihilosequentia:chunk_gold')
     event.get('forge:ores/osmium').remove('exnihilosequentia:chunk_osmium')
     event.get('forge:ores/cobalt').remove('exnihilosequentia:chunk_cobalt')
+    event.get('forge:ores/platinum').remove('exnihilosequentia:chunk_platinum')
 
 });
 
@@ -51,6 +52,7 @@ events.listen('fluid.tags', function (event) {
     event.get('minecraft:water').remove('betterportals:portal_fluid_still')
     event.get('minecraft:water').remove('betterportals:portal_fluid_flowing')
     event.get('minecraft:water').remove('exnihilosequentia:sea_water')
+    event.get('minecraft:water').remove('exnihilosequentia:sea_water_flow')
 
     event.get('forge:ethanol').remove('pneumaticcraft:ethanol')
 

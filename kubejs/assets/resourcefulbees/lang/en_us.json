@@ -19,6 +19,16 @@
    "item.resourcefulbees.cobalt_bee_spawn_egg": "Cobalt Bee Spawn Egg",
    "entity.resourcefulbees.cobalt_bee": "Cobalt Bee",
 
+   "block.resourcefulbees.platinum_honeycomb_block": "Platinum Honeycomb Block",
+   "item.resourcefulbees.platinum_honeycomb": "Platinum Honeycomb",
+   "item.resourcefulbees.platinum_bee_spawn_egg": "Platinum Bee Spawn Egg",
+   "entity.resourcefulbees.platinum_bee": "Platinum Bee",
+
+   "block.resourcefulbees.aluminum_honeycomb_block": "Aluminum Honeycomb Block",
+   "item.resourcefulbees.aluminum_honeycomb": "Aluminum Honeycomb",
+   "item.resourcefulbees.aluminum_bee_spawn_egg": "Aluminum Bee Spawn Egg",
+   "entity.resourcefulbees.aluminum_bee": "Aluminum Bee",
+
    "block.resourcefulbees.silver_honeycomb_block": "Silver Honeycomb Block",
    "item.resourcefulbees.silver_honeycomb": "Silver Honeycomb",
    "item.resourcefulbees.silver_bee_spawn_egg": "Silver Bee Spawn Egg",

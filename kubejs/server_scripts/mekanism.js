@@ -296,7 +296,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanism:metallurgic_infuser', ['SCS', 'IBI', 'SCS'], {
         S: '#forge:sheetmetals/steel',
         C: 'create:furnace_engine',
-        B: 'immersiveengineering:heavy_engineering',
+        B: 'refinedstorage:machine_casing',
         I: 'superpackutils:reinforced_capacitor'
     }),
 
@@ -327,6 +327,16 @@ events.listen('recipes', function (event) {
         C: 'create:crushing_wheel',
         B: 'mekanism:steel_casing',
         I: '#forge:circuits/basic'
+    }),
+
+    //Chemical Crystallizer
+    event.remove({output: 'mekanism:chemical_crystallizer'})
+    event.shaped('mekanism:chemical_crystallizer', ['SCS', 'IBI', 'ECE'], {
+        S: Item.of('tconstruct:large_plate', {Material:"tconstruct:hepatizon"}),
+        E: 'pneumaticcraft:compressed_iron_gear',
+        C: 'mekanism:fluorite_gem',
+        B: 'mekanism:steel_casing',
+        I: '#forge:circuits/advanced'
     }),
 
     //Energized Smelter
@@ -562,7 +572,7 @@ events.listen('recipes', function (event) {
         S: '#forge:plates/lead',
         C: 'immersiveengineering:fluid_pump',
         J: 'create:mechanical_pump',
-        B: 'immersiveengineering:heavy_engineering'
+        B: 'refinedstorage:machine_casing'
     }),
 
     //Osmium Compressor

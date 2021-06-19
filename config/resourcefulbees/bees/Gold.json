@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "minecraft:gold_ingot"
+    "mainOutput": "superpackutils:gold_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

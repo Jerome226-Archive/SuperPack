@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "create:zinc_ingot"
+    "mainOutput": "superpackutils:zinc_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

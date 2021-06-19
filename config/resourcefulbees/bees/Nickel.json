@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "thermal:nickel_ingot"
+    "mainOutput": "superpackutils:nickel_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

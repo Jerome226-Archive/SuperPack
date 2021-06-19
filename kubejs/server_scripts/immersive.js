@@ -16,6 +16,15 @@ events.listen('recipes', function (event) {
     event.remove({id: 'immersiveengineering:cokeoven/coke_block'})
     event.recipes.immersiveengineering.coke_oven('thermal:coal_coke_block', 'minecraft:coal_block').creosote(5000).time(8100)
 
+    //Concrete
+    event.remove({id: 'immersiveengineering:crafting/concrete'})
+    event.remove({id: 'immersiveengineering:crafting/concrete2'})
+    event.shaped(Item.of('immersiveengineering:concrete', 8), ['ATA', 'TWT', 'ATA'], {
+        A: 'immersiveengineering:slag',
+        W: 'thermal:rich_slag',
+        T: 'engineersdecor:dense_grit_sand_block'
+    }),
+
     //IE Coke Brick
     event.remove({output: 'immersiveengineering:cokebrick'})
     event.shaped(Item.of('immersiveengineering:cokebrick', 3), ['ATA', 'TWT', 'ATA'], {

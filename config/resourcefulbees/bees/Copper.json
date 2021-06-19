@@ -10,7 +10,7 @@
   },
   "CentrifugeData": {
     "hasCentrifugeOutput": true,
-    "mainOutput": "thermal:copper_ingot"
+    "mainOutput": "superpackutils:copper_wax"
   },
   "SpawnData": {
     "canSpawnInWorld": false

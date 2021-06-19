@@ -24,6 +24,9 @@ events.listen('recipes', function (event) {
     event.remove({id: 'pneumaticcraft:thermo_plant/vegetable_oil_from_seeds'})
     event.remove({id: 'pneumaticcraft:thermo_plant/vegetable_oil_from_crops'})
 
+    //Sourdough
+    event.recipes.create.filling('pneumaticcraft:sourdough', ['pneumaticcraft:wheat_flour', fluid.of('pneumaticcraft:yeast_culture', 125)]),
+
     //Refinery
     event.remove({id: 'pneumaticcraft:refinery/oil_2'})
     event.remove({id: 'pneumaticcraft:refinery/oil_3'})
