@@ -6,27 +6,186 @@ events.listen('recipes', function (event) {
     //Superpack: Utils
     //-----------------------------------------------------
 
-    //Condensed LPG
+    //Steam-Cracked Naphtha
     event.custom({
         "type": "pneumaticcraft:fluid_mixer",
         "input1": {
           "type": "pneumaticcraft:fluid",
-          "fluid": "pneumaticcraft:lpg",
-          "amount": 25
+          "fluid": "superpackutils:naphtha",
+          "amount": 50
         },
         "input2": {
           "type": "pneumaticcraft:fluid",
-          "fluid": "mekanism:stead",
+          "fluid": "mekanism:steam",
           "amount": 75
         },
         "fluid_output": {
-          "fluid": "superpackutils:condensed_lpg_fluid",
+          "fluid": "superpackutils:sc_naphtha",
           "amount": 50
         },
         "pressure": 2.0,
         "time": 300
     }),
+
+    //Steam-Cracked Light Fuel
+    event.custom({
+      "type": "pneumaticcraft:fluid_mixer",
+      "input1": {
+        "type": "pneumaticcraft:fluid",
+        "fluid": "thermal:light_oil",
+        "amount": 50
+      },
+      "input2": {
+        "type": "pneumaticcraft:fluid",
+        "fluid": "mekanism:steam",
+        "amount": 75
+      },
+      "fluid_output": {
+        "fluid": "superpackutils:sc_light_oil",
+        "amount": 50
+      },
+      "pressure": 2.0,
+      "time": 300
+  }),
+
+  //Steam-Cracked Heavy Fuel
+    event.custom({
+    "type": "pneumaticcraft:fluid_mixer",
+    "input1": {
+      "type": "pneumaticcraft:fluid",
+      "fluid": "thermal:heavy_oil",
+      "amount": 50
+    },
+    "input2": {
+      "type": "pneumaticcraft:fluid",
+      "fluid": "mekanism:steam",
+      "amount": 75
+    },
+    "fluid_output": {
+      "fluid": "superpackutils:sc_heavy_oil",
+      "amount": 50
+    },
+    "pressure": 2.0,
+    "time": 300
+    }),
+
+    //Hydro-Cracked Naphtha
+    event.custom({
+        "type": "pneumaticcraft:fluid_mixer",
+        "input1": {
+          "type": "pneumaticcraft:fluid",
+          "fluid": "superpackutils:naphtha",
+          "amount": 50
+        },
+        "input2": {
+          "type": "pneumaticcraft:fluid",
+          "fluid": "mekanism:hydrogen",
+          "amount": 75
+        },
+        "fluid_output": {
+          "fluid": "superpackutils:hc_naphtha",
+          "amount": 50
+        },
+        "pressure": 2.0,
+        "time": 300
+    }),
+
+    //Hydro-Cracked Light Fuel
+    event.custom({
+      "type": "pneumaticcraft:fluid_mixer",
+      "input1": {
+        "type": "pneumaticcraft:fluid",
+        "fluid": "thermal:light_oil",
+        "amount": 50
+      },
+      "input2": {
+        "type": "pneumaticcraft:fluid",
+        "fluid": "mekanism:hydrogen",
+        "amount": 75
+      },
+      "fluid_output": {
+        "fluid": "superpackutils:hc_light_oil",
+        "amount": 50
+      },
+      "pressure": 2.0,
+      "time": 300
+    }),
+
+    //Hydro-Cracked Heavy Fuel
+    event.custom({
+      "type": "pneumaticcraft:fluid_mixer",
+      "input1": {
+        "type": "pneumaticcraft:fluid",
+        "fluid": "thermal:heavy_oil",
+        "amount": 50
+      },
+      "input2": {
+        "type": "pneumaticcraft:fluid",
+        "fluid": "mekanism:hydrogen",
+        "amount": 75
+      },
+      "fluid_output": {
+        "fluid": "superpackutils:hc_heavy_oil",
+        "amount": 50
+      },
+      "pressure": 2.0,
+      "time": 300
+    }),
+
+    //Propylene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:propene"},"gasOutput":{"gas":"superpackutils:propene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:propene"},"fluidOutput":{"fluid":"superpackutils:propene","amount":1}})
   
+    //Benzene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:benzene"},"gasOutput":{"gas":"superpackutils:benzene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:benzene"},"fluidOutput":{"fluid":"superpackutils:benzene","amount":1}})
+
+    //Ethyl Benzene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:ethyl_benzene"},"gasOutput":{"gas":"superpackutils:ethyl_benzene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:ethyl_benzene"},"fluidOutput":{"fluid":"superpackutils:ethyl_benzene","amount":1}})
+
+    //Butadiene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:butadiene"},"gasOutput":{"gas":"superpackutils:butadiene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:butadiene"},"fluidOutput":{"fluid":"superpackutils:butadiene","amount":1}})
+
+    //Acrylonitrile
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:acrylonitrile"},"gasOutput":{"gas":"superpackutils:acrylonitrile","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:acrylonitrile"},"fluidOutput":{"fluid":"superpackutils:acrylonitrile","amount":1}})
+
+    //ABS
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:abs"},"gasOutput":{"gas":"superpackutils:abs","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:abs"},"fluidOutput":{"fluid":"superpackutils:abs","amount":1}})
+
+    //Ethyl Chloride
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:ethyl_chloride"},"gasOutput":{"gas":"superpackutils:ethyl_chloride","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:ethyl_chloride"},"fluidOutput":{"fluid":"superpackutils:ethyl_chloride","amount":1}})
+
+    //Silicon Dioxide
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:silicon_dioxide"},"gasOutput":{"gas":"superpackutils:silicon_dioxide","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_dioxide"},"fluidOutput":{"fluid":"superpackutils:silicon_dioxide","amount":1}})
+
+    //Polyethene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:polyethene"},"gasOutput":{"gas":"superpackutils:polyethene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:polyethene"},"fluidOutput":{"fluid":"superpackutils:polyethene","amount":1}})
+
+    //Chemical Death
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:chemical_death"},"gasOutput":{"gas":"superpackutils:chemical_death","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:chemical_death"},"fluidOutput":{"fluid":"superpackutils:chemical_death","amount":1}})
+
+    //Ammonia
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:ammonia"},"gasOutput":{"gas":"superpackutils:ammonia","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:ammonia"},"fluidOutput":{"fluid":"superpackutils:ammonia","amount":1}})
+    
+    //Cyanide
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:cyanide"},"gasOutput":{"gas":"superpackutils:cyanide","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:cyanide"},"fluidOutput":{"fluid":"superpackutils:cyanide","amount":1}})
+
+    //Carbon Dioxide
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:carbon_dioxide"},"gasOutput":{"gas":"superpackutils:carbon_dioxide","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:carbon_dioxide"},"fluidOutput":{"fluid":"superpackutils:carbon_dioxide","amount":1}})
+   
+    //Methane
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:methane"},"gasOutput":{"gas":"superpackutils:methane","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:methane"},"fluidOutput":{"fluid":"superpackutils:methane","amount":1}})
+
+    //Styrene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:styrene"},"gasOutput":{"gas":"superpackutils:styrene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:styrene"},"fluidOutput":{"fluid":"superpackutils:styrene","amount":1}})
+
+    //Pure Sulfuric
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:pure_sulfuric_acid"},"gasOutput":{"gas":"superpackutils:pure_sulfuric_acid","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:pure_sulfuric_acid"},"fluidOutput":{"fluid":"superpackutils:pure_sulfuric_acid","amount":1}})
+
+    //Toluene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:toluene"},"gasOutput":{"gas":"superpackutils:toluene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:toluene"},"fluidOutput":{"fluid":"superpackutils:toluene","amount":1}})
+
+    //Octane
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:octane"},"gasOutput":{"gas":"superpackutils:octane","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:octane"},"fluidOutput":{"fluid":"superpackutils:octane","amount":1}})
+
     //Dimensional Plasma
     event.custom({
         "type": "astralsorcery:lightwell",
@@ -85,6 +244,12 @@ events.listen('recipes', function (event) {
         I: '#forge:coins'
     }),
 
+    //Propene
+    event.custom({"type":"mekanism:separating","input":{"amount":4,"tag":"forge:propane"},"leftGasOutput":{"gas":"superpackutils:propene","amount":3},"rightGasOutput":{"gas":"superpackutils:methane","amount":1}})
+    
+    //Butene
+    event.custom({"type":"mekanism:separating","input":{"amount":4,"tag":"forge:butane"},"leftGasOutput":{"gas":"superpackutils:butene","amount":3},"rightGasOutput":{"gas":"superpackutils:methane","amount":1}})
+
     //Stabilizer
     event.custom({
       "type": "masterfulmachinery:machine_process",
@@ -129,7 +294,7 @@ events.listen('recipes', function (event) {
               }
           }
       ]
-  })
+    })
 
     //Igneous Deepslate Generation
     event.custom({
@@ -203,7 +368,7 @@ events.listen('recipes', function (event) {
               }
           }
       ]
-  })
+    })
 
       //Energetic Alloy
       event.custom({
@@ -505,7 +670,7 @@ events.listen('recipes', function (event) {
         A: 'superpackutils:doublelayered_capacitor',
         B: 'superpackutils:metallurgic_casing',
         I: 'superpackutils:big_steel_casing'
-  }),
+    }),
 
     //Assembler Casing
     event.shaped(Item.of('superpackutils:assembler_frame', 8), ['BCB', 'AIA', 'BCB'], {
@@ -549,6 +714,13 @@ events.listen('recipes', function (event) {
                     "count": 8
                 }
             },
+            {
+              "type": "masterfulmachinery:items",
+              "data":{
+                  "item": "superpackutils:advanced_casing",
+                  "count": 3
+              }
+          },
             {
                 "type": "masterfulmachinery:items",
                 "data":{
@@ -612,6 +784,12 @@ events.listen('recipes', function (event) {
     //Ethyl Chloride
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:hydrogen_chloride"},"rightInput":{"amount":1,"gas":"mekanism:ethene"},"output":{"gas":"superpackutils:ethyl_chloride","amount":1}})
 
+    //Ethyl Benzene
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:benzene"},"rightInput":{"amount":1,"gas":"mekanism:ethene"},"output":{"gas":"superpackutils:ethyl_benzene","amount":1}})
+
+    //Acrylonitrile
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:propylene"},"rightInput":{"amount":1,"gas":"superpackutils:ammonia"},"output":{"gas":"superpackutils:acrylonitrile","amount":1}})
+
     //Ammonia
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:hydrogen"},"rightInput":{"amount":1,"gas":"superpackutils:nitrogen"},"output":{"gas":"superpackutils:ammonia","amount":1}})
 
@@ -623,6 +801,9 @@ events.listen('recipes', function (event) {
 
     //Tetraethyl Lead Dust
     event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"thermal:lead_dust"}},"fluidInput":{"amount":50,"tag":"forge:sodium"},"gasInput":{"amount":100,"gas":"superpackutils:ethyl_chloride"},"energyRequired":200,"duration":400,"itemOutput":{"item":"superpackutils:tetraethyl_lead_dust","count":1},"gasOutput":{"gas":"mekanism:oxygen","amount":10}})
+
+    //Polydimethylsiloxane
+    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"libvulpes:dustsilicon"}},"fluidInput":{"amount":250,"tag":"forge:methane"},"gasInput":{"amount":500,"gas":"mekanism:chlorine"},"energyRequired":300,"duration":200,"itemOutput":{"item":"superpackutils:polydimethylsiloxane_pulp","count":1},"gasOutput":{"gas":"mekanism:hydrogen_chloride","amount":25}})
 
     //Chemical Death
     event.custom({"type":"mekanism:reaction","itemInput":{"amount":1,"ingredient":{"item":"botania:living_root"}},"fluidInput":{"amount":600,"tag":"minecraft:water"},"gasInput":{"amount":200,"gas":"superpackutils:cyanide"},"energyRequired":200,"duration":37,"itemOutput":{"item":"biomesoplenty:dead_branch","count":1},"gasOutput":{"gas":"superpackutils:chemical_death","amount":100}})
@@ -640,6 +821,9 @@ events.listen('recipes', function (event) {
           "item": "superpackutils:industrial_sand"
         }
     })
+
+    //Advanced Machine Casing
+    event.custom({"type":"mekanism:compressing","itemInput":{"ingredient":{"item":"superpackutils:mixed_alloy_ingot"}},"gasInput":{"amount":1,"gas":"mekanism:liquid_osmium"},"output":{"item":"superpackutils:advanced_casing","count":1}})
 
     //Bedrock Dust & Limestone Dust
     event.recipes.create.crushing([Item.of('superpackutils:limestone_dust').withChance(0.35), 'superpackutils:bedrock_dust', Item.of('superpackutils:bedrock_dust').withChance(0.45)], 'superpackutils:deepslate', 350)
@@ -898,8 +1082,8 @@ events.listen('recipes', function (event) {
     event.recipes.create.filling('superpackutils:weird_fungu', ['minecraft:crimson_fungus', fluid.of('mekanismgenerators:bioethanol', 1000)]),
 
     //Bio Plastic
-    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"thermal:sawdust"},{"item":"thermal:rubber"}],"result":{"fluid":"superpackutils:molten_bio_plastic_fluid","amount":1000},"fluid":{"tag":"forge:biodiesel","amount":1000},"energy":3200}),
-    event.recipes.create.compacting(Item.of('superpackutils:bio_plastic', 1), [fluid.of('superpackutils:molten_bio_plastic_fluid', 1000)]),
+    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"thermal:sawdust"},{"item":"thermal:rubber"}],"result":{"fluid":"superpackutils:molten_bio_plastic","amount":1000},"fluid":{"tag":"forge:biodiesel","amount":1000},"energy":3200}),
+    event.recipes.create.compacting(Item.of('superpackutils:bio_plastic', 1), [fluid.of('superpackutils:molten_bio_plastic', 1000)]),
 
     //Infused Stone
     event.recipes.create.mixing(Item.of('superpackutils:infused_stone', 2), ['create:limestone', 'botania:livingrock'])

@@ -28,24 +28,20 @@ events.listen('recipes', function (event) {
         ],
         "results": [
           {
-            "fluid": "immersivepetroleum:lubricant",
+            "fluid": "superpackutils:sulfurized_naphtha",
             "amount": 9
           },
           {
-            "fluid": "immersivepetroleum:diesel_sulfur",
-            "amount": 14
+            "fluid": "superpackutils:sulfurized_light_oil",
+            "amount": 39
           },
           {
-            "fluid": "pneumaticcraft:lpg",
+            "fluid": "superpackutils:sulfurized_heavy_oil",
             "amount": 15
           },
           {
-            "fluid": "pneumaticcraft:kerosene",
-            "amount": 10
-          },
-          {
-            "fluid": "immersivepetroleum:gasoline",
-            "amount": 39
+            "fluid": "immersivepetroleum:diesel_sulfur",
+            "amount": 12
           }
         ],
         "input": {
@@ -68,6 +64,72 @@ events.listen('recipes', function (event) {
         },
         "input": {
           "tag": "forge:diesel_sulfur",
+          "amount": 7
+        },
+        "secondary_input": {
+          "tag": "minecraft:water",
+          "amount": 7
+        },
+        "secondary_result": {
+          "item": "thermal:sulfur_dust",
+          "chance": "0.02"
+        }
+    })
+
+    event.custom({
+        "type": "immersivepetroleum:hydrotreater",
+        "time": 1,
+        "energy": 512,
+        "result": {
+          "fluid": "superpackutils:naphtha",
+          "amount": 7
+        },
+        "input": {
+          "tag": "forge:sulfurized_naphtha",
+          "amount": 7
+        },
+        "secondary_input": {
+          "tag": "minecraft:water",
+          "amount": 7
+        },
+        "secondary_result": {
+          "item": "thermal:sulfur_dust",
+          "chance": "0.02"
+        }
+    })
+
+    event.custom({
+        "type": "immersivepetroleum:hydrotreater",
+        "time": 1,
+        "energy": 512,
+        "result": {
+          "fluid": "thermal:light_oil",
+          "amount": 7
+        },
+        "input": {
+          "tag": "forge:sulfurized_light_oil",
+          "amount": 7
+        },
+        "secondary_input": {
+          "tag": "minecraft:water",
+          "amount": 7
+        },
+        "secondary_result": {
+          "item": "thermal:sulfur_dust",
+          "chance": "0.02"
+        }
+    })
+
+    event.custom({
+        "type": "immersivepetroleum:hydrotreater",
+        "time": 1,
+        "energy": 512,
+        "result": {
+          "fluid": "thermal:heavy_oil",
+          "amount": 7
+        },
+        "input": {
+          "tag": "forge:sulfurized_heavy_oil",
           "amount": 7
         },
         "secondary_input": {

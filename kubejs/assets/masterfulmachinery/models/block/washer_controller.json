@@ -1,0 +1,8 @@
+{
+    "parent":"minecraft:block/orientable",
+    "textures":{
+        "side":"masterfulmachinery:block/washer_casing",
+        "top":"masterfulmachinery:block/washer_casing",
+        "front":"masterfulmachinery:block/washer_controller"
+    }
+}

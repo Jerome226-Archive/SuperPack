@@ -31,24 +31,185 @@ events.listen('recipes', function (event) {
     event.remove({id: 'pneumaticcraft:refinery/oil_2'})
     event.remove({id: 'pneumaticcraft:refinery/oil_3'})
     event.remove({id: 'pneumaticcraft:refinery/oil_4'})
+
+    //Hydro-Cracked Naphtha
     event.custom({
       "type": "pneumaticcraft:refinery",
       "input": {
         "type": "pneumaticcraft:fluid",
-        "tag": "forge:condensed_lpg",
-        "amount": 10
+        "tag": "forge:hc_naphtha",
+        "amount": 1000
       },
       "temperature": {
         "min_temp": 373
       },
       "results": [
         {
-          "fluid": "superpackutils:propylene_fluid",
-          "amount": 4
+          "fluid": "superpackutils:methane",
+          "amount": 750
         },
         {
-          "fluid": "superpackutils:benzene_fluid",
-          "amount": 5
+          "fluid": "superpackutils:propane",
+          "amount": 750
+        },
+        {
+          "fluid": "superpackutils:butane",
+          "amount": 750
+        }
+      ]
+    })
+
+    //Steam-Cracked Naphtha
+    event.custom({
+      "type": "pneumaticcraft:refinery",
+      "input": {
+        "type": "pneumaticcraft:fluid",
+        "tag": "forge:sc_naphtha",
+        "amount": 1000
+      },
+      "temperature": {
+        "min_temp": 373
+      },
+      "results": [
+        {
+          "fluid": "superpackutils:propene",
+          "amount": 600
+        },
+        {
+          "fluid": "superpackutils:butadiene",
+          "amount": 400
+        },
+        {
+          "fluid": "superpackutils:toluene",
+          "amount": 200
+        },
+        {
+          "fluid": "superpackutils:benzene",
+          "amount": 400
+        }
+      ]
+    })
+
+    //Hydro-Cracked Light Fuel
+    event.custom({
+      "type": "pneumaticcraft:refinery",
+      "input": {
+        "type": "pneumaticcraft:fluid",
+        "tag": "forge:hc_light_oil",
+        "amount": 1000
+      },
+      "temperature": {
+        "min_temp": 373
+      },
+      "results": [
+        {
+          "fluid": "superpackutils:methane",
+          "amount": 200
+        },
+        {
+          "fluid": "superpackutils:propane",
+          "amount": 400
+        },
+        {
+          "fluid": "superpackutils:butane",
+          "amount": 400
+        },
+        {
+          "fluid": "superpackutils:naphtha",
+          "amount": 200
+        }
+      ]
+    })
+
+    //Steam-Cracked Light Fuel
+    event.custom({
+      "type": "pneumaticcraft:refinery",
+      "input": {
+        "type": "pneumaticcraft:fluid",
+        "tag": "forge:sc_light_oil",
+        "amount": 1000
+      },
+      "temperature": {
+        "min_temp": 373
+      },
+      "results": [
+        {
+          "fluid": "superpackutils:propene",
+          "amount": 450
+        },
+        {
+          "fluid": "superpackutils:butadiene",
+          "amount": 300
+        },
+        {
+          "fluid": "superpackutils:naphtha",
+          "amount": 100
+        },
+        {
+          "fluid": "superpackutils:benzene",
+          "amount": 300
+        }
+      ]
+    })
+
+    //Hydro-Cracked Heavy Fuel
+    event.custom({
+      "type": "pneumaticcraft:refinery",
+      "input": {
+        "type": "pneumaticcraft:fluid",
+        "tag": "forge:hc_heavy_oil",
+        "amount": 1000
+      },
+      "temperature": {
+        "min_temp": 373
+      },
+      "results": [
+        {
+          "fluid": "superpackutils:methane",
+          "amount": 75
+        },
+        {
+          "fluid": "superpackutils:propane",
+          "amount": 100
+        },
+        {
+          "fluid": "superpackutils:butane",
+          "amount": 100
+        },
+        {
+          "fluid": "thermal:light_oil",
+          "amount": 800
+        }
+      ]
+    })
+
+    //Steam-Cracked Heavy Fuel
+    event.custom({
+      "type": "pneumaticcraft:refinery",
+      "input": {
+        "type": "pneumaticcraft:fluid",
+        "tag": "forge:sc_heavy_oil",
+        "amount": 1000
+      },
+      "temperature": {
+        "min_temp": 373
+      },
+      "results": [
+        {
+          "fluid": "superpackutils:methane",
+          "amount": 300
+        },
+        {
+          "fluid": "superpackutils:propene",
+          "amount": 300
+        },
+        {
+          "fluid": "superpackutils:benzene",
+          "amount": 200
+        },
+        {
+          "fluid": "thermal:light_oil",
+          "amount": 100
         }
       ]
     })
@@ -72,7 +233,7 @@ events.listen('recipes', function (event) {
       },
       "fluid_input": {
         "type": "pneumaticcraft:fluid",
-        "fluid": "superpackutils:lubrified_lpg_fluid",
+        "fluid": "superpackutils:abs",
         "amount": 100
       },
       "fluid_output": {
@@ -88,8 +249,6 @@ events.listen('recipes', function (event) {
     })
 
     event.recipes.create.compacting(Item.of('pneumaticcraft:plastic', 1), [fluid.of('pneumaticcraft:plastic', 1000)]),
-
-
     event.remove({id: 'pneumaticcraft:heat_frame_cooling/plastic'})
 
     //Biodiesel

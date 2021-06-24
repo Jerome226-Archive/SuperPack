@@ -452,14 +452,78 @@ events.listen('recipes', function (event) {
     })
 
     //-----------------------------------------------------
-    //Mixer Recipes
+    //Chemical Reactor
+    //-----------------------------------------------------
+
+    event.custom({
+      "type": "masterfulmachinery:machine_structure",
+      "id": "chemical_reactor",
+      "controllerId": "chemical_reactor",
+      "name": "Chemical Reactor",
+      "layout": [
+        [
+          "F F",
+          "   ",
+          "F F"
+        ],
+        [
+          "APA",
+          "GAO",
+          "ACA"
+        ],
+        [
+          "AAA",
+          "GBO",
+          "AAA"
+        ],
+        [
+          "AIA",
+          "GBO",
+          "AAA"
+        ],
+        [
+          "SAS",
+          "AAA",
+          "SAS"
+        ]
+      ],
+      "legend": {
+        "F": {
+          "block": "immersiveposts:fence_silver"
+        },
+        "A": {
+          "block": "superpackutils:chemical_reactor_casing"
+        },
+        "P": {
+          "block": "masterfulmachinery:chemical_reactor_basic_port_pncr_pressure_input"
+        },
+        "G": {
+          "block": "masterfulmachinery:chemical_reactor_basic_port_mekanism_gas_input"
+        },
+        "O": {
+          "block": "masterfulmachinery:chemical_reactor_basic_port_mekanism_gas_output"
+        },
+        "I": {
+          "block": "masterfulmachinery:chemical_reactor_basic_port_items_input"
+        },
+        "B": {
+          "block": "superpackutils:big_steel_casing"
+        },
+        "S": {
+          "block": "immersiveengineering:slab_sheetmetal_silver"
+        }
+      }
+    })
+
+    //-----------------------------------------------------
+    //Alchemical Mixer Recipes
     //-----------------------------------------------------
 
     event.custom({
       "type": "masterfulmachinery:machine_structure",
       "controllerId": "mixer",
       "id": "mixer",
-      "name": "Advanced Mixer",
+      "name": "Alchemical Mixer",
       "layout": [
           [
             "AEA",

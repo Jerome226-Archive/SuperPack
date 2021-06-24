@@ -99,6 +99,15 @@ events.listen('recipes', function (event) {
         S: 'thermal:iron_plate'
     }),
 
+    //Redstone Servo
+    event.remove({output: 'thermal:redstone_servo'})
+    event.shaped('thermal:redstone_servo', ['TST', 'BCB', 'TST'], {
+        T: 'minecraft:redstone',
+        C: 'minecraft:iron_ingot',
+        B: 'immersiveengineering:stick_steel',
+        S: 'thermal:invar_plate'
+    }),
+
     //Thermal Aqueous Accumulator
     event.remove({output: 'thermal:device_water_gen'})
     event.shaped('thermal:device_water_gen', ['TDT', 'BCB', 'TST'], {
@@ -198,10 +207,6 @@ events.listen('recipes', function (event) {
     //Redstone Flux Coil
     event.remove({id: 'thermal:rf_coil'})
     event.recipes.mekanism.metallurgic_infusing('thermal:rf_coil', 'immersiveengineering:coil_mv', 'mekanism:redstone', 160),
-
-    //Redstone Servo
-    event.remove({id: 'thermal:redstone_servo'})
-    event.recipes.mekanism.metallurgic_infusing('thermal:redstone_servo', 'immersiveengineering:component_iron', 'mekanism:redstone', 160),
 
     //Rubber
     event.remove({id: 'thermal:rubber_from_vine'})
