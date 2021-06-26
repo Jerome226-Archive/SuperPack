@@ -700,7 +700,7 @@ events.listen('recipes', function (event) {
 
     //Sheets
     event.remove({id: 'mekanism:reaction/substrate/ethene_oxygen'})
-    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"mekanism:substrate"}},"fluidInput":{"amount":50,"tag":"forge:oxygen"},"gasInput":{"amount":50,"gas":"superpackutils:polyethene"},"energyRequired":1000,"duration":60,"itemOutput":{"item":"mekanism:hdpe_pellet"},"gasOutput":{"gas":"mekanism:oxygen","amount":5}})
+    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"superpackutils:polydimethylsiloxane_pulp"}},"fluidInput":{"amount":50,"tag":"forge:oxygen"},"gasInput":{"amount":50,"gas":"superpackutils:polyethene"},"energyRequired":1000,"duration":60,"itemOutput":{"item":"mekanism:hdpe_pellet"},"gasOutput":{"gas":"mekanism:oxygen","amount":5}})
 
     //Infused Alloy
     event.remove({output: 'mekanism:alloy_infused'})

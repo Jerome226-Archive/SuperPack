@@ -33,7 +33,11 @@ events.listen('recipes', function (event) {
           },
           {
             "fluid": "superpackutils:sulfurized_light_oil",
-            "amount": 39
+            "amount": 25
+          },
+          {
+            "fluid": "superpackutils:sulfurized_gasoline",
+            "amount": 14
           },
           {
             "fluid": "superpackutils:sulfurized_heavy_oil",
@@ -64,6 +68,28 @@ events.listen('recipes', function (event) {
         },
         "input": {
           "tag": "forge:diesel_sulfur",
+          "amount": 7
+        },
+        "secondary_input": {
+          "tag": "minecraft:water",
+          "amount": 7
+        },
+        "secondary_result": {
+          "item": "thermal:sulfur_dust",
+          "chance": "0.02"
+        }
+    })
+
+    event.custom({
+        "type": "immersivepetroleum:hydrotreater",
+        "time": 1,
+        "energy": 512,
+        "result": {
+          "fluid": "immersivepetroleum:gasoline",
+          "amount": 7
+        },
+        "input": {
+          "tag": "forge:sulfurized_gasoline",
           "amount": 7
         },
         "secondary_input": {

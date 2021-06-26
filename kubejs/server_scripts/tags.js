@@ -74,6 +74,7 @@ events.listen('fluid.tags', function (event) {
     event.get('forge:sulfurized_naphtha').add('superpackutils:sulfurized_naphtha')
     event.get('forge:sulfurized_light_oil').add('superpackutils:sulfurized_light_oil')
     event.get('forge:sulfurized_heavy_oil').add('superpackutils:sulfurized_heavy_oil')
+    event.get('forge:sulfurized_gasoline').add('superpackutils:sulfurized_gasoline')
     event.get('forge:sc_light_oil').add('superpackutils:sc_light_oil')
     event.get('forge:hc_light_oil').add('superpackutils:hc_light_oil')
     event.get('forge:sc_heavy_oil').add('superpackutils:sc_heavy_oil')
