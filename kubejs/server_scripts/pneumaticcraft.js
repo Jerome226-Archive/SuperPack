@@ -53,6 +53,10 @@ events.listen('recipes', function (event) {
           "amount": 750
         },
         {
+          "fluid": "superpackutils:octane",
+          "amount": 300
+        },
+        {
           "fluid": "superpackutils:butane",
           "amount": 750
         }
