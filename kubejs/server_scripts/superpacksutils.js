@@ -132,7 +132,7 @@ events.listen('recipes', function (event) {
       "time": 300
     }),
 
-    //Propylene
+    //Propene
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:propene"},"gasOutput":{"gas":"superpackutils:propene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:propene"},"fluidOutput":{"fluid":"superpackutils:propene","amount":1}})
   
     //Benzene
@@ -173,6 +173,15 @@ events.listen('recipes', function (event) {
    
     //Methane
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:methane"},"gasOutput":{"gas":"superpackutils:methane","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:methane"},"fluidOutput":{"fluid":"superpackutils:methane","amount":1}})
+
+    //Butane
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:butane"},"gasOutput":{"gas":"superpackutils:butane","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:butane"},"fluidOutput":{"fluid":"superpackutils:butane","amount":1}})
+
+    //Butene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:butene"},"gasOutput":{"gas":"superpackutils:butene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:butene"},"fluidOutput":{"fluid":"superpackutils:butene","amount":1}})
+
+    //Propane
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:propane"},"gasOutput":{"gas":"superpackutils:propane","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:propane"},"fluidOutput":{"fluid":"superpackutils:propane","amount":1}})
 
     //Styrene
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:styrene"},"gasOutput":{"gas":"superpackutils:styrene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:styrene"},"fluidOutput":{"fluid":"superpackutils:styrene","amount":1}})
@@ -274,7 +283,7 @@ events.listen('recipes', function (event) {
             "type": "masterfulmachinery:fluids",
             "data":{
                 "fluid": "tconstruct:molten_osmium",
-                "amount": 100
+                "amount": 144
             }
         },
           {
@@ -656,6 +665,14 @@ events.listen('recipes', function (event) {
           I: 'refinedstorage:machine_casing'
     }),
 
+    //Mixer Casing
+    event.shaped(Item.of('superpackutils:mixer_casing', 4), ['BCB', 'AIA', 'BCB'], {
+      C: 'superpackutils:compressed_steel_ingot',
+      A: 'superpackutils:reinforced_capacitor',
+      B: '#forge:sheetmetals/steel',
+      I: 'refinedstorage:machine_casing'
+    }),
+
     //Infuser Casing
     event.shaped(Item.of('superpackutils:infuser_casing', 4), ['BCB', 'AIA', 'BCB'], {
           C: 'thermal:constantan_ingot',
@@ -795,6 +812,9 @@ events.listen('recipes', function (event) {
 
     //Methane
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":4,"gas":"mekanism:hydrogen"},"rightInput":{"amount":1,"gas":"superpackutils:carbon_dioxide"},"output":{"gas":"superpackutils:methane","amount":5}})
+
+    //Polyethylene
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":2,"gas":"mekanism:ethene"},"rightInput":{"amount":1,"gas":"superpackutils:oxygen"},"output":{"gas":"superpackutils:polyethene","amount":5}})
 
     //Cyanide
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:ammonia"},"rightInput":{"amount":1,"gas":"superpackutils:methane"},"output":{"gas":"superpackutils:cyanide","amount":1}})

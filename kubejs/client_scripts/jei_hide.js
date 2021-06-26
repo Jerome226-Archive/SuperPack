@@ -59,6 +59,10 @@ onEvent('jei.hide.items', event => {
         'masterfulmachinery:mixer_basic_port_pncr_pressure_output',
         'masterfulmachinery:mixer_basic_port_botania_mana_output',
         'masterfulmachinery:mixer_basic_port_energy_output',
+        'masterfulmachinery:chemical_reactor_basic_port_items_output',
+        'masterfulmachinery:chemical_reactor_basic_port_pncr_pressure_output',
+        'masterfulmachinery:washer_basic_port_fluids_output',
+        'masterfulmachinery:washer_basic_port_energy_output',
 
         //Ex Nihilo
         'exnihilosequentia:crushed_andesite',

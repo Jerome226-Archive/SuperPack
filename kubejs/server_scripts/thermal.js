@@ -17,7 +17,7 @@ events.listen('recipes', function (event) {
     //Cured Rubber
     event.remove({id: 'thermal:smelting/cured_rubber_from_smelting'})
     event.remove({id: 'thermal:machine/smelter/smelter_cured_rubber'})
-    event.custom({"type":"mekanism:purifying","itemInput":{"ingredient":{"item":"thermal:rubber"}},"gasInput":{"amount":1,"gas":"mekanism:oxygen"},"output":{"item":"thermal:cured_rubber"}})
+    event.custom({"type":"mekanism:purifying","itemInput":{"ingredient":{"item":"thermal:rubber"}},"gasInput":{"amount":1,"gas":"superpackutils:carbon_dioxide"},"output":{"item":"thermal:cured_rubber"}})
 
     //Sap Bottle Empying
     event.recipes.create.emptying([fluid.of('thermal:sap', 250), 'minecraft:glass_bottle'], 'autumnity:sap_bottle')

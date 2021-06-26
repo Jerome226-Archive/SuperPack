@@ -518,6 +518,39 @@ events.listen('recipes', function (event) {
     //-----------------------------------------------------
     //Alchemical Mixer Recipes
     //-----------------------------------------------------
+    
+        //Mixer Controller
+        event.shaped('masterfulmachinery:mixer_controller', [
+          'PEP',
+          'GHG',
+          'PFP'
+        ], {
+          P: 'superpackutils:mixer_casing',
+          E: 'superpackutils:circuit_board',
+          F: 'refinedstorage:construction_core',
+          G: 'mekanism:basic_control_circuit',
+          H: 'refinedstorage:machine_casing'
+      })
+
+
+      //Mixer Energy Input
+      event.shapeless('masterfulmachinery:mixer_basic_port_energy_input', ['superpackutils:mixer_casing', 'thermal:lead_ingot', 'superpackutils:electrical_platinum_ingot'])
+
+      //Mixer Mana Input
+      event.shapeless('masterfulmachinery:mixer_basic_port_botania_mana_input', ['superpackutils:mixer_casing', 'thermal:lead_ingot', 'botania:manasteel_ingot'])
+
+      //Mixer Pressure Input
+      event.shapeless('masterfulmachinery:mixer_basic_port_pncr_pressure_input', ['superpackutils:mixer_casing', 'thermal:lead_ingot', 'pneumaticcraft:ingot_iron_compressed'])
+
+      //Mixer Items Output
+      event.shapeless('masterfulmachinery:mixer_basic_port_items_output', ['superpackutils:mixer_casing', 'thermal:copper_ingot'])
+
+      //Mixer Items Input
+      event.shapeless('masterfulmachinery:mixer_basic_port_items_input', ['superpackutils:mixer_casing', 'thermal:lead_ingot'])
+
+    //-----------------------------------------------------
+    //Alchemical Mixer Recipes
+    //-----------------------------------------------------
 
     event.custom({
       "type": "masterfulmachinery:machine_structure",

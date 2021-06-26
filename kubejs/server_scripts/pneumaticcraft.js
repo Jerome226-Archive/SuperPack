@@ -233,7 +233,7 @@ events.listen('recipes', function (event) {
       },
       "fluid_input": {
         "type": "pneumaticcraft:fluid",
-        "fluid": "superpackutils:abs",
+        "fluid": "pneumaticcraft:lpg",
         "amount": 100
       },
       "fluid_output": {
