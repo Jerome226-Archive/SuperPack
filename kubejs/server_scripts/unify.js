@@ -31,7 +31,7 @@ onEvent('recipes', event => {
 
     //Blast Chiller
     event.remove({id: `thermal:compat/tconstruct/chiller_tconstruct_${nameUnify}_ingot`});
-  
+
   }
 
   if (ingotItem !== null && isGem == true) {

@@ -70,6 +70,7 @@ events.listen('fluid.tags', function (event) {
     event.get('forge:styrene').add('superpackutils:styrene')
     event.get('forge:toluene').add('superpackutils:toluene')
     event.get('forge:octane').add('superpackutils:octane')
+    event.get('forge:nitrous_oxide').add('superpackutils:nitrous_oxide')
 
     event.get('forge:sulfurized_naphtha').add('superpackutils:sulfurized_naphtha')
     event.get('forge:sulfurized_light_oil').add('superpackutils:sulfurized_light_oil')
@@ -81,6 +82,8 @@ events.listen('fluid.tags', function (event) {
     event.get('forge:hc_heavy_oil').add('superpackutils:hc_heavy_oil')
     event.get('forge:sc_naphtha').add('superpackutils:sc_naphtha')
     event.get('forge:hc_naphtha').add('superpackutils:hc_naphtha')
+
+    event.get('tconstruct:ichor').add('superpackutils:ichor')
 
     event.get('minecraft:water').remove('create:honey')
     event.get('minecraft:water').remove('create:flowing_honey')

@@ -101,10 +101,10 @@ events.listen('recipes', function (event) {
     event.recipes.create.mixing('minecraft:ender_eye', ['minecraft:ender_pearl', 'minecraft:blaze_powder']).heated()
 
     //Crimson Fungus
-    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:crimson_fungus","count":1}],"input":{"item":"minecraft:crimson_fungus"},"soil":{"item":"minecraft:crimson_nylium"},"time":480,"render":{"type":"generic","block":"minecraft:crimson_fungus"}})
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:crimson_fungus","count":2}],"input":{"item":"minecraft:crimson_fungus"},"soil":{"item":"minecraft:crimson_nylium"},"time":480,"render":{"type":"generic","block":"minecraft:crimson_fungus"}})
 
     //Warped Fungus
-    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:warped_fungus","count":1}],"input":{"item":"minecraft:warped_fungus"},"soil":{"item":"minecraft:warped_nylium"},"time":480,"render":{"type":"generic","block":"minecraft:warped_fungus"}})
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:warped_fungus","count":2}],"input":{"item":"minecraft:warped_fungus"},"soil":{"item":"minecraft:warped_nylium"},"time":480,"render":{"type":"generic","block":"minecraft:warped_fungus"}})
     
     //Chorus Fruit
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:chorus_fruit"}],"input":{"item":"minecraft:chorus_flower"},"soil":{"item":"minecraft:end_stone"},"time":480,"render":{"type":"chorus","block":"minecraft:chorus_flower"}})

@@ -201,6 +201,9 @@ events.listen('recipes', function (event) {
     //Octane
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:octane"},"gasOutput":{"gas":"superpackutils:octane","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:octane"},"fluidOutput":{"fluid":"superpackutils:octane","amount":1}})
 
+    //Nitrous Oxide
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:nitrous_oxide"},"gasOutput":{"gas":"superpackutils:nitrous_oxide","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:nitrous_oxide"},"fluidOutput":{"fluid":"superpackutils:nitrous_oxide","amount":1}})
+
     //Dimensional Plasma
     event.custom({
         "type": "astralsorcery:lightwell",
@@ -691,15 +694,15 @@ events.listen('recipes', function (event) {
     }),
 
     //Improved Metallurgic Casing
-    event.shaped(Item.of('superpackutils:improved_metallurgic_casing', 8), ['BCB', 'AIA', 'BCB'], {
-        C: 'pneumaticcraft:plastic',
+    event.shaped(Item.of('superpackutils:improved_metallurgic_casing', 4), ['BCB', 'AIA', 'BCB'], {
+        C: 'superpackutils:abs_sheet',
         A: 'superpackutils:doublelayered_capacitor',
         B: 'superpackutils:metallurgic_casing',
         I: 'superpackutils:big_steel_casing'
     }),
 
     //Assembler Casing
-    event.shaped(Item.of('superpackutils:assembler_frame', 8), ['BCB', 'AIA', 'BCB'], {
+    event.shaped(Item.of('superpackutils:assembler_frame', 4), ['BCB', 'AIA', 'BCB'], {
           C: 'superpackutils:electrical_platinum_ingot',
           A: 'superpackutils:doublelayered_capacitor',
           B: 'superpackutils:electrical_steel_ingot',
@@ -1087,13 +1090,10 @@ events.listen('recipes', function (event) {
     event.recipes.create.mixing('superpackutils:energetic_processor', ['refinedstorage:destruction_core', 'superpackutils:energetic_alloy_ingot', 'tconstruct:pig_iron_ingot'])
 
     //Vibrant Core
-    event.recipes.create.mixing('superpackutils:vibrant_processor', ['refinedstorage:construction_core', 'superpackutils:vibrant_alloy_ingot', 'tconstruct:queens_slime_ingot'])
+    event.recipes.create.mixing('superpackutils:vibrant_processor', ['refinedstorage:construction_core', 'superpackutils:vibrant_alloy_ingot', 'botania:terrasteel_ingot'])
 
     //Rich Slag Alloy
     event.recipes.create.mixing('superpackutils:rich_slag_alloy', ['thermal:rich_slag', 'create:andesite_alloy'])
-
-    //Black Marble
-    event.recipes.mekanism.metallurgic_infusing(Item.of('astralsorcery:black_marble_raw', 8), Item.of('astralsorcery:marble_raw', 8), 'mekanism:carbon', 80),
     
     //Dyingrock
     event.custom({

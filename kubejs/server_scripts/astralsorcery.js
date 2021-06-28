@@ -37,6 +37,9 @@ events.listen('recipes', function (event) {
         },
         "starlight": 60
     }),
+
+    //Black Marble
+    event.recipes.mekanism.metallurgic_infusing(Item.of('astralsorcery:black_marble_raw', 8), Item.of('astralsorcery:marble_raw', 8), 'mekanism:carbon', 10),
   
     //Starlight Crafting
     event.remove({id: 'astralsorcery:altar/altar_attunement'})
@@ -195,5 +198,73 @@ events.listen('recipes', function (event) {
           "astralsorcery:built_in_effect_discovery_central_beam"
         ]
     })
+
+    event.remove({id: 'astralsorcery:infuser/glass_pane'})
+    event.custom({
+      "type": "astralsorcery:infuser",
+      "fluidInput": "astralsorcery:liquid_starlight",
+      "input": {
+        "item": "botania:mana_glass_pane"
+      },
+      "output": {
+        "item": "astralsorcery:glass_lens",
+        "count": 1
+      },
+      "consumptionChance": 0.1,
+      "duration": 100,
+      "consumeMultipleFluids": false,
+      "acceptChaliceInput": true,
+      "copyNBTToOutputs": false
+    })
+
+    //Attunement Altar
+    event.remove({id: 'astralsorcery:altar/attunement_altar'})
+    event.custom({
+      "type": "astralsorcery:altar",
+      "altar_type": 1,
+      "duration": 200,
+      "starlight": 1600,
+      "pattern": [
+        "A___A",
+        "_____",
+        "_ENE_",
+        "_PCP_",
+        "B___B"
+      ],
+      "key": {
+        "A": {
+          "item": "astralsorcery:aquamarine"
+        },
+        "B": {
+          "item": "tconstruct:tinkers_bronze_ingot"
+        },
+        "N": {
+          "item": "astralsorcery:nocturnal_powder"
+        },
+        "C": {
+          "item": "astralsorcery:spectral_relay"
+        },
+        "P": {
+          "item": "create:brass_ingot"
+        },
+        "E": {
+          "tag": "astralsorcery:starmetal"
+        }
+      },
+      "output": [
+        {
+          "item": "astralsorcery:attunement_altar",
+          "count": 1
+        }
+      ],
+      "effects": [
+        "astralsorcery:pillar_sparkle",
+        "astralsorcery:built_in_effect_discovery_central_beam",
+        "astralsorcery:altar_default_lightbeams",
+        "astralsorcery:altar_default_sparkle",
+        "astralsorcery:built_in_effect_attunement_sparkle"
+      ]
+    })
+
 
 });
