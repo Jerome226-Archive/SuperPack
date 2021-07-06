@@ -26,7 +26,7 @@ events.listen('recipes', function (event) {
     //Crucible Heat Sources
     event.custom({
         "type": "exnihilosequentia:heat",
-        "block": "tconstruct:molten_blaze",
+        "block": "tconstruct:blazing_blood",
         "amount": 8
     });
 
@@ -45,70 +45,82 @@ events.listen('recipes', function (event) {
         }
     });
 
-    //Andesite Cobblestone
-    event.remove({ id: 'exnihilosequentia:hammer/ens_andesite' });
-    event.remove({ id: 'create:andesite_cobblestone_from_andesite_stonecutting' });
-    event.custom({
-        "type": "exnihilosequentia:hammer",
-        "results": [
-          {
-            "chance": 1.0,
-            "item": "create:andesite_cobblestone",
-            "count": 1
-          }
-        ],
-        "input": {
-          "item": "minecraft:andesite"
-        }
-    });
-
-    //Diorite Cobblestone
-    event.remove({ id: 'exnihilosequentia:hammer/ens_diorite' });
-    event.remove({ id: 'create:diorite_cobblestone_from_diorite_stonecutting' });
-    event.custom({
-        "type": "exnihilosequentia:hammer",
-        "results": [
-          {
-            "chance": 1.0,
-            "item": "create:diorite_cobblestone",
-            "count": 1
-          }
-        ],
-        "input": {
-          "item": "minecraft:diorite"
-        }
-    });
-
-    //Granite Cobblestone
-    event.remove({ id: 'exnihilosequentia:hammer/ens_granite' });
-    event.remove({ id: 'create:granite_cobblestone_from_granite_stonecutting' });
-    event.custom({
-        "type": "exnihilosequentia:hammer",
-        "results": [
-          {
-            "chance": 1.0,
-            "item": "create:granite_cobblestone",
-            "count": 1
-          }
-        ],
-        "input": {
-          "item": "minecraft:granite"
-        }
-    });
-
     //End Sand
     event.custom({
-        "type": "exnihilosequentia:fluid_item",
-        "fluid": {
-          "fluid": "exnihilosequentia:witchwater"
-        },
+      "type": "exnihilosequentia:fluid_item",
+      "fluid": {
+        "fluid": "exnihilosequentia:witchwater"
+      },
+      "input": {
+          "item": "create:limesand"
+      },
+      "result": {
+        "item": "byg:end_sand"
+      }
+  });
+
+    function hammerCrushing(needSmelting, name, stoneItem, cobblestoneItem) {
+    
+    //Hammer Crushing
+    event.custom({
+        "type": "exnihilosequentia:hammer",
+        "results": [
+          {
+            "chance": 1.0,
+            "item": `${cobblestoneItem}`,
+            "count": 1
+          }
+        ],
         "input": {
-            "item": "create:limesand"
-        },
-        "result": {
-          "item": "byg:end_sand"
+          "item": `${stoneItem}`
         }
     });
+
+    //Recipe Removal
+    event.remove({ id: `exnihilosequentia:hammer/ens_${name}` });
+    event.remove({ id: `create:${name}_cobblestone_from_${name}_stonecutting` });
+
+    //Ceramics Kiln
+    event.custom({
+      "type": "ceramics:kiln",
+      "ingredient": {
+        "item": `${cobblestoneItem}`
+      },
+      "result": `${stoneItem}`,
+      "experience": 0.1,
+      "cookingtime": 100
+    })
+
+    if (needSmelting == true) {
+
+    //Smelting Recipe
+    event.smelting(`${stoneItem}`, `${cobblestoneItem}`).xp(0.1)
+
+    }
+
+    }
+
+    hammerCrushing(false, 'metamorphic_forest', 'botania:metamorphic_forest_stone', 'botania:metamorphic_forest_cobblestone')
+    hammerCrushing(false, 'metamorphic_plains', 'botania:metamorphic_plains_stone', 'botania:metamorphic_plains_cobblestone')
+    hammerCrushing(false, 'metamorphic_mountain', 'botania:metamorphic_mountain_stone', 'botania:metamorphic_mountain_cobblestone')
+    hammerCrushing(false, 'metamorphic_fungal', 'botania:metamorphic_fungal_stone', 'botania:metamorphic_fungal_cobblestone')
+    hammerCrushing(false, 'metamorphic_swamp', 'botania:metamorphic_swamp_stone', 'botania:metamorphic_swamp_cobblestone')
+    hammerCrushing(false, 'metamorphic_desert', 'botania:metamorphic_desert_stone', 'botania:metamorphic_desert_cobblestone')
+    hammerCrushing(false, 'metamorphic_taiga', 'botania:metamorphic_taiga_stone', 'botania:metamorphic_taiga_cobblestone')
+    hammerCrushing(false, 'metamorphic_mesa', 'botania:metamorphic_mesa_stone', 'botania:metamorphic_mesa_cobblestone')
+    hammerCrushing(false, 'metamorphic_mesa', 'botania:metamorphic_mesa_stone', 'botania:metamorphic_mesa_cobblestone')
+    hammerCrushing(true, 'granite', 'minecraft:granite', 'create:granite_cobblestone')
+    hammerCrushing(true, 'diorite', 'minecraft:diorite', 'create:diorite_cobblestone')
+    hammerCrushing(true, 'andesite', 'minecraft:andesite', 'create:andesite_cobblestone')
+    hammerCrushing(true, 'limestone', 'create:limestone', 'create:limestone_cobblestone')
+    hammerCrushing(true, 'weathered_limestone', 'create:weathered_limestone', 'create:weathered_limestone_cobblestone')
+    hammerCrushing(true, 'dolomite', 'create:dolomite', 'create:dolomite_cobblestone')
+    hammerCrushing(true, 'gabbro', 'create:gabbro', 'create:gabbro_cobblestone')
+    hammerCrushing(true, 'scoria', 'create:scoria', 'create:scoria_cobblestone')
+    hammerCrushing(true, 'dark_scoria', 'create:dark_scoria', 'create:dark_scoria_cobblestone')
+    hammerCrushing(false, 'dacite', 'byg:dacite', 'byg:dacite_cobblestone')
+    hammerCrushing(false, 'scoria', 'byg:scoria_stone', 'byg:scoria_cobblestone')
+    hammerCrushing(false, 'seared', 'tconstruct:seared_stone', 'tconstruct:seared_cobble')
 
     //Crushed Endstone
     event.remove({ id: 'exnihilosequentia:hammer/ens_end_stone' });
@@ -705,7 +717,7 @@ events.listen('recipes', function (event) {
             "item": "botania:livingwood_twig"
           },
           "C": {
-            "item": "superpackutils:mythril_ingot"
+            "item": "superpackutils:mythril_gear"
           },
           "Z": {
             "item": slabItem

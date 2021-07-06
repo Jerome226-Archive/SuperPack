@@ -57,7 +57,7 @@ events.listen('recipes', function (event) {
             "item": "create:shadow_steel"
           },
           {
-            "item": "mekanism:dust_refined_obsidian"
+            "item": "superpackutils:obsidian_alloy_ingot"
           },
         ],
         "pressure": -0.75,
@@ -334,7 +334,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanism:chemical_crystallizer', ['SCS', 'IBI', 'ECE'], {
         S: Item.of('tconstruct:large_plate', {Material:"tconstruct:hepatizon"}),
         E: 'pneumaticcraft:compressed_iron_gear',
-        C: 'mekanism:fluorite_gem',
+        C: '#bloodmagic:crystals/demon',
         B: 'mekanism:steel_casing',
         I: '#forge:circuits/advanced'
     }),
@@ -698,9 +698,40 @@ events.listen('recipes', function (event) {
         I: 'superpackutils:big_steel_casing'
     }),
 
+    //Hazmat Helmet
+    event.remove({output: 'mekanism:hazmat_mask'})
+    event.shaped('mekanism:hazmat_mask', ['TTT', 'TDT', 'BAB'], {
+        A: 'thermal:bronze_ingot',
+        D: '#forge:glass_panes/colorless',
+        T: 'superpackutils:radioactive_fabric',
+        B: 'thermal:lead_ingot'
+    }),
+
+    //Hazmat Chestplate
+    event.remove({output: 'mekanism:hazmat_gown'})
+    event.shaped('mekanism:hazmat_gown', ['T T', 'TAT', 'TTT'], {
+        A: 'thermal:bronze_ingot',
+        T: 'superpackutils:radioactive_fabric'
+    }),
+
+    //Hazmat Leggings
+    event.remove({output: 'mekanism:hazmat_pants'})
+    event.shaped('mekanism:hazmat_pants', ['TTT', 'T T', 'A A'], {
+        A: 'thermal:bronze_ingot',
+        T: 'superpackutils:radioactive_fabric'
+    }),
+
+    //Hazmat Boots
+    event.remove({output: 'mekanism:hazmat_boots'})
+    event.shaped('mekanism:hazmat_boots', ['T T', 'ABA'], {
+        A: 'thermal:lead_ingot',
+        B: 'thermal:cured_rubber',
+        T: 'superpackutils:radioactive_fabric'
+    }),
+
     //Sheets
     event.remove({id: 'mekanism:reaction/substrate/ethene_oxygen'})
-    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"superpackutils:polydimethylsiloxane_pulp"}},"fluidInput":{"amount":50,"tag":"forge:oxygen"},"gasInput":{"amount":50,"gas":"superpackutils:polyethene"},"energyRequired":1000,"duration":60,"itemOutput":{"item":"mekanism:hdpe_pellet"},"gasOutput":{"gas":"mekanism:oxygen","amount":5}})
+    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"superpackutils:polydimethylsiloxane_pulp"}},"fluidInput":{"amount":50,"tag":"forge:oxygen"},"gasInput":{"amount":500,"gas":"superpackutils:polyethene"},"energyRequired":1000,"duration":60,"itemOutput":{"item":"mekanism:hdpe_pellet"},"gasOutput":{"gas":"superpackutils:plastic_waste","amount":200}})
 
     //Infused Alloy
     event.remove({output: 'mekanism:alloy_infused'})

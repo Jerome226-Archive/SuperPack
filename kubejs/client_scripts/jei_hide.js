@@ -63,6 +63,14 @@ onEvent('jei.hide.items', event => {
         'masterfulmachinery:chemical_reactor_basic_port_pncr_pressure_output',
         'masterfulmachinery:washer_basic_port_fluids_output',
         'masterfulmachinery:washer_basic_port_energy_output',
+        'masterfulmachinery:advanced_mixer_basic_port_pncr_pressure_output',
+        'masterfulmachinery:alloyer_basic_port_pncr_pressure_output',
+        'masterfulmachinery:alloyer_basic_port_energy_output',
+        'masterfulmachinery:compacter_basic_port_mekanism_gas_output',
+        'masterfulmachinery:compacter_basic_port_fluids_input',
+        'masterfulmachinery:compacter_basic_port_pncr_pressure_output',
+        'masterfulmachinery:compacter_basic_port_energy_output',
+        'masterfulmachinery:advanced_mixer_basic_port_energy_output',
 
         //Ex Nihilo
         'exnihilosequentia:crushed_andesite',
@@ -166,10 +174,17 @@ onEvent('jei.hide.items', event => {
         'immersiveengineering:dust_sulfur',
         'mekanism:dust_sulfur',
         'eidolon:sulfur',
+        'factoriores:sulfur_dust',
+
+        //Sulfur Block
+        'factoriores:sulfur_block',
 
         //Sawdust
         'immersiveengineering:dust_wood',
         'mekanism:sawdust',
+
+        //Bitumen
+        'immersivepetroleum:bitumen',
 
         //Coke
         'immersiveengineering:coal_coke',

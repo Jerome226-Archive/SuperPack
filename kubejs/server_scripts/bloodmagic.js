@@ -9,7 +9,7 @@ events.listen('recipes', function (event) {
   event.remove({id: 'bloodmagic:altar/soul_snare'})
 	event.recipes.bloodmagic.altar('bloodmagic:soulsnare', 'botania:mana_string').upgradeLevel(0).altarSyphon(500).consumptionRate(5).drainRate(1)
  
-  event.shaped('thermal:chiller_ingot_cast', [' AB', 'AIA', 'CA '], {
+  event.shaped('bloodmagic:soulsnare', [' AB', 'AIA', 'CA '], {
     C: 'astralsorcery:starmetal_ingot',
     A: 'botania:redstone_root',
     B: 'botania:mana_string',

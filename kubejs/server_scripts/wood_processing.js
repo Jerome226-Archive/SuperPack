@@ -1,4 +1,5 @@
 onEvent('recipes', event => {
+
     function wood(isModded, logType, modName, woodName, logItem, logStrippedItem, plankItem, stairItem, slabItem, fenceItem, gateItem, doorItem, trapdoorItem, pPlateItem, bookshelfItem, craftingTableItem, boatItem, vertPlankItem, sawdustItem, saplingItem, leaveItem) {
 
     //Stick
@@ -173,7 +174,9 @@ onEvent('recipes', event => {
 
         //Thermal Sawmill
         event.custom({"type": "thermal:sawmill","ingredient": {"item": `${bookshelfItem}`},"result": [{"item": `${plankItem}`,"count": 4},{"item": "minecraft:book","count": 3}],"energy": 1000})
+                                                                                                                                                                                                               zzzseeqQQQQQQQQa
 
+                                                                                                                                                                                                            =========-----
         
     }
 
@@ -182,7 +185,27 @@ onEvent('recipes', event => {
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":`${leaveItem}`,"count":5}],"input":{"item":`${saplingItem}`},"soil":[{"item":"minecraft:dirt"}],"time":500,"render":{"type":"generic","block":`${saplingItem}`}})
 
     }
-    
+
+    if (isModded == true && leaveItem !== null) {
+
+    event.custom({
+        "type": "botania:mana_infusion",
+        "input": {
+          "item": `${leaveItem}`
+        },
+        "output": {
+          "item": `${leaveItem}`,
+          "count": 2
+        },
+        "mana": 2000,
+        "catalyst": {
+          "type": "block",
+          "block": "botania:conjuration_catalyst"
+        }
+    })
+
+    }
+
     }
 
     wood(false, 'log', 'minecraft', 'oak', 'minecraft:oak_log', 'minecraft:stripped_oak_log', 'minecraft:oak_planks', 'minecraft:oak_stairs', 'minecraft:oak_slab', 'minecraft:oak_fence', 'minecraft:oak_fence_gate', 'minecraft:oak_door', 'minecraft:oak_trapdoor', 'minecraft:oak_pressure_plate', 'minecraft:bookshelf', 'minecraft:crafting_table', 'minecraft:oak_boat', 'quark:vertical_oak_planks', 'thermal:sawdust', 'minecraft:oak_sapling', 'minecraft:oak_leaves');
@@ -204,12 +227,23 @@ onEvent('recipes', event => {
     wood(true, 'log', 'upgrade_aquatic', 'driftwood', 'upgrade_aquatic:driftwood_log', 'upgrade_aquatic:stripped_driftwood_log', 'upgrade_aquatic:driftwood_planks', 'upgrade_aquatic:driftwood_stairs', 'upgrade_aquatic:driftwood_slab', 'upgrade_aquatic:driftwood_fence', 'upgrade_aquatic:driftwood_fence_gate', 'upgrade_aquatic:driftwood_door', 'upgrade_aquatic:driftwood_trapdoor', 'upgrade_aquatic:driftwood_pressure_plate', 'upgrade_aquatic:driftwood_bookshelf', null, 'upgrade_aquatic:driftwood_boat', 'upgrade_aquatic:vertical_driftwood_planks', 'thermal:sawdust', null, null);
     wood(true, 'log', 'upgrade_aquatic', 'river', 'upgrade_aquatic:river_log', 'upgrade_aquatic:stripped_river_log', 'upgrade_aquatic:river_planks', 'upgrade_aquatic:river_stairs', 'upgrade_aquatic:river_slab', 'upgrade_aquatic:river_fence', 'upgrade_aquatic:river_fence_gate', 'upgrade_aquatic:river_door', 'upgrade_aquatic:river_trapdoor', 'upgrade_aquatic:river_pressure_plate', 'upgrade_aquatic:river_bookshelf', null, 'upgrade_aquatic:river_boat', 'upgrade_aquatic:vertical_river_planks', 'thermal:sawdust', 'upgrade_aquatic:river_sapling', 'upgrade_aquatic:river_leaves');
 
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'sushigocrafting:avocado_sapling', 'sushigocrafting:avocado_leaves');
+
     wood(true, 'stem', 'endergetic', 'poise', 'endergetic:poise_stem', 'endergetic:stripped_poise_stem', 'endergetic:poise_planks', 'endergetic:poise_stairs', 'endergetic:poise_slab', 'endergetic:poise_fence', 'endergetic:poise_fence_gate', 'endergetic:poise_door', 'endergetic:poise_trapdoor', 'endergetic:poise_pressure_plate', 'endergetic:poise_bookshelf', null, 'endergetic:poise_boat', 'endergetic:vertical_poise_planks', 'thermal:sawdust', null, null);
+    
+    wood(true, 'log', 'architects_palette', 'twisted', 'architects_palette:twisted_log', 'architects_palette:stripped_twisted_log', 'architects_palette:twisted_planks', 'architects_palette:twisted_stairs', 'architects_palette:twisted_slab', 'architects_palette:twisted_fence', 'architects_palette:twisted_fence_gate', 'architects_palette:twisted_door', 'architects_palette:twisted_trapdoor', 'architects_palette:twisted_pressure_plate', 'endergetic:poise_bookshelf', null, null, null, 'thermal:sawdust', 'architects_palette:twisted_sapling', 'architects_palette:twisted_leaves');
 
     wood(true, 'log', 'autumnity', 'maple', 'autumnity:maple_log', 'autumnity:stripped_maple_log', 'autumnity:maple_planks', 'autumnity:maple_stairs', 'autumnity:maple_slab', 'autumnity:maple_fence', 'autumnity:maple_fence_gate', 'autumnity:maple_door', 'autumnity:maple_trapdoor', 'autumnity:maple_pressure_plate', 'autumnity:maple_bookshelf', null, 'autumnity:maple_boat', 'autumnity:vertical_maple_planks', 'thermal:sawdust', 'autumnity:maple_sapling', 'autumnity:maple_leaves');
     wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'autumnity:red_maple_sapling', 'autumnity:red_maple_leaves');
     wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'autumnity:orange_maple_sapling', 'autumnity:orange_maple_leaves');
     wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'autumnity:yellow_maple_sapling', 'autumnity:yellow_maple_leaves');
+
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'quark:blue_blossom_sapling', 'quark:blue_blossom_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'quark:lavender_blossom_sapling', 'quark:lavender_blossom_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'quark:orange_blossom_sapling', 'quark:orange_blossom_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'quark:pink_blossom_sapling', 'quark:pink_blossom_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'quark:yellow_blossom_sapling', 'quark:yellow_blossom_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'quark:red_blossom_sapling', 'quark:red_blossom_leaves');
 
     wood(true, 'log', 'biomesoplenty', 'fir', 'biomesoplenty:fir_log', 'biomesoplenty:stripped_fir_log', 'biomesoplenty:fir_planks', 'biomesoplenty:fir_stairs', 'biomesoplenty:fir_slab', 'biomesoplenty:fir_fence', 'biomesoplenty:fir_fence_gate', 'biomesoplenty:fir_door', 'biomesoplenty:fir_trapdoor', 'biomesoplenty:fir_pressure_plate', 'quarkoplenty:fir_bookshelf', null, 'biomesoplenty:fir_boat', 'quarkoplenty:vertical_fir_planks', 'thermal:sawdust', 'biomesoplenty:fir_sapling', 'biomesoplenty:fir_leaves');
     wood(true, 'log', 'biomesoplenty', 'redwood', 'biomesoplenty:redwood_log', 'biomesoplenty:stripped_redwood_log', 'biomesoplenty:redwood_planks', 'biomesoplenty:redwood_stairs', 'biomesoplenty:redwood_slab', 'biomesoplenty:redwood_fence', 'biomesoplenty:redwood_fence_gate', 'biomesoplenty:redwood_door', 'biomesoplenty:redwood_trapdoor', 'biomesoplenty:redwood_pressure_plate', 'quarkoplenty:redwood_bookshelf', null, 'biomesoplenty:redwood_boat', 'quarkoplenty:vertical_redwood_planks', 'thermal:sawdust', 'biomesoplenty:redwood_sapling', 'biomesoplenty:redwood_leaves');
@@ -223,6 +257,12 @@ onEvent('recipes', event => {
     wood(true, 'log', 'biomesoplenty', 'magic', 'biomesoplenty:magic_log', 'biomesoplenty:stripped_magic_log', 'biomesoplenty:magic_planks', 'biomesoplenty:magic_stairs', 'biomesoplenty:magic_slab', 'biomesoplenty:magic_fence', 'biomesoplenty:magic_fence_gate', 'biomesoplenty:magic_door', 'biomesoplenty:magic_trapdoor', 'biomesoplenty:magic_pressure_plate', 'quarkoplenty:magic_bookshelf', null, 'biomesoplenty:magic_boat', 'quarkoplenty:vertical_magic_planks', 'thermal:sawdust', 'biomesoplenty:magic_sapling', 'biomesoplenty:magic_leaves');
     wood(true, 'log', 'biomesoplenty', 'umbran', 'biomesoplenty:umbran_log', 'biomesoplenty:stripped_umbran_log', 'biomesoplenty:umbran_planks', 'biomesoplenty:umbran_stairs', 'biomesoplenty:umbran_slab', 'biomesoplenty:umbran_fence', 'biomesoplenty:umbran_fence_gate', 'biomesoplenty:umbran_door', 'biomesoplenty:umbran_trapdoor', 'biomesoplenty:umbran_pressure_plate', 'quarkoplenty:umbran_bookshelf', null, 'biomesoplenty:umbran_boat', 'quarkoplenty:vertical_umbran_planks', 'thermal:sawdust', 'biomesoplenty:umbran_sapling', 'biomesoplenty:umbran_leaves');
     wood(true, 'log', 'biomesoplenty', 'hellbark', 'biomesoplenty:hellbark_log', 'biomesoplenty:stripped_hellbark_log', 'biomesoplenty:hellbark_planks', 'biomesoplenty:hellbark_stairs', 'biomesoplenty:hellbark_slab', 'biomesoplenty:hellbark_fence', 'biomesoplenty:hellbark_fence_gate', 'biomesoplenty:hellbark_door', 'biomesoplenty:hellbark_trapdoor', 'biomesoplenty:hellbark_pressure_plate', 'quarkoplenty:hellbark_bookshelf', null, 'biomesoplenty:hellbark_boat', 'quarkoplenty:vertical_hellbark_planks', 'thermal:sawdust', 'biomesoplenty:hellbark_sapling', 'biomesoplenty:hellbark_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'biomesoplenty:origin_sapling', 'biomesoplenty:origin_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'biomesoplenty:flowering_oak_sapling', 'biomesoplenty:flowering_oak_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'biomesoplenty:rainbow_birch_sapling', 'biomesoplenty:rainbow_birch_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'biomesoplenty:yellow_autumn_sapling', 'biomesoplenty:yellow_autumn_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'biomesoplenty:orange_autumn_sapling', 'biomesoplenty:orange_autumn_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'biomesoplenty:maple_sapling', 'biomesoplenty:maple_leaves');
 
     wood(true, 'log', 'byg', 'aspen', 'byg:aspen_log', 'byg:stripped_aspen_log', 'byg:aspen_planks', 'byg:aspen_stairs', 'byg:aspen_slab', 'byg:aspen_fence', 'byg:aspen_fence_gate', 'byg:aspen_door', 'byg:aspen_trapdoor', 'byg:aspen_pressure_plate', 'byg:aspen_bookshelf', 'byg:aspen_crafting_table', 'byg:aspen_boat', null, 'thermal:sawdust', 'byg:aspen_sapling', 'byg:aspen_leaves');
     wood(true, 'log', 'byg', 'baobab', 'byg:baobab_log', 'byg:stripped_baobab_log', 'byg:baobab_planks', 'byg:baobab_stairs', 'byg:baobab_slab', 'byg:baobab_fence', 'byg:baobab_fence_gate', 'byg:baobab_door', 'byg:baobab_trapdoor', 'byg:baobab_pressure_plate', 'byg:baobab_bookshelf', 'byg:baobab_crafting_table', 'byg:baobab_boat', null, 'thermal:sawdust', 'byg:baobab_sapling', 'byg:baobab_leaves');
@@ -256,6 +296,20 @@ onEvent('recipes', event => {
     wood(true, 'stem', 'byg', 'bulbis', 'byg:bulbis_stem', 'byg:stripped_bulbis_stem', 'byg:bulbis_planks', 'byg:bulbis_stairs', 'byg:bulbis_slab', 'byg:bulbis_fence', 'byg:bulbis_fence_gate', 'byg:bulbis_door', 'byg:bulbis_trapdoor', 'byg:bulbis_pressure_plate', 'byg:bulbis_bookshelf', 'byg:bulbis_crafting_table', null, null, 'thermal:sawdust', null, null);
     wood(true, 'stem', 'byg', 'sythian', 'byg:sythian_stem', 'byg:stripped_sythian_stem', 'byg:sythian_planks', 'byg:sythian_stairs', 'byg:sythian_slab', 'byg:sythian_fence', 'byg:sythian_fence_gate', 'byg:sythian_door', 'byg:sythian_trapdoor', 'byg:sythian_pressure_plate', 'byg:sythian_bookshelf', 'byg:sythian_crafting_table', null, null, 'thermal:sawdust', null, null);
     wood(true, 'pedu', 'byg', 'embur', 'byg:embur_pedu', 'byg:stripped_embur_pedu', 'byg:embur_planks', 'byg:embur_stairs', 'byg:embur_slab', 'byg:embur_fence', 'byg:embur_fence_gate', 'byg:embur_door', 'byg:embur_trapdoor', 'byg:embur_pressure_plate', 'byg:embur_bookshelf', 'byg:embur_crafting_table', null, null, 'thermal:sawdust', null, null);
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:withering_oak_sapling', 'byg:withering_oak_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:araucaria_sapling', 'byg:araucaria_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:brown_birch_sapling', 'byg:brown_birch_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:brown_oak_sapling', 'byg:brown_oak_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:joshua_sapling', 'byg:joshua_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:orange_birch_sapling', 'byg:orange_birch_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:orange_oak_sapling', 'byg:orange_oak_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:orange_spruce_sapling', 'byg:orange_spruce_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:orchard_sapling', 'byg:orchard_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:red_birch_sapling', 'byg:red_birch_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:red_oak_sapling', 'byg:red_oak_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:red_spruce_sapling', 'byg:red_spruce_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:yellow_spruce_sapling', 'byg:yellow_spruce_leaves');
+    wood(true, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 'byg:yellow_birch_sapling', 'byg:yellow_birch_leaves');
 
     wood(true, 'log', 'tconstruct', 'skyroot', 'tconstruct:skyroot_log', 'tconstruct:stripped_skyroot_log', 'tconstruct:skyroot_planks', 'tconstruct:skyroot_planks_stairs', 'tconstruct:skyroot_planks_slab', 'tconstruct:skyroot_fence', 'tconstruct:skyroot_fence_gate', 'tconstruct:skyroot_door', 'tconstruct:skyroot_trapdoor', 'tconstruct:skyroot_pressure_plate', null, null, null, null, 'superpackutils:azure_sawdust', 'tconstruct:sky_slime_sapling', 'tconstruct:sky_slime_leaves');
     wood(true, 'log', 'tconstruct', 'bloodshroom', 'tconstruct:bloodshroom_log', 'tconstruct:stripped_bloodshroom_log', 'tconstruct:bloodshroom_planks', 'tconstruct:bloodshroom_planks_stairs', 'tconstruct:bloodshroom_planks_slab', 'tconstruct:bloodshroom_fence', 'tconstruct:bloodshroom_fence_gate', 'tconstruct:bloodshroom_door', 'tconstruct:bloodshroom_trapdoor', 'tconstruct:bloodshroom_pressure_plate', null, null, null, null, 'superpackutils:bloody_sawdust', 'tconstruct:blood_slime_sapling', 'tconstruct:blood_slime_leaves');

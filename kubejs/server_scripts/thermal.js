@@ -108,6 +108,8 @@ events.listen('recipes', function (event) {
         S: 'thermal:invar_plate'
     }),
 
+    event.recipes.mekanism.metallurgic_infusing('thermal:redstone_servo', 'immersiveengineering:component_iron', 'mekanism:redstone', 20),
+
     //Thermal Aqueous Accumulator
     event.remove({output: 'thermal:device_water_gen'})
     event.shaped('thermal:device_water_gen', ['TDT', 'BCB', 'TST'], {
@@ -364,7 +366,7 @@ events.listen('recipes', function (event) {
           {
               "type": "masterfulmachinery:items",
               "data":{
-                  "item": "superpackutils:redstone_alloy_ingot",
+                  "item": "superpackutils:refined_redstone_ingot",
                   "count": 1
               }
           }

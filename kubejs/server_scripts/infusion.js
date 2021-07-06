@@ -1,102 +1,17 @@
 //priority: 1500
 
 events.listen('recipes', function (event) { 
+    
+    function infusion(inputItem, outputItem) {
 
-    event.remove({id: 'botania:mana_infusion/cocoa_beans_to_wheat_seeds'})
-
-    //Cabbage 
-    event.custom({
-        "type": "botania:mana_infusion",
-        "input": {
-          "item": "minecraft:cocoa_beans"
-        },
-        "output": {
-          "item": "farmersdelight:cabbage_seeds"
-        },
-        "mana": 6000,
-        "group": "botania:crop_cycle",
-        "catalyst": {
-          "type": "block",
-          "block": "botania:alchemy_catalyst"
-        }
-    })
-
-    //Tomato
-    event.custom({
-        "type": "botania:mana_infusion",
-        "input": {
-          "item": "farmersdelight:cabbage_seeds"
-        },
-        "output": {
-          "item": "farmersdelight:tomato_seeds"
-        },
-        "mana": 6000,
-        "group": "botania:crop_cycle",
-        "catalyst": {
-          "type": "block",
-          "block": "botania:alchemy_catalyst"
-        }
-    })
-
-    //Frost Melon
-    event.custom({
-        "type": "botania:mana_infusion",
-        "input": {
-          "item": "farmersdelight:tomato_seeds"
-        },
-        "output": {
-          "item": "thermal:frost_melon_seeds"
-        },
-        "mana": 6000,
-        "group": "botania:crop_cycle",
-        "catalyst": {
-          "type": "block",
-          "block": "botania:alchemy_catalyst"
-        }
-    })
-
-    //Industrial Hemp Seeds
-    event.custom({
-        "type": "botania:mana_infusion",
-        "input": {
-            "item": "thermal:frost_melon_seeds"
-        },
-        "output": {
-          "item": "immersiveengineering:seed"
-        },
-        "mana": 6000,
-        "group": "botania:crop_cycle",
-        "catalyst": {
-          "type": "block",
-          "block": "botania:alchemy_catalyst"
-        }
-    })
-
-    //Barley Seeds
-    event.custom({
-        "type": "botania:mana_infusion",
-        "input": {
-            "item": "immersiveengineering:seed"
-        },
-        "output": {
-          "item": "thermal:barley_seeds"
-        },
-        "mana": 6000,
-        "group": "botania:crop_cycle",
-        "catalyst": {
-          "type": "block",
-          "block": "botania:alchemy_catalyst"
-        }
-    })
-
-    //Corn Seeds
+    //Mana Infusion
     event.custom({
       "type": "botania:mana_infusion",
       "input": {
-        "item": "thermal:barley_seeds"
+        "item": `${inputItem}`
       },
       "output": {
-        "item": "thermal:corn_seeds"
+        "item": `${outputItem}`
       },
       "mana": 6000,
       "group": "botania:crop_cycle",
@@ -104,261 +19,31 @@ events.listen('recipes', function (event) {
         "type": "block",
         "block": "botania:alchemy_catalyst"
       }
-  })
+    })
 
-  //Onion Seeds
-  event.custom({
-    "type": "botania:mana_infusion",
-    "input": {
-      "item": "thermal:corn_seeds"
-    },
-    "output": {
-      "item": "thermal:onion_seeds"
-    },
-    "mana": 6000,
-    "group": "botania:crop_cycle",
-    "catalyst": {
-      "type": "block",
-      "block": "botania:alchemy_catalyst"
     }
-})
 
-  //Radish Seeds
-  event.custom({
-    "type": "botania:mana_infusion",
-    "input": {
-      "item": "thermal:onion_seeds"
-    },
-    "output": {
-      "item": "thermal:radish_seeds"
-    },
-    "mana": 6000,
-    "group": "botania:crop_cycle",
-    "catalyst": {
-      "type": "block",
-      "block": "botania:alchemy_catalyst"
-    }
-})
-
-//Rice Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:radish_seeds"
-  },
-  "output": {
-    "item": "farmersdelight:rice"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Sadiroot Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "farmersdelight:rice"
-  },
-  "output": {
-    "item": "thermal:sadiroot_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Spinach Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:sadiroot_seeds"
-  },
-  "output": {
-    "item": "thermal:spinach_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Bell Pepper Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:spinach_seeds"
-  },
-  "output": {
-    "item": "thermal:bell_pepper_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Eggplant Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:bell_pepper_seeds"
-  },
-  "output": {
-    "item": "thermal:eggplant_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Green Bean Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:eggplant_seeds"
-  },
-  "output": {
-    "item": "thermal:green_bean_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Peanut Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:green_bean_seeds"
-  },
-  "output": {
-    "item": "thermal:peanut_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Strawberry Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:peanut_seeds"
-  },
-  "output": {
-    "item": "neapolitan:strawberry_pips"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Hops Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "neapolitan:strawberry_pips"
-    },
-  "output": {
-    "item": "thermal:hops_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Tea Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:hops_seeds"
-  },
-  "output": {
-    "item": "thermal:tea_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Flax Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "thermal:tea_seeds"
-  },
-  "output": {
-    "item": "supplementaries:flax_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Onion
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "supplementaries:flax_seeds"
-  },
-  "output": {
-    "item": "farmersdelight:onion"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
-
-//Wheat Seeds
-event.custom({
-  "type": "botania:mana_infusion",
-  "input": {
-    "item": "farmersdelight:onion"
-  },
-  "output": {
-    "item": "minecraft:wheat_seeds"
-  },
-  "mana": 6000,
-  "group": "botania:crop_cycle",
-  "catalyst": {
-    "type": "block",
-    "block": "botania:alchemy_catalyst"
-  }
-})
+    event.remove({id: 'botania:mana_infusion/cocoa_beans_to_wheat_seeds'})
+    infusion('minecraft:cocoa_beans', 'farmersdelight:cabbage_seeds')
+    infusion('farmersdelight:cabbage_seeds', 'farmersdelight:tomato_seeds')
+    infusion('farmersdelight:tomato_seeds', 'thermal:frost_melon_seeds')
+    infusion('thermal:frost_melon_seeds', 'immersiveengineering:seed')
+    infusion('immersiveengineering:seed', 'thermal:barley_seeds')
+    infusion('thermal:barley_seeds', 'thermal:corn_seeds')
+    infusion('thermal:corn_seeds', 'thermal:onion_seeds')
+    infusion('thermal:onion_seeds', 'thermal:radish_seeds')
+    infusion('thermal:radish_seeds', 'farmersdelight:rice')
+    infusion('farmersdelight:rice', 'thermal:sadiroot_seeds')
+    infusion('thermal:sadiroot_seeds', 'thermal:spinach_seeds')
+    infusion('thermal:spinach_seeds', 'thermal:bell_pepper_seeds')
+    infusion('thermal:bell_pepper_seeds', 'thermal:eggplant_seeds')
+    infusion('thermal:eggplant_seeds', 'thermal:green_bean_seeds')
+    infusion('thermal:green_bean_seeds', 'thermal:peanut_seeds')
+    infusion('thermal:peanut_seeds', 'neapolitan:strawberry_pips')
+    infusion('neapolitan:strawberry_pips', 'thermal:hops_seeds')
+    infusion('thermal:hops_seeds', 'thermal:tea_seeds')
+    infusion('thermal:tea_seeds', 'supplementaries:flax_seeds')
+    infusion('supplementaries:flax_seeds', 'farmersdelight:onion')
+    infusion('farmersdelight:onion', 'minecraft:wheat_seeds')
 
 });

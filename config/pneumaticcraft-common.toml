@@ -32,7 +32,7 @@
 	#Show particle trail indicating the currently-debugged drone's planned path
 	drone_debugger_path_particles = true
 	#Blacklisted entity ID's, which the Vacuum Trap will not try to absorb. Note that players, tamed entities, boss entities, and PneumaticCraft drones may never be absorbed, regardless of config settings.
-	vacuum_trap_blacklist = []
+	vacuum_trap_blacklist = ["thermal:blizz", "thermal:blitz", "thermal:basalz"]
 
 ["Machine Properties"]
 	#Aerial Interface backwards compat: allow pre-0.8.0 behaviour of getting player's armor inventory from top face, even with Dispenser Upgrade installed

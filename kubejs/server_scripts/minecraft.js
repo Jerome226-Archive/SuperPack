@@ -124,6 +124,12 @@ events.listen('recipes', function (event) {
     //Brown Mushroom Colony
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":"farmersdelight:brown_mushroom_colony"}],"input":{"item":"farmersdelight:brown_mushroom_colony"},"soil":[{"item":"minecraft:mycelium"},{"item":"minecraft:podzol"}],"time":480,"render":{"type":"generic","block":"minecraft:brown_mushroom"}})
 
+    //Crimson Roots
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:crimson_roots"}],"input":{"item":"minecraft:crimson_roots"},"soil":[{"item":"minecraft:crimson_nylium"}],"time":480,"render":{"type":"generic","block":"minecraft:crimson_rooots"}})
+
+    //Warped Roots
+    event.custom({"type":"immersiveengineering:cloche","results":[{"item":"minecraft:warped_roots"}],"input":{"item":"minecraft:warped_roots"},"soil":[{"item":"minecraft:warped_nylium"}],"time":480,"render":{"type":"generic","block":"minecraft:warped_rooots"}})
+
     //Livingroot
     event.custom({"type":"immersiveengineering:cloche","results":[{"item":"botania:living_root"}],"input":{"item":"minecraft:dead_bush"},"soil":[{"item":"farmersdelight:organic_compost"}],"time":1200,"render":{"type":"generic","block":"minecraft:dead_bush"}})
 

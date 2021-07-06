@@ -1,0 +1,8 @@
+{
+    "parent":"minecraft:block/orientable",
+    "textures":{
+        "side":"masterfulmachinery:block/compacter_casing",
+        "top":"masterfulmachinery:block/compacter_casing",
+        "front":"masterfulmachinery:block/compacter_controller"
+    }
+}

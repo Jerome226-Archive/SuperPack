@@ -293,6 +293,37 @@ events.listen('recipes', function (event) {
       ]
     })
 
+    //Smokey Quartz
+    event.remove({id: 'botania:quartz_dark'})
+    event.custom({
+      "type": "botania:runic_altar",
+      "output": {
+        "item": "botania:quartz_dark",
+        "count": 4
+      },
+      "mana": 2000,
+      "ingredients": [
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:quartz_mana"
+        },
+        {
+          "item": "botania:rune_pride"
+        },
+        {
+          "item": "quark:biotite"
+        }
+      ]
+    })
+
     //Red Quartz
     event.remove({id: 'botania:quartz_red'})
     event.custom({
@@ -326,7 +357,7 @@ events.listen('recipes', function (event) {
   
     //Blaze Quartz
     event.remove({id: 'botania:quartz_blaze'})
-    event.recipes.create.mixing('botania:quartz_blaze', ['botania:quartz_mana', fluid.of('tconstruct:molten_blaze', 28)]).heated()
+    event.recipes.create.mixing('botania:quartz_blaze', ['botania:quartz_mana', fluid.of('tconstruct:blazing_blood', 28)]).heated()
 
     //Redstone Root
     event.remove({id: 'botania:redstone_root'})

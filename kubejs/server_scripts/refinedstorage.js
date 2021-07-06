@@ -153,7 +153,7 @@ events.listen('recipes', function (event) {
     "type": "masterfulmachinery:machine_process",
     "structureId": "inscriber",
     "controllerId": "basic",
-    "ticks": 200,
+    "ticks": 100,
     "inputs": [
         {
             "type": "masterfulmachinery:energy",
@@ -207,7 +207,7 @@ event.custom({
     "type": "masterfulmachinery:machine_process",
     "structureId": "inscriber",
     "controllerId": "basic",
-    "ticks": 500,
+    "ticks": 100,
     "inputs": [
         {
             "type": "masterfulmachinery:energy",
@@ -255,6 +255,60 @@ event.custom({
     ]
 })
 
+//Withering Processor
+event.remove({output: 'extradisks:raw_withering_processor'})
+event.custom({
+    "type": "masterfulmachinery:machine_process",
+    "structureId": "inscriber",
+    "controllerId": "basic",
+    "ticks": 100,
+    "inputs": [
+        {
+            "type": "masterfulmachinery:energy",
+            "data":{
+                "amount": 10000
+            }
+        },
+        {
+            "type": "masterfulmachinery:items",
+            "data":{
+                "item": "minecraft:nether_star",
+                "count": 1
+            }
+        },
+        {
+            "type": "masterfulmachinery:items",
+            "data":{
+                "item": "minecraft:redstone",
+                "count": 1
+            }
+        },
+        {
+            "type": "masterfulmachinery:items",
+            "data":{
+                "item": "refinedstorage:processor_binding",
+                "count": 1
+            }
+        },
+        {
+            "type": "masterfulmachinery:items",
+            "data":{
+                "item": "refinedstorage:silicon",
+                "count": 1
+            }
+        }
+    ],
+    "outputs":[
+        {
+            "type": "masterfulmachinery:items",
+            "data":{
+                "item": "extradisks:raw_withering_processor",
+                "count": 1
+            }
+        }
+    ]
+})
+
     //Silicon
     event.remove({id: 'refinedstorage:silicon'})
     event.smelting('refinedstorage:silicon', 'tinyredstone:silicon_compound')
@@ -262,6 +316,10 @@ event.custom({
     //Advanced Processor
     event.remove({id: 'refinedstorage:advanced_processor'})
     event.recipes.create.compacting('refinedstorage:advanced_processor', ['refinedstorage:raw_advanced_processor', 'superpackutils:bio_plastic'])
+
+    //Withering Processor
+    event.remove({id: 'extradisks:withering_processor'})
+    event.recipes.create.compacting('extradisks:withering_processor', ['extradisks:raw_withering_processor', 'superpackutils:bio_plastic'])
 
     //Improved Processor
     event.remove({id: 'refinedstorage:improved_processor'})

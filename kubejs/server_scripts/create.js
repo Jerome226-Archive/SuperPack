@@ -218,7 +218,7 @@ events.listen('recipes', function (event) {
         },
         "fluid_input": {
           "type": "pneumaticcraft:fluid",
-          "tag": "tconstruct:molten_blaze",
+          "tag": "tconstruct:blazing_blood",
           "amount": 250
         },
         "item_output": {

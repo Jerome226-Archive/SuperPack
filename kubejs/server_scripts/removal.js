@@ -3,6 +3,9 @@ events.listen('recipes', function (event) {
 
 var outputRemoval = [
 
+    //Factoriores
+    'factoriores:sulfur_block',
+    
     //Lib Vulpes
     'libvulpes:gearsteel',
 

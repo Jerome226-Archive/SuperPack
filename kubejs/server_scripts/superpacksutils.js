@@ -6,131 +6,50 @@ events.listen('recipes', function (event) {
     //Superpack: Utils
     //-----------------------------------------------------
 
-    //Steam-Cracked Naphtha
-    event.custom({
-        "type": "pneumaticcraft:fluid_mixer",
-        "input1": {
-          "type": "pneumaticcraft:fluid",
-          "fluid": "superpackutils:naphtha",
-          "amount": 50
-        },
-        "input2": {
-          "type": "pneumaticcraft:fluid",
-          "fluid": "mekanism:steam",
-          "amount": 10
-        },
-        "fluid_output": {
-          "fluid": "superpackutils:sc_naphtha",
-          "amount": 50
-        },
-        "pressure": 2.0,
-        "time": 300
+    function oilCracking(inputOil, inputFluid, outputOil) {
+
+    //Refinery
+    event.custom({"type":"immersiveengineering:refinery","result":{"fluid":`${outputOil}`,"amount":100},"input0":{"tag":`${inputFluid}`,"amount":10},"input1":{"tag":`${inputOil}`,"amount":100},"energy":120})
+
+    }
+
+    oilCracking('forge:naphtha', 'forge:steam', 'superpackutils:sc_naphtha')
+    oilCracking('forge:naphtha', 'forge:hydrogen', 'superpackutils:hc_naphtha')
+
+    oilCracking('forge:light_oil', 'forge:steam', 'superpackutils:sc_light_oil')
+    oilCracking('forge:light_oil', 'forge:hydrogen', 'superpackutils:hc_light_oil')
+
+    oilCracking('forge:heavy_oil', 'forge:steam', 'superpackutils:sc_heavy_oil')
+    oilCracking('forge:heavy_oil', 'forge:hydrogen', 'superpackutils:hc_heavy_oil')
+
+    //ABS Sheet
+    event.shaped('superpackutils:abs_sheet', ['AAA', 'A A', 'AAA'], {
+      A: 'superpackutils:abs_pellet'
     }),
 
-    //Steam-Cracked Light Fuel
-    event.custom({
-      "type": "pneumaticcraft:fluid_mixer",
-      "input1": {
-        "type": "pneumaticcraft:fluid",
-        "fluid": "thermal:light_oil",
-        "amount": 50
-      },
-      "input2": {
-        "type": "pneumaticcraft:fluid",
-        "fluid": "mekanism:steam",
-        "amount": 10
-      },
-      "fluid_output": {
-        "fluid": "superpackutils:sc_light_oil",
-        "amount": 50
-      },
-      "pressure": 2.0,
-      "time": 300
-  }),
+    event.recipes.mekanism.enriching('superpackutils:abs_sheet', Item.of('superpackutils:abs_pellet', 3))
 
-  //Steam-Cracked Heavy Fuel
+    //Napalm
     event.custom({
-    "type": "pneumaticcraft:fluid_mixer",
-    "input1": {
-      "type": "pneumaticcraft:fluid",
-      "fluid": "thermal:heavy_oil",
-      "amount": 50
-    },
-    "input2": {
-      "type": "pneumaticcraft:fluid",
-      "fluid": "mekanism:steam",
-      "amount": 10
-    },
-    "fluid_output": {
-      "fluid": "superpackutils:sc_heavy_oil",
-      "amount": 50
-    },
-    "pressure": 2.0,
-    "time": 300
-    }),
-
-    //Hydro-Cracked Naphtha
-    event.custom({
-        "type": "pneumaticcraft:fluid_mixer",
-        "input1": {
-          "type": "pneumaticcraft:fluid",
-          "fluid": "superpackutils:naphtha",
-          "amount": 50
-        },
-        "input2": {
-          "type": "pneumaticcraft:fluid",
-          "fluid": "mekanism:hydrogen",
-          "amount": 10
-        },
-        "fluid_output": {
-          "fluid": "superpackutils:hc_naphtha",
-          "amount": 50
-        },
-        "pressure": 2.0,
-        "time": 300
-    }),
-
-    //Hydro-Cracked Light Fuel
-    event.custom({
-      "type": "pneumaticcraft:fluid_mixer",
-      "input1": {
-        "type": "pneumaticcraft:fluid",
-        "fluid": "thermal:light_oil",
-        "amount": 50
+      "type": "immersiveengineering:mixer",
+      "inputs": [
+        {
+          "count": 3,
+          "base_ingredient": {
+            "item": "superpackutils:polystyrene_bar"
+          }
+        }
+      ],
+      "result": {
+        "fluid": "superpackutils:napalm_b",
+        "amount": 500
       },
-      "input2": {
-        "type": "pneumaticcraft:fluid",
-        "fluid": "mekanism:hydrogen",
-        "amount": 10
+      "fluid": {
+        "tag": "forge:ho_gasoline",
+        "amount": 500
       },
-      "fluid_output": {
-        "fluid": "superpackutils:hc_light_oil",
-        "amount": 50
-      },
-      "pressure": 2.0,
-      "time": 300
-    }),
-
-    //Hydro-Cracked Heavy Fuel
-    event.custom({
-      "type": "pneumaticcraft:fluid_mixer",
-      "input1": {
-        "type": "pneumaticcraft:fluid",
-        "fluid": "thermal:heavy_oil",
-        "amount": 50
-      },
-      "input2": {
-        "type": "pneumaticcraft:fluid",
-        "fluid": "mekanism:hydrogen",
-        "amount": 10
-      },
-      "fluid_output": {
-        "fluid": "superpackutils:hc_heavy_oil",
-        "amount": 50
-      },
-      "pressure": 2.0,
-      "time": 300
-    }),
+      "energy": 10000
+    })
 
     //Propene
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:propene"},"gasOutput":{"gas":"superpackutils:propene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:propene"},"fluidOutput":{"fluid":"superpackutils:propene","amount":1}})
@@ -217,7 +136,7 @@ events.listen('recipes', function (event) {
     }),
 
     //ABS Sheet
-    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"superpackutils:polydimethylsiloxane_pulp"}},"fluidInput":{"amount":50,"tag":"forge:oxygen"},"gasInput":{"amount":50,"gas":"superpackutils:abs"},"energyRequired":3000,"duration":60,"itemOutput":{"item":"superpackutils:abs_pellet"},"gasOutput":{"gas":"mekanism:oxygen","amount":5}})
+    event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"superpackutils:polydimethylsiloxane_pulp"}},"fluidInput":{"amount":50,"tag":"forge:oxygen"},"gasInput":{"amount":500,"gas":"superpackutils:abs"},"energyRequired":3000,"duration":60,"itemOutput":{"item":"superpackutils:abs_pellet"},"gasOutput":{"gas":"superpackutils:plastic_waste","amount":200}})
   
     //Electrical Platinum Ingot
     event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_platinum_ingot', 4)], 'superpackutils:platinum_ingot', ['thermal:electrum_dust', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
@@ -550,6 +469,25 @@ events.listen('recipes', function (event) {
         ]
     })
 
+    //Enriched Carbon Brick
+    event.custom({
+      "type": "thermal:bottler",
+      "ingredient": [
+        {
+          "item": "advancedrocketry:carbon_brick"
+        },
+        {
+          "fluid": "thermal:refined_fuel",
+          "amount": 300
+        }
+      ],
+      "result": [
+        {
+          "item": "superpackutils:enriched_carbon_brick"
+        }
+      ]
+    })
+
     //Redstone Alloy
     event.custom({
         "type": "pneumaticcraft:pressure_chamber",
@@ -558,7 +496,7 @@ events.listen('recipes', function (event) {
             "item": "minecraft:iron_ingot"
           },
           {
-            "item": "minecraft:redstone"
+            "item": "superpackutils:refined_redstone_dust"
           },
         ],
         "pressure": -0.75,
@@ -568,6 +506,44 @@ events.listen('recipes', function (event) {
           }
         ]
     })
+
+    //Glowstone Alloy
+    event.custom({
+      "type": "pneumaticcraft:pressure_chamber",
+      "inputs": [
+        {
+          "item": "minecraft:iron_ingot"
+        },
+        {
+          "item": "superpackutils:refined_glowstone_dust"
+        },
+      ],
+      "pressure": -0.75,
+      "results": [
+        {
+          "item": "superpackutils:redstone_alloy_ingot"
+        }
+      ]
+  })
+
+  //Obsidian Alloy
+  event.custom({
+    "type": "pneumaticcraft:pressure_chamber",
+    "inputs": [
+      {
+        "item": "minecraft:iron_ingot"
+      },
+      {
+        "item": "mekanism:dust_refined_obsidian"
+      },
+    ],
+    "pressure": -0.75,
+    "results": [
+      {
+        "item": "superpackutils:obsidian_alloy_ingot"
+      }
+    ]
+})
 
     //HSLA Steel Ingot
     event.custom({
@@ -705,9 +681,15 @@ events.listen('recipes', function (event) {
     event.shaped(Item.of('superpackutils:assembler_frame', 4), ['BCB', 'AIA', 'BCB'], {
           C: 'superpackutils:electrical_platinum_ingot',
           A: 'superpackutils:doublelayered_capacitor',
-          B: 'superpackutils:electrical_steel_ingot',
+          B: 'superpackutils:electrical_hsla_steel_ingot',
           I: 'mekanism:steel_casing'
     }),
+
+    //Refined Redstone Dust
+    event.recipes.mekanism.metallurgic_infusing('superpackutils:refined_redstone_dust', 'minecraft:redstone', 'mekanism:diamond', 10),
+
+    //Refined Glowstone Dust
+    event.recipes.mekanism.metallurgic_infusing('superpackutils:refined_redstone_dust', 'minecraft:glowstone_dust', 'mekanism:diamond', 10),
 
     //Mixed Alloy Ingot
     event.shaped('superpackutils:mixed_alloy_ingot', ['III', 'NNN', 'CCC'], {
@@ -798,7 +780,7 @@ events.listen('recipes', function (event) {
     })
 
     //Circuit Board
-    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"create:integrated_circuit"}},{"count":1,"base_ingredient":{"item":"superpackutils:bio_plastic"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:wire_lead"}},{"count":1,"base_ingredient":{"item":"refinedstorage:improved_processor"}}],"category":"components","result":{"item":"superpackutils:circuit_board","count":1}})
+    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"create:integrated_circuit"}},{"count":1,"base_ingredient":{"item":"advgenerators:power_io"}},{"count":1,"base_ingredient":{"item":"advgenerators:iron_wiring"}},{"count":1,"base_ingredient":{"item":"mekanism:basic_control_circuit"}}],"category":"components","result":{"item":"superpackutils:circuit_board","count":1}})
 
     //Copper Solenoid
     event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":3,"base_ingredient":{"item":"thermal:copper_plate"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:wire_electrum"}},{"count":2,"base_ingredient":{"item":"immersiveengineering:stick_aluminum"}},{"count":1,"base_ingredient":{"item":"superpackutils:mixed_alloy_ingot"}}],"category":"components","result":{"item":"superpackutils:copper_solenoid","count":1}})

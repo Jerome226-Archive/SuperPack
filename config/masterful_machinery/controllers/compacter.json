@@ -1,0 +1,40 @@
+{
+  "controllerId": "compacter",
+  "name": "Pressurized Compacter",
+  "ports": [
+    {
+      "type": "masterfulmachinery:mekanism_gas",
+      "name": "Gas",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    },
+    {
+      "type": "masterfulmachinery:fluids",
+      "name": "Fluid",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    },
+    {
+      "type": "masterfulmachinery:pncr_pressure",
+      "name": "Pressure",
+      "id": "basic",
+      "data": {
+        "volume": 5000,
+        "dangerPressure": 15,
+        "criticalPressure": 30
+      }
+    }, 
+    {
+      "type": "masterfulmachinery:energy",
+      "name": "Energy",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    }
+  ]
+}

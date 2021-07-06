@@ -516,6 +516,55 @@ events.listen('recipes', function (event) {
     })
 
     //-----------------------------------------------------
+    //Ore Washing Plant
+    //-----------------------------------------------------
+    event.custom({
+      "type": "masterfulmachinery:machine_structure",
+      "id": "washer",
+      "controllerId": "washer",
+      "name": "Ore Washing Plant",
+      "layout": [
+        [
+          "WWWW",
+          "WWWW",
+          "WWWW"
+        ],
+        [
+          "WEW",
+          "I O",
+          "WCW"
+        ],
+        [
+          "WWW",
+          "W W",
+          "WWW"
+        ],
+        [
+          "WWW",
+          "WFW",
+          "WWW"
+        ]
+      ],
+      "legend": {
+        "W": {
+          "block": "superpackutils:washer_casing"
+        },
+        "I": {
+          "block": "masterfulmachinery:washer_basic_port_items_input"
+        },
+        "E": {
+          "block": "masterfulmachinery:washer_basic_port_energy_input"
+        },
+        "O": {
+          "block": "masterfulmachinery:washer_basic_port_items_output"
+        },
+        "F": {
+          "block": "masterfulmachinery:washer_basic_port_fluids_input"
+        }
+      }
+    })
+
+    //-----------------------------------------------------
     //Alchemical Mixer Recipes
     //-----------------------------------------------------
     
@@ -549,7 +598,7 @@ events.listen('recipes', function (event) {
       event.shapeless('masterfulmachinery:mixer_basic_port_items_input', ['superpackutils:mixer_casing', 'thermal:lead_ingot'])
 
     //-----------------------------------------------------
-    //Alchemical Mixer Recipes
+    //Alchemical Mixer
     //-----------------------------------------------------
 
     event.custom({

@@ -34,6 +34,10 @@ events.listen('recipes', function (event) {
     event.remove({id: 'tconstruct:smeltery/alloys/molten_rose_gold'})
     event.recipes.create.mixing(fluid.of('tconstruct:molten_rose_gold', 576), [fluid.of('tconstruct:molten_copper', 432), fluid.of('tconstruct:molten_gold', 144)]).heated()
 
+    //Pewter
+    event.remove({id: 'tconstruct:smeltery/alloys/molten_pewter'})
+    event.recipes.create.mixing(fluid.of('tconstruct:molten_pewter', 288), [fluid.of('tconstruct:molten_iron', 144), fluid.of('tconstruct:molten_lead', 144)]).heated()
+
     //Pig Iron
     event.remove({id: 'tconstruct:smeltery/alloys/molten_pig_iron'})
     event.custom({
@@ -60,7 +64,7 @@ events.listen('recipes', function (event) {
           "fluid": "tconstruct:molten_pig_iron",
           "amount": 288
         },
-        "temperature": 811
+        "temperature": 1200
     })
 
     //Queens Slime
@@ -89,7 +93,7 @@ events.listen('recipes', function (event) {
           "fluid": "tconstruct:molten_queens_slime",
           "amount": 288
         },
-        "temperature": 1150
+        "temperature": 1650
     })
 
     //Hepatizon
@@ -118,7 +122,7 @@ events.listen('recipes', function (event) {
           "fluid": "tconstruct:molten_hepatizon",
           "amount": 288
         },
-        "temperature": 1400
+        "temperature": 1800
     })
 
     //Slimesteel
@@ -143,7 +147,7 @@ events.listen('recipes', function (event) {
           "fluid": "tconstruct:molten_slimesteel",
           "amount": 288
         },
-        "temperature": 900
+        "temperature": 1100
     })
 
 
