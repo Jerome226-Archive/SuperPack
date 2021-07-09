@@ -174,10 +174,7 @@ onEvent('recipes', event => {
 
         //Thermal Sawmill
         event.custom({"type": "thermal:sawmill","ingredient": {"item": `${bookshelfItem}`},"result": [{"item": `${plankItem}`,"count": 4},{"item": "minecraft:book","count": 3}],"energy": 1000})
-                                                                                                                                                                                                               zzzseeqQQQQQQQQa
 
-                                                                                                                                                                                                            =========-----
-        
     }
 
     if (saplingItem !== null && leaveItem !== null) {

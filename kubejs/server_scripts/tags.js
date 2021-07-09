@@ -40,18 +40,31 @@ events.listen('block.tags', function (event) {
     event.get('superpack:metallurgic_fabricator/optional/item_input').add('masterfulmachinery:metallurgic_fabricator_basic_port_items_input')
 
     event.get('superpack:metallurgic_fabricator/item_input').add('masterfulmachinery:metallurgic_fabricator_basic_port_items_input')
+    event.get('superpack:metallurgic_fabricator/item_input').add('masterfulmachinery:metallurgic_fabricator_advanced_port_items_input')
+
+    event.get('superpack:metallurgic_fabricator/item_output').add('masterfulmachinery:metallurgic_fabricator_basic_port_items_output')
+    event.get('superpack:metallurgic_fabricator/item_output').add('masterfulmachinery:metallurgic_fabricator_advanced_port_items_output')
+
 
     //Improved Metallurgic Fabricator
     event.get('superpack:improved_metallurgic_fabricator/optional/item_input').add('superpackutils:improved_metallurgic_casing')
     event.get('superpack:improved_metallurgic_fabricator/optional/item_input').add('masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_input')
 
     event.get('superpack:improved_metallurgic_fabricator/item_input').add('masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_input')
+    event.get('superpack:improved_metallurgic_fabricator/item_input').add('masterfulmachinery:improved_metallurgic_fabricator_advanced_port_items_input')
+
+    event.get('superpack:improved_metallurgic_fabricator/item_output').add('masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_output')
+    event.get('superpack:improved_metallurgic_fabricator/item_output').add('masterfulmachinery:improved_metallurgic_fabricator_advanced_port_items_output')
 
     //Assembler
     event.get('superpack:assembler/optional/item_input').add('superpackutils:assembler_frame')
     event.get('superpack:assembler/optional/item_input').add('masterfulmachinery:assembler_basic_port_items_input')
 
     event.get('superpack:assembler/item_input').add('masterfulmachinery:assembler_basic_port_items_input')
+    event.get('superpack:assembler/item_input').add('masterfulmachinery:assembler_advanced_port_items_input')
+
+    event.get('superpack:assembler/item_output').add('masterfulmachinery:assembler_basic_port_items_output')
+    event.get('superpack:assembler/item_output').add('masterfulmachinery:assembler_advanced_port_items_output')
 
     //Infuser
     event.get('superpack:infuser/optional/item_input').add('superpackutils:infuser_casing')

@@ -521,7 +521,7 @@ events.listen('recipes', function (event) {
       "pressure": -0.75,
       "results": [
         {
-          "item": "superpackutils:redstone_alloy_ingot"
+          "item": "superpackutils:glowstone_alloy_ingot"
         }
       ]
   })
@@ -788,6 +788,10 @@ events.listen('recipes', function (event) {
     //Polished Quartz
     event.recipes.create.sandpaper_polishing('superpackutils:polished_quartz', 'minecraft:quartz')
     event.recipes.mekanism.enriching('superpackutils:polished_quartz', 'minecraft:quartz')
+
+    //Polished Mana Quartz
+    event.recipes.create.sandpaper_polishing('superpackutils:polished_mana_quartz', 'botania:quartz_mana')
+    event.recipes.mekanism.enriching('superpackutils:polished_mana_quartz', 'botania:quartz_mana')
 
     //Silicon Dioxide Oxiding
     event.custom({"type":"mekanism:oxidizing","input":{"ingredient":{"tag":"forge:dusts/quartz"}},"output":{"gas":"superpackutils:silicon_dioxide","amount":100}})

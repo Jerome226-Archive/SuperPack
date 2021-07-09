@@ -123,9 +123,9 @@ events.listen('recipes', function (event) {
         "name": "Metallurgic Fabricator",
         "layout": [
             [
-              "AEA",
+              "TET",
               "IAO",
-              "ACA"
+              "TCT"
             ],
             [
               "AFA",
@@ -146,10 +146,13 @@ events.listen('recipes', function (event) {
                 "block": "masterfulmachinery:metallurgic_fabricator_basic_port_energy_input"
             },
             "I":  {
-                "block": "masterfulmachinery:metallurgic_fabricator_basic_port_items_input"
+                "tag": "superpack:metallurgic_fabricator/item_input"
             },
             "C":  {
               "block": "masterfulmachinery:metallurgic_fabricator_controller"
+            },
+            "T":  {
+              "tag": "superpack:metallurgic_fabricator/optional/item_input"
             },
             "M":  {
                 "block": "refinedstorage:machine_casing"
@@ -161,7 +164,7 @@ events.listen('recipes', function (event) {
                 "block": "immersiveengineering:heavy_engineering"
             },
             "O": {
-                "block": "masterfulmachinery:metallurgic_fabricator_basic_port_items_output"
+                "tag": "superpack:metallurgic_fabricator/item_output"
             }
         }
     })
@@ -210,11 +213,11 @@ events.listen('recipes', function (event) {
         "name": "Assembling Machine",
         "layout": [
           [
-            " BBB ",
-            "BBBBB",
+            " TBT ",
+            "TBBBT",
             "BBZBB",
-            "BBBBB",
-            " BBB "
+            "TBBBT",
+            " TBT "
           ],
           [
             "BBBBB",
@@ -238,11 +241,11 @@ events.listen('recipes', function (event) {
             "BDDDB"
           ],
           [
-            " BBB ",
-            "BBBBB",
+            " TBT ",
+            "TBBBT",
             "BBLBB",
-            "BBBBB",
-            " BBB"
+            "TBBBT",
+            " TBT"
           ]
         ],
         "legend": {
@@ -259,7 +262,10 @@ events.listen('recipes', function (event) {
             "block": "mekanism:laser"
           },
           "F": {
-            "block": "masterfulmachinery:assembler_basic_port_items_input"
+            "tag": "superpack:assembler/item_input"
+          },
+          "T":  {
+            "tag": "superpack:assembler/optional/item_input"
           },
           "Z": {
             "block": "masterfulmachinery:assembler_basic_port_pncr_pressure_input"
@@ -274,7 +280,7 @@ events.listen('recipes', function (event) {
             "block": "masterfulmachinery:assembler_basic_port_fluids_input"
           },
           "J": {
-            "block": "masterfulmachinery:assembler_basic_port_items_output"
+            "tag": "superpack:assembler/item_output"
           },
           "L": {
             "block": "masterfulmachinery:assembler_basic_port_energy_input"
@@ -322,9 +328,9 @@ events.listen('recipes', function (event) {
         "name": "Improved Metallurgic Fabricator",
         "layout": [
             [
-              "AAIAA",
-              "AAAAA",
-              "AAAAA",
+              "TAIAT",
+              "TAAAT",
+              "TAAAT",
               "EAAAO"
             ],
             [
@@ -347,6 +353,9 @@ events.listen('recipes', function (event) {
             "S": {
                 "block": "mekanism:superheating_element"
             },
+            "T":  {
+              "tag": "superpack:improved_metallurgic_fabricator/optional/item_input"
+            },
             "F": {
                 "block": "mekanism:metallurgic_infuser"
             },
@@ -354,10 +363,10 @@ events.listen('recipes', function (event) {
                 "block": "masterfulmachinery:improved_metallurgic_fabricator_basic_port_pncr_pressure_input"
             },
             "E": {
-                "block": "masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_input"
+                "tag": "superpack:improved_metallurgic_fabricator/item_input"
             },
             "O": {
-                "block": "masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_output"
+                "tag": "superpack:improved_metallurgic_fabricator/item_output"
             },
             "I":  {
                 "block": "masterfulmachinery:improved_metallurgic_fabricator_basic_port_energy_input"
