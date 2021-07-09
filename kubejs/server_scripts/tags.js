@@ -102,6 +102,8 @@ events.listen('fluid.tags', function (event) {
 
     event.get('forge:ethanol').remove('pneumaticcraft:ethanol')
 
+    event.get('forge:steam').remove('advgenerators:steam')
+
     event.get('forge:plantoil').remove('pneumaticcraft:vegetable_oil')
     event.get('forge:plantoil').remove('createaddition:seed_oil')
     event.get('forge:plantoil').remove('createaddition:flowing_seed_oil')

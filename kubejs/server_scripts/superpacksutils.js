@@ -689,7 +689,7 @@ events.listen('recipes', function (event) {
     event.recipes.mekanism.metallurgic_infusing('superpackutils:refined_redstone_dust', 'minecraft:redstone', 'mekanism:diamond', 10),
 
     //Refined Glowstone Dust
-    event.recipes.mekanism.metallurgic_infusing('superpackutils:refined_redstone_dust', 'minecraft:glowstone_dust', 'mekanism:diamond', 10),
+    event.recipes.mekanism.metallurgic_infusing('superpackutils:refined_glowstone_dust', 'minecraft:glowstone_dust', 'mekanism:diamond', 10),
 
     //Mixed Alloy Ingot
     event.shaped('superpackutils:mixed_alloy_ingot', ['III', 'NNN', 'CCC'], {
