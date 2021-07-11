@@ -40,9 +40,9 @@ events.listen('recipes', function (event) {
         "name": "Inscriber",
         "layout": [
             [
-              "AEA",
+              "TET",
               "IAO",
-              "ACA"
+              "TCT"
             ],
             [
               "A A",
@@ -55,9 +55,9 @@ events.listen('recipes', function (event) {
                 "APA"
             ],
             [
+                "TAT",
                 "AAA",
-                "AAA",
-                "AAA"
+                "TAT"
             ],
             
           ],
@@ -69,7 +69,10 @@ events.listen('recipes', function (event) {
                 "block": "masterfulmachinery:inscriber_basic_port_energy_input"
             },
             "I":  {
-                "block": "masterfulmachinery:inscriber_basic_port_items_input"
+                "tag": "superpack:inscriber/item_output"
+            },
+            "T":  {
+              "tag": "superpack:inscriber/optional/item_input"
             },
             "C":  {
               "block": "masterfulmachinery:inscriber_controller"
@@ -78,10 +81,10 @@ events.listen('recipes', function (event) {
                 "block": "refinedstorage:machine_casing"
             },
             "P":  {
-                "block": "minecraft:piston"
+                "block": "create:mechanical_press"
             },
             "O": {
-                "block": "masterfulmachinery:inscriber_basic_port_items_output"
+                "tag": "superpack:inscriber/item_output"
             }
         }
     })
@@ -527,6 +530,7 @@ events.listen('recipes', function (event) {
     //-----------------------------------------------------
     //Ore Washing Plant
     //-----------------------------------------------------
+    
     event.custom({
       "type": "masterfulmachinery:machine_structure",
       "id": "washer",
@@ -534,9 +538,9 @@ events.listen('recipes', function (event) {
       "name": "Ore Washing Plant",
       "layout": [
         [
-          "WWWW",
-          "WWWW",
-          "WWWW"
+          "WWW",
+          "WWW",
+          "WWW"
         ],
         [
           "WEW",
@@ -617,9 +621,9 @@ events.listen('recipes', function (event) {
       "name": "Alchemical Mixer",
       "layout": [
           [
-            "AEA",
+            "TET",
             "AAA",
-            "ACA"
+            "TCT"
           ],
           [
             "PGP",
@@ -637,9 +641,9 @@ events.listen('recipes', function (event) {
               "P P"
           ],
           [
-              "AAA",
+              "TAT",
               "AFA",
-              "AAA"
+              "TAT"
           ]
         ],
         "legend": {
@@ -658,6 +662,9 @@ events.listen('recipes', function (event) {
           "M":  {
               "block": "create:basin"
           },
+          "T":  {
+            "tag": "superpack:mixer/optional/item_input"
+          },
           "S":  {
               "block": "create:mechanical_mixer"
           },
@@ -668,10 +675,10 @@ events.listen('recipes', function (event) {
               "block": "immersiveengineering:steel_fence"
           },
           "Z":  {
-              "block": "masterfulmachinery:mixer_basic_port_items_input"
+              "tag": "superpack:mixer/item_input"
           },
           "W":  {
-              "block": "masterfulmachinery:mixer_basic_port_items_output"
+              "tag": "superpack:mixer/item_output"
           }
       }
   })
@@ -722,9 +729,9 @@ events.listen('recipes', function (event) {
         "name": "Infuser",
         "layout": [
             [
-              "AEA",
+              "TET",
               "IAO",
-              "ACA"
+              "TCT"
             ],
             [
               "P P",
@@ -742,9 +749,9 @@ events.listen('recipes', function (event) {
                 "P P"
             ],
             [
-                "AAA",
+                "TAT",
                 "AFA",
-                "AAA"
+                "TAT"
             ]
           ],
           "legend": {
@@ -766,6 +773,9 @@ events.listen('recipes', function (event) {
             "S":  {
                 "block": "create:spout"
             },
+            "T":  {
+              "tag": "superpack:infuser/optional/item_input"
+            },
             "F":  {
                 "block": "masterfulmachinery:infuser_basic_port_fluids_input"
             },
@@ -773,10 +783,10 @@ events.listen('recipes', function (event) {
                 "block": "immersiveengineering:steel_fence"
             },
             "Z":  {
-                "block": "masterfulmachinery:infuser_basic_port_items_input"
+                "tag": "superpack:infuser/item_input"
             },
             "W":  {
-                "block": "masterfulmachinery:infuser_basic_port_items_output"
+                "tag": "superpack:infuser/item_output"
             },
             "O": {
                 "block": "masterfulmachinery:infuser_basic_port_mekanism_gas_output"

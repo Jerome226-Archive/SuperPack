@@ -1,0 +1,24 @@
+{
+	"type": "custommachinery:custom_machine",
+	"machine": "custommachinery:resonator",
+	"time": 100,
+	"requirements": [
+		{
+			"type": "custommachinery:item",
+			"item": "minecraft:redstone",
+			"amount": 1,
+			"mode": "input"
+		},
+		{
+			"type": "custommachinery:energy_per_tick",
+			"amount": 40,
+			"mode": "input"
+		},
+		{
+			"type": "custommachinery:item",
+			"item": "minecraft:redstone_block",
+			"amount": 1,
+			"mode": "output"
+		}
+	]
+}

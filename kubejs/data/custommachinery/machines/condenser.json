@@ -1,0 +1,112 @@
+{
+  "name": "Condenser",
+  "appearance": {
+    "lightmode": "running",
+    "lightlevel": 7,
+    "model": "custommachinery:machine/condenser"
+  },
+  "components": [
+    {
+      "capacity": 100000,
+      "type": "custommachinery:energy"
+    },
+    {
+      "mode": "input",
+      "id": "input1",
+      "capacity": 10000,
+      "type": "custommachinery:fluid"
+    },
+    {
+      "mode": "input",
+      "id": "upgrade1",
+      "type": "custommachinery:item",
+      "variant": "custommachinery:upgrade"
+    },
+    {
+      "mode": "input",
+      "id": "upgrade2",
+      "type": "custommachinery:item",
+      "variant": "custommachinery:upgrade"
+    },
+    {
+      "mode": "input",
+      "id": "upgrade3",
+      "type": "custommachinery:item",
+      "variant": "custommachinery:upgrade"
+    },
+    {
+      "mode": "output",
+      "id": "output1",
+      "capacity": 10000,
+      "type": "custommachinery:fluid"
+    },
+    {
+    	"type": "custommachinery:redstone",
+    	"poweroutput": 15
+    }
+  ],
+  "gui": [
+    {
+      "texture": "custommachinery:textures/gui/smallbackground.png",
+      "x": 0,
+      "y": 0,
+      "type": "custommachinery:texture"
+    },
+    {
+      "x": 47,
+      "y": 80,
+      "type": "custommachinery:player_inventory"
+    },
+    {
+      "id": "input1",
+      "x": 87,
+      "y": 25,
+      "type": "custommachinery:fluid"
+    },
+    {
+      "x": 229,
+      "y": 90,
+      "type": "custommachinery:energy"
+    },
+    {
+      "id": "output1",
+      "x": 149,
+      "y": 25,
+      "type": "custommachinery:fluid"
+    },
+    {
+      "id": "upgrade1",
+      "x": 229,
+      "y": 20,
+      "type": "custommachinery:slot"
+    },
+    {
+      "id": "upgrade2",
+      "x": 229,
+      "y": 40,
+      "type": "custommachinery:slot"
+    },
+    {
+      "id": "upgrade3",
+      "x": 229,
+      "y": 60,
+      "type": "custommachinery:slot"
+    },
+    {
+      "x": 116,
+      "y": 40,
+      "type": "custommachinery:progress"
+    },
+    {
+      "x": 205,
+      "y": 4,
+      "type": "custommachinery:status"
+    },
+    {
+      "text": "Condenser",
+      "x": 45,
+      "y": 5,
+      "type": "custommachinery:text"
+    }
+  ]
+}

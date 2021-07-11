@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "custommachinery:block/resonator_top",
+    "bottom": "custommachinery:block/resonator_bottom",
+    "side": "custommachinery:block/resonator_side"
+  }
+}

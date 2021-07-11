@@ -685,11 +685,74 @@ events.listen('recipes', function (event) {
           I: 'mekanism:steel_casing'
     }),
 
+    //Molten Blizz
+    event.custom({
+      "type": "tconstruct:entity_melting",
+      "entity": {
+        "type": "thermal:blizz"
+      },
+      "result": {
+        "fluid": "superpackutils:molten_blizz",
+        "amount": 20
+      },
+      "damage": 2
+    })
+
+    //Molten Blitz
+    event.custom({
+      "type": "tconstruct:entity_melting",
+      "entity": {
+        "type": "thermal:blitz"
+      },
+      "result": {
+        "fluid": "superpackutils:molten_blitz",
+        "amount": 20
+      },
+      "damage": 2
+    })
+
+    //Molten Basalz
+    event.custom({
+      "type": "tconstruct:entity_melting",
+      "entity": {
+        "type": "thermal:basalz"
+      },
+      "result": {
+        "fluid": "superpackutils:molten_basalz",
+        "amount": 20
+      },
+      "damage": 2
+    })
+
+    //Basic Logic Circuit
+    event.recipes.immersiveengineering.metal_press('superpackutils:basic_circuit', 'refinedstorage:raw_basic_processor', 'immersiveengineering:mold_plate')
+
+    //Improved Logic Circuit
+    event.recipes.immersiveengineering.metal_press('superpackutils:improved_circuit', 'refinedstorage:raw_improved_processor', 'immersiveengineering:mold_plate')
+
+    //Advanced Logic Circuit
+    event.recipes.immersiveengineering.metal_press('superpackutils:advanced_circuit', 'refinedstorage:raw_advanced_processor', 'immersiveengineering:mold_plate')
+
+    //Withering Logic Circuit
+    event.recipes.immersiveengineering.metal_press('superpackutils:withering_circuit', 'extradisks:raw_withering_processor', 'immersiveengineering:mold_plate')
+
     //Refined Redstone Dust
     event.recipes.mekanism.metallurgic_infusing('superpackutils:refined_redstone_dust', 'minecraft:redstone', 'mekanism:diamond', 10),
 
     //Refined Glowstone Dust
     event.recipes.mekanism.metallurgic_infusing('superpackutils:refined_glowstone_dust', 'minecraft:glowstone_dust', 'mekanism:diamond', 10),
+
+    //Crystallized Slime
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:earth_slime_crystal"}},"output":{"infuse_type":"superpackutils:crystallized_slime","amount":10}})
+
+    //Crystallized Ichor
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:ichor_slime_crystal"}},"output":{"infuse_type":"superpackutils:crystallized_ichor","amount":10}})
+
+    //Crystallized Skyslime
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:sky_slime_crystal"}},"output":{"infuse_type":"superpackutils:crystallized_skyslime","amount":10}})
+
+    //Crystallized Enderslime
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:ender_slime_crystal"}},"output":{"infuse_type":"superpackutils:crystallized_enderslime","amount":10}})
 
     //Mixed Alloy Ingot
     event.shaped('superpackutils:mixed_alloy_ingot', ['III', 'NNN', 'CCC'], {
@@ -1102,6 +1165,32 @@ events.listen('recipes', function (event) {
     //Bio Plastic
     event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"thermal:sawdust"},{"item":"thermal:rubber"}],"result":{"fluid":"superpackutils:molten_bio_plastic","amount":1000},"fluid":{"tag":"forge:biodiesel","amount":1000},"energy":3200}),
     event.recipes.create.compacting(Item.of('superpackutils:bio_plastic', 1), [fluid.of('superpackutils:molten_bio_plastic', 1000)]),
+
+    //Napalm-B
+    event.custom({"type":"immersiveengineering:mixer","inputs":[{"count": 3,"base_ingredient": {"item": "superpackutils:manganese_dust"}}],"result":{"fluid":"superpackutils:napalm_b","amount":500},"fluid":{"tag":"forge:ho_gasoline","amount":500},"energy":12000}),
+
+    //Hydrogen Cyanide
+    event.custom({
+      "type": "pneumaticcraft:thermo_plant",
+      "item_input": {
+        "item": "thermal:cured_rubber"
+      },
+      "fluid_input": {
+        "type": "pneumaticcraft:fluid",
+        "fluid": "pneumaticcraft:lpg",
+        "amount": 100
+      },
+      "fluid_output": {
+        "fluid": "pneumaticcraft:plastic",
+        "amount": 1000
+      },
+      "temperature": {
+        "min_temp": 373
+      },
+      "pressure": 2.0,
+      "speed": 0.25,
+      "exothermic": false
+    })
 
     //Infused Stone
     event.recipes.create.mixing(Item.of('superpackutils:infused_stone', 2), ['create:limestone', 'botania:livingrock'])

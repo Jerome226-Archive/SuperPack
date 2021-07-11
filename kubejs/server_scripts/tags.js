@@ -71,12 +71,30 @@ events.listen('block.tags', function (event) {
     event.get('superpack:infuser/optional/item_input').add('masterfulmachinery:infuser_basic_port_items_input')
 
     event.get('superpack:infuser/item_input').add('masterfulmachinery:infuser_basic_port_items_input')
+    event.get('superpack:infuser/item_input').add('masterfulmachinery:infuser_advanced_port_items_input')
+
+    event.get('superpack:infuser/item_output').add('masterfulmachinery:infuser_basic_port_items_output')
+    event.get('superpack:infuser/item_output').add('masterfulmachinery:infuser_advanced_port_items_output')
 
     //Alchemical Mixer
     event.get('superpack:mixer/optional/item_input').add('superpackutils:mixer_casing')
     event.get('superpack:mixer/optional/item_input').add('masterfulmachinery:mixer_basic_port_items_input')
 
     event.get('superpack:mixer/item_input').add('masterfulmachinery:mixer_basic_port_items_input')
+    event.get('superpack:mixer/item_input').add('masterfulmachinery:mixer_advanced_port_items_input')
+
+    event.get('superpack:mixer/item_output').add('masterfulmachinery:mixer_basic_port_items_output')
+    event.get('superpack:mixer/item_output').add('masterfulmachinery:mixer_advanced_port_items_output')
+
+    //Inscriber
+    event.get('superpack:inscriber/optional/item_input').add('superpackutils:inscriber_casing')
+    event.get('superpack:inscriber/optional/item_input').add('masterfulmachinery:inscriber_basic_port_items_input')
+
+    event.get('superpack:inscriber/item_input').add('masterfulmachinery:inscriber_basic_port_items_input')
+    event.get('superpack:inscriber/item_input').add('masterfulmachinery:inscriber_advanced_port_items_input')
+
+    event.get('superpack:inscriber/item_output').add('masterfulmachinery:inscriber_basic_port_items_output')
+    event.get('superpack:inscriber/item_output').add('masterfulmachinery:inscriber_advanced_port_items_output')
 
 });
 

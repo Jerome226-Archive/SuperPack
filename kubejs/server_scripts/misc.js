@@ -81,7 +81,13 @@ events.listen('recipes', function (event) {
     event.remove({id: 'ceramics:unfired_porcelain'})
     event.remove({id: 'ceramics:porcelain_brick_smelting'})
     event.remove({id: 'tconstruct:compat/ceramics/alloy_porcelain'})
+    event.remove({id: 'tconstruct:compat/ceramics/porcelain/unfired_1'})
+
     event.shapeless('ceramics:unfired_porcelain', ['minecraft:clay_ball', 'minecraft:bone_meal'])
+
+    //Silica Steel Mix
+    event.remove({output: 'moreminecarts:silica_steel_mix'})
+    event.recipes.create.mixing(Item.of('moreminecarts:silica_steel_mix', 2), ['minecraft:iron_ingot', 'minecraft:coal', 'refinedstorage:silicon', 'refinedstorage:silicon', 'refinedstorage:silicon'])
 
     //Machine Casing
     event.remove({output: 'youmatter:machine_casing'})
