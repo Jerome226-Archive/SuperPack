@@ -154,7 +154,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'refinedstorage:cable'})
     event.shaped(Item.of('refinedstorage:cable', 12), ['CCC', 'IRI', 'CCC'], {
         C: 'refinedstorage:quartz_enriched_iron',
-        R: 'create:integrated_circuit',
+        R: 'superpackutils:integrated_circuit',
         I: '#forge:glass/colorless'
     }),
 

@@ -257,7 +257,7 @@ events.listen('recipes', function (event) {
         C: '#forge:glass/colorless',
         Y: 'immersiveengineering:component_steel',
         Z: '#forge:treated_wood',
-        M: 'create:integrated_circuit'
+        M: 'superpackutils:integrated_circuit'
     }),
 
     //Bio Slag
