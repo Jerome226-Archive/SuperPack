@@ -13,7 +13,7 @@ events.listen('recipes', function (event) {
             'PFP'
           ], {
             P: 'superpackutils:inscriber_casing',
-            E: 'create:integrated_circuit',
+            E: 'superpackutils:integrated_circuit',
             F: 'superpackutils:bio_plastic',
             G: 'immersiveengineering:circuit_board',
             H: 'refinedstorage:machine_casing'
@@ -530,7 +530,7 @@ events.listen('recipes', function (event) {
     //-----------------------------------------------------
     //Ore Washing Plant
     //-----------------------------------------------------
-    
+
     event.custom({
       "type": "masterfulmachinery:machine_structure",
       "id": "washer",
