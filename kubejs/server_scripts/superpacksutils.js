@@ -843,7 +843,7 @@ events.listen('recipes', function (event) {
     })
 
     //Circuit Board
-    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"create:integrated_circuit"}},{"count":1,"base_ingredient":{"item":"advgenerators:power_io"}},{"count":1,"base_ingredient":{"item":"advgenerators:iron_wiring"}},{"count":1,"base_ingredient":{"item":"mekanism:basic_control_circuit"}}],"category":"components","result":{"item":"superpackutils:circuit_board","count":1}})
+    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"superpackutils:integrated_circuit"}},{"count":1,"base_ingredient":{"item":"advgenerators:power_io"}},{"count":1,"base_ingredient":{"item":"advgenerators:iron_wiring"}},{"count":1,"base_ingredient":{"item":"mekanism:basic_control_circuit"}}],"category":"components","result":{"item":"superpackutils:circuit_board","count":1}})
 
     //Copper Solenoid
     event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":3,"base_ingredient":{"item":"thermal:copper_plate"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:wire_electrum"}},{"count":2,"base_ingredient":{"item":"immersiveengineering:stick_aluminum"}},{"count":1,"base_ingredient":{"item":"superpackutils:mixed_alloy_ingot"}}],"category":"components","result":{"item":"superpackutils:copper_solenoid","count":1}})

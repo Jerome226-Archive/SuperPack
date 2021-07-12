@@ -31,7 +31,7 @@ events.listen('recipes', function (event) {
         S: 'minecraft:smooth_stone',
         I: '#forge:plates/invar',
         P: 'create:mechanical_press',
-        C: 'create:integrated_circuit'
+        C: 'superpackutils:integrated_circuit'
     })
     
     //Drawer Controller Slave

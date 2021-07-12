@@ -185,8 +185,8 @@ events.listen('recipes', function (event) {
     }),
 
     //Create Integrated Circuit
-    event.remove({output: 'create:integrated_circuit'})
-    event.recipes.create.mechanical_crafting('create:integrated_circuit', [
+    event.remove({output: 'superpackutils:integrated_circuit'})
+    event.recipes.create.mechanical_crafting('superpackutils:integrated_circuit', [
         '  L  ',
         'ZCECZ',
         ' BBB '

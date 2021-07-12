@@ -68,7 +68,7 @@ events.listen('recipes', function (event) {
         P: 'refinedstorage:machine_casing',
         A: 'superpackutils:platinum_ingot',
         B: 'refinedstorage:construction_core',
-        G: 'create:integrated_circuit',
+        G: 'superpackutils:integrated_circuit',
         C: 'botania:mana_glass',
         Z: 'refinedstorage:improved_processor'
     })
@@ -79,7 +79,7 @@ events.listen('recipes', function (event) {
         P: 'refinedstorage:machine_casing',
         A: 'superpackutils:platinum_ingot',
         B: 'refinedstorage:construction_core',
-        G: 'create:integrated_circuit',
+        G: 'superpackutils:integrated_circuit',
         C: 'botania:mana_glass',
         Z: 'refinedstorage:basic_processor'
     })

@@ -47,7 +47,7 @@ events.listen('recipes', function (event) {
         R: 'immersiveengineering:wirecoil_electrum',
         L: 'immersiveengineering:wirecoil_copper',
         B: 'superpackutils:copper_solenoid',
-        E: 'create:integrated_circuit'
+        E: 'superpackutils:integrated_circuit'
     })
 
     //Electric Motor
@@ -63,7 +63,7 @@ events.listen('recipes', function (event) {
         C: 'createaddition:capacitor',
         W: 'immersiveengineering:wirecoil_electrum',
         R: 'superpackutils:copper_solenoid',
-        E: 'create:integrated_circuit'
+        E: 'superpackutils:integrated_circuit'
     })
 
 });
