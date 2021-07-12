@@ -735,19 +735,19 @@ events.listen('recipes', function (event) {
 
     //Infused Alloy
     event.remove({output: 'mekanism:alloy_infused'})
-    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_infused', 'superpackutils:basic_alloy', 'superpackutils:crystallized_ichor', 10),
+    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_infused', 'superpackutils:basic_alloy', 'superpackutils:ichor_crystal', 10),
 
     //Reinforced Alloy
     event.remove({output: 'mekanism:alloy_reinforced'})
-    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_reinforced', 'mekanism:alloy_infused', 'superpackutils:crystallized_skyslime', 20),
+    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_reinforced', 'mekanism:alloy_infused', 'superpackutils:skyslime_crystal', 20),
 
     //Atomic Alloy
     event.remove({output: 'mekanism:alloy_atomic'})
-    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_atomic', 'mekanism:alloy_reinforced', 'superpackutils:crystallized_enderslime', 40),
+    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_atomic', 'mekanism:alloy_reinforced', 'superpackutils:enderslime_crystal', 40),
 
     //Basic Circuit
     event.remove({id: 'mekanism:control_circuit/basic'})
-    event.recipes.mekanism.metallurgic_infusing('mekanism:basic_control_circuit', 'immersiveengineering:circuit_board', 'superpackutils:crystallized_slime', 10),
+    event.recipes.mekanism.metallurgic_infusing('mekanism:basic_control_circuit', 'immersiveengineering:circuit_board', 'superpackutils:slime_crystal', 10),
 
     //Advanced Circuit
     event.remove({output: 'mekanism:advanced_control_circuit'})

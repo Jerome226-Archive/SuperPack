@@ -185,16 +185,15 @@ events.listen('recipes', function (event) {
     }),
 
     //Create Integrated Circuit
-    event.remove({output: 'superpackutils:integrated_circuit'})
     event.recipes.create.mechanical_crafting('superpackutils:integrated_circuit', [
         '  L  ',
         'ZCECZ',
         ' BBB '
     ], {
-        L: '#forge:plates/lapis_lazuli',
-        B: '#forge:plates/brass',
+        L: 'thermal:lead_plate',
+        B: 'create:brass_sheet',
         C: 'youmatter:compute_module',
-        Z: '#forge:ingots/zinc',
+        Z: 'create:zinc_ingot',
         E: 'create:electron_tube'
     }),
 

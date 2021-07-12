@@ -743,16 +743,42 @@ events.listen('recipes', function (event) {
     event.recipes.mekanism.metallurgic_infusing('superpackutils:refined_glowstone_dust', 'minecraft:glowstone_dust', 'mekanism:diamond', 10),
 
     //Crystallized Slime
-    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:earth_slime_crystal"}},"output":{"infuse_type":"superpackutils:crystallized_slime","amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:earth_slime_crystal"}},"output":{"infuse_type":"superpackutils:slime_crystal","amount":10}})
 
     //Crystallized Ichor
-    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:ichor_slime_crystal"}},"output":{"infuse_type":"superpackutils:crystallized_ichor","amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:ichor_slime_crystal"}},"output":{"infuse_type":"superpackutils:ichor_crystal","amount":10}})
 
     //Crystallized Skyslime
-    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:sky_slime_crystal"}},"output":{"infuse_type":"superpackutils:crystallized_skyslime","amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:sky_slime_crystal"}},"output":{"infuse_type":"superpackutils:skyslime_crystal","amount":10}})
 
     //Crystallized Enderslime
-    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:ender_slime_crystal"}},"output":{"infuse_type":"superpackutils:crystallized_enderslime","amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:ender_slime_crystal"}},"output":{"infuse_type":"superpackutils:enderslime_crystal","amount":10}})
+
+    //Resonating Coil
+    event.custom({
+      "type": "custommachinery:custom_machine",
+      "machine": "custommachinery:resonator",
+      "time": 200,
+      "requirements": [
+        {
+          "type": "custommachinery:item",
+          "item": "minecraft:redstone",
+          "amount": 1,
+          "mode": "input"
+        },
+        {
+          "type": "custommachinery:energy_per_tick",
+          "amount": 100,
+          "mode": "input"
+        },
+        {
+          "type": "custommachinery:item",
+          "item": "superpackutils:resonating_coil",
+          "amount": 1,
+          "mode": "output"
+        }
+      ]
+    })
 
     //Mixed Alloy Ingot
     event.shaped('superpackutils:mixed_alloy_ingot', ['III', 'NNN', 'CCC'], {

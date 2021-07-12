@@ -417,7 +417,7 @@ onEvent('recipes', event => {
   })
 
   //Tiny Dust
-  event.shapeless(item.of(tinyDustItem, 9), [dustItem])
+  event.shapeless(item.of(tinyDustItem, 4), [dustItem])
 
   }
   //Manual Recipe
