@@ -115,8 +115,8 @@ events.listen('fluid.tags', function (event) {
     event.get('minecraft:water').remove('betterportals:portal_fluid_flowing')
     event.get('minecraft:water').remove('exnihilosequentia:sea_water')
     event.get('minecraft:water').remove('exnihilosequentia:sea_water_flow')
-    event.get('minecraft:water').remove('factoriores:sulfuric_acid')
-    event.get('minecraft:water').remove('factoriores:flowing_sulfuric_acid')
+    //event.get('minecraft:water').remove('factoriores:sulfuric_acid')
+    //event.get('minecraft:water').remove('factoriores:flowing_sulfuric_acid')
 
     event.get('forge:ethanol').remove('pneumaticcraft:ethanol')
 

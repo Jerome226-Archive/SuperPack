@@ -174,10 +174,10 @@ onEvent('jei.hide.items', event => {
         'immersiveengineering:dust_sulfur',
         'mekanism:dust_sulfur',
         'eidolon:sulfur',
-        'factoriores:sulfur_dust',
+        //'factoriores:sulfur_dust',
 
         //Sulfur Block
-        'factoriores:sulfur_block',
+        //'factoriores:sulfur_block',
 
         //Sawdust
         'immersiveengineering:dust_wood',
