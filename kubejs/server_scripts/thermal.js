@@ -29,6 +29,90 @@ events.listen('recipes', function (event) {
     event.remove({output: 'thermal:obsidian_glass'})
     event.recipes.create.mixing(Item.of('thermal:obsidian_glass', 2), ['thermal:quartz_dust', 'minecraft:obsidian', '#forge:sand'])
 
+    //Blizz Rod
+    event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "tag": "tconstruct:casts/multi_use/rod"
+      },
+      "fluid": {
+        "name": "superpackutils:molten_blizz",
+        "amount": 100
+      },
+      "result": "thermal:blizz_rod",
+      "cooling_time": 57
+    })
+
+    event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "tag": "tconstruct:casts/single_use/rod"
+      },
+      "cast_consumed": true,
+      "fluid": {
+        "name": "superpackutils:molten_blizz",
+        "amount": 100
+      },
+      "result": "thermal:blizz_rod",
+      "cooling_time": 57
+    })
+
+    //Blitz Rod
+    event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "tag": "tconstruct:casts/multi_use/rod"
+      },
+      "fluid": {
+        "name": "superpackutils:molten_blitz",
+        "amount": 100
+      },
+      "result": "thermal:blitz_rod",
+      "cooling_time": 86
+    })
+
+    event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "tag": "tconstruct:casts/single_use/rod"
+      },
+      "cast_consumed": true,
+      "fluid": {
+        "name": "superpackutils:molten_blitz",
+        "amount": 100
+      },
+      "result": "thermal:blitz_rod",
+      "cooling_time": 86
+    })
+
+    //Basalz Rod
+    event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "tag": "tconstruct:casts/multi_use/rod"
+      },
+      "fluid": {
+        "name": "superpackutils:molten_basalz",
+        "amount": 100
+      },
+      "result": "thermal:basalz_rod",
+      "cooling_time": 134
+    })
+
+    event.custom({
+      "type": "tconstruct:casting_table",
+      "cast": {
+        "tag": "tconstruct:casts/single_use/rod"
+      },
+      "cast_consumed": true,
+      "fluid": {
+        "name": "superpackutils:molten_basalz",
+        "amount": 100
+      },
+      "result": "thermal:basalz_rod",
+      "cooling_time": 134
+    })
+
     //Signalum Glass
     event.remove({output: 'thermal:signalum_glass'})
     event.custom({

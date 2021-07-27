@@ -1,9 +1,9 @@
 {
-  "name": "Condenser",
+  "name": "Polarizer",
   "appearance": {
     "lightmode": "running",
     "lightlevel": 7,
-    "model": "custommachinery:machine/condenser"
+    "model": "custommachinery:machine/polarizer"
   },
   "components": [
     {
@@ -13,8 +13,7 @@
     {
       "mode": "input",
       "id": "input1",
-      "capacity": 10000,
-      "type": "custommachinery:fluid"
+      "type": "custommachinery:item"
     },
     {
       "mode": "input",
@@ -37,8 +36,7 @@
     {
       "mode": "output",
       "id": "output1",
-      "capacity": 10000,
-      "type": "custommachinery:fluid"
+      "type": "custommachinery:item"
     },
     {
     	"type": "custommachinery:redstone",
@@ -60,8 +58,8 @@
     {
       "id": "input1",
       "x": 87,
-      "y": 25,
-      "type": "custommachinery:fluid"
+      "y": 30,
+      "type": "custommachinery:slot"
     },
     {
       "x": 229,
@@ -71,8 +69,8 @@
     {
       "id": "output1",
       "x": 149,
-      "y": 25,
-      "type": "custommachinery:fluid"
+      "y": 30,
+      "type": "custommachinery:slot"
     },
     {
       "id": "upgrade1",
@@ -94,7 +92,7 @@
     },
     {
       "x": 116,
-      "y": 40,
+      "y": 30,
       "type": "custommachinery:progress"
     },
     {
@@ -103,7 +101,7 @@
       "type": "custommachinery:status"
     },
     {
-      "text": "Condenser",
+      "text": "Polarizer",
       "x": 45,
       "y": 5,
       "type": "custommachinery:text"

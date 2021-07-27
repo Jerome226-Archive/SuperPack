@@ -197,6 +197,105 @@ events.listen('recipes', function (event) {
         E: 'create:electron_tube'
     }),
 
+    //Precision Mechanism
+    event.remove({output: 'create:sequenced_assembly/precision_mechanism'})
+    event.custom({
+        "type": "create:sequenced_assembly",
+        "ingredient": {
+          "tag": "forge:plates/gold"
+        },
+        "transitionalItem": {
+          "item": "create:incomplete_precision_mechanism"
+        },
+        "sequence": [
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              {
+                "item": "create:incomplete_precision_mechanism"
+              },
+              {
+                "item": "create:cogwheel"
+              }
+            ],
+            "results": [
+              {
+                "item": "create:incomplete_precision_mechanism"
+              }
+            ]
+          },
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              {
+                "item": "create:incomplete_precision_mechanism"
+              },
+              {
+                "item": "create:large_cogwheel"
+              }
+            ],
+            "results": [
+              {
+                "item": "create:incomplete_precision_mechanism"
+              }
+            ]
+          },
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              {
+                "item": "create:incomplete_precision_mechanism"
+              },
+              {
+                "tag": "forge:nuggets/iron"
+              }
+            ],
+            "results": [
+              {
+                "item": "create:incomplete_precision_mechanism"
+              }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "item": "create:precision_mechanism",
+            "chance": 120.0
+          },
+          {
+            "item": "create:golden_sheet",
+            "chance": 8.0
+          },
+          {
+            "item": "create:andesite_alloy",
+            "chance": 8.0
+          },
+          {
+            "item": "create:cogwheel",
+            "chance": 5.0
+          },
+          {
+            "item": "create:shaft",
+            "chance": 2.0
+          },
+          {
+            "item": "create:crushed_gold_ore",
+            "chance": 2.0
+          },
+          {
+            "item": "minecraft:gold_nugget",
+            "chance": 2.0
+          },
+          {
+            "item": "minecraft:iron_ingot"
+          },
+          {
+            "item": "minecraft:clock"
+          }
+        ],
+        "loops": 0
+    })
+
     //White Sail
     event.remove({output: 'create:white_sail'})
     event.shaped(Item.of('create:white_sail', 8), ['PPP', 'PCP', 'PPP'], {

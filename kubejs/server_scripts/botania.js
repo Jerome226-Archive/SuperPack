@@ -371,6 +371,9 @@ events.listen('recipes', function (event) {
             {
                 "item": "superpackutils:ender_pearl_nugget"
             },
+            {
+              "item": "botania:terrasteel_nugget"
+          },
           {
             "item": "botania:quartz_mana"
           }

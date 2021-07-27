@@ -287,6 +287,7 @@ onEvent('jei.hide.items', event => {
         'mekanism:ingot_lead',
         'exnihilosequentia:ingot_lead',
         'eidolon:lead_ingot',
+        'voluminousenergy:lead_ingot',
 
         //Lead Dust
         'immersiveengineering:dust_lead',
@@ -304,6 +305,7 @@ onEvent('jei.hide.items', event => {
         'immersiveengineering:ingot_silver',
         'iceandfire:silver_ingot',
         'exnihilosequentia:ingot_silver',
+        'voluminousenergy:silver_ingot',
 
         //Silver Dust
         'immersiveengineering:dust_silver',
@@ -341,6 +343,7 @@ onEvent('jei.hide.items', event => {
         //Steel Ingot
         'immersiveengineering:ingot_steel',
         'libvulpes:ingotsteel',
+        'voluminousenergy:steel_ingot',
 
         //Steel Nugget
         'immersiveengineering:nugget_steel',
@@ -392,12 +395,16 @@ onEvent('jei.hide.items', event => {
         //Bronze Nugget
         'mekanism:nugget_bronze',
 
+        //Titanium Ingot
+        'voluminousenergy:titanium_ingot',
+
         //Aluminum Dust
         'libvulpes:dustaluminum',
 
         //Aluminum Ingot
         'libvulpes:ingotaluminum',
         'exnihilosequentia:ingot_aluminum',
+        'voluminousenergy:aluminum_ingot',
         
         //Aluminum Nugget
         'libvulpes:nuggetaluminum',

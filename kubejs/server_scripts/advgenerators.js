@@ -12,4 +12,12 @@ events.listen('recipes', function (event) {
         T: 'thermal:rf_coil'
     })
 
+    //Redstone Wire
+    event.remove({output: 'advgenerators:iron_wiring'})
+    event.shaped('advgenerators:iron_wiring', [' AL', 'ASA', 'LA '], {
+        A: 'superpackutils:resonating_coil',
+        S: 'immersiveengineering:stick_iron',
+        L: 'minecraft:stick'
+    })
+
 });

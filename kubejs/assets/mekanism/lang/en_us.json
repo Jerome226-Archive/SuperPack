@@ -1,3 +1,116 @@
 {
+	"block.mekanism.ultimate_smelting_factory": "\u00A76Inductive Smelting Factory",
+	"block.mekanism.basic_smelting_factory": "\u00A7aBasic Smelting Factory",
+	"block.mekanism.advanced_smelting_factory": "\u00A7cAdvanced Smelting Factory",
+	"block.mekanism.elite_smelting_factory": "\u00A73Elite Smelting Factory",
+	"container.mekanism.ultimate_smelting_factory": "Inductive Smelting Factory",
+
+	"block.mekanism.ultimate_enriching_factory": "\u00A76Inductive Enriching Factory",
+	"block.mekanism.basic_enriching_factory": "\u00A7aBasic Enriching Factory",
+	"block.mekanism.advanced_enriching_factory": "\u00A7cAdvanced Enriching Factory",
+	"block.mekanism.elite_enriching_factory": "\u00A73Elite Enriching Factory",
+	"container.mekanism.ultimate_enriching_factory": "Inductive Enriching Factory",
+
+	"block.mekanism.ultimate_crushing_factory": "\u00A76Inductive Crushing Factory",
+	"block.mekanism.basic_crushing_factory": "\u00A7aBasic Crushing Factory",
+	"block.mekanism.advanced_crushing_factory": "\u00A7cAdvanced Crushing Factory",
+	"block.mekanism.elite_crushing_factory": "\u00A73Elite Crushing Factory",
+	"container.mekanism.ultimate_crushing_factory": "Inductive Crushing Factory",
+
+	"block.mekanism.ultimate_compressing_factory": "\u00A76Inductive Compressing Factory",
+	"block.mekanism.basic_compressing_factory": "\u00A7aBasic Compressing Factory",
+	"block.mekanism.advanced_compressing_factory": "\u00A7cAdvanced Compressing Factory",
+	"block.mekanism.elite_compressing_factory": "\u00A73Elite Compressing Factory",
+	"container.mekanism.ultimate_compressing_factory": "Inductive Compressing Factory",
+
+	"block.mekanism.ultimate_combining_factory": "\u00A76Inductive Combining Factory",
+	"block.mekanism.basic_combining_factory": "\u00A7aBasic Combining Factory",
+	"block.mekanism.advanced_combining_factory": "\u00A7cAdvanced Combining Factory",
+	"block.mekanism.elite_combining_factory": "\u00A73Elite Combining Factory",
+	"container.mekanism.ultimate_combining_factory": "Inductive Combining Factory",
+
+	"block.mekanism.ultimate_purifying_factory": "\u00A76Inductive Purifying Factory",
+	"block.mekanism.basic_purifying_factory": "\u00A7aBasic Purifying Factory",
+	"block.mekanism.advanced_purifying_factory": "\u00A7cAdvanced Purifying Factory",
+	"block.mekanism.elite_purifying_factory": "\u00A73Elite Purifying Factory",
+	"container.mekanism.ultimate_purifying_factory": "Inductive Purifying Factory",
+
+	"block.mekanism.ultimate_injecting_factory": "\u00A76Inductive Injecting Factory",
+	"block.mekanism.basic_injecting_factory": "\u00A7aBasic Injecting Factory",
+	"block.mekanism.advanced_injecting_factory": "\u00A7cAdvanced Injecting Factory",
+	"block.mekanism.elite_injecting_factory": "\u00A73Elite Injecting Factory",
+	"container.mekanism.ultimate_injecting_factory": "Inductive Injecting Factory",
+
+	"block.mekanism.ultimate_infusing_factory": "\u00A76Inductive Infusing Factory",
+	"block.mekanism.basic_infusing_factory": "\u00A7aBasic Infusing Factory",
+	"block.mekanism.advanced_infusing_factory": "\u00A7cAdvanced Infusing Factory",
+	"block.mekanism.elite_infusing_factory": "\u00A73Elite Infusing Factory",
+	"container.mekanism.ultimate_infusing_factory": "Inductive Infusing Factory",
+
+	"block.mekanism.ultimate_sawing_factory": "\u00A76Inductive Sawing Factory",
+	"block.mekanism.basic_sawing_factory": "\u00A7aBasic Sawing Factory",
+	"block.mekanism.advanced_sawing_factory": "\u00A7cAdvanced Sawing Factory",
+	"block.mekanism.elite_sawing_factory": "\u00A73Elite Sawing Factory",
+	"container.mekanism.ultimate_sawing_factory": "Inductive Sawing Factory",
+
+	"block.mekanism.ultimate_induction_provider": "\u00A76Inductive Induction Provider",
+	"block.mekanism.basic_induction_provider": "\u00A7aBasic Induction Provider",
+	"block.mekanism.advanced_induction_provider": "\u00A7cAdvanced Induction Provider",
+	"block.mekanism.elite_induction_provider": "\u00A73Elite Induction Provider",
+
+	"block.mekanism.ultimate_induction_cell": "\u00A76Inductive Induction Cell",
+	"block.mekanism.basic_induction_cell": "\u00A7aBasic Induction Cell",
+	"block.mekanism.advanced_induction_cell": "\u00A7cAdvanced Induction Cell",
+	"block.mekanism.elite_induction_cell": "\u00A73Elite Induction Cell",
+
+	"block.mekanism.ultimate_fluid_tank": "\u00A76Inductive Fluid Tank",
+	"block.mekanism.basic_fluid_tank": "\u00A7aBasic Fluid Tank",
+	"block.mekanism.advanced_fluid_tank": "\u00A7cAdvanced Fluid Tank",
+	"container.mekanism.ultimate_fluid_tank": "Inductive Fluid Tank",
+	"block.mekanism.elite_fluid_tank": "\u00A73Elite Fluid Tank",
+
+	"block.mekanism.ultimate_bin": "\u00A76Inductive Bin",
+	"block.mekanism.basic_bin": "\u00A7aBasic Bin",
+	"block.mekanism.advanced_bin": "\u00A7cAdvanced Bin",
+	"container.mekanism.ultimate_bin": "Inductive Bin",
+	"block.mekanism.elite_bin": "\u00A73Elite Bin",
+
+	"block.mekanism.ultimate_energy_cube": "\u00A76Inductive Energy Cube",
+	"block.mekanism.basic_energy_cube": "\u00A7aBasic Energy Cube",
+	"block.mekanism.advanced_energy_cube": "\u00A7cAdvanced Energy Cube",
+	"container.mekanism.ultimate_energy_cube": "Inductive Energy Cube",
+	"block.mekanism.elite_energy_cube": "\u00A73Elite Energy Cube",
+
+	"block.mekanism.ultimate_chemical_tank": "\u00A76Inductive Chemical Tank",
+	"block.mekanism.basic_chemical_tank": "\u00A7aBasic Chemical Tank",
+	"block.mekanism.advanced_chemical_tank": "\u00A7cAdvanced Chemical Tank",
+	"container.mekanism.ultimate_chemical_tank": "Inductive Chemical Tank",
+	"block.mekanism.elite_chemical_tank": "\u00A73Elite Chemical Tank",
+
+	"block.mekanism.ultimate_universal_cable": "\u00A76Inductive Universal Cable",
+	"block.mekanism.advanced_universal_cable": "\u00A7cAdvanced Universal Cable",
+	"block.mekanism.basic_universal_cable": "\u00A7aBasic Universal Cable",
+	"block.mekanism.elite_universal_cable": "\u00A73Elite Universal Cable",
+
+	"block.mekanism.ultimate_pressurized_tube": "\u00A76Inductive Pressurized Tube",
+	"block.mekanism.advanced_pressurized_tube": "\u00A7cAdvanced Pressurized Tube",
+	"block.mekanism.basic_pressurized_tube": "\u00A7aBasic Pressurized Tube",
+	"block.mekanism.elite_pressurized_tube": "\u00A73Elite Pressurized Tube",
+
+	"block.mekanism.ultimate_thermodynamic_conductor": "\u00A76Inductive Thermodynamic Conductor",
+	"block.mekanism.advanced_thermodynamic_conductor": "\u00A7cAdvanced Thermodynamic Conductor",
+	"block.mekanism.basic_thermodynamic_conductor": "\u00A7aBasic Thermodynamic Conductor",
+	"block.mekanism.elite_thermodynamic_conductor": "\u00A73Elite Thermodynamic Conductor",
+
+	"item.mekanism.ultimate_tier_installer": "\u00A76Inductive Tier Installer",
+	"item.mekanism.basic_tier_installer": "\u00A7aBasic Tier Installer",
+	"item.mekanism.advanced_tier_installer": "\u00A7cAdvanced Tier Installer",
+	"item.mekanism.elite_tier_installer": "\u00A73Elite Tier Installer",
+
+	"item.mekanism.ultimate_control_circuit": "\u00A75Ultimate Control Circuit",
+	"item.mekanism.elite_control_circuit": "\u00A73Elite Control Circuit",
+	"item.mekanism.advanced_control_circuit": "\u00A7cAdvanced Control Circuit",
+	"item.mekanism.basic_control_circuit": "\u00A7aBasic Control Circuit",
+
 	"block.mekanism.thermal_evaporation_block": "Thermal Evaporation Casing"
 }

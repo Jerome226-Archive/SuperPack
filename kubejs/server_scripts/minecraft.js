@@ -84,7 +84,7 @@ events.listen('recipes', function (event) {
             "fluid": "create:potion",
             "nbt": {
               "Bottle": "REGULAR",
-              "Potion": "minecraft:fire_resistance"
+              "Potion": "minecraft:harming"
             },
             "amount": 25
           }

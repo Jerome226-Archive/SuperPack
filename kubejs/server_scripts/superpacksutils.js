@@ -29,27 +29,12 @@ events.listen('recipes', function (event) {
 
     event.recipes.mekanism.enriching('superpackutils:abs_sheet', Item.of('superpackutils:abs_pellet', 3))
 
-    //Napalm
-    event.custom({
-      "type": "immersiveengineering:mixer",
-      "inputs": [
-        {
-          "count": 3,
-          "base_ingredient": {
-            "item": "superpackutils:polystyrene_bar"
-          }
-        }
-      ],
-      "result": {
-        "fluid": "superpackutils:napalm_b",
-        "amount": 500
-      },
-      "fluid": {
-        "tag": "forge:ho_gasoline",
-        "amount": 500
-      },
-      "energy": 10000
-    })
+    //PVC Sheet
+    event.shaped('superpackutils:pvc_sheet', ['AAA', 'A A', 'AAA'], {
+      A: 'superpackutils:pvc_pellet'
+    }),
+
+    event.recipes.mekanism.enriching('superpackutils:pvc_sheet', Item.of('superpackutils:pvc_pellet', 3))
 
     //Propene
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:propene"},"gasOutput":{"gas":"superpackutils:propene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:propene"},"fluidOutput":{"fluid":"superpackutils:propene","amount":1}})
@@ -122,6 +107,21 @@ events.listen('recipes', function (event) {
 
     //Nitrous Oxide
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:nitrous_oxide"},"gasOutput":{"gas":"superpackutils:nitrous_oxide","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:nitrous_oxide"},"fluidOutput":{"fluid":"superpackutils:nitrous_oxide","amount":1}})
+
+    //Plastic Waste
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:plastic_waste"},"gasOutput":{"gas":"superpackutils:plastic_waste","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:plastic_waste"},"fluidOutput":{"fluid":"superpackutils:plastic_waste","amount":1}})
+
+    //Hydrogen Cyanide
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:hydrogen_cyanide"},"gasOutput":{"gas":"superpackutils:hydrogen_cyanide","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:hydrogen_cyanide"},"fluidOutput":{"fluid":"superpackutils:hydrogen_cyanide","amount":1}})
+
+    //Diborane
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:diborane"},"gasOutput":{"gas":"superpackutils:diborane","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:diborane"},"fluidOutput":{"fluid":"superpackutils:diborane","amount":1}})
+    
+    //Boric Acid
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:boric_acid"},"gasOutput":{"gas":"superpackutils:boric_acid","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:boric_acid"},"fluidOutput":{"fluid":"superpackutils:boric_acid","amount":1}})
+
+    //Acetylene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:acetylene"},"gasOutput":{"gas":"superpackutils:acetylene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:acetylene"},"fluidOutput":{"fluid":"superpackutils:acetylene","amount":1}})
 
     //Dimensional Plasma
     event.custom({
@@ -363,6 +363,46 @@ events.listen('recipes', function (event) {
         ]
     })
 
+      //Copper-Redstone Ingot
+      event.remove({id: 'extendedcrafting:redstone_ingot'})
+      event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "metallurgic_fabricator",
+        "controllerId": "metallurgic_fabricator",
+        "ticks": 100,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 5000
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:copper_ingot",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "minecraft:redstone",
+                    "count": 1
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "extendedcrafting:redstone_ingot",
+                    "count": 1
+                }
+            }
+        ]
+    })
+    
     //Mythril Ingot
     event.custom({
         "type": "masterfulmachinery:machine_process",
@@ -655,7 +695,7 @@ events.listen('recipes', function (event) {
 
     //Mixer Casing
     event.shaped(Item.of('superpackutils:mixer_casing', 4), ['BCB', 'AIA', 'BCB'], {
-      C: 'superpackutils:compressed_steel_ingot',
+      C: 'botania:manasteel_ingot',
       A: 'superpackutils:reinforced_capacitor',
       B: '#forge:sheetmetals/steel',
       I: 'refinedstorage:machine_casing'
@@ -748,6 +788,9 @@ events.listen('recipes', function (event) {
     //Crystallized Ichor
     event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:ichor_slime_crystal"}},"output":{"infuse_type":"superpackutils:ichor_crystal","amount":10}})
 
+    //Crystallized Blood
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"superpackutils:blood_crystal"}},"output":{"infuse_type":"superpackutils:blood_crystal","amount":10}})
+
     //Crystallized Skyslime
     event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:sky_slime_crystal"}},"output":{"infuse_type":"superpackutils:skyslime_crystal","amount":10}})
 
@@ -762,7 +805,7 @@ events.listen('recipes', function (event) {
       "requirements": [
         {
           "type": "custommachinery:item",
-          "item": "minecraft:redstone",
+          "item": "superpackutils:redstone_wire",
           "amount": 1,
           "mode": "input"
         },
@@ -776,6 +819,35 @@ events.listen('recipes', function (event) {
           "item": "superpackutils:resonating_coil",
           "amount": 1,
           "mode": "output"
+        }
+      ]
+    })
+
+    //Fumed Silica
+    event.custom({"type":"mekanism:evaporating","input":{"amount":10,"tag":"forge:silicon_tetrachloride"},"output":{"fluid":"superpackutils:fumed_silica","amount":1}})
+
+    //Distiller
+    event.custom({
+      "type": "custommachinery:custom_machine",
+      "machine": "custommachinery:distiller",
+      "time": 30,
+      "requirements": [
+        {
+          "type": "custommachinery:fluid",
+          "tag": "minecraft:water",
+          "amount": 10,
+          "mode": "input"
+        },
+        {
+          "type": "custommachinery:energy_per_tick",
+          "amount": 100,
+          "mode": "input"
+        },
+        {
+          "type": "custommachinery:fluid",
+          "fluid": "superpackutils:distilled_water",
+          "amount": 10,
+          "mode": "input"
         }
       ]
     })
@@ -892,7 +964,25 @@ events.listen('recipes', function (event) {
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:benzene"},"rightInput":{"amount":1,"gas":"mekanism:ethene"},"output":{"gas":"superpackutils:ethyl_benzene","amount":1}})
 
     //Acrylonitrile
-    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:propylene"},"rightInput":{"amount":1,"gas":"superpackutils:ammonia"},"output":{"gas":"superpackutils:acrylonitrile","amount":1}})
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:hydrogen_cyanide"},"rightInput":{"amount":1,"gas":"superpackutils:acetylene"},"output":{"gas":"superpackutils:acrylonitrile","amount":1}})
+
+    //Silicon Tetrachloride
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:chlorine"},"rightInput":{"amount":1,"gas":"superpackutils:silicon_dioxide"},"output":{"gas":"superpackutils:silicon_tetrachlorides","amount":1}})
+
+    //Vynil Chloride
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:ethene"},"rightInput":{"amount":2,"gas":"mekanism:chlorine"},"output":{"gas":"superpackutils:vynil_chloride","amount":1}})
+
+    //Polyvynil Chloride
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:vynil_chloride"},"rightInput":{"amount":1,"gas":"mekanism:oxygen"},"output":{"gas":"superpackutils:polyvynil_chloride","amount":1}})
+
+    //Polyethylene
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:ethene"},"rightInput":{"amount":1,"gas":"mekanism:oxygen"},"output":{"gas":"superpackutils:polyethene","amount":1}})
+
+    //Cumene
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"supepackutils:benzene"},"rightInput":{"amount":1,"gas":"superpackutils:propene"},"output":{"gas":"superpackutils:cumene","amount":1}})
+
+    //Chloroform
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"supepackutils:acetone"},"rightInput":{"amount":1,"gas":"superpackutils:sodium_hypochlorite"},"output":{"gas":"superpackutils:chloroform","amount":1}})
 
     //Ammonia
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:hydrogen"},"rightInput":{"amount":1,"gas":"superpackutils:nitrogen"},"output":{"gas":"superpackutils:ammonia","amount":1}})
@@ -1183,7 +1273,7 @@ events.listen('recipes', function (event) {
     })
     
     //Superheated Bronze Ingot
-    event.recipes.create.compacting('superpackutils:superheated_bronze_ingot', ['#forge:ingots/bronze', fluid.of('tconstruct:magma_cream', 50)]).superheated(),
+    event.recipes.create.compacting('superpackutils:superheated_bronze_ingot', ['#forge:ingots/bronze', fluid.of('tconstruct:magma', 50)]).superheated(),
 
     //Weird Fungu
     event.recipes.create.filling('superpackutils:weird_fungu', ['minecraft:crimson_fungus', fluid.of('mekanismgenerators:bioethanol', 1000)]),

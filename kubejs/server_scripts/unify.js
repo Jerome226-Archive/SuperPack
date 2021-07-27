@@ -452,8 +452,8 @@ onEvent('recipes', event => {
             {
                 "type": "masterfulmachinery:fluids",
                 "data":{
-                    "fluid": "minecraft:water",
-                    "amount": 100
+                    "fluid": "superpackutils:distilled_water",
+                    "amount": 50
                 }
             }
         ],
@@ -880,6 +880,9 @@ onEvent('recipes', event => {
 
   }
 
+  //Manual Recipe
+  event.recipes.immersiveengineering.metal_press('superpackutils:redstone_wire', 'minecraft:redstone', 'immersiveengineering:mold_wire')
+
   //-----------------------------------------------------
   //unifyOre Coin
   //-----------------------------------------------------
@@ -956,6 +959,7 @@ onEvent('recipes', event => {
   unifyOre(false, 'netherite', null, 'minecraft:netherite_ingot', 'mekanism:dust_netherite', null, 'minecraft:netherite_block', 'tconstruct:netherite_nugget', null, null, null, null, null, null, 'tconstruct:molten_netherite', 221, 74, 25, 0, 0, null, 2, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
   unifyOre(false, 'dark_steel', null, 'superpackutils:dark_steel_ingot', null, null, 'superpackutils:dark_steel_block', 'superpackutils:dark_steel_nugget', null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
   unifyOre(false, 'depleted_dust', null, null, 'superpackutils:depleted_mythril_dust', null, null, null, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, 'superpackutils:tiny_depleted_mythril_dust');
+  unifyOre(false, 'lithium', null, 'superpackutils:lithium_ingot', 'superpackutils:lithium_dust', 'mekanism:dust_lithium', null, null, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, null, null, null, null, null, null, null, null, null, 'superpackutils:tiny_depleted_mythril_dust');
 
   unifyOre(true, 'diamond', 'minecraft:diamond_ore', 'minecraft:diamond', 'thermal:diamond_dust', null, 'minecraft:diamond_block', null, null, 'thermal:diamond_gear', null, null, null, null, 'tconstruct:molten_diamond', 237, 79, 0, 158, 0, null, 2, 1, null, null, null, null, null, null, null, null, null, null, null, null, null);
   unifyOre(true, 'coal', 'minecraft:coal_ore', 'minecraft:coal', 'mekanism:dust_coal', null, 'minecraft:coal_block', null, null, null, null, null, null, null, null, 0, 0, 0, 0, 0, null, 2, 1, null, null, null, null, null, null, null, null, null, null, null, null, null);

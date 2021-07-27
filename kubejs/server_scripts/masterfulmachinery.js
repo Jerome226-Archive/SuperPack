@@ -28,6 +28,17 @@ events.listen('recipes', function (event) {
         //Inscriber Energy Input
         event.shapeless('masterfulmachinery:inscriber_basic_port_energy_input', ['superpackutils:inscriber_casing', 'thermal:lead_ingot', 'superpackutils:electrical_platinum_ingot'])
 
+      //Inscriber Advanced Items Input
+      event.shaped('masterfulmachinery:inscriber_advanced_port_items_input', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:inscriber_basic_port_items_input',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
+
+      //Inscriber Advanced Items Output
+      event.shaped('masterfulmachinery:inscriber_advanced_port_items_output', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:inscriber_basic_port_items_output',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
 
     //-----------------------------------------------------
     //Inscriber
@@ -114,6 +125,18 @@ events.listen('recipes', function (event) {
 
         //Metallurgic Fabricator Energy Input
         event.shapeless('masterfulmachinery:metallurgic_fabricator_basic_port_energy_input', ['superpackutils:metallurgic_casing', 'thermal:lead_ingot', 'superpackutils:electrical_platinum_ingot'])
+
+      //Metallurgic Faricator Advanced Items Input
+      event.shaped('masterfulmachinery:metallurgic_fabricator_advanced_port_items_input', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:metallurgic_fabricator_basic_port_items_input',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
+
+      //Metallurgic Faricator Advanced Items Output
+      event.shaped('masterfulmachinery:metallurgic_fabricator_advanced_port_items_output', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:metallurgic_fabricator_basic_port_items_output',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
 
     //-----------------------------------------------------
     //Metallurgic Fabricator
@@ -204,6 +227,17 @@ events.listen('recipes', function (event) {
       //Assembler Fluid Input
       event.shapeless('masterfulmachinery:assembler_basic_port_fluids_input', ['superpackutils:assembler_frame', 'thermal:lead_ingot', 'thermal:tin_ingot'])
 
+      //Assembler Advanced Items Input
+      event.shaped('masterfulmachinery:assembler_advanced_port_items_input', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:assembler_basic_port_items_input',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
+
+      //Assembler Advanced Items Output
+      event.shaped('masterfulmachinery:assembler_advanced_port_items_output', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:assembler_basic_port_items_output',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
 
     //-----------------------------------------------------
     //Assembling Machine
@@ -319,6 +353,18 @@ events.listen('recipes', function (event) {
 
         //Improved Metallurgic Fabricator Pressure Input
         event.shapeless('masterfulmachinery:improved_metallurgic_fabricator_basic_port_pncr_pressure_input', ['superpackutils:improved_metallurgic_casing', 'thermal:lead_ingot', 'pneumaticcraft:ingot_iron_compressed'])
+
+      //Improved Metallurgic Fabricator Advanced Items Input
+      event.shaped('masterfulmachinery:improved_metallurgic_fabricator_advanced_port_items_input', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_input',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
+
+      //Improved Metallurgic Fabricator Advanced Items Output
+      event.shaped('masterfulmachinery:improved_metallurgic_fabricator_advanced_port_items_output', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:improved_metallurgic_fabricator_basic_port_items_output',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
 
     //-----------------------------------------------------
     //Improved Metallurgic Fabricator
@@ -610,6 +656,18 @@ events.listen('recipes', function (event) {
       //Mixer Items Input
       event.shapeless('masterfulmachinery:mixer_basic_port_items_input', ['superpackutils:mixer_casing', 'thermal:lead_ingot'])
 
+      //Mixer Advanced Items Input
+      event.shaped('masterfulmachinery:mixer_advanced_port_items_input', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:mixer_basic_port_items_input',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
+
+      //Mixer Advanced Items Output
+      event.shaped('masterfulmachinery:mixer_advanced_port_items_output', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:mixer_basic_port_items_output',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
+
     //-----------------------------------------------------
     //Alchemical Mixer
     //-----------------------------------------------------
@@ -684,6 +742,114 @@ events.listen('recipes', function (event) {
   })
 
     //-----------------------------------------------------
+    //Pressurized Alloyer
+    //-----------------------------------------------------
+
+    event.custom({
+      "type": "masterfulmachinery:machine_structure",
+      "id": "alloyer",
+      "controllerId": "alloyer",
+      "name": "Pressurized Alloyer",
+      "layout": [
+        [
+          " TBT ",
+          "TAAAT",
+          "AAAAA",
+          "TAAAT",
+          " TAT "
+        ],
+        [
+          " OFO ",
+          "OEEEO",
+          "DEEEG",
+          "OEEEO",
+          " OCO "
+        ],
+        [
+          " TAT ",
+          "TAAAT",
+          "AAAAA",
+          "TAAAT",
+          " TAT "
+        ]
+      ],
+      "legend": {
+        "A": {
+          "block": "superpackutils:alloyer_casing"
+        },
+        "B": {
+          "block": "masterfulmachinery:alloyer_basic_port_energy_input"
+        },
+        "O": {  
+          "block": "thermal:obsidian_glass"
+        },
+        "D": {
+          "tag": "superpack:alloyer/item_input"
+        },
+        "T": {
+          "tag": "superpack:alloyer/optional/item_input"
+        },
+        "E": {
+          "block": "superpackutils:cryotheum"
+        },
+        "F": {
+          "block": "masterfulmachinery:alloyer_basic_port_pncr_pressure_input"
+        },
+        "G": {
+          "tag": "superpack:alloyer/item_output"
+        }
+      }
+    })
+
+    //-----------------------------------------------------
+    //Pressurized Compacter
+    //-----------------------------------------------------
+
+    event.custom({
+      "type": "masterfulmachinery:machine_structure",
+      "id": "compacter",
+      "controllerId": "compacter",
+      "name": "Pressurized Compacter",
+      "layout": [
+        [
+          "ABA",
+          "AAA",
+          "AAA"
+        ],
+        [
+          "AFA",
+          "E G",
+          "ACA"
+        ],
+        [
+          "AAA",
+          "AAA",
+          "AAA"
+        ]
+      ],
+      "legend": {
+        "A": {
+          "block": "superpackutils:compacter_casing"
+        },
+        "B": {
+          "block": "masterfulmachinery:compacter_basic_port_energy_input" 
+        },
+        "P": {
+          "block": "create:mechanical_press"
+        },
+        "E": {
+          "block": "masterfulmachinery:compacter_basic_port_mekanism_gas_input"
+        },
+        "F": {
+          "block": "masterfulmachinery:compacter_basic_port_pncr_pressure_input"
+        },
+        "G": {
+          "block": "masterfulmachinery:compacter_basic_port_fluids_output"
+        }
+      }
+    })
+
+    //-----------------------------------------------------
     //Infuser Recipes
     //-----------------------------------------------------
     
@@ -717,6 +883,18 @@ events.listen('recipes', function (event) {
 
         //Infuser Items Input
         event.shapeless('masterfulmachinery:infuser_basic_port_items_input', ['superpackutils:infuser_casing', 'thermal:lead_ingot'])
+
+      //Infuser Advanced Items Input
+      event.shaped('masterfulmachinery:infuser_advanced_port_items_input', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:infuser_basic_port_items_input',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
+
+      //Infuser Advanced Items Output
+      event.shaped('masterfulmachinery:infuser_advanced_port_items_output', [' I ', 'ICI', ' I '], {
+        C: 'masterfulmachinery:infuser_basic_port_items_output',
+        I: 'extendedcrafting:redstone_ingot'
+      }),
 
     //-----------------------------------------------------
     //Infuser

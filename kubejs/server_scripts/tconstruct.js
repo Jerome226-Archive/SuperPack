@@ -6,6 +6,9 @@ events.listen('recipes', function (event) {
     event.remove({id: 'tconstruct:smeltery/casting/seared/smeltery_controller'})
     event.custom({"type":"immersiveengineering:bottling_machine","result":{"item":"tconstruct:smeltery_controller"},"input":{"item":"tconstruct:seared_heater"},"fluid":{"tag":"tconstruct:molten_constantan","amount":576}})
 
+    //Treated Wood Recipe
+    event.remove({id: 'tconstruct:compat/immersiveengineering/treated_wood'})
+
     //Ichor Slimeball
     event.custom({
         "type": "tconstruct:casting_table",
@@ -164,8 +167,7 @@ events.listen('recipes', function (event) {
     event.remove({id: 'tconstruct:smeltery/casting/blazewood'})
     event.recipes.create.filling('tconstruct:blazewood', ['#minecraft:planks', fluid.of('tconstruct:blazing_blood', 100)])
 
-    //Ichor Crystal
-    event.remove({id: 'minecraft:tools/modifiers/slime_crystal/ichor'})
+    //Blood Crystal
     event.custom({
         "type": "masterfulmachinery:machine_process",
         "structureId": "infuser",
@@ -181,7 +183,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:items",
                 "data":{
-                    "item": "tconstruct:ichor_slime_ball",
+                    "item": "tconstruct:blood_slime_ball",
                     "count": 1
                 }
             },
@@ -230,7 +232,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:fluids",
                 "data":{
-                    "fluid": "tconstruct:blazing_blood",
+                    "fluid": "tconstruct:blood",
                     "amount": 250
                 }
             }
@@ -239,7 +241,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:items",
                 "data":{
-                    "item": "tconstruct:ichor_slime_crystal",
+                    "item": "superpackutils:blood_crystal",
                     "count": 1
                 }
             }
@@ -322,6 +324,88 @@ events.listen('recipes', function (event) {
                 "type": "masterfulmachinery:items",
                 "data":{
                     "item": "tconstruct:sky_slime_crystal",
+                    "count": 1
+                }
+            }
+        ]
+    })
+
+    //Ichor Crystal
+    event.remove({id: 'minecraft:tools/modifiers/slime_crystal/ichor'})
+    event.custom({
+        "type": "masterfulmachinery:machine_process",
+        "structureId": "infuser",
+        "controllerId": "infuser",
+        "ticks": 1000,
+        "inputs": [
+            {
+                "type": "masterfulmachinery:energy",
+                "data":{
+                    "amount": 1000
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "tconstruct:ichor_slime_ball",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:sulfur",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "mythicbotany:alfsteel_ingot",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "mekanism:ingot_refined_glowstone",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "eidolon:fungus_sprouts",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "thermal:rosin",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "superpackutils:superheated_bronze_ingot",
+                    "count": 1
+                }
+            },
+            {
+                "type": "masterfulmachinery:fluids",
+                "data":{
+                    "fluid": "superpackutils:naphtha",
+                    "amount": 250
+                }
+            }
+        ],
+        "outputs":[
+            {
+                "type": "masterfulmachinery:items",
+                "data":{
+                    "item": "tconstruct:ichor_slime_crystal",
                     "count": 1
                 }
             }

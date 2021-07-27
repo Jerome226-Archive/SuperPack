@@ -17,7 +17,7 @@ events.listen('recipes', function (event) {
 
     //Ethylene
     event.remove({id: 'mekanism:reaction/substrate/water_hydrogen'})
-    event.custom({"type":"mekanism:reaction","itemInput":{"amount":2,"ingredient":{"tag":"forge:fuels/bio"}},"fluidInput":{"amount":200,"tag":"forge:ethanol"},"gasInput":{"amount":100,"gas":"mekanism:sulfuric_acid"},"duration":100,"itemOutput":{"item":"mekanism:substrate"},"gasOutput":{"gas":"mekanism:ethene","amount":100}})
+    event.custom({"type":"mekanism:reaction","itemInput":{"amount":2,"ingredient":{"tag":"forge:fuels/bio"}},"fluidInput":{"amount":20,"tag":"forge:ethanol"},"gasInput":{"amount":100,"gas":"mekanism:sulfuric_acid"},"duration":100,"itemOutput":{"item":"mekanism:substrate"},"gasOutput":{"gas":"mekanism:ethene","amount":100}})
 
     //HDPE Rod
     event.remove({id: 'mekanism:hdpe_rod'})
@@ -479,8 +479,8 @@ events.listen('recipes', function (event) {
     event.remove({output: 'mekanism:ultimate_chemical_tank'})
     event.shaped('mekanism:ultimate_chemical_tank', ['CSC', 'EPE', 'CSC'], {
         P: 'mekanism:elite_chemical_tank',
-        C: 'mekanism:enriched_refined_obsidian',
-        S: 'mekanism:alloy_atomic',
+        C: 'mekanism:enriched_gold',
+        S: 'superpackutils:combusting_alloy',
         E: '#forge:ingots/invar'
     }),
 
@@ -515,8 +515,8 @@ events.listen('recipes', function (event) {
     event.remove({output: 'mekanism:ultimate_fluid_tank'})
     event.shaped('mekanism:ultimate_fluid_tank', ['CSC', 'EPE', 'CSC'], {
         P: 'mekanism:elite_fluid_tank',
-        C: 'mekanism:enriched_refined_obsidian',
-        S: 'mekanism:alloy_atomic',
+        C: 'mekanism:enriched_gold',
+        S: 'superpackutils:combusting_alloy',
         E: 'pneumaticcraft:ingot_iron_compressed'
     }),
     
@@ -551,9 +551,47 @@ events.listen('recipes', function (event) {
     event.remove({output: 'mekanism:ultimate_energy_cube'})
     event.shaped('mekanism:ultimate_energy_cube', ['CSC', 'EPE', 'CSC'], {
         P: 'mekanism:elite_energy_cube',
-        C: 'mekanism:enriched_refined_obsidian',
-        S: 'mekanism:alloy_atomic',
+        C: 'mekanism:enriched_gold',
+        S: 'superpackutils:combusting_alloy',
         E: 'mekanism:energy_tablet'
+    }),
+
+    //Ultimate Bin
+    event.remove({output: 'mekanism:ultimate_bin'})
+    event.shaped('mekanism:ultimate_bin', ['PAP', 'CBC', 'PPP'], {
+        P: '#forge:cobblestone',
+        A: 'superpackutils:inductive_control_circuit',
+        B: 'mekanism:elite_bin',
+        C: 'superpackutils:combusting_alloy'
+    }),
+
+    //Ultimate Induction Provider
+    event.remove({output: 'mekanism:ultimate_induction_provider'})
+    event.shaped('mekanism:ultimate_induction_provider', ['ABA', 'BPB', 'ABA'], {
+        P: 'mekanism:ultimate_energy_cube',
+        A: 'superpackutils:inductive_control_circuit',
+        B: 'mekanism:elite_induction_provider'
+    }),
+
+    //Ultimate Universal Cable
+    event.remove({output: 'mekanism:ultimate_universal_cable'})
+    event.shaped(Item.of('mekanism:ultimate_universal_cable', 8), ['CCC', 'CPC', 'CCC'], {
+        P: 'superpackutils:combusting_alloy',
+        C: 'mekanism:elite_universal_cable'
+    }),
+    
+    //Ultimate Pressurized Tube
+    event.remove({output: 'mekanism:ultimate_pressurized_tube'})
+    event.shaped(Item.of('mekanism:ultimate_pressurized_tube', 8), ['CCC', 'CPC', 'CCC'], {
+        P: 'superpackutils:combusting_alloy',
+        C: 'mekanism:elite_pressurized_tube'
+    }),
+
+    //Ultimate Thermodynamic Conductor
+    event.remove({output: 'mekanism:ultimate_thermodynamic_conductor'})
+    event.shaped(Item.of('mekanism:ultimate_thermodynamic_conductor', 8), ['CCC', 'CPC', 'CCC'], {
+        P: 'superpackutils:combusting_alloy',
+        C: 'mekanism:elite_thermodynamic_conductor'
     }),
 
     //Personal Chest
@@ -735,15 +773,18 @@ events.listen('recipes', function (event) {
 
     //Infused Alloy
     event.remove({output: 'mekanism:alloy_infused'})
-    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_infused', 'superpackutils:basic_alloy', 'superpackutils:ichor_crystal', 10),
+    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_infused', 'superpackutils:basic_alloy', 'superpackutils:blood_crystal', 10),
 
     //Reinforced Alloy
     event.remove({output: 'mekanism:alloy_reinforced'})
-    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_reinforced', 'mekanism:alloy_infused', 'superpackutils:skyslime_crystal', 20),
+    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_reinforced', 'mekanism:alloy_infused', 'superpackutils:skyslime_crystal', 10),
+
+    //Combusting Alloy
+    event.recipes.mekanism.metallurgic_infusing('superpackutils:combusting_alloy', 'mekanism:alloy_reinforced', 'superpackutils:ichor_crystal', 10),
 
     //Atomic Alloy
     event.remove({output: 'mekanism:alloy_atomic'})
-    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_atomic', 'mekanism:alloy_reinforced', 'superpackutils:enderslime_crystal', 40),
+    event.recipes.mekanism.metallurgic_infusing('mekanism:alloy_atomic', 'superpackutils:combusting_alloy', 'superpackutils:enderslime_crystal', 10),
 
     //Basic Circuit
     event.remove({id: 'mekanism:control_circuit/basic'})

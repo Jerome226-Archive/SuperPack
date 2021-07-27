@@ -96,6 +96,16 @@ events.listen('block.tags', function (event) {
     event.get('superpack:inscriber/item_output').add('masterfulmachinery:inscriber_basic_port_items_output')
     event.get('superpack:inscriber/item_output').add('masterfulmachinery:inscriber_advanced_port_items_output')
 
+    //Pressurized Alloyer
+    event.get('superpack:alloyer/optional/item_input').add('superpackutils:alloyer_casing')
+    event.get('superpack:alloyer/optional/item_input').add('masterfulmachinery:alloyer_basic_port_items_input')
+
+    event.get('superpack:alloyer/item_input').add('masterfulmachinery:alloyer_basic_port_items_input')
+    event.get('superpack:alloyer/item_input').add('masterfulmachinery:alloyer_advanced_port_items_input')
+
+    event.get('superpack:alloyer/item_output').add('masterfulmachinery:alloyer_basic_port_items_output')
+    event.get('superpack:alloyer/item_output').add('masterfulmachinery:alloyer_advanced_port_items_output')
+
 });
 
 events.listen('fluid.tags', function (event) {

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "custommachinery:block/polarizer_top",
+    "bottom": "custommachinery:block/polarizer_bottom",
+    "side": "custommachinery:block/polarizer_side"
+  }
+}
