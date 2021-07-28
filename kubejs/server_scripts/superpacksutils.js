@@ -536,7 +536,7 @@ events.listen('recipes', function (event) {
             "item": "minecraft:iron_ingot"
           },
           {
-            "item": "superpackutils:refined_redstone_dust"
+            "item": "minecraft:redstone"
           },
         ],
         "pressure": -0.75,
@@ -555,7 +555,7 @@ events.listen('recipes', function (event) {
           "item": "minecraft:iron_ingot"
         },
         {
-          "item": "superpackutils:refined_glowstone_dust"
+          "item": "minecraft:glowstone"
         },
       ],
       "pressure": -0.75,
@@ -574,7 +574,7 @@ events.listen('recipes', function (event) {
         "item": "minecraft:iron_ingot"
       },
       {
-        "item": "mekanism:dust_refined_obsidian"
+        "item": "mekanism:obsidian_dust"
       },
     ],
     "pressure": -0.75,
