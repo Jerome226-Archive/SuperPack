@@ -153,6 +153,21 @@ events.listen('recipes', function (event) {
     //Enriched Oil Carbon
     event.recipes.mekanism.enriching('superpackutils:enriched_petcoke', 'immersivepetroleum:petcoke_dust')
 
+    //Enriched Slime 
+    event.recipes.mekanism.enriching('superpackutils:enriched_slime', 'tconstruct:earth_slime_crystal')
+
+    //Enriched Blood
+    event.recipes.mekanism.enriching('superpackutils:enriched_blood', 'superpackutils:blood_crystal')
+
+    //Enriched Skyslime
+    event.recipes.mekanism.enriching('superpackutils:enriched_skyslime', 'tconstruct:sky_slime_crystal')
+
+    //Enriched Enderslime
+    event.recipes.mekanism.enriching('superpackutils:enriched_enderslime', 'tconstruct:ender_slime_crystal')
+
+    //Enriched Ichor
+    event.recipes.mekanism.enriching('superpackutils:enriched_ichor', 'tconstruct:ichor_slime_crystal')
+
     //Basic Alloy
     event.recipes.mekanism.metallurgic_infusing('superpackutils:basic_alloy', 'superpackutils:rich_slag_alloy', 'superpackutils:petroleum_coke', 160),
 
@@ -784,18 +799,23 @@ events.listen('recipes', function (event) {
 
     //Crystallized Slime
     event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:earth_slime_crystal"}},"output":{"infuse_type":"superpackutils:slime_crystal","amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"superpackutils:enriched_slime"}},"output":{"infuse_type":"superpackutils:slime_crystal","amount":80}})
 
     //Crystallized Ichor
     event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:ichor_slime_crystal"}},"output":{"infuse_type":"superpackutils:ichor_crystal","amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"superpackutils:enriched_ichor"}},"output":{"infuse_type":"superpackutils:ichor_crystal","amount":80}})
 
     //Crystallized Blood
     event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"superpackutils:blood_crystal"}},"output":{"infuse_type":"superpackutils:blood_crystal","amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"superpackutils:enriched_blood"}},"output":{"infuse_type":"superpackutils:blood_crystal","amount":80}})
 
     //Crystallized Skyslime
     event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:sky_slime_crystal"}},"output":{"infuse_type":"superpackutils:skyslime_crystal","amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"superpackutils:enriched_skyslime"}},"output":{"infuse_type":"superpackutils:skyslime_crystal","amount":80}})
 
     //Crystallized Enderslime
     event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"tconstruct:ender_slime_crystal"}},"output":{"infuse_type":"superpackutils:enderslime_crystal","amount":10}})
+    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":"superpackutils:enriched_enderslime"}},"output":{"infuse_type":"superpackutils:enderslime_crystal","amount":80}})
 
     //Resonating Coil
     event.custom({
@@ -953,6 +973,10 @@ events.listen('recipes', function (event) {
     //Polished Mana Quartz
     event.recipes.create.sandpaper_polishing('superpackutils:polished_mana_quartz', 'botania:quartz_mana')
     event.recipes.mekanism.enriching('superpackutils:polished_mana_quartz', 'botania:quartz_mana')
+
+    //Polished Certus Quartz
+    event.recipes.create.sandpaper_polishing('superpackutils:polished_certus_quartz', 'superpackutils:certus_quartz')
+    event.recipes.mekanism.enriching('superpackutils:polished_certus_quartz', 'superpackutils:certus_quartz')
 
     //Silicon Dioxide Oxiding
     event.custom({"type":"mekanism:oxidizing","input":{"ingredient":{"tag":"forge:dusts/quartz"}},"output":{"gas":"superpackutils:silicon_dioxide","amount":100}})

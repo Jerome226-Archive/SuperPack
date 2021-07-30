@@ -5,9 +5,6 @@ events.listen('item.tags', function (event) {
     event.get('forge:slag').remove('immersiveengineering:slag')
     event.get('forge:gears/compressed_iron').add('pneumaticcraft:compressed_iron_gear')
 
-    event.get('forge:ingots/iron').remove('dustrial_decor:rusty_iron_ingot')
-    event.get('forge:nuggets/iron').remove('dustrial_decor:rusty_iron_nugget')
-
     event.get('forge:gears/steel').remove('libvulpes:gearsteel')
 
     event.get('forge:ingots/starmetal').add('astralsorcery:starmetal_ingot')

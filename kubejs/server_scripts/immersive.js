@@ -204,10 +204,10 @@ events.listen('recipes', function (event) {
     //IE Light Engineering Block
     event.remove({output: 'immersiveengineering:light_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:light_engineering', 4), ['SCS', 'IBI', 'SCS'], {
-        S: '#forge:sheetmetals/aluminum',
+        S: 'immersiveengineering:ingot_aluminum',
         C: 'immersiveengineering:component_iron',
         B: 'create:andesite_casing',
-        I: '#forge:ingots/electrum'
+        I: 'immersiveengineering:ingot_aluminum'
     }),
 
     //Generator
@@ -221,19 +221,19 @@ events.listen('recipes', function (event) {
     //IE Heavy Engineering Block
     event.remove({output: 'immersiveengineering:heavy_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 2), ['SCS', 'IBI', 'SCS'], {
-        S: 'superpackutils:compressed_steel_ingot',
+        S: 'superpackutils:bioslag_ingot',
         C: 'superpackutils:reinforced_capacitor',
         B: 'create:brass_casing',
-        I: 'immersiveengineering:slag'
+        I: 'superpackutils:heavy_mechanism'
     }),
 
     //IE Redstone Engineering Block
     event.remove({output: 'immersiveengineering:rs_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:rs_engineering', 2), ['SCS', 'IBI', 'SCS'], {
-        S: '#forge:sheetmetals/constantan',
+        S: 'thermal:constantan_ingot',
         C: 'thermal:redstone_servo',
         B: 'create:copper_casing',
-        I: '#forge:ingots/constantan'
+        I: 'superpackutils:redstone_mechanism'
     }),
 
     //Thermoelectric Generator
