@@ -4,14 +4,6 @@
 
 	#World Gen Settings
 	[Settings."World Gen"]
-		rocks = true
-		twigs = true
-		fallenLeaves = true
-		bones = true
-		charredBones = true
-		iceChunks = true
-		pinecones = true
-		seashells = true
 		seaOats = true
 		cattails = true
 		barkMushrooms = true
@@ -24,17 +16,47 @@
 		moreSeagrass = true
 		#Denser river grass
 		moreGrassInRivers = true
-		# % chance of groundcover placement
-		#Range: 0 ~ 100
-		groundcoverChance = 100
+		shortGrass = true
+		beachGrass = true
 
-	#Mob Spawn Settings
-	[Settings."Mob Spawns"]
-		#Tropical fish in jungles
-		jungleTropicalFish = true
+		[Settings."World Gen".Groundcover]
+			rocks = true
+			twigs = true
+			fallenLeaves = true
+			bones = true
+			charredBones = true
+			iceChunks = true
+			pinecones = true
+			seashells = true
+			# % chance of groundcover placement
+			#Range: 0 ~ 100
+			groundcoverChance = 100
+			#Groundcover Biome Blacklist, example: ["minecraft:plains", "minecraft:beach"]
+			groundcoverBlacklist = []
 
 	#Biome Settings
 	[Settings.Biomes]
 		overgrownSpires = true
 		verdantSands = true
+
+	[Settings."Mob Settings"]
+
+		[Settings."Mob Settings"."Mob Toggles"]
+			"Enable Flies" = false
+			"Enable Fireflies" = true
+			"Enable Starfish" = true
+			"Enable Clams" = true
+			"Enable Snails" = false
+			"Enable Slugs" = false
+			"Enable Small Spiders" = true
+			"Enable Frogs" = true
+
+		[Settings."Mob Settings"."Misc Mob Settings"]
+			"Mute Flies" = false
+
+		[Settings."Mob Settings"."Vanilla Mob Settings"]
+			#Tropical fish in jungles
+			jungleTropicalFish = true
+			#Bats spawn outside at night
+			nightBats = true
 
