@@ -296,6 +296,73 @@ events.listen('recipes', function (event) {
         "loops": 0
     })
 
+    event.custom({
+      "type": "create:sequenced_assembly",
+      "ingredient": {
+        "item": "thermal:iron_plate"
+      },
+      "transitionalItem": {
+        "item": "superpackutils:incomplete_redstone_mechanism"
+      },
+      "sequence": [
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            },
+            {
+              "item": "create:cogwheel"
+            }
+          ],
+          "results": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            },
+            {
+              "item": "create:large_cogwheel"
+            }
+          ],
+          "results": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            },
+            {
+              "tag": "forge:nuggets/iron"
+            }
+          ],
+          "results": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "item": "superpackutils:redstone_mechanism",
+          "chance": 100.0
+        }
+      ],
+      "loops": 0
+  })
+
     //White Sail
     event.remove({output: 'create:white_sail'})
     event.shaped(Item.of('create:white_sail', 8), ['PPP', 'PCP', 'PPP'], {

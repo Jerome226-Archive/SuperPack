@@ -9,7 +9,7 @@ events.listen('recipes', function (event) {
     function oilCracking(inputOil, inputFluid, outputOil) {
 
     //Refinery
-    event.custom({"type":"immersiveengineering:refinery","result":{"fluid":`${outputOil}`,"amount":100},"input0":{"tag":`${inputFluid}`,"amount":10},"input1":{"tag":`${inputOil}`,"amount":100},"energy":120})
+    event.custom({"type":"immersiveengineering:refinery","result":{"fluid":outputOil,"amount":100},"input0":{"tag":inputFluid,"amount":10},"input1":{"tag":inputOil,"amount":100},"energy":120})
 
     }
 

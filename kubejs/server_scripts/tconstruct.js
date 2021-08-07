@@ -155,6 +155,10 @@ events.listen('recipes', function (event) {
         "temperature": 2000
     })
 
+    //Nether Grout
+    event.remove({output: 'tconstruct:nether_grout'})
+    event.recipes.create.mixing(Item.of('tconstruct:nether_grout', 2), ['minecraft:magma_cream', 'minecraft:soul_sand']).heated()
+
     //Mud Bricks
     event.remove({id: 'tconstruct:smeltery/casting/mud_bricks'})
     event.recipes.create.filling('tconstruct:mud_bricks', ['minecraft:dirt', fluid.of('minecraft:water', 100)]),
