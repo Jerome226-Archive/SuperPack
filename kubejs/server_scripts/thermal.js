@@ -314,6 +314,20 @@ events.listen('recipes', function (event) {
         I: '#forge:rods'
     }),
 
+    //Resonant Ender
+    event.remove({output: 'thermal:machine/crucible/crucible_ender_pearl'})
+    event.recipes.thermal.crucible(fluid.of('thermal:ender', 250), 'superpackutils:resonant_clathrate')
+
+    //Energized Glowstone
+    event.remove({output: 'thermal:machine/crucible/crucible_glowstone_dust'})
+    event.remove({output: 'thermal:machine/crucible/crucible_glowstone_block'})
+    event.recipes.thermal.crucible(fluid.of('thermal:glowstone', 250), 'superpackutils:energized_clathrate')
+
+    //Destabilized Redstone
+    event.remove({output: 'thermal:machine/crucible/crucible_glowstone_dust'})
+    event.remove({output: 'thermal:machine/crucible/crucible_glowstone_block'})
+    event.recipes.thermal.crucible(fluid.of('thermal:redstone', 250), 'superpackutils:destabilized_clathrate')
+    
     //Rich Slag
     event.custom({
         "type": "masterfulmachinery:machine_process",
