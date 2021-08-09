@@ -360,6 +360,28 @@ onEvent('recipes', event => {
   event.remove({ output: `#forge:gems/${nameUnify}`, type: 'mekanism:enriching'});
   event.remove({ output: `#minecraft:${nameUnify}s`, type: 'mekanism:enriching'});
 
+  //VE Crusher - 1 Ingot into Dust
+  event.remove({id: `voluminousenergy:crushing/ores/vanilla/${nameUnify}_ore`})
+  event.remove({id: `voluminousenergy:crushing/ores/vanilla/nether_${nameUnify}_ore`})
+  event.remove({id: `voluminousenergy:crushing/${nameUnify}`})
+  event.custom({
+    "type": "voluminousenergy:crushing",
+    "ingredient": {
+      "item": ingotItem,
+      "count": 1
+    },
+    "process_time": 200,
+    "result": {
+      "item": dustItem,
+      "count": 1
+    },
+    "rng": {
+      "item": "minecraft:air",
+      "count": 0,
+      "chance": 0
+    }
+  })
+
   //Induction Smelter
   event.remove({id: `thermal:machine/smelter/smelter_${nameUnify}_dust`})
   event.recipes.thermal.smelter(ingotItem, dustItem)
@@ -377,6 +399,25 @@ onEvent('recipes', event => {
   //IE Crusher
   event.recipes.immersiveengineering.crusher(Item.of(dustItem, oreDoublingOutput), oreItem)
 
+  //VE Crusher
+  event.custom({
+    "type": "voluminousenergy:crushing",
+    "ingredient": {
+      "item": oreItem,
+      "count": 1
+    },
+    "process_time": 200,
+    "result": {
+      "item": dustItem,
+      "count": oreDoublingOutput
+    },
+    "rng": {
+      "item": "minecraft:air",
+      "count": 0,
+      "chance": 0
+    }
+  })
+
   }
 
   if (oreItem !== null && ingotItem !== null && isGem == true && nameUnify !== 'charcoal') {
@@ -393,6 +434,25 @@ onEvent('recipes', event => {
   //Create Crusher
   event.recipes.create.crushing([Item.of(ingotItem, oreDoublingOutput), Item.of(ingotItem, oreDoublingBonus).withChance(0.30), Item.of('minecraft:cobblestone').withChance(0.35)], oreItem, 350)
   
+  //VE Crusher
+  event.custom({
+    "type": "voluminousenergy:crushing",
+    "ingredient": {
+      "item": oreItem,
+      "count": 1
+    },
+    "process_time": 200,
+    "result": {
+      "item": ingotItem,
+      "count": oreDoublingOutput
+    },
+    "rng": {
+      "item": "minecraft:air",
+      "count": 0,
+      "chance": 0
+    }
+  })
+
   }
 
   if (oreItem !== null && crushedItem !== null && oreItem !== null && isGem == false) {
@@ -422,6 +482,13 @@ onEvent('recipes', event => {
   }
   //Manual Recipe
   event.remove({id: 'thermal:compat/create/pulverizer_create_zinc_ore'})
+  event.remove({id: `voluminousenergy:crushing/ores/bauxiteore`})
+  event.remove({id: `voluminousenergy:crushing/ores/cinnabarore`})
+  event.remove({id: `voluminousenergy:crushing/ores/eighzo_ore`})
+  event.remove({id: `voluminousenergy:crushing/ores/galena_ore`})
+  event.remove({id: `voluminousenergy:crushing/ores/rutileore`})
+  event.remove({id: `voluminousenergy:crushing/ores/saltpeterore`})
+  event.remove({id: `voluminousenergy:crushing/ores/sulfur`})
 
   //-----------------------------------------------------
   //unifyOre Purified Crushed Ore
@@ -647,17 +714,6 @@ onEvent('recipes', event => {
   event.recipes.thermal.crucible(fluid.of(moltenFluid, 1296), `#forge:storage_blocks/${nameUnify}`)
   
   }
-
-  //Doesnt works at the moment wait for fix.
-
-  //Melting Repair Kit
-  //event.recipes.thermal.crucible(fluid.of(moltenFluid, 288), Item.of('tconstruct:repair_kit', {Material:`tconstruct:${nameUnify}`})) 
-
-  //Melting Pickaxe Head
-  //event.recipes.thermal.crucible(fluid.of(moltenFluid, 288), Item.of('tconstruct:pickaxe_head', {Material:`tconstruct:${nameUnify}`})) 
-
-  //Melting Hammer Head
-  //event.recipes.thermal.crucible(fluid.of(moltenFluid, 1152), Item.of('tconstruct:hammer_head', {Material:`tconstruct:${nameUnify}`})) 
 
   }
 

@@ -20,4 +20,16 @@ events.listen('recipes', function (event) {
         L: 'minecraft:stick'
     })
 
+    //Advanced Generators Iron Frame
+    event.custom({
+        "type":"createaddition:rolling",
+        "input": {
+              "item": 'superpackutils:triple_iron_rod'
+        },
+        "result": {
+            "item": 'advgenerators:iron_frame',
+            "count": 1
+        }
+    })
+
 });

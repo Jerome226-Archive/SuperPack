@@ -87,7 +87,7 @@ events.listen('recipes', function (event) {
 
     //Silica Steel Mix
     event.remove({output: 'moreminecarts:silica_steel_mix'})
-    event.recipes.create.mixing(Item.of('moreminecarts:silica_steel_mix', 2), ['minecraft:iron_ingot', 'minecraft:coal', 'refinedstorage:silicon', 'refinedstorage:silicon', 'refinedstorage:silicon'])
+    event.recipes.create.mixing(Item.of('moreminecarts:silica_steel_mix', 2), ['voluminousenergy:basalt_dust', 'refinedstorage:silicon', 'refinedstorage:silicon', 'refinedstorage:silicon'])
 
     //Machine Casing
     event.remove({output: 'youmatter:machine_casing'})

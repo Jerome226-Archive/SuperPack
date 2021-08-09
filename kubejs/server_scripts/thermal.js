@@ -179,7 +179,7 @@ events.listen('recipes', function (event) {
         T: '#forge:treated_wood',
         C: 'create:andesite_casing',
         B: 'minecraft:bucket',
-        D: 'minecraft:dispenser', //Will probably be replaced with custom treetap later
+        D: 'superpackutils:treetap',
         S: 'thermal:iron_plate'
     }),
 
@@ -209,7 +209,7 @@ events.listen('recipes', function (event) {
     event.shaped('thermal:device_soil_infuser', ['TDT', 'BCB', 'TST'], {
         T: 'immersiveengineering:treated_wood_horizontal',
         C: 'immersiveengineering:light_engineering',
-        B: 'thermal:phytogro',
+        B: 'superpackutils:phyto_filter',
         D: 'createaddition:capacitor', 
         S: 'botania:agricarnation'
     }),

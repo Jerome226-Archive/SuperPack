@@ -123,6 +123,39 @@ events.listen('recipes', function (event) {
     //Acetylene
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:acetylene"},"gasOutput":{"gas":"superpackutils:acetylene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:acetylene"},"fluidOutput":{"fluid":"superpackutils:acetylene","amount":1}})
 
+    //Vinyl Chloride
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:vinyl_chloride"},"gasOutput":{"gas":"superpackutils:vinyl_chloride","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:vinyl_chloride"},"fluidOutput":{"fluid":"superpackutils:vinyl_chloride","amount":1}})
+
+    //Polyvinyl Chloride
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:polyvinyl_chloride"},"gasOutput":{"gas":"superpackutils:polyvinyl_chloride","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:polyvinyl_chloride"},"fluidOutput":{"fluid":"superpackutils:polyvinyl_chloride","amount":1}})
+
+    //Silicon Tetrachloride
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:silicon_tetrachloride"},"gasOutput":{"gas":"superpackutils:silicon_tetrachloride","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_tetrachloride"},"fluidOutput":{"fluid":"superpackutils:silicon_tetrachloride","amount":1}})
+
+    //Silicon Chloride
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:silicon_chloride"},"gasOutput":{"gas":"superpackutils:silicon_chloride","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_chloride"},"fluidOutput":{"fluid":"superpackutils:silicon_chloride","amount":1}})
+
+    //Silicon Hypochlorite
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:silicon_hypochlorite"},"gasOutput":{"gas":"superpackutils:silicon_hypochlorite","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_hypochlorite"},"fluidOutput":{"fluid":"superpackutils:silicon_hypochlorite","amount":1}})
+
+    //Phenol
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:phenol"},"gasOutput":{"gas":"superpackutils:phenol","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:phenol"},"fluidOutput":{"fluid":"superpackutils:phenol","amount":1}})
+
+    //Cumene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:cumene"},"gasOutput":{"gas":"superpackutils:cumene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:cumene"},"fluidOutput":{"fluid":"superpackutils:cumene","amount":1}})
+
+    //Chloroform
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:chloroform"},"gasOutput":{"gas":"superpackutils:chloroform","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:chloroform"},"fluidOutput":{"fluid":"superpackutils:chloroform","amount":1}})
+
+    //Bisphenol A
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:bisphenol_a"},"gasOutput":{"gas":"superpackutils:chloroform","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:chloroform"},"fluidOutput":{"fluid":"superpackutils:chloroform","amount":1}})
+
+    //Acetone
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:acetone"},"gasOutput":{"gas":"superpackutils:acetone","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:acetone"},"fluidOutput":{"fluid":"superpackutils:acetone","amount":1}})
+
+    //Polystyrene
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:polystyrene"},"gasOutput":{"gas":"superpackutils:polystyrene","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:polystyrene"},"fluidOutput":{"fluid":"superpackutils:polystyrene","amount":1}})
+
     //Dimensional Plasma
     event.custom({
         "type": "astralsorcery:lightwell",
@@ -341,7 +374,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:items",
                 "data":{
-                    "item": "minecraft:glowstone_dust",
+                    "item": "superpackutils:energium_pulp",
                     "count": 3
                 }
             },
@@ -487,7 +520,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:items",
                 "data":{
-                    "item": "thermal:ender_pearl_dust",
+                    "item": "superpackutils:vibrium_pulp",
                     "count": 3
                 }
             },
@@ -867,7 +900,7 @@ events.listen('recipes', function (event) {
           "type": "custommachinery:fluid",
           "fluid": "superpackutils:distilled_water",
           "amount": 10,
-          "mode": "input"
+          "mode": "output"
         }
       ]
     })
@@ -960,6 +993,234 @@ events.listen('recipes', function (event) {
         I: 'immersiveengineering:stick_steel'
     })
 
+    //Treetap
+    event.shaped('superpackutils:treetap', [' C ', 'CCC', '  C'], {
+      C: '#forge:treated_wood'
+    })
+
+    //Phyto-Filter
+    event.shaped('superpackutils:phyto_filter', ['CSC'], {
+      S: 'botania:mana_string',
+      C: 'thermal:phytogro'
+    })
+
+    //Triple Iron Rod
+    event.shapeless('superpackutils:triple_iron_rod', [item.of('immersiveengineering:stick_iron', 3)])
+
+    //Neutron Collector
+    event.shaped('superpackutils:phyto_filter', ['SCS', 'CTC', 'SCS'], {
+      S: 'superpackutils:beryllium_ingot',
+      T: 'mythicbotany:mana_collector',
+      C: 'libvulpes:plateiridium'
+    })
+
+    //Redstone Mechanisms
+    event.custom({
+      "type": "create:sequenced_assembly",
+      "ingredient": {
+        "item": "immersiveengineering:plate_aluminum"
+      },
+      "transitionalItem": {
+        "item": "superpackutils:incomplete_redstone_mechanism"
+      },
+      "sequence": [
+        {
+          "type": "create:filling",
+          "ingredients": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            },
+            {
+              "fluid": "superpackutils:insulating_glass",
+              "amount": 35
+            }
+          ],
+          "results": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            }
+          ]
+        },
+        {
+          "type": "create:pressing",
+          "ingredients": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            },
+            {
+              "item": "thermal:redstone_servo"
+            }
+          ],
+          "results": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            },
+            {
+              "item": "creategears:gear"
+            }
+          ],
+          "results": [
+            {
+              "item": "superpackutils:incomplete_redstone_mechanism"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "item": "superpackutils:redstone_mechanism",
+          "chance": 100.0
+        }
+      ],
+      "loops": 0
+  })
+
+  //Light Mechanisms
+  event.custom({
+    "type": "create:sequenced_assembly",
+    "ingredient": {
+      "item": "thermal:iron_plate"
+    },
+    "transitionalItem": {
+      "item": "superpackutils:incomplete_light_mechanism"
+    },
+    "sequence": [
+      {
+        "type": "create:filling",
+        "ingredients": [
+          {
+            "item": "superpackutils:incomplete_light_mechanism"
+          },
+          {
+            "fluid": "superpackutils:insulating_glass",
+            "amount": 35
+          }
+        ],
+        "results": [
+          {
+            "item": "superpackutils:incomplete_light_mechanism"
+          }
+        ]
+      },
+      {
+        "type": "create:pressing",
+        "ingredients": [
+          {
+            "item": "superpackutils:incomplete_light_mechanism"
+          },
+          {
+            "item": "thermal:electrum_ingot"
+          }
+        ],
+        "results": [
+          {
+            "item": "superpackutils:incomplete_light_mechanism"
+          }
+        ]
+      },
+      {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "superpackutils:incomplete_light_mechanism"
+          },
+          {
+            "item": "creategears:gear"
+          }
+        ],
+        "results": [
+          {
+            "item": "superpackutils:incomplete_light_mechanism"
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "item": "superpackutils:light_mechanism",
+        "chance": 100.0
+      }
+    ],
+    "loops": 0
+})
+
+//Heavy Mechanisms
+event.custom({
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "thermal:iron_plate"
+  },
+  "transitionalItem": {
+    "item": "superpackutils:incomplete_heavy_mechanism"
+  },
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "superpackutils:incomplete_heavy_mechanism"
+        },
+        {
+          "fluid": "superpackutils:insulating_glass",
+          "amount": 35
+        }
+      ],
+      "results": [
+        {
+          "item": "superpackutils:incomplete_heavy_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "superpackutils:incomplete_heavy_mechanism"
+        },
+        {
+          "item": "moreminecarts:silica_steel"
+        }
+      ],
+      "results": [
+        {
+          "item": "superpackutils:incomplete_heavy_mechanism"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "superpackutils:incomplete_heavy_mechanism"
+        },
+        {
+          "item": "creategears:gear"
+        }
+      ],
+      "results": [
+        {
+          "item": "superpackutils:incomplete_heavy_mechanism"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "superpackutils:heavy_mechanism",
+      "chance": 100.0
+    }
+  ],
+  "loops": 0
+})
+
     //Circuit Board
     event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"superpackutils:integrated_circuit"}},{"count":1,"base_ingredient":{"item":"advgenerators:power_io"}},{"count":1,"base_ingredient":{"item":"advgenerators:iron_wiring"}},{"count":1,"base_ingredient":{"item":"mekanism:basic_control_circuit"}}],"category":"components","result":{"item":"superpackutils:circuit_board","count":1}})
 
@@ -1032,6 +1293,10 @@ events.listen('recipes', function (event) {
     //Chemical Death
     event.custom({"type":"mekanism:reaction","itemInput":{"amount":1,"ingredient":{"item":"botania:living_root"}},"fluidInput":{"amount":600,"tag":"minecraft:water"},"gasInput":{"amount":200,"gas":"superpackutils:cyanide"},"energyRequired":200,"duration":37,"itemOutput":{"item":"biomesoplenty:dead_branch","count":1},"gasOutput":{"gas":"superpackutils:chemical_death","amount":100}})
 
+    //Cumene
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:propene"},"rightInput":{"amount":1,"gas":"superpackutils:benzene"},"output":{"gas":"superpackutils:cumene","amount":1}})
+
+    //Polycarbonate
     //Industrial Sand
     event.custom({
         "type": "exnihilosequentia:fluid_item",

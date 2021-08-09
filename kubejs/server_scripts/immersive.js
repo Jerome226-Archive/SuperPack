@@ -205,9 +205,9 @@ events.listen('recipes', function (event) {
     event.remove({output: 'immersiveengineering:light_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:light_engineering', 4), ['SCS', 'IBI', 'SCS'], {
         S: 'immersiveengineering:ingot_aluminum',
-        C: 'immersiveengineering:component_iron',
+        C: 'superpackutils:thermionic_valve',
         B: 'create:andesite_casing',
-        I: 'immersiveengineering:ingot_aluminum'
+        I: 'superpackutils:light_mechanism'
     }),
 
     //Generator
@@ -220,7 +220,7 @@ events.listen('recipes', function (event) {
 
     //IE Heavy Engineering Block
     event.remove({output: 'immersiveengineering:heavy_engineering'})
-    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 2), ['SCS', 'IBI', 'SCS'], {
+    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 4), ['SCS', 'IBI', 'SCS'], {
         S: 'superpackutils:bioslag_ingot',
         C: 'superpackutils:reinforced_capacitor',
         B: 'create:brass_casing',
@@ -229,9 +229,9 @@ events.listen('recipes', function (event) {
 
     //IE Redstone Engineering Block
     event.remove({output: 'immersiveengineering:rs_engineering'})
-    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:rs_engineering', 2), ['SCS', 'IBI', 'SCS'], {
+    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:rs_engineering', 4), ['SCS', 'IBI', 'SCS'], {
         S: 'thermal:constantan_ingot',
-        C: 'thermal:redstone_servo',
+        C: 'create:precision_mechanism',
         B: 'create:copper_casing',
         I: 'superpackutils:redstone_mechanism'
     }),
