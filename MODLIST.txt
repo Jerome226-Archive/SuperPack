@@ -66,7 +66,7 @@ CTM-MC1.16.1-1.1.2.6.jar
 Cucumber-1.16.4-4.1.10.jar
 culinaryconstruct-forge-1.16.5-4.0.0.6.jar
 curios-forge-1.16.5-4.0.5.2.jar
-custommachinery-1.16.5-0.4.4.jar
+custommachinery-1.16.5-0.4.5.jar
 CyclopsCore-1.16.5-1.11.7.jar
 DataFixerSlayer 1.0-3.jar
 decorative_blocks-1.16.4-1.7.2.jar
@@ -162,7 +162,7 @@ Morph-o-Tool-1.4-27.jar
 Morpheus-1.16.5-4.2.70.jar
 MouseTweaks-2.14-mc1.16.2.jar
 mowziesmobs-1.5.19.jar
-MythicBotany-1.16.4-1.3.19.jar
+MythicBotany-1.16.5-1.4.0.jar
 NaturesCompass-1.16.5-1.9.1-forge.jar
 neapolitan-1.16.5-2.1.0.jar
 Neat 1.7-27.jar
@@ -206,7 +206,7 @@ superpackutils-1.16.5-b1.8.jar
 supplementaries-1.16.5-0.14.5.jar
 sushigocrafting-1.16.4-0.1.4.jar
 swingthroughgrass-1.16.4-1.5.3.jar
-TConstruct-1.16.5-3.1.0.231.jar
+TConstruct-1.16.5-3.1.1.252.jar
 theoneprobe-1.16-3.1.4.jar
 thermal_cultivation-1.16.5-1.3.0.jar
 thermal_expansion-1.16.5-1.3.0.jar
