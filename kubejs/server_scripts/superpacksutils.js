@@ -1008,7 +1008,7 @@ events.listen('recipes', function (event) {
     event.shapeless('superpackutils:triple_iron_rod', [item.of('immersiveengineering:stick_iron', 3)])
 
     //Neutron Collector
-    event.shaped('superpackutils:phyto_filter', ['SCS', 'CTC', 'SCS'], {
+    event.shaped('superpackutils:neutron_collector', ['SCS', 'CTC', 'SCS'], {
       S: 'superpackutils:beryllium_ingot',
       T: 'mythicbotany:mana_collector',
       C: 'libvulpes:plateiridium'
