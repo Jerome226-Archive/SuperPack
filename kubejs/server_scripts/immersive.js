@@ -16,7 +16,11 @@ events.listen('recipes', function (event) {
     event.remove({id: 'immersiveengineering:cokeoven/coke_block'})
     event.recipes.immersiveengineering.coke_oven('thermal:coal_coke_block', 'minecraft:coal_block').creosote(5000).time(8100)
 
-    //Distillation Tower
+    //Herbicide
+    event.remove({id: 'immersiveengineering:mixer/herbicide'})
+    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"voluminousenergy:saltpeterchunk"},{"item":"thermal:copper_dust"}],"result":{"fluid":"immersiveengineering:herbicide","amount":500},"fluid":{"tag":"forge:ethanol","amount":500},"energy":3200}),
+
+    //Oil distilling
     event.remove({id: 'immersivepetroleum:distillationtower/oilcracking'})
     event.custom({
         "type": "immersivepetroleum:distillation",
@@ -36,25 +40,48 @@ events.listen('recipes', function (event) {
             "amount": 25
           },
           {
-            "fluid": "superpackutils:sulfurized_gasoline",
-            "amount": 14
-          },
-          {
             "fluid": "superpackutils:sulfurized_heavy_oil",
             "amount": 15
-          },
-          {
-            "fluid": "immersivepetroleum:diesel_sulfur",
-            "amount": 12
           }
         ],
         "input": {
           "tag": "forge:crude_oil",
-          "amount": 75
+          "amount": 49
         },
         "time": 1,
         "energy": 2048
     })
+
+    //Biomass distilling
+    event.custom({
+      "type": "immersivepetroleum:distillation",
+      "byproducts": [
+        {
+          "item": "voluminousenergy:shredded_biomass",
+          "chance": "0.3"
+        }
+      ],
+      "results": [
+        {
+          "fluid": "superpackutils:bio_ethanol",
+          "amount": 11
+        },
+        {
+          "fluid": "superpackutils:methanol",
+          "amount": 15
+        },
+        {
+          "fluid": "superpackutils:acetic_acid",
+          "amount": 23
+        }
+      ],
+      "input": {
+        "tag": "forge:fermented_biomass",
+        "amount": 49
+      },
+      "time": 1,
+      "energy": 2048
+  })
 
     //Sulfur Recovery Unit
     event.remove({id: 'immersivepetroleum:hydrotreater/sulfur_recovery'})
@@ -204,10 +231,10 @@ events.listen('recipes', function (event) {
     //IE Light Engineering Block
     event.remove({output: 'immersiveengineering:light_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:light_engineering', 4), ['SCS', 'IBI', 'SCS'], {
-        S: 'immersiveengineering:ingot_aluminum',
-        C: 'superpackutils:thermionic_valve',
+        S: 'immersiveengineering:sheetmetal_aluminum',
+        C: 'immersiveengineering:toolupgrade_revolver_electro',
         B: 'create:andesite_casing',
-        I: 'superpackutils:light_mechanism'
+        I: 'thermal:electrum_ingot'
     }),
 
     //Generator
@@ -220,20 +247,26 @@ events.listen('recipes', function (event) {
 
     //IE Heavy Engineering Block
     event.remove({output: 'immersiveengineering:heavy_engineering'})
-    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 4), ['SCS', 'IBI', 'SCS'], {
-        S: 'superpackutils:bioslag_ingot',
+    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 2), ['SCS', 'IBI', 'SCS'], {
+        S: 'moreminecarts:corrugated_silica_steel',
         C: 'superpackutils:reinforced_capacitor',
         B: 'create:brass_casing',
-        I: 'superpackutils:heavy_mechanism'
+        I: 'superpackutils:bioslag_ingot'
+    }),
+
+    //Silica Steel Sheetmetal
+    event.remove({output: 'moreminecarts:corrugated_silica_steel'})
+    event.shaped(Item.of('moreminecarts:corrugated_silica_steel', 4), [' C ', 'C C', ' C '], {
+        C: 'moreminecarts:silica_steel'
     }),
 
     //IE Redstone Engineering Block
     event.remove({output: 'immersiveengineering:rs_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:rs_engineering', 4), ['SCS', 'IBI', 'SCS'], {
-        S: 'thermal:constantan_ingot',
+        S: 'immersiveengineering:sheetmetal_constantan',
         C: 'create:precision_mechanism',
         B: 'create:copper_casing',
-        I: 'superpackutils:redstone_mechanism'
+        I: 'thermal:redstone_servo'
     }),
 
     //Thermoelectric Generator

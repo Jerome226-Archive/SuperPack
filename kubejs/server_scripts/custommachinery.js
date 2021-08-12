@@ -3,7 +3,7 @@
 events.listen('recipes', function (event) {
 
     //Resonator
-    event.shaped(Item.of('custommachinery:custom_machine_item', {id:"custommachinery:resonator"}), ['CAC', 'BHB', 'PAP'], {
+    event.shaped(Item.of('custommachinery:custom_machine_item', {machine:"custommachinery:resonator"}), ['CAC', 'BHB', 'PAP'], {
         P: 'immersiveengineering:plate_steel',
         A: 'thermal:rf_coil',
         B: 'mekanism:basic_control_circuit',
@@ -12,7 +12,7 @@ events.listen('recipes', function (event) {
     }),
 
     //Distiller
-    event.shaped(Item.of('custommachinery:custom_machine_item', {id:"custommachinery:distiller"}), ['CJC', 'BHB', 'PAP'], {
+    event.shaped(Item.of('custommachinery:custom_machine_item', {machine:"custommachinery:distiller"}), ['CJC', 'BHB', 'PAP'], {
         P: 'thermal:silver_plate',
         A: 'createaddition:heater',
         J: 'mekanismgenerators:solar_panel',

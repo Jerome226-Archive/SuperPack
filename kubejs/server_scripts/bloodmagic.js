@@ -210,7 +210,7 @@ events.listen('recipes', function (event) {
           "item": "botania:runic_altar"
         },
         "H": {
-          "item": "tconstruct:blood_slime_ball"
+          "item": "superpackutils:blood_crystal"
         }
       },
       "output": [

@@ -215,6 +215,21 @@ events.listen('recipes', function (event) {
     event.remove({id: 'tconstruct:smeltery/casting/obsidian/chest'})
     event.recipes.create.filling('minecraft:ender_chest', ['minecraft:ender_eye', fluid.of('tconstruct:molten_obsidian', 8000)]),
 
+    //Ice Automation
+    event.custom({
+      "type": "advgenerators:exchanger_cooling",
+      "input": {
+        "fluids": {
+          "fluid": "minecraft:water"
+        },
+        "amount": 1
+      },
+      "output": {
+        "item": "minecraft:ice",
+        "amount": 0.001
+      },
+      "heat": 10
+  })
     //Compass
     event.remove({id: 'tconstruct:smeltery/casting/metal/iron/compass'})
     event.recipes.create.filling('minecraft:compass', ['minecraft:redstone', fluid.of('tconstruct:molten_iron', 576)]),

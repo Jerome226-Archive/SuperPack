@@ -14,10 +14,6 @@ events.listen('recipes', function (event) {
     event.remove({output: 'youmatter:transistor_raw'})
     event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"immersiveengineering:hemp_fiber"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:ingot_aluminum"}},{"count":1,"base_ingredient":{"item":"create:brass_sheet"}}],"category":"components","result":{"item":"youmatter:transistor_raw","count":1}})
 
-    //Silicon Compound
-    event.remove({output: 'tinyredstone:silicon_compound'})
-    event.recipes.create.mixing(Item.of('tinyredstone:silicon_compound', 2), ['minecraft:charcoal', 'superpackutils:polished_quartz', 'minecraft:sand'])
-
     //Metal Crafting Table
     event.remove({output: 'engineersdecor:metal_crafting_table'})
     event.shaped('engineersdecor:metal_crafting_table', ['PCP'], {
@@ -55,7 +51,7 @@ events.listen('recipes', function (event) {
 
     //Compute Module
     event.remove({output: 'youmatter:compute_module'})
-    event.recipes.create.mechanical_crafting(Item.of('youmatter:compute_module', 1), [' LE', 'RTR', 'PGP'], {
+    event.recipes.create.mechanical_crafting(Item.of('youmatter:compute_module', 2), [' LE', 'RTR', 'PGP'], {
         T: 'youmatter:transistor',
         G: '#forge:rods/gold',
         E: 'immersiveengineering:electron_tube',

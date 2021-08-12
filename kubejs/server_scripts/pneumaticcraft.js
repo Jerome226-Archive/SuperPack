@@ -230,28 +230,8 @@ events.listen('recipes', function (event) {
     //Plastic
     event.remove({id: 'pneumaticcraft:thermo_plant/plastic_from_biodiesel'})
     event.remove({id: 'pneumaticcraft:thermo_plant/plastic_from_lpg'})
-    event.custom({
-      "type": "pneumaticcraft:thermo_plant",
-      "item_input": {
-        "item": "thermal:cured_rubber"
-      },
-      "fluid_input": {
-        "type": "pneumaticcraft:fluid",
-        "fluid": "pneumaticcraft:lpg",
-        "amount": 100
-      },
-      "fluid_output": {
-        "fluid": "pneumaticcraft:plastic",
-        "amount": 1000
-      },
-      "temperature": {
-        "min_temp": 373
-      },
-      "pressure": 2.0,
-      "speed": 0.25,
-      "exothermic": false
-    })
-
+    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"thermal:sawdust"},{"item":"mekanism:dust_charcoal"}],"result":{"fluid":"pneumaticcraft:molten_plastic","amount":1000},"fluid":{"tag":"forge:lpg","amount":1000},"energy":3200}),
+    
     event.recipes.create.compacting(Item.of('pneumaticcraft:plastic', 1), [fluid.of('pneumaticcraft:plastic', 1000)]),
     event.remove({id: 'pneumaticcraft:heat_frame_cooling/plastic'})
 

@@ -300,6 +300,9 @@ events.listen('recipes', function (event) {
     event.remove({id: 'thermal:rubber_from_dandelion'})
     event.recipes.create.compacting(Item.of('thermal:rubber', 3), [fluid.of('thermal:latex', 1000)]),
 
+    //Resin Rubber
+    event.recipes.create.compacting(Item.of('superpackutils:resin_rubber', 3), [fluid.of('thermal:resin', 1000)]),
+
     //Ingot Cast
     event.remove({output: 'thermal:chiller_ingot_cast'})
     event.shaped('thermal:chiller_ingot_cast', [' C ', 'CIC', ' C '], {
@@ -315,19 +318,19 @@ events.listen('recipes', function (event) {
     }),
 
     //Resonant Ender
-    event.remove({output: 'thermal:machine/crucible/crucible_ender_pearl'})
+    event.remove({id: 'thermal:machine/crucible/crucible_ender_pearl'})
     event.recipes.thermal.crucible(fluid.of('thermal:ender', 250), 'superpackutils:resonant_clathrate')
 
     //Energized Glowstone
-    event.remove({output: 'thermal:machine/crucible/crucible_glowstone_dust'})
-    event.remove({output: 'thermal:machine/crucible/crucible_glowstone_block'})
+    event.remove({id: 'thermal:machine/crucible/crucible_glowstone_dust'})
+    event.remove({id: 'thermal:machine/crucible/crucible_glowstone_block'})
     event.recipes.thermal.crucible(fluid.of('thermal:glowstone', 250), 'superpackutils:energized_clathrate')
 
     //Destabilized Redstone
-    event.remove({output: 'thermal:machine/crucible/crucible_glowstone_dust'})
-    event.remove({output: 'thermal:machine/crucible/crucible_glowstone_block'})
+    event.remove({id: 'thermal:machine/crucible/crucible_redstone_dust'})
+    event.remove({id: 'thermal:machine/crucible/crucible_redstone_block'})
     event.recipes.thermal.crucible(fluid.of('thermal:redstone', 250), 'superpackutils:destabilized_clathrate')
-    
+
     //Rich Slag
     event.custom({
         "type": "masterfulmachinery:machine_process",
@@ -358,7 +361,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:mekanism_gas",
                 "data":{
-                    "gas": "mekanism:sulfur_dioxide",
+                    "gas": "mekanism:sulfur_trioxide",
                     "amount": 100
                 }
             }
@@ -393,6 +396,13 @@ events.listen('recipes', function (event) {
                   "item": "thermal:blizz_powder",
                   "count": 1
               }
+          },
+          {
+            "type": "masterfulmachinery:items",
+            "data":{
+                "item": "create:shadow_steel",
+                "count": 1
+            }
           },
           {
               "type": "masterfulmachinery:items",
@@ -448,6 +458,13 @@ events.listen('recipes', function (event) {
               }
           },
           {
+            "type": "masterfulmachinery:items",
+            "data":{
+                "item": "createaddition:overcharged_alloy",
+                "count": 1
+            }
+          },
+          {
               "type": "masterfulmachinery:items",
               "data":{
                   "item": "thermal:copper_ingot",
@@ -499,6 +516,13 @@ events.listen('recipes', function (event) {
                   "item": "thermal:blitz_powder",
                   "count": 1
               }
+          },
+          {
+            "type": "masterfulmachinery:items",
+            "data":{
+                "item": "create:refined_radiance",
+                "count": 1
+            }
           },
           {
               "type": "masterfulmachinery:items",

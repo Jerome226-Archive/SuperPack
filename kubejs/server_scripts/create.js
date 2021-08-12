@@ -186,7 +186,7 @@ events.listen('recipes', function (event) {
     event.custom({
         "type": "create:sequenced_assembly",
         "ingredient": {
-          "tag": "forge:plates/gold"
+          "item": "superpackutils:brass_mechanisms_base"
         },
         "transitionalItem": {
           "item": "create:incomplete_precision_mechanism"
@@ -315,6 +315,6 @@ events.listen('recipes', function (event) {
     
     //Create Electron Tube
     event.remove({output: 'create:electron_tube'})
-    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"immersiveengineering:electron_tube"}},{"count":1,"base_ingredient":{"item":"create:polished_rose_quartz"}},{"count":1,"base_ingredient":{"item":"minecraft:redstone"}},{"count":1,"base_ingredient":{"item":"mekanism:ingot_steel"}}],"category":"components","result":{"item":"create:electron_tube","count":1}})
+    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"immersiveengineering:electron_tube"}},{"count":1,"base_ingredient":{"item":"create:polished_rose_quartz"}},{"count":1,"base_ingredient":{"item":"mekanism:ingot_steel"}}],"category":"components","result":{"item":"create:electron_tube","count":1}})
 
 });

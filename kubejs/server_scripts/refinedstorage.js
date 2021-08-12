@@ -16,17 +16,16 @@ events.listen('recipes', function (event) {
         S: 'superpackutils:circuit_board',
         A: 'storagedrawers:controller',
         M: 'refinedstorage:machine_casing',
-        Y: 'superpackutils:electrical_platinum_ingot',
-        E: 'tconstruct:slimesteel_ingot',
+        Y: 'superpackutils:advanced_logic_circuit',
+        E: 'superpackutils:data_core',
         B: 'refinedstorage:construction_core'
     })
 
     //Refined Storage Machine Case
     event.remove({output: 'refinedstorage:machine_casing'})
-    event.recipes.create.mechanical_crafting('refinedstorage:machine_casing', ['SCS', 'ABA', 'SCS'], {
-        S: 'refinedstorage:quartz_enriched_iron',
-        C: 'create:electron_tube',
-        A: 'superpackutils:reinforced_capacitor',
+    event.recipes.create.mechanical_crafting('refinedstorage:machine_casing', ['SCS', 'CBC', 'SCS'], {
+        S: 'mekanism:ingot_steel',
+        C: 'refinedstorage:quartz_enriched_iron',
         B: 'immersiveengineering:heavy_engineering'
     })
 
@@ -131,7 +130,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:items",
                 "data":{
-                    "item": "refinedstorage:silicon",
+                    "item": "voluminousenergy:silicon",
                     "count": 1
                 }
             }
@@ -185,7 +184,7 @@ events.listen('recipes', function (event) {
         {
             "type": "masterfulmachinery:items",
             "data":{
-                "item": "refinedstorage:silicon",
+                "item": "voluminousenergy:silicon",
                 "count": 1
             }
         }
@@ -239,7 +238,7 @@ event.custom({
         {
             "type": "masterfulmachinery:items",
             "data":{
-                "item": "refinedstorage:silicon",
+                "item": "voluminousenergy:silicon",
                 "count": 1
             }
         }
@@ -293,7 +292,7 @@ event.custom({
         {
             "type": "masterfulmachinery:items",
             "data":{
-                "item": "refinedstorage:silicon",
+                "item": "voluminousenergy:silicon",
                 "count": 1
             }
         }
@@ -311,22 +310,30 @@ event.custom({
 
     //Silicon
     event.remove({id: 'refinedstorage:silicon'})
-    event.smelting('refinedstorage:silicon', 'tinyredstone:silicon_compound')
+    event.smelting('refinedstorage:silicon', 'voluminousenergy:sand_dust')
+
+    //Cable
+    event.remove({output: 'refinedstorage:cable'})
+    event.shaped(Item.of('refinedstorage:cable', 12), ['CCC', 'IRI', 'CCC'], {
+        C: 'refinedstorage:quartz_enriched_iron',
+        R: 'superpackutils:integrated_circuit',
+        I: '#forge:glass/colorless'
+    }),
 
     //Advanced Processor
     event.remove({id: 'refinedstorage:advanced_processor'})
-    event.recipes.create.compacting('refinedstorage:advanced_processor', ['refinedstorage:raw_advanced_processor', 'superpackutils:bio_plastic'])
+    event.recipes.create.compacting('refinedstorage:advanced_processor', ['refinedstorage:raw_advanced_processor', 'pneumaticcraft:plastic'])
 
     //Withering Processor
     event.remove({id: 'extradisks:withering_processor'})
-    event.recipes.create.compacting('extradisks:withering_processor', ['extradisks:raw_withering_processor', 'superpackutils:bio_plastic'])
+    event.recipes.create.compacting('extradisks:withering_processor', ['extradisks:raw_withering_processor', 'pneumaticcraft:plastic'])
 
     //Improved Processor
     event.remove({id: 'refinedstorage:improved_processor'})
-    event.recipes.create.compacting('refinedstorage:improved_processor', ['refinedstorage:raw_improved_processor', 'superpackutils:bio_plastic'])
+    event.recipes.create.compacting('refinedstorage:improved_processor', ['refinedstorage:raw_improved_processor', 'pneumaticcraft:plastic'])
 
     //Basic Processor
     event.remove({id: 'refinedstorage:basic_processor'})
-    event.recipes.create.compacting('refinedstorage:basic_processor', ['refinedstorage:raw_basic_processor', 'superpackutils:bio_plastic'])
+    event.recipes.create.compacting('refinedstorage:basic_processor', ['refinedstorage:raw_basic_processor', 'pneumaticcraft:plastic'])
 
 });

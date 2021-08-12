@@ -91,36 +91,29 @@ events.listen('recipes', function (event) {
       "cookingtime": 100
     })
 
-    if (needSmelting == true) {
-
-    //Smelting Recipe
-    event.smelting(`${stoneItem}`, `${cobblestoneItem}`).xp(0.1)
-
     }
 
-    }
-
-    hammerCrushing(false, 'metamorphic_forest', 'botania:metamorphic_forest_stone', 'botania:metamorphic_forest_cobblestone')
-    hammerCrushing(false, 'metamorphic_plains', 'botania:metamorphic_plains_stone', 'botania:metamorphic_plains_cobblestone')
-    hammerCrushing(false, 'metamorphic_mountain', 'botania:metamorphic_mountain_stone', 'botania:metamorphic_mountain_cobblestone')
-    hammerCrushing(false, 'metamorphic_fungal', 'botania:metamorphic_fungal_stone', 'botania:metamorphic_fungal_cobblestone')
-    hammerCrushing(false, 'metamorphic_swamp', 'botania:metamorphic_swamp_stone', 'botania:metamorphic_swamp_cobblestone')
-    hammerCrushing(false, 'metamorphic_desert', 'botania:metamorphic_desert_stone', 'botania:metamorphic_desert_cobblestone')
-    hammerCrushing(false, 'metamorphic_taiga', 'botania:metamorphic_taiga_stone', 'botania:metamorphic_taiga_cobblestone')
-    hammerCrushing(false, 'metamorphic_mesa', 'botania:metamorphic_mesa_stone', 'botania:metamorphic_mesa_cobblestone')
-    hammerCrushing(false, 'metamorphic_mesa', 'botania:metamorphic_mesa_stone', 'botania:metamorphic_mesa_cobblestone')
-    hammerCrushing(false, 'granite', 'minecraft:granite', 'create:granite_cobblestone')
-    hammerCrushing(false, 'diorite', 'minecraft:diorite', 'create:diorite_cobblestone')
-    hammerCrushing(false, 'andesite', 'minecraft:andesite', 'create:andesite_cobblestone')
-    hammerCrushing(false, 'limestone', 'create:limestone', 'create:limestone_cobblestone')
-    hammerCrushing(false, 'weathered_limestone', 'create:weathered_limestone', 'create:weathered_limestone_cobblestone')
-    hammerCrushing(false, 'dolomite', 'create:dolomite', 'create:dolomite_cobblestone')
-    hammerCrushing(false, 'gabbro', 'create:gabbro', 'create:gabbro_cobblestone')
-    hammerCrushing(false, 'scoria', 'create:scoria', 'create:scoria_cobblestone')
-    hammerCrushing(true, 'dark_scoria', 'create:dark_scoria', 'create:dark_scoria_cobblestone')
-    hammerCrushing(false, 'dacite', 'byg:dacite', 'byg:dacite_cobblestone')
-    hammerCrushing(false, 'scoria', 'byg:scoria_stone', 'byg:scoria_cobblestone')
-    hammerCrushing(false, 'seared', 'tconstruct:seared_stone', 'tconstruct:seared_cobble')
+    hammerCrushing('metamorphic_forest', 'botania:metamorphic_forest_stone', 'botania:metamorphic_forest_cobblestone')
+    hammerCrushing('metamorphic_plains', 'botania:metamorphic_plains_stone', 'botania:metamorphic_plains_cobblestone')
+    hammerCrushing('metamorphic_mountain', 'botania:metamorphic_mountain_stone', 'botania:metamorphic_mountain_cobblestone')
+    hammerCrushing('metamorphic_fungal', 'botania:metamorphic_fungal_stone', 'botania:metamorphic_fungal_cobblestone')
+    hammerCrushing('metamorphic_swamp', 'botania:metamorphic_swamp_stone', 'botania:metamorphic_swamp_cobblestone')
+    hammerCrushing('metamorphic_desert', 'botania:metamorphic_desert_stone', 'botania:metamorphic_desert_cobblestone')
+    hammerCrushing('metamorphic_taiga', 'botania:metamorphic_taiga_stone', 'botania:metamorphic_taiga_cobblestone')
+    hammerCrushing('metamorphic_mesa', 'botania:metamorphic_mesa_stone', 'botania:metamorphic_mesa_cobblestone')
+    hammerCrushing('metamorphic_mesa', 'botania:metamorphic_mesa_stone', 'botania:metamorphic_mesa_cobblestone')
+    hammerCrushing('granite', 'minecraft:granite', 'create:granite_cobblestone')
+    hammerCrushing('diorite', 'minecraft:diorite', 'create:diorite_cobblestone')
+    hammerCrushing('andesite', 'minecraft:andesite', 'create:andesite_cobblestone')
+    hammerCrushing('limestone', 'create:limestone', 'create:limestone_cobblestone')
+    hammerCrushing('weathered_limestone', 'create:weathered_limestone', 'create:weathered_limestone_cobblestone')
+    hammerCrushing('dolomite', 'create:dolomite', 'create:dolomite_cobblestone')
+    hammerCrushing('gabbro', 'create:gabbro', 'create:gabbro_cobblestone')
+    hammerCrushing('scoria', 'create:scoria', 'create:scoria_cobblestone')
+    hammerCrushing('dark_scoria', 'create:dark_scoria', 'create:dark_scoria_cobblestone')
+    hammerCrushing('dacite', 'byg:dacite', 'byg:dacite_cobblestone')
+    hammerCrushing('scoria', 'byg:scoria_stone', 'byg:scoria_cobblestone')
+    hammerCrushing('seared', 'tconstruct:seared_stone', 'tconstruct:seared_cobble')
 
     //Crushed Endstone
     event.remove({ id: 'exnihilosequentia:hammer/ens_end_stone' });

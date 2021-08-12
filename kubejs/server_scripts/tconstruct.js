@@ -9,6 +9,29 @@ events.listen('recipes', function (event) {
     //Treated Wood Recipe
     event.remove({id: 'tconstruct:compat/immersiveengineering/treated_wood'})
 
+    //Seared Melter
+    event.remove({output: 'tconstruct:seared_melter'})
+    event.shaped('tconstruct:seared_melter', [' C ', 'BIB', 'BBB'], {
+        C: 'minecraft:blast_furnace',
+        B: 'tconstruct:seared_brick',
+        I: 'tconstruct:seared_fuel_gauge'
+    }),
+
+    //Seared Heater
+    event.remove({output: 'tconstruct:seared_heater'})
+    event.shaped('tconstruct:seared_heater', ['BBB', 'BCB', 'BBB'], {
+        C: 'minecraft:furnace',
+        B: 'tconstruct:seared_brick'
+    }),
+
+    //Scorched Alloyer
+    event.remove({output: 'tconstruct:scorched_alloyer'})
+    event.shaped('tconstruct:scorched_alloyer', [' C ', 'BIB', 'BBB'], {
+        C: 'create:mechanical_mixer',
+        B: 'tconstruct:scorched_brick',
+        I: 'tconstruct:scorched_fuel_gauge'
+    }),
+
     //Ichor Slimeball
     event.custom({
         "type": "tconstruct:casting_table",

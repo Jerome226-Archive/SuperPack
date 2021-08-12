@@ -150,14 +150,6 @@ events.listen('recipes', function (event) {
         C: 'thermal:electrum_plate'
     }),
 
-    //Cable
-    event.remove({output: 'refinedstorage:cable'})
-    event.shaped(Item.of('refinedstorage:cable', 12), ['CCC', 'IRI', 'CCC'], {
-        C: 'refinedstorage:quartz_enriched_iron',
-        R: 'superpackutils:integrated_circuit',
-        I: '#forge:glass/colorless'
-    }),
-
     //Pipe
     event.remove({output: 'quark:pipe'})
     event.shaped(Item.of('quark:pipe', 8), ['CCC', 'IRI', 'CCC'], {
@@ -179,19 +171,18 @@ events.listen('recipes', function (event) {
     //Mekanism Steel Casing
     event.remove({output: 'mekanism:steel_casing'})
     event.recipes.create.mechanical_crafting(Item.of('mekanism:steel_casing', 1), [
-        'CPSPC',
+        ' PSP ',
         'PEGEP',
         'SBHBS',
         'PEGEP',
-        'CPSPC'
+        ' PSP '
       ], {
-        C: 'youmatter:machine_casing',
+        S: 'youmatter:machine_casing',
         P: '#forge:plates/steel',
-        S: '#immersiveengineering:scaffoldings/steel',
         E: 'superpackutils:electrical_platinum_ingot',
         G: 'superpackutils:sturdy_capacitor',
-        H: 'immersiveengineering:heavy_engineering',
-        B: 'superpackutils:bio_plastic'
+        H: 'voluminousenergy:aluminum_machine_casing',
+        B: 'advgenerators:controller'
     })
 
     //Cheap Steel Casing
@@ -617,7 +608,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'mekanism:osmium_compressor'})
     event.shaped('mekanism:osmium_compressor', ['GCG', 'IBI', 'SJS'], {
         S: '#forge:plates/bronze',
-        C: 'create:mechanical_press',
+        C: 'voluminousenergy:compressor',
         J: 'create:depot',
         B: 'mekanism:steel_casing',
         I: '#forge:circuits/advanced',
@@ -630,7 +621,7 @@ events.listen('recipes', function (event) {
         S: '#forge:plates/constantan',
         C: 'mekanism:electrolytic_core',
         B: 'mekanism:steel_casing',
-        I: '#forge:circuits/advanced',
+        I: '#forge:circuits/basic',
         G: '#forge:gears/constantan'
     }),
 
@@ -650,7 +641,7 @@ events.listen('recipes', function (event) {
         S: '#forge:plates/invar',
         C: 'immersiveengineering:blastfurnace_preheater',
         B: 'mekanism:fuelwood_heater',
-        I: '#forge:circuits/advanced',
+        I: '#forge:circuits/basic',
         G: '#forge:sheetmetals/aluminum'
     }),
 
@@ -666,9 +657,9 @@ events.listen('recipes', function (event) {
     //Fuelwood Heater
     event.remove({output: 'mekanism:fuelwood_heater'})
     event.shaped('mekanism:fuelwood_heater', ['SCS', 'IBI', 'SAS'], {
-        S: '#forge:plates/steel',
+        S: 'immersiveengineering:sheetmetal_steel',
         C: 'minecraft:furnace',
-        B: 'mekanism:steel_casing',
+        B: 'immersiveengineering:light_engineering',
         A: 'create:blaze_burner',
         I: '#forge:circuits/basic'
     }),
@@ -788,8 +779,11 @@ events.listen('recipes', function (event) {
 
     //Basic Circuit
     event.remove({id: 'mekanism:control_circuit/basic'})
-    event.recipes.mekanism.metallurgic_infusing('mekanism:basic_control_circuit', 'immersiveengineering:circuit_board', 'superpackutils:slime_crystal', 10),
-
+    event.shaped('mekanism:basic_control_circuit', ['CIC'], {
+        C: 'superpackutils:basic_alloy',
+        I: 'immersiveengineering:circuit_board'
+    }),
+    
     //Advanced Circuit
     event.remove({output: 'mekanism:advanced_control_circuit'})
     event.remove({type: 'mekanism:combining'})

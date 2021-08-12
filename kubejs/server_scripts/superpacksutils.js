@@ -168,17 +168,43 @@ events.listen('recipes', function (event) {
         "color": -11310593
     }),
 
+    //Pahoehoe Lava
+    event.remove({id: 'advgenerators:exchanger/lava_to_obsidian'})
+    event.custom({
+      "type": "advgenerators:exchanger_cooling",
+      "input": {
+        "fluids": {
+          "fluid": "minecraft:lava"
+        },
+        "amount": 1
+      },
+      "output": {
+        "fluid": "superpackutils:pahoehoe_lava",
+        "amount": 1
+      },
+      "heat": 30
+    })
+
+    //Biomass
+    event.recipes.create.compacting(Item.of('superpackutils:biomass', 3), [fluid.of('voluminousenergy:biofuel', 1000)]),
+
+    //Fermented Biomass
+    event.custom({"type":"immersiveengineering:fermenter","fluid":{"fluid":"superpackutils:fermented_biomass","amount":50},"input":{"item":"superpackutils:biomass"},"energy":3000})
+
+    //Bioslag Alloy
+    event.recipes.create.mixing('superpackutils:bioslag_ingot', [fluid.of('immersiveengineering:herbicide', 125), 'immersiveengineering:slag', 'thermal:tin_ingot']).heated()
+
     //ABS Sheet
     event.custom({"type":"mekanism:reaction","itemInput":{"ingredient":{"item":"superpackutils:polydimethylsiloxane_pulp"}},"fluidInput":{"amount":50,"tag":"forge:oxygen"},"gasInput":{"amount":500,"gas":"superpackutils:abs"},"energyRequired":3000,"duration":60,"itemOutput":{"item":"superpackutils:abs_pellet"},"gasOutput":{"gas":"superpackutils:plastic_waste","amount":200}})
   
     //Electrical Platinum Ingot
-    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_platinum_ingot', 4)], 'superpackutils:platinum_ingot', ['thermal:electrum_dust', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
+    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_platinum_ingot', 4)], 'superpackutils:platinum_ingot', ['superpackutils:electrical_pulp', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
  
     //Electrical Steel Ingot
-    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_steel_ingot', 4)], 'mekanism:ingot_steel', ['thermal:electrum_dust', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
+    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_steel_ingot', 4)], 'mekanism:ingot_steel', ['superpackutils:electrical_pulp', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
 
     //Electrical HSLA Steel Ingot
-    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_hsla_steel_ingot', 4)], 'superpackutils:hsla_steel_ingot', ['thermal:electrum_dust', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
+    event.recipes.immersiveengineering.arc_furnace([Item.of('superpackutils:electrical_hsla_steel_ingot', 4)], 'superpackutils:hsla_steel_ingot', ['superpackutils:electrical_pulp', Item.of('thermal:silver_dust', 2)], 'thermal:slag')
 
     //Rune
     event.recipes.create.pressing('superpackutils:rune', 'botania:livingrock')
@@ -202,7 +228,7 @@ events.listen('recipes', function (event) {
     event.recipes.mekanism.enriching('superpackutils:enriched_ichor', 'tconstruct:ichor_slime_crystal')
 
     //Basic Alloy
-    event.recipes.mekanism.metallurgic_infusing('superpackutils:basic_alloy', 'superpackutils:rich_slag_alloy', 'superpackutils:petroleum_coke', 160),
+    event.recipes.mekanism.metallurgic_infusing('superpackutils:basic_alloy', 'voluminousenergy:silicon', 'superpackutils:petroleum_coke', 160),
 
     //Petroleum Coke
     event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":'immersivepetroleum:petcoke_dust'}},"output":{"infuse_type":`superpackutils:petroleum_coke`,"amount":10}})
@@ -405,46 +431,6 @@ events.listen('recipes', function (event) {
                 "type": "masterfulmachinery:items",
                 "data":{
                     "item": "superpackutils:energetic_alloy_ingot",
-                    "count": 1
-                }
-            }
-        ]
-    })
-
-      //Copper-Redstone Ingot
-      event.remove({id: 'extendedcrafting:redstone_ingot'})
-      event.custom({
-        "type": "masterfulmachinery:machine_process",
-        "structureId": "metallurgic_fabricator",
-        "controllerId": "metallurgic_fabricator",
-        "ticks": 100,
-        "inputs": [
-            {
-                "type": "masterfulmachinery:energy",
-                "data":{
-                    "amount": 5000
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "thermal:copper_ingot",
-                    "count": 1
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "minecraft:redstone",
-                    "count": 1
-                }
-            }
-        ],
-        "outputs":[
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "extendedcrafting:redstone_ingot",
                     "count": 1
                 }
             }
@@ -1014,213 +1000,6 @@ events.listen('recipes', function (event) {
       C: 'libvulpes:plateiridium'
     })
 
-    //Redstone Mechanisms
-    event.custom({
-      "type": "create:sequenced_assembly",
-      "ingredient": {
-        "item": "immersiveengineering:plate_aluminum"
-      },
-      "transitionalItem": {
-        "item": "superpackutils:incomplete_redstone_mechanism"
-      },
-      "sequence": [
-        {
-          "type": "create:filling",
-          "ingredients": [
-            {
-              "item": "superpackutils:incomplete_redstone_mechanism"
-            },
-            {
-              "fluid": "superpackutils:insulating_glass",
-              "amount": 35
-            }
-          ],
-          "results": [
-            {
-              "item": "superpackutils:incomplete_redstone_mechanism"
-            }
-          ]
-        },
-        {
-          "type": "create:pressing",
-          "ingredients": [
-            {
-              "item": "superpackutils:incomplete_redstone_mechanism"
-            },
-            {
-              "item": "thermal:redstone_servo"
-            }
-          ],
-          "results": [
-            {
-              "item": "superpackutils:incomplete_redstone_mechanism"
-            }
-          ]
-        },
-        {
-          "type": "create:deploying",
-          "ingredients": [
-            {
-              "item": "superpackutils:incomplete_redstone_mechanism"
-            },
-            {
-              "item": "creategears:gear"
-            }
-          ],
-          "results": [
-            {
-              "item": "superpackutils:incomplete_redstone_mechanism"
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "item": "superpackutils:redstone_mechanism",
-          "chance": 100.0
-        }
-      ],
-      "loops": 0
-  })
-
-  //Light Mechanisms
-  event.custom({
-    "type": "create:sequenced_assembly",
-    "ingredient": {
-      "item": "thermal:iron_plate"
-    },
-    "transitionalItem": {
-      "item": "superpackutils:incomplete_light_mechanism"
-    },
-    "sequence": [
-      {
-        "type": "create:filling",
-        "ingredients": [
-          {
-            "item": "superpackutils:incomplete_light_mechanism"
-          },
-          {
-            "fluid": "superpackutils:insulating_glass",
-            "amount": 35
-          }
-        ],
-        "results": [
-          {
-            "item": "superpackutils:incomplete_light_mechanism"
-          }
-        ]
-      },
-      {
-        "type": "create:pressing",
-        "ingredients": [
-          {
-            "item": "superpackutils:incomplete_light_mechanism"
-          },
-          {
-            "item": "thermal:electrum_ingot"
-          }
-        ],
-        "results": [
-          {
-            "item": "superpackutils:incomplete_light_mechanism"
-          }
-        ]
-      },
-      {
-        "type": "create:deploying",
-        "ingredients": [
-          {
-            "item": "superpackutils:incomplete_light_mechanism"
-          },
-          {
-            "item": "creategears:gear"
-          }
-        ],
-        "results": [
-          {
-            "item": "superpackutils:incomplete_light_mechanism"
-          }
-        ]
-      }
-    ],
-    "results": [
-      {
-        "item": "superpackutils:light_mechanism",
-        "chance": 100.0
-      }
-    ],
-    "loops": 0
-})
-
-//Heavy Mechanisms
-event.custom({
-  "type": "create:sequenced_assembly",
-  "ingredient": {
-    "item": "thermal:iron_plate"
-  },
-  "transitionalItem": {
-    "item": "superpackutils:incomplete_heavy_mechanism"
-  },
-  "sequence": [
-    {
-      "type": "create:filling",
-      "ingredients": [
-        {
-          "item": "superpackutils:incomplete_heavy_mechanism"
-        },
-        {
-          "fluid": "superpackutils:insulating_glass",
-          "amount": 35
-        }
-      ],
-      "results": [
-        {
-          "item": "superpackutils:incomplete_heavy_mechanism"
-        }
-      ]
-    },
-    {
-      "type": "create:pressing",
-      "ingredients": [
-        {
-          "item": "superpackutils:incomplete_heavy_mechanism"
-        },
-        {
-          "item": "moreminecarts:silica_steel"
-        }
-      ],
-      "results": [
-        {
-          "item": "superpackutils:incomplete_heavy_mechanism"
-        }
-      ]
-    },
-    {
-      "type": "create:deploying",
-      "ingredients": [
-        {
-          "item": "superpackutils:incomplete_heavy_mechanism"
-        },
-        {
-          "item": "creategears:gear"
-        }
-      ],
-      "results": [
-        {
-          "item": "superpackutils:incomplete_heavy_mechanism"
-        }
-      ]
-    }
-  ],
-  "results": [
-    {
-      "item": "superpackutils:heavy_mechanism",
-      "chance": 100.0
-    }
-  ],
-  "loops": 0
-})
-
     //Circuit Board
     event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"superpackutils:integrated_circuit"}},{"count":1,"base_ingredient":{"item":"advgenerators:power_io"}},{"count":1,"base_ingredient":{"item":"advgenerators:iron_wiring"}},{"count":1,"base_ingredient":{"item":"mekanism:basic_control_circuit"}}],"category":"components","result":{"item":"superpackutils:circuit_board","count":1}})
 
@@ -1573,29 +1352,6 @@ event.custom({
 
     //Napalm-B
     event.custom({"type":"immersiveengineering:mixer","inputs":[{"count": 3,"base_ingredient": {"item": "superpackutils:manganese_dust"}}],"result":{"fluid":"superpackutils:napalm_b","amount":500},"fluid":{"tag":"forge:ho_gasoline","amount":500},"energy":12000}),
-
-    //Hydrogen Cyanide
-    event.custom({
-      "type": "pneumaticcraft:thermo_plant",
-      "item_input": {
-        "item": "thermal:cured_rubber"
-      },
-      "fluid_input": {
-        "type": "pneumaticcraft:fluid",
-        "fluid": "pneumaticcraft:lpg",
-        "amount": 100
-      },
-      "fluid_output": {
-        "fluid": "pneumaticcraft:plastic",
-        "amount": 1000
-      },
-      "temperature": {
-        "min_temp": 373
-      },
-      "pressure": 2.0,
-      "speed": 0.25,
-      "exothermic": false
-    })
 
     //Infused Stone
     event.recipes.create.mixing(Item.of('superpackutils:infused_stone', 2), ['create:limestone', 'botania:livingrock'])

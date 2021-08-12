@@ -7,6 +7,8 @@ events.listen('item.tags', function (event) {
 
     event.get('forge:gears/steel').remove('libvulpes:gearsteel')
 
+    event.get('forge:silicon').remove('voluminousenergy:silicon')
+
     event.get('forge:ingots/starmetal').add('astralsorcery:starmetal_ingot')
     event.get('forge:storage_blocks/starmetal').add('astralsorcery:starmetal')
     event.get('forge:dusts/starmetal').add('astralsorcery:stardust')

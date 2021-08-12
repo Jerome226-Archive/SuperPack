@@ -197,6 +197,14 @@ events.listen('recipes', function (event) {
         L: '#botania:livingwood'
     }),
 
+    //Glimmering Dreamwood
+    event.remove({output: 'botania:glimmering_dreamwood'})
+    event.shaped('botania:glimmering_dreamwood', ['FIF', 'ILI', 'FIF'], {
+        F: 'eidolon:wicked_weave',
+        I: 'astralsorcery:illumination_powder',
+        L: 'botania:dreamwood'
+    }),
+
     //Bowl of Water
     event.recipes.create.filling('botania:water_bowl', ['minecraft:bowl', fluid.of('minecraft:water', 1000)]),
 
@@ -242,6 +250,78 @@ events.listen('recipes', function (event) {
       },
       "output": {
         "name": "botania:livingwood"
+      }
+    }),
+
+    //Livingwood Planks
+    event.custom({
+      "type": "botania:pure_daisy",
+      "input": {
+        "type": "block",
+        "block": "astralsorcery:infused_wood_planks"
+      },
+      "output": {
+        "name": "botania:livingwood_planks"
+      }
+    }),
+
+    //Livingwood Planks Slab
+    event.custom({
+      "type": "botania:pure_daisy",
+      "input": {
+        "type": "block",
+        "block": "astralsorcery:infused_wood_slab"
+      },
+      "output": {
+        "name": "botania:livingwood_planks_slab"
+      }
+    }),
+
+    //Livingwood Planks Stairs
+    event.custom({
+      "type": "botania:pure_daisy",
+      "input": {
+        "type": "block",
+        "block": "astralsorcery:infused_wood_stairs"
+      },
+      "output": {
+        "name": "botania:livingwood_planks_stairs"
+      }
+    }),
+
+    //Livingrock Bricks
+    event.custom({
+      "type": "botania:pure_daisy",
+      "input": {
+        "type": "block",
+        "block": "astralsorcery:marble_bricks"
+      },
+      "output": {
+        "name": "botania:livingrock_bricks"
+      }
+    }),
+
+    //Livingrock Slab
+    event.custom({
+      "type": "botania:pure_daisy",
+      "input": {
+        "type": "block",
+        "block": "astralsorcery:marble_slab"
+      },
+      "output": {
+        "name": "botania:livingrock_bricks_slab"
+      }
+    }),
+
+    //Livingrock Stairs
+    event.custom({
+      "type": "botania:pure_daisy",
+      "input": {
+        "type": "block",
+        "block": "astralsorcery:marble_stairs"
+      },
+      "output": {
+        "name": "botania:livingrock_bricks_stairs"
       }
     }),
 
