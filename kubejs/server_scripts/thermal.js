@@ -185,10 +185,9 @@ events.listen('recipes', function (event) {
 
     //Redstone Servo
     event.remove({output: 'thermal:redstone_servo'})
-    event.shaped('thermal:redstone_servo', ['TST', 'BCB', 'TST'], {
+    event.shaped('thermal:redstone_servo', ['TST', ' C ', 'TST'], {
         T: 'minecraft:redstone',
         C: 'minecraft:iron_ingot',
-        B: 'immersiveengineering:stick_steel',
         S: 'thermal:invar_plate'
     }),
 

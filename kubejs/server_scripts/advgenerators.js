@@ -12,6 +12,15 @@ events.listen('recipes', function (event) {
         T: 'thermal:rf_coil'
     })
 
+    //Control Circuit
+    event.remove({output: 'advgenerators:controller'})
+    event.shaped('advgenerators:controller', ['EIE', 'ICI', 'EIE'], {
+        C: 'superpackutils:coated_circuit_board',
+        E: 'superpackutils:polished_certus_quartz',
+        I: 'superpackutils:carbon_plate'
+    }),
+
+
     //Iron-Redstone Wiring
     event.remove({output: 'advgenerators:iron_wiring'})
     event.shaped('advgenerators:iron_wiring', [' AL', 'ASA', 'LA '], {
@@ -23,7 +32,7 @@ events.listen('recipes', function (event) {
     //Iron Tubing
     event.remove({output: 'advgenerators:iron_tubing'})
     event.shaped('advgenerators:iron_tubing', [' AL', 'ASA', 'LA '], {
-        A: 'advgenerators:iron_tubing',
+        A: 'createaddition:iron_wire',
         S: 'immersiveengineering:stick_iron',
         L: 'minecraft:stick'
     })
