@@ -232,7 +232,7 @@ events.listen('recipes', function (event) {
     event.remove({output: 'immersiveengineering:light_engineering'})
     event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:light_engineering', 4), ['SCS', 'IBI', 'SCS'], {
         S: 'immersiveengineering:sheetmetal_aluminum',
-        C: 'immersiveengineering:toolupgrade_revolver_electro',
+        C: 'create:electron_tube',
         B: 'create:andesite_casing',
         I: 'thermal:electrum_ingot'
     }),
