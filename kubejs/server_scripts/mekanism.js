@@ -789,4 +789,20 @@ events.listen('recipes', function (event) {
     event.remove({type: 'mekanism:combining'})
     event.recipes.mekanism.combining('mekanism:advanced_control_circuit', '#forge:circuits/basic', Item.of('mekanism:alloy_infused', 2))
 
+    // Osmium Ore
+    event.custom({
+        "type": "mekanism:metallurgic_infusing",
+        "itemInput": {
+          "ingredient": {
+            "item": "superpackutils:infused_stone"
+          }
+        },
+        "infusionInput": {
+          "amount": 10,
+          "tag": "superpackutils:nickel_selenide"
+        },
+        "output": {
+          "item": "mekanism:osmium_ore"
+        }
+      })
 });

@@ -1370,6 +1370,73 @@ events.listen('recipes', function (event) {
     event.smelting('superpackutils:cupronickel_ingot', 'superpackutils:cupronickel_blend')
     event.recipes.minecraft.blasting('superpackutils:cupronickel_ingot', 'superpackutils:cupronickel_blend')
 
+    // Selenium
+    event.custom({
+      "type": "mekanism:separating",
+      "input": {
+        "amount": 10,
+        "fluid": "superpackutils:anode_sludge"
+      },
+      "leftGasOutput": {
+        "gas": "superpackutils:selenium",
+        "amount": 3
+      },
+      "rightGasOutput": {
+        "gas": "superpackutils:tellurium",
+        "amount": 3
+      }
+    })
+
+    // Selenickel Alloy
+    event.custom({
+      "type": "mekanism:reaction",
+      "itemInput": {
+        "ingredient": {
+          "item": "superpackutils:platinum_manganese_alloy_ingot"
+        }
+      },
+      "fluidInput": {
+        "amount": 50,
+        "tag": "tconstruct:molten_nickel"
+      },
+      "gasInput": {
+        "amount": 10,
+        "gas": "superpack:selenium"
+      },
+      "energyRequired": 1000,
+      "duration": 60,
+      "gasOutput": {
+        "gas": "superpackutils:selenickel_alloy",
+        "amount": 5
+      }
+    })
+
+    // Selenous Crystal
+    event.custom({
+      "type": "mekanism:crystallizing",
+      "chemicalType": "gas",
+      "input": {
+        "amount": 15,
+        "gas": "superpackutils:selenickel_alloy"
+      },
+      "output": {
+        "item": "superpackutils:selenous_crystal"
+      }
+    })
+
+    event.custom({
+      "type": "mekanism:infusion_conversion",
+      "input": {
+        "ingredient": {
+          "item": "superpackutils:selenous_crystal"
+        }
+      },
+      "output": {
+        "infuse_type": "superpackutils:nickel_selenide",
+        "amount": 10
+      }
+    })
+
     //Alchemical Dusts
     function mixer(alchemicalDustItem, catalystItem) {
 
