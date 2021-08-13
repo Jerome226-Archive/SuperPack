@@ -22,6 +22,60 @@ events.listen('recipes', function (event) {
     oilCracking('forge:heavy_oil', 'forge:steam', 'superpackutils:sc_heavy_oil')
     oilCracking('forge:heavy_oil', 'forge:hydrogen', 'superpackutils:hc_heavy_oil')
 
+    function oiling(machine, inputItem, outputFluid, outputAmount) {
+
+    event.custom({"type":`immersiveengineering:${machine}`,"fluid":{"fluid":outputFluid,"amount":outputAmount},"input":{"item":inputItem},"energy":6400})
+
+    }
+
+    oiling('squeezer', 'minecraft:cod', 'superpackutils:fish_oil', 45)
+    oiling('squeezer', 'minecraft:salmon', 'superpackutils:fish_oil', 45)
+    oiling('squeezer', 'minecraft:pufferfish', 'superpackutils:fish_oil', 100)
+    oiling('squeezer', 'minecraft:tropical_fish', 'superpackutils:fish_oil', 60)
+    oiling('squeezer', 'aquaculture:atlantic_cod', 'superpackutils:fish_oil', 80)
+    oiling('squeezer', 'aquaculture:blackfish', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:pacific_halibut', 'superpackutils:fish_oil', 80)
+    oiling('squeezer', 'aquaculture:atlantic_halibut', 'superpackutils:fish_oil', 80)
+    oiling('squeezer', 'aquaculture:atlantic_herring', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:pink_salmon', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:pollock', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:rainbow_trout', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:bayad', 'superpackutils:fish_oil', 60)
+    oiling('squeezer', 'aquaculture:boulti', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:capitaine', 'superpackutils:fish_oil', 80)
+    oiling('squeezer', 'aquaculture:synodontis', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:smallmouth_bass', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:bluegill', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:brown_trout', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:carp', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:gar', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:minnow', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:muskellunge', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:perch', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:piranha', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:tambaqui', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'upgrade_aquatic:lionfish', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'aquaculture:red_grouper', 'superpackutils:fish_oil', 50)
+    oiling('squeezer', 'upgrade_aquatic:pike', 'superpackutils:fish_oil', 65)
+    oiling('squeezer', 'aquaculture:catfish', 'superpackutils:fish_oil', 65)
+    oiling('squeezer', 'aquaculture:tuna', 'superpackutils:fish_oil', 80)
+    oiling('squeezer', 'aquaculture:arapaima', 'superpackutils:fish_oil', 80)
+
+    oiling('squeezer', 'thermal:barley_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:corn_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:flax_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:radish_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:sadiroot_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:spinach_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:bell_pepper_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:eggplant_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:green_bean_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:peanut_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:hops_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:tea_seeds', 'immersiveengineering:plantoil', 80)
+    oiling('squeezer', 'thermal:frost_melon_seeds', 'immersiveengineering:plantoil', 120)
+    oiling('squeezer', 'supplementaries:flax_seeds', 'immersiveengineering:plantoil', 80)
+
     //ABS Sheet
     event.shaped('superpackutils:abs_sheet', ['AAA', 'A A', 'AAA'], {
       A: 'superpackutils:abs_pellet'

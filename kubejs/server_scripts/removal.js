@@ -96,6 +96,10 @@ var outputRemoval = [
     'createaddition:accumulator',
     'createaddition:redstone_relay',
 
+    //Mini Utilities
+    'miniutilities:mechanical_miner',
+    'miniutilities:mechanical_placer',
+
     //Pneumaticcraft
     'pneumaticcraft:logistics_configurator',
     'pneumaticcraft:logistics_frame_storage',

@@ -18,7 +18,7 @@ events.listen('recipes', function (event) {
 
     //Herbicide
     event.remove({id: 'immersiveengineering:mixer/herbicide'})
-    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"voluminousenergy:saltpeterchunk"},{"item":"thermal:copper_dust"}],"result":{"fluid":"immersiveengineering:herbicide","amount":500},"fluid":{"tag":"forge:ethanol","amount":500},"energy":3200}),
+    event.custom({"type":"immersiveengineering:mixer","inputs":[{"item":"voluminousenergy:saltpeterchunk"},{"item":"thermal:copper_dust"}],"result":{"fluid":"immersiveengineering:herbicide","amount":500},"fluid":{"tag":"forge:fish_oil","amount":500},"energy":3200}),
 
     //Oil distilling
     event.remove({id: 'immersivepetroleum:distillationtower/oilcracking'})

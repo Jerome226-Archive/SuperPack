@@ -91,6 +91,10 @@ onEvent('jei.hide.items', event => {
         'mekanism:diversion_transporter',
         'mekanism:logistical_sorter',
 
+        //Mini Utilities
+        'miniutilities:mechanical_placer',
+        'miniutilities:mechanical_miner',
+
         //Pneumaticcraft
         'pneumaticcraft:logistics_configurator',
         Item.of('pneumaticcraft:logistics_configurator', {"pneumaticcraft:air":30000}),
