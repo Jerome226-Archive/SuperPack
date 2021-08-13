@@ -1,0 +1,40 @@
+{
+  "controllerId": "assembler",
+  "name": "Primitive Assembling Machine",
+  "ports": [
+    {
+      "type": "masterfulmachinery:items",
+      "name": "Items",
+      "id": "basic",
+      "data": {
+        "rows": 1,
+        "columns": 1
+      }
+    },
+    {
+      "type": "masterfulmachinery:items",
+      "name": "Items",
+      "id": "advanced",
+      "data": {
+        "rows": 3,
+        "columns": 3
+      }
+    },
+    {
+      "type": "masterfulmachinery:fluids",
+      "name": "Fluid",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    },
+    {
+      "type": "masterfulmachinery:energy",
+      "name": "Energy",
+      "id": "basic",
+      "data": {
+        "capacity": 10000
+      }
+    }
+  ]
+}

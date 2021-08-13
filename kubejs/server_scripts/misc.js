@@ -124,6 +124,11 @@ events.listen('recipes', function (event) {
     event.recipes.create.filling('superpackutils:skyslime_bottle', ['minecraft:glass_bottle', fluid.of('tconstruct:sky_slime', 50)])
     event.recipes.create.emptying([fluid.of('tconstruct:sky_slime', 50), 'minecraft:glass_bottle'], 'superpackutils:skyslime_bottle')
 
+    //Fish Oil
+    event.remove({id: 'alexsmobs:fish_oil'})
+    event.recipes.create.filling('alexsmobs:fish_oil', ['minecraft:glass_bottle', fluid.of('superpackutils:fish_oil', 250)])
+    event.recipes.create.emptying([fluid.of('superpackutils:fish_oil', 250), 'minecraft:glass_bottle'], 'alexsmobs:fish_oil')
+
     //Blood Bottle
     event.recipes.create.filling('superpackutils:blood_bottle', ['minecraft:glass_bottle', fluid.of('tconstruct:blood', 50)])
     event.recipes.create.emptying([fluid.of('tconstruct:blood', 50), 'minecraft:glass_bottle'], 'superpackutils:blood_bottle')
