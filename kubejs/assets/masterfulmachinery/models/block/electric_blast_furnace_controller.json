@@ -1,0 +1,8 @@
+{
+    "parent":"minecraft:block/orientable",
+    "textures":{
+        "side":"masterfulmachinery:block/electric_blast_furnace_casing",
+        "top":"masterfulmachinery:block/electric_blast_furnace_casing",
+        "front":"masterfulmachinery:block/electric_blast_furnace_controller"
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "masterfulmachinery:block/electric_blast_furnace_advanced_port_items_output"
+  }
+}

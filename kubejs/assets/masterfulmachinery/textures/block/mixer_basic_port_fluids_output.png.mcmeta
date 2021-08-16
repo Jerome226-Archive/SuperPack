@@ -4,7 +4,7 @@
       "type":"CTM",
       "layer":"SOLID",
       "textures":[
-         "masterfulmachinery:block/mixer_basic_port_items_input-ctm"
+         "masterfulmachinery:block/mixer_basic_port_fluids_output-ctm"
       ],
       "extra":{
          "connect_to":[
@@ -27,13 +27,13 @@
                "block":"masterfulmachinery:mixer_advanced_port_items_output"
             },
             {
+               "block":"masterfulmachinery:mixer_basic_port_energy_input"
+            },
+            {
                "block":"masterfulmachinery:mixer_basic_port_fluids_input"
             },
             {
                "block":"masterfulmachinery:mixer_basic_port_fluids_output"
-            },
-            {
-               "block":"masterfulmachinery:mixer_basic_port_energy_input"
             },
             {
                "block":"masterfulmachinery:mixer_basic_port_botania_mana_input"

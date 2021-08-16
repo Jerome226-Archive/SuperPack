@@ -1,6 +1,6 @@
 {
-  "controllerId": "primitive_assembler",
-  "name": "Primitive Assembling Machine",
+  "controllerId": "electric_blast_furnace",
+  "name": "Electric Blast Furnace",
   "ports": [
     {
       "type": "masterfulmachinery:items",
@@ -20,6 +20,16 @@
         "columns": 3
       }
     },
+    {
+      "type": "masterfulmachinery:pncr_pressure",
+      "name": "Pressure",
+      "id": "basic",
+      "data": {
+        "volume": 5000,
+        "dangerPressure": 15,
+        "criticalPressure": 30
+      }
+    }, 
     {
       "type": "masterfulmachinery:fluids",
       "name": "Fluid",
