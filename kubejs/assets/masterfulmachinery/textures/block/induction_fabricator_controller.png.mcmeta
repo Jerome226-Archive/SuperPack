@@ -1,0 +1,35 @@
+{
+   "ctm":{
+      "ctm_version":1,
+      "type":"CTM",
+      "layer":"SOLID",
+      "textures":[
+         "masterfulmachinery:block/induction_fabricator_controller-ctm"
+      ],
+      "extra":{
+         "connect_to":[
+            {
+               "block":"superpackutils:induction_fabricator_casing"
+            },
+            {
+               "block":"masterfulmachinery:induction_fabricator_controller"
+            },
+            {
+               "block":"masterfulmachinery:induction_fabricator_basic_port_items_output"
+            },
+            {
+               "block":"masterfulmachinery:induction_fabricator_basic_port_items_input"
+            },
+            {
+               "block":"masterfulmachinery:induction_fabricator_advanced_port_items_output"
+            },
+            {
+               "block":"masterfulmachinery:induction_fabricator_advanced_port_items_input"
+            },
+            {
+               "block":"masterfulmachinery:induction_fabricator_basic_port_energy_input"
+            }
+         ]
+      }
+   }
+}

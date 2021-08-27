@@ -1407,9 +1407,6 @@ events.listen('recipes', function (event) {
     //Napalm-B
     event.custom({"type":"immersiveengineering:mixer","inputs":[{"count": 3,"base_ingredient": {"item": "superpackutils:manganese_dust"}}],"result":{"fluid":"superpackutils:napalm_b","amount":500},"fluid":{"tag":"forge:ho_gasoline","amount":500},"energy":12000}),
 
-    //Infused Stone
-    event.recipes.create.mixing(Item.of('superpackutils:infused_stone', 2), ['create:limestone', 'botania:livingrock'])
-
     //Compressed Steel Ingot
     event.custom({"type":"immersiveengineering:squeezer","result":{"item":"superpackutils:compressed_steel_ingot"},"input":{"count":1,"base_ingredient":{"tag":"forge:ingots/steel"}},"energy":19200})
 

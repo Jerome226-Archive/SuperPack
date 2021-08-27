@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "masterfulmachinery:block/supercooler_basic_port_items_output"
+  }
+}

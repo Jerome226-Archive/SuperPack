@@ -1,0 +1,8 @@
+{
+    "parent":"minecraft:block/orientable",
+    "textures":{
+        "side":"masterfulmachinery:block/supercooler_casing",
+        "top":"masterfulmachinery:block/supercooler_casing",
+        "front":"masterfulmachinery:block/supercooler_controller"
+    }
+}

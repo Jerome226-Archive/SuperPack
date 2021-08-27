@@ -112,7 +112,10 @@
 	"item.mekanism.advanced_control_circuit": "\u00A7cAdvanced Control Circuit",
 	"item.mekanism.basic_control_circuit": "\u00A7aBasic Control Circuit",
 
-	"item.mekanism.dust_lithium": "Raw Lithium Dust"
+	"block.mekanism.block_refined_obsidian": "Refined Obsidian Block",
+	"block.mekanism.block_refined_glowstone": "Refined Glowstone Block",
+
+	"item.mekanism.dust_lithium": "Raw Lithium Dust",
 
 	"block.mekanism.thermal_evaporation_block": "Thermal Evaporation Casing"
 }
