@@ -17,8 +17,8 @@
         "blue": "20",
         "alpha": "FC"
       },
-      "minY": 10,
-      "maxY": 15,
+      "minY": 0,
+      "maxY": 0,
       "playerTeleportedMinY": 100,
       "playerTeleportedMaxY": 120,
       "spawnChance": 0,
