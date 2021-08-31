@@ -247,7 +247,7 @@ events.listen('recipes', function (event) {
 
     //IE Heavy Engineering Block
     event.remove({output: 'immersiveengineering:heavy_engineering'})
-    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 2), ['SCS', 'IBI', 'SCS'], {
+    event.recipes.create.mechanical_crafting(Item.of('immersiveengineering:heavy_engineering', 4), ['SCS', 'IBI', 'SCS'], {
         S: 'moreminecarts:corrugated_silica_steel',
         C: 'superpackutils:reinforced_capacitor',
         B: 'create:brass_casing',
