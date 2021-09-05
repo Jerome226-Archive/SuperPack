@@ -182,7 +182,7 @@ events.listen('recipes', function (event) {
         E: 'superpackutils:electrical_platinum_ingot',
         G: 'superpackutils:sturdy_capacitor',
         H: 'voluminousenergy:aluminum_machine_casing',
-        B: 'advgenerators:controller'
+        B: 'superpackutils:dark_steel_ingot'
     })
 
     //Cheap Steel Casing
@@ -222,7 +222,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:items",
                 "data":{
-                    "item": "superpackutils:bio_plastic",
+                    "item": "superpackutils:dark_steel_ingot",
                     "count": 1
                 }
             },
@@ -243,7 +243,7 @@ events.listen('recipes', function (event) {
             {
                 "type": "masterfulmachinery:items",
                 "data":{
-                    "item": "immersiveengineering:heavy_engineering",
+                    "item": "voluminousenergy:aluminum_machine_casing",
                     "count": 1
                 }
             }

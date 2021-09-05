@@ -4,7 +4,8 @@ events.listen('recipes', function (event) {
 
     //Smeltery Controller
     event.remove({id: 'tconstruct:smeltery/casting/seared/smeltery_controller'})
-    event.custom({"type":"immersiveengineering:bottling_machine","result":{"item":"tconstruct:smeltery_controller"},"input":{"item":"tconstruct:seared_heater"},"fluid":{"tag":"tconstruct:molten_constantan","amount":576}})
+    event.custom({"type":"immersiveengineering:bottling_machine","result":{"item":"tconstruct:smeltery_controller"},"input":{"item":"superpackutils:smeltery_assembly"},"fluid":{"tag":"tconstruct:molten_constantan","amount":576}})
+    event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"superpackutils:integrated_circuit"}},{"count":1,"base_ingredient":{"item":"tconstruct:seared_melter"}},{"count":1,"base_ingredient":{"item":"tconstruct:scorched_alloyer"}},{"count":1,"base_ingredient":{"item":"tconstruct:seared_heater"}}],"category":"components","result":{"item":"superpackutils:smeltery_assembly","count":1}})
 
     //Treated Wood Recipe
     event.remove({id: 'tconstruct:compat/immersiveengineering/treated_wood'})
