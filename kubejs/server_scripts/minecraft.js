@@ -16,24 +16,6 @@ events.listen('recipes', function (event) {
         H: 'immersiveengineering:hammer'
     }),
 
-    //Fletching Table
-    event.remove({output: 'minecraft:fletching_table'})
-    event.shaped('minecraft:fletching_table', ['TTT', 'WHS', 'TTT'], {
-        T: 'minecraft:birch_planks',
-        S: 'minecraft:arrow',
-        W: 'minecraft:target',
-        H: 'minecraft:bow'
-    }),
-
-    //Cartography Table
-    event.remove({output: 'minecraft:cartography_table'})
-    event.shaped('minecraft:cartography_table', ['HWS', 'TTT', 'TTT'], {
-        T: '#forge:treated_wood',
-        S: 'supplementaries:globe',
-        W: 'minecraft:map',
-        H: 'minecraft:compass'
-    }),
-
     //Stonecutter
     event.remove({output: 'minecraft:stonecutter'})
     event.shaped('minecraft:stonecutter', [' C ', 'III'], {
