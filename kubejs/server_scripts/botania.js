@@ -744,7 +744,7 @@ events.listen('recipes', function (event) {
           "tag": "botania:runes/air"
         },
         {
-          "item": "quark:violet_crystal_cluster"
+          "item": "superpackutils:lust_crystal"
         },
         {
           "item": "eidolon:lesser_soul_gem"
@@ -771,7 +771,7 @@ events.listen('recipes', function (event) {
           "tag": "botania:runes/winter"
         },
         {
-          "item": "quark:white_crystal_cluster"
+          "item": "superpackutils:gluttony_crystal"
         },
         {
           "item": "eidolon:enchanted_ash"
