@@ -478,7 +478,7 @@ onEvent('recipes', event => {
   if (oreItem !== null && purifiedCrushedItem !== null && oreItem !== null && isGem == false) {
 
   //Create Crusher
-  event.recipes.create.crushing([Item.of(purifiedCrushedItem), tinydustItem, Item.of('minecraft:cobblestone').withChance(0.35)], purifiedOreItem, 200)
+  event.recipes.create.crushing([Item.of(purifiedCrushedItem), tinyDustItem, Item.of('minecraft:cobblestone').withChance(0.35)], purifiedOreItem, 200)
   
   }
 

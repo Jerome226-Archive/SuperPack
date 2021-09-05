@@ -1,10 +1,7 @@
-//priority 10
+//priority 2000
 events.listen('recipes', function (event) {
 
 var outputRemoval = [
-
-    //Factoriores
-    //'factoriores:sulfur_block',
     
     //Lib Vulpes
     'libvulpes:gearsteel',
@@ -127,6 +124,8 @@ var outputRemoval = [
 var typeRemoval = [
 
     'immersiveengineering:cloche',
+    'thermal:sawmill',
+    'thermal:pulverizer',
     'thermal:press',
 
 ];

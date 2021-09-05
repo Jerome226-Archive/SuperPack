@@ -59,7 +59,7 @@ events.listen('recipes', function (event) {
       }
   });
 
-    function hammerCrushing(needSmelting, name, stoneItem, cobblestoneItem) {
+    function hammerCrushing(name, stoneItem, cobblestoneItem) {
     
     //Hammer Crushing
     event.custom({

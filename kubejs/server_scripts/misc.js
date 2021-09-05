@@ -10,6 +10,25 @@ events.listen('recipes', function (event) {
     event.remove({id: 'byg:gray_dye'})
     event.remove({id: 'platforms:wrench_alt'})
 
+    //Macaw's Wood Plate
+    function woodplate(logItem, plateItem) {
+
+    event.remove({output: plateItem})
+    event.recipes.immersiveengineering.metal_press(plateItem, logItem, 'immersiveengineering:mold_plate')
+    event.recipes.immersiveengineering.sawmill(Item.of('superpackutils:plywood', 2), 'mcwfurnitures:oak_plate', [{stripping: false, output: sawdustItem}], 'thermal:sawdust')
+
+    }
+
+    woodplate('minecraft:oak_log', 'mcwfurnitures:oak_plate')
+    woodplate('minecraft:spruce_log', 'mcwfurnitures:spruce_plate')
+    woodplate('minecraft:birch_log', 'mcwfurnitures:birch_plate')
+    woodplate('minecraft:jungle_log', 'mcwfurnitures:jungle_plate')
+    woodplate('minecraft:spruce_log', 'mcwfurnitures:spruce_plate')
+    woodplate('minecraft:acacia_log', 'mcwfurnitures:acacia_plate')
+    woodplate('minecraft:dark_oak_log', 'mcwfurnitures:dark_oak_plate')
+    woodplate('minecraft:crimson_stem', 'mcwfurnitures:crimson_plate')
+    woodplate('minecraft:warped_stem', 'mcwfurnitures:warped_plate')
+
     //Raw Transistor
     event.remove({output: 'youmatter:transistor_raw'})
     event.custom({"type":"immersiveengineering:blueprint","inputs":[{"count":1,"base_ingredient":{"item":"immersiveengineering:hemp_fiber"}},{"count":1,"base_ingredient":{"item":"immersiveengineering:ingot_aluminum"}},{"count":1,"base_ingredient":{"item":"create:brass_sheet"}}],"category":"components","result":{"item":"youmatter:transistor_raw","count":1}})

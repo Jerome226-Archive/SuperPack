@@ -1028,7 +1028,7 @@ events.listen('recipes', function (event) {
 
     //Heating Element
     event.shaped(Item.of('superpackutils:heating_element', 2), ['ICI', 'EEE', 'ICI'], {
-        C: 'superpackutils:redstone_alloy_ingot',
+        C: 'superpackutils:refined_redstone_ingot',
         E: 'superpackutils:superheated_bronze_ingot',
         I: 'immersiveengineering:stick_steel'
     })

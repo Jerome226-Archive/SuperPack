@@ -8,36 +8,17 @@ onEvent('recipes', event => {
     //Mekanism Sawmill
     event.recipes.mekanism.sawing(Item.of('minecraft:stick', 9), '#minecraft:wooden_stairs')
 
-    //Thermal Sawmill
-    event.recipes.thermal.sawmill(Item.of('minecraft:stick', 9), '#minecraft:wooden_stairs')
-
-    //Mekanism Sawmill
-    event.recipes.mekanism.sawing(Item.of('minecraft:stick', 9), '#minecraft:wooden_slabs')
-
-    //Thermal Sawmill
-    event.recipes.thermal.sawmill(Item.of('minecraft:stick', 9), '#minecraft:wooden_slabs')
-
-    //Mekanism Sawmill
-    event.recipes.mekanism.sawing(Item.of('minecraft:stick', 9), '#minecraft:planks')
-
-    //Thermal Sawmill
-    event.recipes.thermal.sawmill(Item.of('minecraft:stick', 9), '#minecraft:planks')
-    
-
     if (plankItem !== null) {
 
         //Remove Output
         event.remove({ output: plankItem, type: 'create:cutting'});
         event.remove({ output: plankItem, type: 'immersiveengineering:sawmill'});
         event.remove({ output: plankItem, type: 'mekanism:sawing'});
-        event.remove({ output: plankItem, type: 'thermal:sawmill'});
         event.remove({ output: plankItem, type: 'minecraft:crafting_shapeless'});
 
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of('minecraft:stick', 2), plankItem)
 
-        //Thermal Sawmill
-        event.recipes.thermal.sawmill(Item.of('minecraft:stick', 2), plankItem)
     }
 
     if (logStrippedItem !== null) {
@@ -60,9 +41,6 @@ onEvent('recipes', event => {
     }
 
     if (plankItem !== null && logItem !== null) {
-
-        //Thermal Sawmill
-        event.recipes.thermal.sawmill(Item.of(plankItem, 6), `#${modName}:${woodName}_${logType}s`)
 
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of(plankItem, 6), `#${modName}:${woodName}_${logType}s`)
@@ -102,9 +80,6 @@ onEvent('recipes', event => {
 
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of(plankItem, 2), pPlateItem)
-
-        //Thermal Sawmill
-        event.recipes.thermal.sawmill(Item.of(plankItem, 2), pPlateItem)
         
     }
 
@@ -112,9 +87,6 @@ onEvent('recipes', event => {
 
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of(plankItem, 5), boatItem)
-
-        //Thermal Sawmill
-        event.recipes.thermal.sawmill(Item.of(plankItem, 5), boatItem)
         
     }
 
@@ -123,17 +95,12 @@ onEvent('recipes', event => {
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of(plankItem, 2), gateItem, Item.of('minecraft:stick', 4))
 
-        //Thermal Sawmill
-        event.custom({"type": "thermal:sawmill","ingredient": {"item": `${gateItem}`},"result": [{"item": `${plankItem}`,"count": 2},{"item": "minecraft:stick","count": 4}],"energy": 1000})
     }
 
     if (fenceItem !== null && plankItem !== null) {
 
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of(plankItem, 1), fenceItem, Item.of('minecraft:stick', 2))
-
-        //Thermal Sawmill
-        event.custom({"type": "thermal:sawmill","ingredient": {"item": `${fenceItem}`},"result": [{"item": `${plankItem}`,"count": 1},{"item": "minecraft:stick","count": 2}],"energy": 1000})
         
     }
 
@@ -141,9 +108,6 @@ onEvent('recipes', event => {
 
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of(plankItem, 2), doorItem)
-
-        //Thermal Sawmill
-        event.recipes.thermal.sawmill(Item.of(plankItem, 2), doorItem)
         
     }
 
@@ -151,9 +115,6 @@ onEvent('recipes', event => {
 
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of(plankItem, 3), trapdoorItem)
-
-        //Thermal Sawmill
-        event.recipes.thermal.sawmill(Item.of(plankItem, 3), trapdoorItem)
         
     }
 
@@ -161,9 +122,6 @@ onEvent('recipes', event => {
 
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of(plankItem, 4), craftingTableItem)
-
-        //Thermal Sawmill
-        event.recipes.thermal.sawmill(Item.of(plankItem, 4), craftingTableItem)
         
     }
 
@@ -171,9 +129,6 @@ onEvent('recipes', event => {
 
         //Mekanism Sawmill
         event.recipes.mekanism.sawing(Item.of(plankItem, 4), bookshelfItem, Item.of('minecraft:book', 3))
-
-        //Thermal Sawmill
-        event.custom({"type": "thermal:sawmill","ingredient": {"item": `${bookshelfItem}`},"result": [{"item": `${plankItem}`,"count": 4},{"item": "minecraft:book","count": 3}],"energy": 1000})
 
     }
 

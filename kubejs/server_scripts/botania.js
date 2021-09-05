@@ -430,7 +430,7 @@ events.listen('recipes', function (event) {
           "item": "botania:rune_wrath"
         },
         {
-          "item": "superpackutils:redstone_alloy_ingot"
+          "item": "extendedcrafting:redstone_ingot"
         }
       ]
     })
@@ -798,7 +798,7 @@ events.listen('recipes', function (event) {
           "tag": "botania:runes/spring"
         },
         {
-          "item": "quark:green_crystal_cluster"
+          "item": "superpackutils:greed_crystal"
         },
         {
           "item": "eidolon:warped_sprouts"
@@ -825,7 +825,7 @@ events.listen('recipes', function (event) {
           "tag": "botania:runes/autumn"
         },
         {
-          "item": "quark:orange_crystal_cluster"
+          "item": "superpackutils:sloth_crystal"
         },
         {
           "item": "eidolon:fungus_sprouts"
@@ -852,7 +852,7 @@ events.listen('recipes', function (event) {
           "tag": "botania:runes/winter"
         },
         {
-          "item": "quark:red_crystal_cluster"
+          "item": "superpackutils:wrath_crystal"
         },
         {
           "item": "eidolon:crimson_essence"
@@ -879,7 +879,7 @@ events.listen('recipes', function (event) {
           "tag": "botania:runes/winter"
         },
         {
-          "item": "quark:indigo_crystal_cluster"
+          "item": "superpackutils:envy_crystal"
         },
         {
           "item": "eidolon:shadow_gem"
@@ -906,7 +906,7 @@ events.listen('recipes', function (event) {
           "tag": "botania:runes/summer"
         },
         {
-          "item": "quark:black_crystal_cluster"
+          "item": "superpackutils:pride_crystal"
         },
         {
           "item": "eidolon:death_essence"
