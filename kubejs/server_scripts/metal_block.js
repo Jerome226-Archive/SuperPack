@@ -4,7 +4,6 @@ events.listen('recipes', function (event) {
 
     //Copper 
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/copper"},"result": "create:copper_block","count": 1})
-    event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/copper"},"result": "iceandfire:copper_block","count": 1})
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/copper"},"result": "immersiveengineering:storage_copper","count": 1})
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/copper"},"result": "mekanism:block_copper","count": 1})
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/copper"},"result": "thermal:copper_block","count": 1})
@@ -19,7 +18,6 @@ events.listen('recipes', function (event) {
     //Silver
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/silver"},"result": "thermal:silver_block","count": 1})
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/silver"},"result": "immersiveengineering:storage_silver","count": 1})
-    event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/silver"},"result": "iceandfire:silver_block","count": 1})
 
     //Lead
     event.custom({"type": "minecraft:stonecutting","ingredient": {"tag": "forge:storage_blocks/lead"},"result": "thermal:lead_block","count": 1})
