@@ -45,7 +45,7 @@ events.listen('recipes', function (event) {
     ],
     "key": {
       "A": {
-        "item": "eidolon:ender_calx"
+        "item": "eidolon:pewter_inlay"
       },
       "B": {
         "item": "eidolon:shadow_gem"
@@ -57,7 +57,7 @@ events.listen('recipes', function (event) {
         "item": "botania:quartz_dark"
       },
       "I": {
-        "item": "eidolon:soul_shard"
+        "item": "eidolon:crucible"
       },
       "D": {
         "item": "superpackutils:dyingrock"
