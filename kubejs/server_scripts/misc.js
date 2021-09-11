@@ -92,6 +92,12 @@ events.listen('recipes', function (event) {
     //Porcelain ReplaceInput
     event.replaceInput({}, 'exnihilosequentia:porcelain_clay', 'ceramics:unfired_porcelain')
 
+    //Ex Nihilo Crucible fix
+    event.remove({output: 'exnihilosequentia:crucible_unfired'})
+    event.shaped('exnihilosequentia:crucible_unfired', ['T T', 'T T', 'TTT'], {
+        T: 'ceramics:unfired_porcelain'
+    }),
+
     //Porcelain Recipe
     event.remove({id: 'ceramics:unfired_porcelain'})
     event.remove({id: 'ceramics:porcelain_brick_smelting'})
