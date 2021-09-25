@@ -276,11 +276,11 @@ events.listen('recipes', function (event) {
       I: 'thermal:obsidian_glass'
     }),
 	
-	event.shapeless('4x pneumaticcraft:pressure_chamber_glass', ['thermal:obsidian_glass', '4x pneumaticcraft:pressure_chamber_wall'])
-	event.shapeless('pneumaticcraft:pressure_chamber_glass', ['thermal:obsidian_glass', 'pneumaticcraft:pressure_chamber_wall'])
+    event.shapeless('4x pneumaticcraft:pressure_chamber_glass', ['thermal:obsidian_glass', '4x pneumaticcraft:pressure_chamber_wall'])
+    event.shapeless('pneumaticcraft:pressure_chamber_glass', ['thermal:obsidian_glass', 'pneumaticcraft:pressure_chamber_wall'])
 	
-	//Pressure Tube
-	event.remove({output: 'pneumaticcraft:pressure_tube'})
+    //Pressure Tube
+    event.remove({output: 'pneumaticcraft:pressure_tube'})
     event.shaped(Item.of('pneumaticcraft:pressure_tube', 8), ['ACA'], {
       C: 'thermal:obsidian_glass',
       A: '#forge:ingots/compressed_iron'
