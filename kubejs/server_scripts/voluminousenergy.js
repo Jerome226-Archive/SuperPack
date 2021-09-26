@@ -1,7 +1,21 @@
 //priority: 1500
 
 events.listen('recipes', function (event) {
-
+    
+    //Carbon Plate
+    event.custom({
+	   "type": "voluminousenergy:compressing",
+       "ingredient": {
+       "item": 'superpackutils:combined_carbon_fibers',
+       "count": 1
+     },
+       "process_time": 200,
+       "result": {
+       "item": "superpackutils:carbon_plate",
+       "count": 1
+     }
+    })
+    
     //Quartz Multiplier
     event.remove({output: 'voluminousenergy:quartz_multiplier'})
     event.shaped('voluminousenergy:quartz_multiplier', ['CCC', 'I I'], {
