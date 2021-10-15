@@ -268,7 +268,24 @@ events.listen('recipes', function (event) {
       B: 'mekanism:pressure_disperser',
       I: 'superpackutils:big_steel_casing'
     }),
-
+    
+    //Pressure Chamber Glass
+    event.remove({output: 'pneumaticcraft:pressure_chamber_glass'})
+    event.shaped(Item.of('pneumaticcraft:pressure_chamber_glass', 16), ['AAA', 'AIA', 'AAA'], {
+      A: 'pneumaticcraft:reinforced_bricks',
+      I: 'thermal:obsidian_glass'
+    }),
+	
+    event.shapeless('4x pneumaticcraft:pressure_chamber_glass', ['thermal:obsidian_glass', '4x pneumaticcraft:pressure_chamber_wall'])
+    event.shapeless('pneumaticcraft:pressure_chamber_glass', ['thermal:obsidian_glass', 'pneumaticcraft:pressure_chamber_wall'])
+	
+    //Pressure Tube
+    event.remove({output: 'pneumaticcraft:pressure_tube'})
+    event.shaped(Item.of('pneumaticcraft:pressure_tube', 8), ['ACA'], {
+      C: 'thermal:obsidian_glass',
+      A: '#forge:ingots/compressed_iron'
+    }),  
+        
     //Yeast Culture
     event.remove({id: 'pneumaticcraft:thermo_plant/yeast_culture'})
     event.custom({"type":"immersiveengineering:fermenter","fluid":{"fluid":"pneumaticcraft:yeast_culture","amount":50},"input":{"item":"superpackutils:weird_fungu"},"energy":5000})
