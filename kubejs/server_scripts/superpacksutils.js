@@ -186,11 +186,11 @@ events.listen('recipes', function (event) {
     //Silicon Tetrachloride
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:silicon_tetrachloride"},"gasOutput":{"gas":"superpackutils:silicon_tetrachloride","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_tetrachloride"},"fluidOutput":{"fluid":"superpackutils:silicon_tetrachloride","amount":1}})
 
-    //Silicon Chloride
-    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:silicon_chloride"},"gasOutput":{"gas":"superpackutils:silicon_chloride","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_chloride"},"fluidOutput":{"fluid":"superpackutils:silicon_chloride","amount":1}})
+    //Sodium Chloride
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:sodium_chloride"},"gasOutput":{"gas":"superpackutils:sodium_chloride","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:sodium_chloride"},"fluidOutput":{"fluid":"superpackutils:sodium_chloride","amount":1}})
 
-    //Silicon Hypochlorite
-    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:silicon_hypochlorite"},"gasOutput":{"gas":"superpackutils:silicon_hypochlorite","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:silicon_hypochlorite"},"fluidOutput":{"fluid":"superpackutils:silicon_hypochlorite","amount":1}})
+    //Sodium Hypochlorite
+    event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:sodium_hypochlorite"},"gasOutput":{"gas":"superpackutils:sodium_hypochlorite","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:sodium_hypochlorite"},"fluidOutput":{"fluid":"superpackutils:sodium_hypochlorite","amount":1}})
 
     //Phenol
     event.custom({"type":"mekanism:rotary","fluidInput":{"amount":1,"tag":"forge:phenol"},"gasOutput":{"gas":"superpackutils:phenol","amount":1},"gasInput":{"amount":1,"gas":"superpackutils:phenol"},"fluidOutput":{"fluid":"superpackutils:phenol","amount":1}})
@@ -616,63 +616,6 @@ events.listen('recipes', function (event) {
       ]
     })
 
-    //Redstone Alloy
-    event.custom({
-        "type": "pneumaticcraft:pressure_chamber",
-        "inputs": [
-          {
-            "item": "minecraft:iron_ingot"
-          },
-          {
-            "item": "minecraft:redstone"
-          },
-        ],
-        "pressure": -0.75,
-        "results": [
-          {
-            "item": "superpackutils:redstone_alloy_ingot"
-          }
-        ]
-    })
-
-    //Glowstone Alloy
-    event.custom({
-      "type": "pneumaticcraft:pressure_chamber",
-      "inputs": [
-        {
-          "item": "minecraft:iron_ingot"
-        },
-        {
-          "item": "minecraft:glowstone"
-        },
-      ],
-      "pressure": -0.75,
-      "results": [
-        {
-          "item": "superpackutils:glowstone_alloy_ingot"
-        }
-      ]
-  })
-
-  //Obsidian Alloy
-  event.custom({
-    "type": "pneumaticcraft:pressure_chamber",
-    "inputs": [
-      {
-        "item": "minecraft:iron_ingot"
-      },
-      {
-        "item": "mekanism:obsidian_dust"
-      },
-    ],
-    "pressure": -0.75,
-    "results": [
-      {
-        "item": "superpackutils:obsidian_alloy_ingot"
-      }
-    ]
-})
-
     //HSLA Steel Ingot
     event.custom({
       "type": "masterfulmachinery:machine_process",
@@ -1085,7 +1028,7 @@ events.listen('recipes', function (event) {
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:hydrogen_cyanide"},"rightInput":{"amount":1,"gas":"superpackutils:acetylene"},"output":{"gas":"superpackutils:acrylonitrile","amount":1}})
 
     //Silicon Tetrachloride
-    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:chlorine"},"rightInput":{"amount":1,"gas":"superpackutils:silicon_dioxide"},"output":{"gas":"superpackutils:silicon_tetrachlorides","amount":1}})
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:chlorine"},"rightInput":{"amount":1,"gas":"superpackutils:silicon_dioxide"},"output":{"gas":"superpackutils:silicon_tetrachloride","amount":1}})
 
     //Vynil Chloride
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:ethene"},"rightInput":{"amount":2,"gas":"mekanism:chlorine"},"output":{"gas":"superpackutils:vynil_chloride","amount":1}})
@@ -1097,10 +1040,10 @@ events.listen('recipes', function (event) {
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:ethene"},"rightInput":{"amount":1,"gas":"mekanism:oxygen"},"output":{"gas":"superpackutils:polyethene","amount":1}})
 
     //Cumene
-    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"supepackutils:benzene"},"rightInput":{"amount":1,"gas":"superpackutils:propene"},"output":{"gas":"superpackutils:cumene","amount":1}})
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:benzene"},"rightInput":{"amount":1,"gas":"superpackutils:propene"},"output":{"gas":"superpackutils:cumene","amount":1}})
 
     //Chloroform
-    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"supepackutils:acetone"},"rightInput":{"amount":1,"gas":"superpackutils:sodium_hypochlorite"},"output":{"gas":"superpackutils:chloroform","amount":1}})
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:acetone"},"rightInput":{"amount":1,"gas":"superpackutils:sodium_hypochlorite"},"output":{"gas":"superpackutils:chloroform","amount":1}})
 
     //Ammonia
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:hydrogen"},"rightInput":{"amount":1,"gas":"superpackutils:nitrogen"},"output":{"gas":"superpackutils:ammonia","amount":1}})
@@ -1109,10 +1052,10 @@ events.listen('recipes', function (event) {
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":4,"gas":"mekanism:hydrogen"},"rightInput":{"amount":1,"gas":"superpackutils:carbon_dioxide"},"output":{"gas":"superpackutils:methane","amount":5}})
 
     //Nitrous Oxide
-    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:oxygen"},"rightInput":{"amount":1,"gas":"superpackutils:nitrogen"},"output":{"gas":"superpackutils:nitrous_oxyde","amount":2}})
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"mekanism:oxygen"},"rightInput":{"amount":1,"gas":"superpackutils:nitrogen"},"output":{"gas":"superpackutils:nitrous_oxide","amount":2}})
 
     //Polyethylene
-    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":2,"gas":"mekanism:ethene"},"rightInput":{"amount":1,"gas":"superpackutils:oxygen"},"output":{"gas":"superpackutils:polyethene","amount":5}})
+    event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":2,"gas":"mekanism:ethene"},"rightInput":{"amount":1,"gas":"mekanism:oxygen"},"output":{"gas":"superpackutils:polyethene","amount":5}})
 
     //Cyanide
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:ammonia"},"rightInput":{"amount":1,"gas":"superpackutils:methane"},"output":{"gas":"superpackutils:cyanide","amount":1}})
