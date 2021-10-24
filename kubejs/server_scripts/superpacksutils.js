@@ -1072,21 +1072,6 @@ events.listen('recipes', function (event) {
     //Cumene
     event.custom({"type":"mekanism:chemical_infusing","leftInput":{"amount":1,"gas":"superpackutils:propene"},"rightInput":{"amount":1,"gas":"superpackutils:benzene"},"output":{"gas":"superpackutils:cumene","amount":1}})
 
-    //Polycarbonate
-    //Industrial Sand
-    event.custom({
-        "type": "exnihilosequentia:fluid_item",
-        "fluid": {
-          "fluid": "mekanism:heavy_water"
-        },
-        "input": {
-          "item": "create:limesand"
-        },
-        "result": {
-          "item": "superpackutils:industrial_sand"
-        }
-    })
-
     //Advanced Machine Casing
     event.custom({"type":"mekanism:compressing","itemInput":{"ingredient":{"item":"superpackutils:mixed_alloy_ingot"}},"gasInput":{"amount":1,"gas":"mekanism:liquid_osmium"},"output":{"item":"superpackutils:advanced_casing","count":1}})
 

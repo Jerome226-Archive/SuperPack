@@ -16,20 +16,6 @@ events.listen('item.tags', function (event) {
     
     event.get('forge:crops/strawberry').add('neapolitan:strawberries')
 
-    event.get('forge:ores/copper').remove('exnihilosequentia:chunk_copper')
-    event.get('forge:ores/lead').remove('exnihilosequentia:chunk_lead')
-    event.get('forge:ores/nickel').remove('exnihilosequentia:chunk_nickel')
-    event.get('forge:ores/silver').remove('exnihilosequentia:chunk_silver')
-    event.get('forge:ores/tin').remove('exnihilosequentia:chunk_tin')
-    event.get('forge:ores/aluminum').remove('exnihilosequentia:chunk_aluminum')
-    event.get('forge:ores/uranium').remove('exnihilosequentia:chunk_uranium')
-    event.get('forge:ores/zinc').remove('exnihilosequentia:chunk_zinc')
-    event.get('forge:ores/iron').remove('exnihilosequentia:chunk_iron')
-    event.get('forge:ores/gold').remove('exnihilosequentia:chunk_gold')
-    event.get('forge:ores/osmium').remove('exnihilosequentia:chunk_osmium')
-    event.get('forge:ores/cobalt').remove('exnihilosequentia:chunk_cobalt')
-    event.get('forge:ores/platinum').remove('exnihilosequentia:chunk_platinum')
-
 });
 
 events.listen('block.tags', function (event) {

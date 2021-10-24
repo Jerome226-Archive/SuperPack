@@ -15,7 +15,7 @@ events.listen('recipes', function (event) {
 
     event.remove({output: plateItem})
     event.recipes.immersiveengineering.metal_press(plateItem, logItem, 'immersiveengineering:mold_plate')
-    event.recipes.immersiveengineering.sawmill(Item.of('superpackutils:plywood', 2), 'mcwfurnitures:oak_plate', [{stripping: false, output: sawdustItem}], 'thermal:sawdust')
+    event.recipes.immersiveengineering.sawmill(Item.of('superpackutils:plywood', 2), 'mcwfurnitures:oak_plate', [{stripping: false, output: 'thermal:sawdust'}], 'thermal:sawdust')
 
     }
 
