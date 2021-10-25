@@ -360,9 +360,6 @@ onEvent('jei.hide.items', event => {
         //Steel Plate
         'libvulpes:platesteel',
 
-        //Steel Gear
-        'libvulpes:gearsteel',
-
         //Zinc Ingot
         'exnihilosequentia:ingot_zinc',
 

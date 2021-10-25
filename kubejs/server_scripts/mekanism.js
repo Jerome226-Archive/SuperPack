@@ -706,7 +706,7 @@ events.listen('recipes', function (event) {
     event.shaped('mekanism:superheating_element', ['CSC', 'SBS', 'CSC'], {
         S: 'superpackutils:heating_element',
         C: '#mekanism:enriched/redstone',
-        B: 'superpackutils:big_steel_casing'
+        B: 'superpackutils:thermopneumatic_hull'
     }),
 
     //Pressure Dispenser
@@ -724,7 +724,7 @@ events.listen('recipes', function (event) {
         C: 'mekanism:hdpe_sheet',
         A: 'superpackutils:doublelayered_capacitor',
         B: '#forge:sheetmetals/steel',
-        I: 'superpackutils:big_steel_casing'
+        I: 'superpackutils:thermopneumatic_hull'
     }),
 
     //Hazmat Helmet

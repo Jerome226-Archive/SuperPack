@@ -157,4 +157,5 @@ events.listen('recipes', function (event) {
     //Blood Bottle
     event.recipes.create.filling('superpackutils:blood_bottle', ['minecraft:glass_bottle', fluid.of('tconstruct:blood', 50)])
     event.recipes.create.emptying([fluid.of('tconstruct:blood', 50), 'minecraft:glass_bottle'], 'superpackutils:blood_bottle')
+    
 });

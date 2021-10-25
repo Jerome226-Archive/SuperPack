@@ -28,6 +28,7 @@ events.listen('recipes', function (event) {
 
     }
 
+
     oiling('squeezer', 'minecraft:cod', 'superpackutils:fish_oil', 45)
     oiling('squeezer', 'minecraft:salmon', 'superpackutils:fish_oil', 45)
     oiling('squeezer', 'minecraft:pufferfish', 'superpackutils:fish_oil', 100)
@@ -745,7 +746,7 @@ events.listen('recipes', function (event) {
         C: 'superpackutils:abs_sheet',
         A: 'superpackutils:doublelayered_capacitor',
         B: 'superpackutils:metallurgic_casing',
-        I: 'superpackutils:big_steel_casing'
+        I: 'superpackutils:thermopneumatic_hull'
     }),
 
     //Assembler Casing
@@ -894,87 +895,6 @@ events.listen('recipes', function (event) {
       N: 'thermal:nickel_plate',
       I: 'thermal:tin_plate'
     }),
-
-    //Reinforced Steel Casing
-    event.custom({
-        "type": "masterfulmachinery:machine_process",
-        "structureId": "assembler",
-        "controllerId": "assembler",
-        "ticks": 100,
-        "inputs": [
-            {
-                "type": "masterfulmachinery:energy",
-                "data":{
-                    "amount": 1000
-                }
-            },
-            {
-                "type": "masterfulmachinery:fluids",
-                "data":{
-                    "fluid": "youmatter:stabilizer",
-                    "amount": 1500
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "pneumaticcraft:ingot_iron_compressed",
-                    "count": 8
-                }
-            },
-            {
-              "type": "masterfulmachinery:items",
-              "data":{
-                  "item": "superpackutils:advanced_casing",
-                  "count": 3
-              }
-          },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "mekanism:ingot_osmium",
-                    "count": 2
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:doublelayered_capacitor",
-                    "count": 2
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:electrical_hsla_steel_ingot",
-                    "count": 4
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "mekanism:steel_casing",
-                    "count": 1
-                }
-            }
-        ],
-        "outputs":[
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:big_steel_casing",
-                    "count": 1
-                }
-            }
-        ]
-    })
-
-    //Heating Element
-    event.shaped(Item.of('superpackutils:heating_element', 2), ['ICI', 'EEE', 'ICI'], {
-        C: 'superpackutils:refined_redstone_ingot',
-        E: 'superpackutils:superheated_bronze_ingot',
-        I: 'immersiveengineering:stick_steel'
-    })
 
     //Treetap
     event.shaped('superpackutils:treetap', [' C ', 'CCC', '  C'], {
@@ -1322,9 +1242,6 @@ events.listen('recipes', function (event) {
         }
     })
     
-    //Superheated Bronze Ingot
-    event.recipes.create.compacting('superpackutils:superheated_bronze_ingot', ['#forge:ingots/bronze', fluid.of('tconstruct:magma', 50)]).superheated(),
-
     //Weird Fungu
     event.recipes.create.filling('superpackutils:weird_fungu', ['minecraft:crimson_fungus', fluid.of('mekanismgenerators:bioethanol', 1000)]),
 
@@ -1416,68 +1333,4 @@ events.listen('recipes', function (event) {
       }
     })
 
-    //Alchemical Dusts
-    function mixer(alchemicalDustItem, catalystItem) {
-
-    event.custom({
-        "type": "masterfulmachinery:machine_process",
-        "structureId": "mixer",
-        "controllerId": "mixer",
-        "ticks": 100,
-        "inputs": [
-            {
-                "type": "masterfulmachinery:energy",
-                "data":{
-                    "amount": 100
-                }
-            },
-            {
-                "type": "masterfulmachinery:botania_mana",
-                "data":{
-                    "amount": 300
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": "superpackutils:alchemical_powder",
-                    "count": 3
-                }
-            },
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": catalystItem,
-                    "count": 4
-                }
-            }
-        ],
-        "outputs":[
-            {
-                "type": "masterfulmachinery:items",
-                "data":{
-                    "item": alchemicalDustItem,
-                    "count": 1
-                }
-            }
-        ]
-    })
-
-    }
-
-    mixer('superpackutils:alchemical_iron_dust', 'superpackutils:iron_wax')
-    mixer('superpackutils:alchemical_gold_dust', 'superpackutils:gold_wax')
-    mixer('superpackutils:alchemical_copper_dust', 'superpackutils:copper_wax')
-    mixer('superpackutils:alchemical_aluminum_dust', 'superpackutils:aluminum_wax')
-    mixer('superpackutils:alchemical_lead_dust', 'superpackutils:lead_wax')
-    mixer('superpackutils:alchemical_nickel_dust', 'superpackutils:nickel_wax')
-    mixer('superpackutils:alchemical_silver_dust', 'superpackutils:silver_wax')
-    mixer('superpackutils:alchemical_tin_dust', 'superpackutils:tin_wax')
-    mixer('superpackutils:alchemical_zinc_dust', 'superpackutils:zinc_wax')
-    mixer('superpackutils:alchemical_platinum_dust', 'superpackutils:platinum_wax')
-    mixer('superpackutils:alchemical_uranium_dust', 'superpackutils:uranium_wax')
-    mixer('superpackutils:alchemical_osmium_dust', 'superpackutils:osmium_wax')
-    mixer('superpackutils:alchemical_aluminum_dust', 'superpackutils:aluminum_wax')
-    mixer('superpackutils:alchemical_cobalt_dust', 'superpackutils:cobalt_wax')
-
-});
+ });

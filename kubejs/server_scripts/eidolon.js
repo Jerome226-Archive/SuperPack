@@ -21,7 +21,7 @@ events.listen('recipes', function (event) {
     event.shaped('eidolon:crucible', ['ABA', 'AWA', 'AAA'], {
         A: 'eidolon:pewter_ingot',
         B: 'minecraft:wooden_shovel',
-        W: 'exnihilosequentia:crucible_fired'
+        W: 'ceramics:unfired_cistern'
     })
 
     //Magic Workbench

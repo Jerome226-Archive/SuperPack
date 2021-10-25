@@ -1,4 +1,6 @@
 {
 	"item.immersiveengineering.ore_aluminum": "Aluminum Ore",
+	"block.immersiveengineering.light_engineering": "Light Engineering Frame",
+	"block.immersiveengineering.heavy_engineering": "Heavy Engineering Frame",
 	"item.immersiveengineering.slag": "Bio Slag"
 }

@@ -3,9 +3,6 @@ events.listen('recipes', function (event) {
 
 var outputRemoval = [
     
-    //Lib Vulpes
-    'libvulpes:gearsteel',
-
     //Refined Storage
     '#refinedstorage:crafter',
     '#refinedstorage:crafting_monitor',
