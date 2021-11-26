@@ -600,7 +600,7 @@ onEvent('recipes', event => {
     event.recipes.mekanism.metallurgic_infusing(orePieceItem, 'superpackutils:crystal_shard', alchemicalInfuseType, 10)
 
     //Alchemical Dust into Infusion Type
-    event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":alchemicalDustItem}},"output":{"infuse_type":alchemicalInfuseType,"amount":10}})
+    //event.custom({"type":"mekanism:infusion_conversion","input":{"ingredient":{"item":alchemicalDustItem}},"output":{"infuse_type":alchemicalInfuseType,"amount":10}})
 
   }
 

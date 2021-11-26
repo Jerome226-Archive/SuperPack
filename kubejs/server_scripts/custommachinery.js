@@ -8,7 +8,7 @@ events.listen('recipes', function (event) {
         A: 'thermal:rf_coil',
         B: 'mekanism:basic_control_circuit',
         H: 'refinedstorage:machine_casing',
-        C: 'superpackutils:steel_gear'
+        C: 'libvulpes:gearsteel'
     }),
 
     //Distiller
